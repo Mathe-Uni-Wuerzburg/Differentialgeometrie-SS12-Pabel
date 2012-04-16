@@ -1,0 +1,40 @@
+\chapter{Grundbegriffe und Bezeichnungen aus der linearen Algebra und analytischen Geometrie}
+  
+  Die klassische Differentialgeometrie der Kurven und Flächen benutzt als umgebenden Raum einen \(n\)-dimensionalen, orientierten, euklidischen Raum \(E^n\) mit zugehörigem euklischem Richtungsvektorraum \(V^n\).
+
+\section{Strukturen}
+
+  \(V^n\) ist mit einem Skalarprodukt \((X,Y) \mapsto \langle X, Y \rangle \in \IR\) ausgestattet. 
+  Damit lassen sich messen:
+  \begin{itemize}
+   \item die Länge von Vektoren \(X\): \(|X| = \sqrt{ \langle X,X \rangle }\)
+   \item die Orthogonalität von Vektoren \(X, Y\): \(X \perp Y \Leftrightarrow \langle X, Y \rangle = 0\)
+   \item der Winkel zwischen zwei Vektoren \(X, Y\): \(\cos \angle (X, Y) = \langle \frac{X}{|X|}, \frac{Y}{|Y|} \rangle \)
+   \item der Abstand von Punkten \(p, q\): \(\dist(p,q) = | \vec{pq} | \)
+   \item Flächeninhalte, Volumina, usw.
+  \end{itemize}
+  Ist zusätzlich eine feste Orthonormalbasis \( (\overset{\circ}{e_1}, ... \overset{\circ}{e_n}) \) (definiert durch \( \langle \overset{\circ}{e_i}, \overset{\circ}{e_k} \rangle = \delta_{ik} \)) ausgezeichnet als positiv orientiert, erhält man eine Orientierung des Raumes und kann alle Basen in positiv und negativ orientierte einteilen.
+  
+  \paragraph*{Standard-Modell.} \(E^n = V^n = \IR^n\), ausgestattet mit dem Standard-Skalarprodukt \(\langle X, Y \rangle = \sum_{i=1}^n X^iY^i\) und der (positiv orientierten) Standardbasis \(\overset{\circ}{e_1}, ... \overset{\circ}{e_n})\) mit \(\overset{\circ}{e_i} = (0, ... 1, ... 0)^T\).
+  Dieses Standardmodell reicht bei uns meist aus:
+  Bezüglich eines kartesischen Koordinatensystems \((0; e_1, ... e_n)\) in einem abstraktem, orientiertem euklidschem Raum \(E^n\), bestehend aus 
+  \begin{itemize}
+   \item einem "`Ursprung"' ("`Nullpunkt"') \(0 \in E^n\)
+   \item einer positiv orientierten Orthonormalbasis \((e_1, ... e_n)\) im \(V^n\)
+  \end{itemize}
+  kann man jedem Punkt und jedem Vektor eindeutig reelle Koordinaten zuordnen:
+  \begin{itemize}
+   \item Vektor: \(X = \sum_{i=1}^n X^ie_i \in V^n \mapsto (X^1, ... X^n) \in \IR^n\)
+   \item Punkt: \(p = 0 + \sum_{i=1}^n p^ie_i \mapsto (p^1, ... p^n) \in \IR^n\)
+  \end{itemize}
+  Aus einem Skalarprodukt in \(V^n\) wird in Koordinaten
+  \[
+   \langle X, Y \rangle = \left\langle \sum X^ie_i, \sum Y^ke_k \right\rangle = \sum_{i}\sum_{k} X^iY^k \langle e_i, e_k \rangle = \sum_{i=1}^n X^iY^i
+  \]
+  das Standard-Skalarprodukt im \(\IR^n\).
+  Man ist im Stanard-Modell angelangt.
+  Ein Wechsel des kartesischen Koordinatensystems im \(E^n\) induziert im Koordinatenraum \(\IR^n\) eine \defNotion{Bewegung} \[p \mapsto p' = Dp + t\] bestehend aus einer eigentlichen orthogonalen Drehmatrix \(D \in SO(u, \IR)\) mit \(\det D = +1\) und einem Translationsvektor \(t \in \IR^n\).
+  In der euklidschen Differentialgeometrie werden Eigenschaften von Objekten (Kurven, Flächen, ...) untersucht, die invariant gegenüber solchen Transformationen sind, also nicht vom gewählten kartesischen Koordinatensystem abhängig sind.
+  Bemerkung: in der sogenannten affinen Differentialgeometrie untersucht man Eigenschaften von Objekten, die (in Koordinaten) invariant sind gegenüber beliebigen affinen Transformationen \(p \mapsto p' = Ap + t\), \(A\) regulär. Man ignoriert dort vollständig die metrische Struktur des \(\IR^n\).
+  Der umgebende Raum ist dann ein \defNotion{affiner Punktraum} (bei uns nur am Rande betrachtet).
+  
