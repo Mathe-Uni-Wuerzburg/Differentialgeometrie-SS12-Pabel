@@ -74,10 +74,10 @@ ReadWrite=true
 
 [item:00-einfuehrung.tex]
 archive=true
-column=98
+column=63
 encoding=UTF-8
 highlight=LaTeX
-line=38
+line=12
 mode=LaTeX
 open=true
 order=0
@@ -89,28 +89,28 @@ encoding=UTF-8
 highlight=LaTeX
 line=0
 mode=LaTeX
-open=false
-order=-1
+open=true
+order=1
 
 [item:main.tex]
 archive=true
-column=26
+column=2
 encoding=UTF-8
 highlight=LaTeX
 line=13
 mode=LaTeX
-open=false
-order=0
+open=true
+order=6
 
 [item:packages.tex]
 archive=true
-column=27
+column=18
 encoding=UTF-8
 highlight=LaTeX
-line=1
+line=9
 mode=LaTeX
-open=false
-order=3
+open=true
+order=2
 
 [item:symbols.tex]
 archive=true
@@ -120,7 +120,7 @@ highlight=LaTeX
 line=11
 mode=LaTeX
 open=true
-order=1
+order=3
 
 [item:theorems.tex]
 archive=true
@@ -129,8 +129,8 @@ encoding=UTF-8
 highlight=LaTeX
 line=0
 mode=LaTeX
-open=false
-order=0
+open=true
+order=5
 
 [item:titlepage.tex]
 archive=true
@@ -139,24 +139,24 @@ encoding=UTF-8
 highlight=LaTeX
 line=20
 mode=LaTeX
-open=false
-order=1
+open=true
+order=4
 
 [view-settings,view=0,item:00-einfuehrung.tex]
-CursorColumn=98
-CursorLine=38
+CursorColumn=63
+CursorLine=12
 
 [view-settings,view=0,item:literatur.tex]
 CursorColumn=8
 CursorLine=0
 
 [view-settings,view=0,item:main.tex]
-CursorColumn=26
+CursorColumn=2
 CursorLine=13
 
 [view-settings,view=0,item:packages.tex]
-CursorColumn=27
-CursorLine=1
+CursorColumn=18
+CursorLine=9
 
 [view-settings,view=0,item:symbols.tex]
 CursorColumn=26
