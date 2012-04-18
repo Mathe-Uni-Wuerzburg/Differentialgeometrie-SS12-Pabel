@@ -3,38 +3,105 @@
   Die klassische Differentialgeometrie der Kurven und Flächen benutzt als umgebenden Raum einen \(n\)-dimensionalen, orientierten, euklidischen Raum \(E^n\) mit zugehörigem euklischem Richtungsvektorraum \(V^n\).
 
 \section{Strukturen}
-
-  \(V^n\) ist mit einem Skalarprodukt \((X,Y) \mapsto \langle X, Y \rangle \in \IR\) ausgestattet. 
-  Damit lassen sich messen:
+\(V^n\) ist mit einem Skalarprodukt \((X,Y) \mapsto \langle X, Y \rangle \in \IR\) ausgestattet. 
+Damit lassen sich messen:
   \begin{itemize}
    \item die Länge von Vektoren \(X\): \(|X| = \sqrt{ \langle X,X \rangle }\)
    \item die Orthogonalität von Vektoren \(X, Y\): \(X \perp Y \Leftrightarrow \langle X, Y \rangle = 0\)
    \item der Winkel zwischen zwei Vektoren \(X, Y\): \(\cos \angle (X, Y) = \left\langle \frac{X}{|X|}, \frac{Y}{|Y|} \right\rangle \)
-   \item der Abstand von Punkten \(p, q\): \(\dist(p,q) = | \vv{pq} | \)
+   \item der Abstand von Punkten \(p, q\): \(\dd(p,q) = | \vv{pq} | \)
    \item Flächeninhalte, Volumina, usw.
   \end{itemize}
-  Ist zusätzlich eine feste Orthonormalbasis \( (\mathring{e_1}, ... \mathring{e_n}) \) (definiert durch \( \langle \mathring{e_i}, \mathring{e_k} \rangle = \delta_{ik} \)) ausgezeichnet als positiv orientiert, erhält man eine Orientierung des Raumes und kann alle Basen in positiv und negativ orientierte einteilen.
+Ist zusätzlich eine feste Orthonormalbasis \( (\mathring{e_1}, ... \mathring{e_n}) \) (definiert durch \( \langle \mathring{e_i}, \mathring{e_k} \rangle = \delta_{ik} \)) ausgezeichnet als positiv orientiert, erhält man eine Orientierung des Raumes und kann alle Basen in positiv und negativ orientierte einteilen.
   
-  \paragraph*{Standard-Modell:} \(E^n = V^n = \IR^n\), ausgestattet mit dem Standard-Skalarprodukt \(\langle X, Y \rangle = \sum_{i=1}^n X^iY^i\) und der (positiv orientierten) Standardbasis \(\mathring{e_1}, ... \mathring{e_n})\) mit \(\mathring{e_i} = (0, \dots, 1, \dots, 0)^T\).
-  Dieses Standardmodell reicht bei uns meist aus:
-  Bezüglich eines kartesischen Koordinatensystems \((0; e_1, ... e_n)\) in einem abstraktem, orientiertem euklidschem Raum \(E^n\), bestehend aus 
+\paragraph*{Standard-Modell:} \(E^n = V^n = \IR^n\), ausgestattet mit dem Standard-Skalarprodukt \(\langle X, Y \rangle = \sum_{i=1}^n X^iY^i\) und der (positiv orientierten) Standardbasis \(\mathring{e_1}, ... \mathring{e_n})\) mit \(\mathring{e_i} = (0, \dots, 1, \dots, 0)^T\).
+Dieses Standardmodell reicht bei uns meist aus:
+Bezüglich eines kartesischen Koordinatensystems \((0; e_1, ... e_n)\) in einem abstraktem, orientiertem euklidschem Raum \(E^n\), bestehend aus 
   \begin{itemize}
    \item einem "`Ursprung"' ("`Nullpunkt"') \(0 \in E^n\)
    \item einer positiv orientierten Orthonormalbasis \((e_1, ... e_n)\) im \(V^n\)
   \end{itemize}
-  kann man jedem Punkt und jedem Vektor eindeutig reelle Koordinaten zuordnen:
+kann man jedem Punkt und jedem Vektor eindeutig reelle Koordinaten zuordnen:
   \begin{itemize}
    \item Vektor: \(X = \sum_{i=1}^n X^ie_i \in V^n \mapsto (X^1, ... X^n) \in \IR^n\)
    \item Punkt: \(p = 0 + \sum_{i=1}^n p^ie_i \mapsto (p^1, ... p^n) \in \IR^n\)
   \end{itemize}
-  Aus einem Skalarprodukt in \(V^n\) wird in Koordinaten
+Aus einem Skalarprodukt in \(V^n\) wird in Koordinaten
   \[
    \langle X, Y \rangle = \left\langle \sum X^ie_i, \sum Y^ke_k \right\rangle = \sum_{i}\sum_{k} X^iY^k \langle e_i, e_k \rangle = \sum_{i=1}^n X^iY^i
   \]
-  das Standard-Skalarprodukt im \(\IR^n\).
-  Man ist im Stanard-Modell angelangt.
-  Ein Wechsel des kartesischen Koordinatensystems im \(E^n\) induziert im Koordinatenraum \(\IR^n\) eine \defNotion{Bewegung} \[p \mapsto p' = Dp + t\] bestehend aus einer eigentlichen orthogonalen Drehmatrix \(D \in SO(u, \IR)\) mit \(\det D = +1\) und einem Translationsvektor \(t \in \IR^n\).
-  In der euklidschen Differentialgeometrie werden Eigenschaften von Objekten (Kurven, Flächen, ...) untersucht, die invariant gegenüber solchen Transformationen sind, also nicht vom gewählten kartesischen Koordinatensystem abhängig sind. \\
-  Bemerkung: in der sogenannten affinen Differentialgeometrie untersucht man Eigenschaften von Objekten, die (in Koordinaten) invariant sind gegenüber beliebigen affinen Transformationen \(p \mapsto p' = Ap + t\), \(A\) regulär. Man ignoriert dort vollständig die metrische Struktur des \(\IR^n\).
+das Standard-Skalarprodukt im \(\IR^n\).
+Man ist im Stanard-Modell angelangt.
+Ein Wechsel des kartesischen Koordinatensystems im \(E^n\) induziert im Koordinatenraum \(\IR^n\) eine \defNotion{Bewegung} \[p \mapsto p' = Dp + t\] bestehend aus einer eigentlichen orthogonalen Drehmatrix \(D \in SO(u, \IR)\) mit \(\det D = +1\) und einem Translationsvektor \(t \in \IR^n\).
+In der euklidschen Differentialgeometrie werden Eigenschaften von Objekten (Kurven, Flächen, ...) untersucht, die invariant gegenüber solchen Transformationen sind, also nicht vom gewählten kartesischen Koordinatensystem abhängig sind. \\
+  \begin{bemerkung} In der sogenannten affinen Differentialgeometrie untersucht man Eigenschaften von Objekten, die (in Koordinaten) invariant sind gegenüber beliebigen affinen Transformationen \(p \mapsto p' = Ap + t\), \(A\) regulär. Man ignoriert dort vollständig die metrische Struktur des \(\IR^n\).
   Der umgebende Raum ist dann ein \defNotion{affiner Punktraum} (bei uns nur am Rande betrachtet).
-  
+  \end{bemerkung}
+Zum \uline{Vektorprodukt} (Kreuzprodukt) im orientierten euklidischen \(\IR^n\): \\
+  Zu je \(n-1\) Vektoren \(X_1, \dots, X_{n-1} \in \IR^n (n\ge 2)\) gibt es genau einen Vektor \(Y\in \IR^n\) mit den Eigenschaften
+  \begin{enumerate}
+   \item \(Y \perp X_k, (k = 1, \dots, n-1) \)
+   \item \(|Y|=a_{n-1}(X_1, \dots, X_{n-1}) = \sqrt{\det\left(\langle X_i, X_k \rangle\right)_{i=k=1,\dots,n-1}} \) \\
+	  \(= (n-1)\)-dimensionaler Flächeninhalt des von \(X_1, \dots, X_{n-1}\) aufgespannten \(n-1\)-dimensionalen Parallelogramms \\
+	  \(=\) Wurzel aus der \uline{Gramschen} Determinanten \(G(X_1,\dots, X_{n-1}\)
+   \item \(\det (X_1, \dots, X_{n-1}, Y) \ge 0\) ( d.h. \(X_1, \dots, X_{n-1}, Y)\) ist positiv orientiert)
+  \end{enumerate}
+Bezeichnung: \(Y=X_1 \times \dots \times X_{n-1}\) \\
+Eine explizite ormel ist (mit der Standardbasis \((e_1, \dots , e_n)\) des \(\IR^n\) ): 
+\begin{align*}
+ X_1 \times \dots \times X_{n-1} = \sum_{i=1}^n \det (X_1, \dots, X_{n-1},e_i)e_i = \sum_{i=1}^n \left\vert\begin{matrix}
+                                                                                                  X_1^1  &\dots  &X_{n-1}^1 &0 \\
+                                                                                                  \vdots &       & \vdots   &\vdots \\
+                                                                                                  \vdots &       & \vdots   &1 \\
+                                                                                                  \vdots &       & \vdots   & \vdots \\
+                                                                                                  X_1^n  & \dots &X_{n-1}^n &0
+                                                                                                 \end{matrix}
+                                                                                                 \right\vert (i) e_i = \left\vert\begin{matrix}
+                                                                                                                    X_1^1 & \dots & X_{n-1}^1 & e_1 \\
+                                                                                                                    \vdots & & \vdots & \vdots \\
+                                                                                                                    \vdots & & \vdots & \vdots \\
+                                                                                                                    \vdots & & \vdots & \vdots \\
+                                                                                                                    X_1^n & \dots & X_{n-1}^n & e_n
+                                                                                                                   \end{matrix}
+                                                                                                                   \right\vert
+\end{align*}
+\begin{bsp}{\(\uline{n=2}\):}
+ \[ X=\begin{pmatrix}
+       X^1 \\
+       X^2
+      \end{pmatrix}
+      \Rightarrow X^x = \left\vert \begin{matrix}
+                                    X^1 & e_1 \\
+                                    X^2 & e_2
+                                   \end{matrix}
+			\right\vert
+			= -X^2 e_1 + X^1 e_2 = \begin{pmatrix}
+			                        -X^2 \\
+			                        X^1
+			                       \end{pmatrix}
+\]
+\[
+ |X^x| = a_1(X) = |X|
+\]
+\end{bsp}
+
+\begin{bsp}{\(\uline{n=3}\):}
+  \begin{align*}
+   X \times Y = \left\vert \begin{matrix}
+                            X^1 & Y^1 & e_1 \\
+                            X^2 & Y^2 & e_2 \\
+                            X^3 & Y^3 & e_3
+                           \end{matrix}
+		\right\vert
+		=(X^2Y^3-X^3Y^2) e_1 + \dots
+  \end{align*}
+\[
+ |X \times Y| = a_2(X,Y) = \sqrt{\det \begin{pmatrix}
+                                      \langle X,X\rangle & \langle X,Y\rangle \\
+                                      \langle Y,X \rangle & \langle Y,Y\rangle
+                                     \end{pmatrix}
+}
+\]
+\end{bsp}
+
+\uline{Anwendung:} Jedes Orthonormalsystem \((e_1, \dots, e_{n-1})\) im \(\IR^n\) lässt sich durch \(e_n := e_1 \times \dots \times e_{n-1}\) eindeutig zu einer positiv orientierten Orthonormalbasis \((e_1, \dots, e_n)\) ergänzen.

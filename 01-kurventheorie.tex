@@ -1,0 +1,90 @@
+\chapter{Lokale Kurventheorie im euklidischen Raum}
+\section{Grundbegriffe der Kurventheorie}
+Wir betrachten zunächst (kurzzeitig) rein affingeometrische Begriffe/Invarianten.
+\begin{definition}
+ Ein \uline{\(\C^r\)-Weg} oder eine \uline{parametrisierte \(\C^r\)-Kurve} (\(r\ge 0\)) [\(\C^r = r\)-mal stetig differenzierbar] im (affinen) \(\IR^n\) ist eine \(\C^r\)-Abbildung 
+\[
+ c: t\in I \subset \IR \mapsto c(t)\in \IR^n
+\]
+eines offenen Intervalls \(I\) in den \(\IR^n\). \\
+\(t\) heißt \uline{Parameter}, die Bildmenge \(c[I] \subset \IR^n\) die \uline{Spur des Weges}. \\
+Ein \(\C^r\)-Weg (\(n\ge 1\)) heißt \uline{regulär}, wenn überall der \uline{Tangentenvektor} \(\dot c(t) = \frac{\dd c}{\dd t}(t) \ne 0\) ist. Nichtreguläre Punkte \(c(t_0)\) mit \(\dot c(t_0)=0\) heißen \uline{Singularitäten}.
+\end{definition}
+\uline{Kinematische Interpretation:} \\
+\(t \mapsto c(t)\) beschreibt die \uline{zeit}abhängige Bewegung eines Punktes im \(\IR^n\).
+\(\dot c\) ist die vektorielle Geschwindigkeit (und im euklidischen \(\IR^n\) \(w:= | \dot c|\) die skalare Geschwindigkeit).
+
+\begin{bsp}\(\)
+\begin{enumerate}
+ \item \uline{Peano-Kurve}: Stetiger (\(\C^0\)-)Weg im \(\IR^2\), dessen Spur jeden Punkt eines Gebietes \(G\subseteq \IR^2\) ausfüllt (niergends differenzierbar, "`unbrauchbar"')
+ \item \uline{Konstanter Weg}: \(t \in I \mapsto c(t)=x_0 \in \IR^n\) (niergends regulär, "`unbrauchbar"')
+ \item \uline{Neil'sche Parabel}: \(c: t\in \IR \mapsto c(t) = \begin{pmatrix}
+                                                                t^2 \\
+								t^3
+                                                               \end{pmatrix}
+								\in \IR^2 \)\quad (\(\C^\infty\)-Weg), in \(c(0)=\begin{pmatrix}
+								                                                  0 \\
+														  0
+								                                                 \end{pmatrix} \) nicht regulär ("`Spitze"') (\(w(0)=|\dot c (0)|=0\), "`man hat Zeit, sich umzudrehen"')
+ \item \uline{Kreislinie}: \(c: t\in \IR \mapsto c(t)=\begin{pmatrix}
+                                                       \cos t \\
+						       \sin t
+                                                      \end{pmatrix} \in \IR^2\) ( \(\infty\)-oft durchlaufbar) [Affin gesehen ist das eine Ellipse!] \\
+Aber auch \(t \mapsto \tilde c(t) = \begin{pmatrix}
+                                     t \\
+				     \pm \sqrt{1-t^2}
+                                    \end{pmatrix} \) und \(t \mapsto \tilde{\tilde c}(t)=\begin{pmatrix}
+											  \frac{1}{\cosh t} \\
+											  \tanh t
+											 \end{pmatrix} \)
+sind Parametrisierungen von Kreisstücken.
+\end{enumerate}
+\end{bsp}
+Wege,  die nur mit veränderlicher "`Zeitskala"' durchlaufen werden, sollen nicht als verschieden angesehen werden.
+\begin{definition}
+ \(I, \tilde I \subset \IR\) seien offene Intervalle. \\
+Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\)-äquivalent} (\(r\ge 0 \)), wenn ein orientierungstreuer (d.h. monoton wachsender) \(\C^r\)-Diffiomorphismus \(\Phi : I \to \tilde I\) existiert, mit
+\[
+ \uline{c= \tilde c \circ \Phi}, \text{ d.h. } \uline{\forall_t c(t)=\tilde c (\Phi(t))}
+\]
+
+\end{definition}
+
+\begin{bemerkung} \(\)
+ \begin{enumerate}
+  \item[0.] \(\Phi \, \C^r\)-Diffeomorphismus \(\Leftrightarrow \Phi\) bijektiv und \(\Phi\) \uline{und \(\Phi^{-1}\)}\, \(C^r\)-differenzierbar. 
+  [Bsp.: \(\Phi: t \in \IR \to t^3 \in \IR\) ist \uline{kein} \(\C^1\)-Diffeomorphismus] \\
+  Bei \(C^r\)-Diffeomorphismus ist stets \(\dot \Phi(t)\ne 0\) (falls \(r\ge 1\))
+  \item[1.] \(\Phi\) ist (für \(r\ge 1\)) genau dann orientierungstreu, wenn überall \(\dot \Phi(t)>0\) ist.
+  \item[2.] Äquivalente Wege besitzen (für \(r\ge 1\)) das gleiche Regularitätsverhalten.
+  \[
+   \dot c(t)= \dot{\tilde c} (\Phi(t)) \cdot \underbrace{\dot \Phi(t)}_{>0}
+  \]
+  \item[3.] Die Äquivalenz von Wegen ist wirklich eine Äquivalenzrelation (reflexiv, symmetrisch, transitiv)
+ \end{enumerate}
+\end{bemerkung}
+
+\begin{definition}
+ Eine (orientierte, reguläre) \uline{\(\C^r\)-Kurve} (\(r\ge1\)) im (affinen) \(\IR^n\) ist eine Äquivalenzklasse \([c]\) von regulären \(\C^r\)-Wegen \(c : I \subset \IR \to \IR^n\). Ein Repräsentant heißt eine (zulässige) \uline{Parametrisierungen} der \(\C^r\)-Kurve, eine die Äquivalenz vermittelnde Abbildung \(\Phi\) eine (zulässige) \uline{Parametertransformation}.
+\end{definition}
+
+\begin{bsp}
+ Die "`Kreis"'-Darstellungen \[t \mapsto c(t)=\begin{pmatrix}
+                                              \cos t \\
+                                              \sin t
+                                             \end{pmatrix} \in \IR^2, \left(|t|<\frac\pi2\right)
+			     \]
+ und \[\tilde t\mapsto \tilde c(\tilde t) = \begin{pmatrix}
+                                             \frac1{\cosh \tilde t} \\
+                                             \tanh \tilde t
+                                            \end{pmatrix} \in \IR^2 (\tilde t \in \IR) 
+     \]
+ sind \(\C^\infty\)-äquivalente Parametertransformationen: \[
+                                                            \Phi(t) = \operatorname{Artanh} \sin t = \tilde t
+                                                           \]
+mit
+\[
+ \dot \Phi(t)=\frac{\cos t}{1-\sin^2 t}= \frac1{\cos t} >0
+\]
+
+\end{bsp}
