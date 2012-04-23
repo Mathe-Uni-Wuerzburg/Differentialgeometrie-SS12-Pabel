@@ -1,5 +1,5 @@
 \newtheoremstyle{style}
-   {0.5cm}                   %Space above
+   {0.5cm}                 %Space above
    {0cm}                   %Space below
    {\normalfont}                      %Body font: original {\normalfont}
    {}                      %Indent amount \left(empty = no indent,
@@ -7,20 +7,21 @@
    {\normalfont\bfseries}  %Thm head font original {\normalfont\bfseries}
    {:}                     %Punctuation after thm head original :
    {\newline}              %Space after thm head: " " = normal interword
-                            %space; \newline = linebreak
-   {{\textbf{\thmname{#1}\thmnumber{ #2}\thmnote{ \left(#3\right)}}}} %Hier wird die endgültige Struktur deiner Umgebung festgelegt. Hier funktioniert vspace.                    
+			   %space; \newline = linebreak
+  {\textbf{\thmname{#1}\thmnumber{ #2}}\thmnote{ (#3)}}
+%Hier wird die endgültige Struktur deiner Umgebung festgelegt. Hier funktioniert vspace.                    
                                         %Thm head spec \left(can be left empty, meaning
                            %`normal'\right) original {\underline{\thmname{#1}\thmnumber{ #2}\thmnote{ \left(#3\right)}}}
 
 \theoremstyle{style}
 
+\newtheorem*{bsp}{Beispiel}
 \newtheorem*{definition}{Definition}
 \newtheorem{satz}[subsection]{Satz}
 \newtheorem{lemma}{Lemma}
 \newtheorem{korollar}{Korollar}
 \newtheorem{proposition}{Proposition}
 \newtheorem*{bemerkung}{Bemerkung}
-\newtheorem*{bsp}{Beispiel}
 \newtheorem*{anwendung}{Anwendung}
 
 %neue Beweisumgebung
