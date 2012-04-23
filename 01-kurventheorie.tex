@@ -16,8 +16,8 @@ Ein \(\C^r\)-Weg (\(n\ge 1\)) heißt \uline{regulär}, wenn überall der \uline{
 
 \begin{bsp}\(\)
 \begin{enumerate}
- \item \uline{Peano-Kurve}: Stetiger (\(\C^0\)-)Weg im \(\IR^2\), dessen Spur jeden Punkt eines Gebietes \(G\subseteq \IR^2\) ausfüllt (niergends differenzierbar, "`unbrauchbar"')
- \item \uline{Konstanter Weg}: \(t \in I \mapsto c(t)=x_0 \in \IR^n\) (niergends regulär, "`unbrauchbar"')
+ \item \uline{Peano-Kurve}: Stetiger (\(\C^0\)-)Weg im \(\IR^2\), dessen Spur jeden Punkt eines Gebietes \(G\subseteq \IR^2\) ausfüllt (nirgends differenzierbar, "`unbrauchbar"')
+ \item \uline{Konstanter Weg}: \(t \in I \mapsto c(t)=x_0 \in \IR^n\) (nirgends regulär, "`unbrauchbar"')
  \item \uline{Neil'sche Parabel}: \(c: t\in \IR \mapsto c(t) = \begin{pmatrix}
                                                                 t^2 \\
 								t^3
@@ -69,12 +69,16 @@ Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\
 \end{definition}
 
 \begin{bsp}
- Die "`Kreis"'-Darstellungen \[t \mapsto c(t)=\begin{pmatrix}
-                                              \cos t \\
-                                              \sin t
-                                             \end{pmatrix} \in \IR^2, \left(|t|<\frac\pi2\right)
-			     \]
- und \[\tilde t\mapsto \tilde c(\tilde t) = \begin{pmatrix}
+ Die "`Kreis"'-Darstellungen 
+ \[
+ t \mapsto c(t)=\begin{pmatrix}
+                 \cos t \\
+                 \sin t
+                \end{pmatrix} \in \IR^2, \left(|t|<\frac\pi2\right)
+ \]
+ und 
+     \[
+      \tilde t\mapsto \tilde c(\tilde t) = \begin{pmatrix}
                                              \frac1{\cosh \tilde t} \\
                                              \tanh \tilde t
                                             \end{pmatrix} \in \IR^2 (\tilde t \in \IR) 
@@ -86,5 +90,156 @@ mit
 \[
  \dot \Phi(t)=\frac{\cos t}{1-\sin^2 t}= \frac1{\cos t} >0
 \]
-
 \end{bsp}
+
+\begin{bemerkung}
+ Nicht jedes 1-dimensionale "`Gebilde"' im \(\IR^n\) (z.B. eine vollständige Kreislinie) lässt sich global und injektiv als Bild eines offenen Intervalls darstellen. \\
+ Objekte, die sich nur lokal so parametrisieren lassen, heißen (1-dimensionale) differenzierbare Mannigfaltigkeiten. Für lokale Untersuchungen ist eine solche Erweiterung der Kurvenbegriffs nicht nötig.
+\end{bemerkung}
+
+Die bisher eingeführten Begriffe sind offensichtlich affin-invariant. Aber im Folgenden sind auch nur Eigenschaften von \uline{Kurven} von Interesse, also Eigenschaften, die nicht von der Parametrisierung abhängen. \\
+Hier ein Beispiel aus der rein affinen Differentialgeometrie. 
+\begin{bsp}\(\)
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=11cm, height=5.5cm]{Bilder/Bsp1.jpg}
+\end{figure} 
+\end{bsp}
+
+\begin{satz}
+ \(t \mapsto c(t)\) sei Parameterdarstellung einer \(\C^r\)-Kurve im (affinen) \(\IR^n\) mit \(r \ge n\). Dann sind die Ableitungsvektoren 
+ \[
+  c_p:= \frac{\dd^p c}{\dd t^p} \, (p=1,\dots, n)
+ \]
+\uline{nicht} invariant gegenüber Parametertransformationen, jedoch die (punktualen, orientierten) \uline{Schmieg}-\uline{räume} (oskulierende Räume, "`osculating spaces"') 
+\[
+ S_p(t):= c(t) + \langle \langle c_1(t), \dots , c_p(t) \rangle \rangle
+\]
+Spezialfälle: \\
+Tangente \(S_1(t)=c(t) + \langle \langle \dot c(t) \rangle \rangle \) \\
+Schmiegebene \( S_2(t) c(t) + \langle \langle \dot c(t), \ddot c(t) \rangle \rangle \)
+\end{satz}
+
+\begin{beweis}
+ Aus \(c = \tilde c \circ \Phi\) folgt nach der Kettenregel
+ \begin{align*}
+  \dot c &= \dot \Phi \left(\dot{\tilde c} \circ \Phi \right)\\
+  \ddot c &= \dot \Phi^2 \left( \ddot{\tilde c} \circ \Phi \right) + Q_2^1 \left( \dot \Phi, \ddot \Phi \right) \cdot \dot {\tilde c}(t)
+ \end{align*}
+allgemein 
+\begin{align*}
+ c_p= \dot \Phi^p (\tilde c_p \circ \Phi) + \sum_{k=1}^{p-1} \underbrace{Q_p^k \left( \dot \Phi, \ddot \Phi \right)}_{\text{"`Kettenregelpolynome"'}} \left( \tilde c_k \circ \Phi \right)
+\end{align*}
+Also hat man die Transformationsformel
+\begin{align*}
+ \begin{pmatrix}
+  c_1 \\
+  \vdots \\
+  \vdots \\
+  c_p
+ \end{pmatrix} = \begin{pmatrix}
+		  \dot \Phi &0 & \cdots & 0 \\
+		  Q_2^1& \dot \Phi^2 & \ddots  & \vdots \\
+		  \vdots & \ddots & \ddots &0 \\
+		  Q_p^1 & \cdots & Q_p^k & \dot \Phi^p
+		 \end{pmatrix} \begin{pmatrix}
+				\tilde c_1 \circ \Phi \\
+				\vdots \\
+				\vdots \\
+				\tilde c_p \circ \Phi
+			       \end{pmatrix}
+\end{align*}
+mit einer regulären Transformationsmatrix positiver Determinante. \\
+Das zeigt 
+\[
+ \langle \langle c_1, \dots, c_p \rangle \rangle = \langle \langle \tilde c_1 \circ \Phi, \dots, \tilde c_p \circ \Phi \rangle \rangle
+\]
+und die weiteren Behauptungen.
+\end{beweis}
+
+\begin{bemerkung}
+ Die Regularitätsforderung \(\dot c(t) \ne 0\) bedeutet, dass in jedem Punkt die Tangenten als 1-dimensionale Unterräume existieren.
+\end{bemerkung}
+
+Die Schmiegräume kann man dazu benutzen, um festzustellen, ob eine Kurve in einem echten affinen Teilraum \(U_p \subset \IR^n\) liegt, in einer Geraden, einer Ebene usw. (affin-invariant!) \\
+Zunächst gilt offensichtlich 
+\[
+ S_1(t) \subseteq S_2(t) \subseteq \dots \subseteq S_n(t) \le p
+\]
+
+\begin{satz}\label{satz112} \(\)
+ \begin{enumerate}
+  \item[a)] Liegt eine \(\C^{p+1}\)-Kurve in einem \(p\)-dimensionalen affinen Unterraum des \(\IR^n\) (\(1 \le +p \le n-1 \)), so ist
+  \[
+   \forall_t \dim S_{p+1}(t) < p+1
+  \]
+  d.h. der (\(p+1\))-te Schmiegraum degeneriert.
+  \item[b)] Gilt umgekehrt 
+  \[
+   \forall_t \dim S_{p+1}(t) = \dim S_p(t) \stackrel{!}{=} p
+  \]
+  so liegt die Kurve in einem \(p\)-dimensionalen, aber keinem niedriger dimensionalen affinen Unterraum.
+ \end{enumerate}
+\end{satz}
+
+\begin{anwendung} \(\)
+ \begin{enumerate}
+  \item Eine \(\C^2\)-Kurve \([c]\) im \(\IR^n\) verläuft genau dann \uline{geradlinig}, wenn \(\forall_t \big(\dot c(t), \ddot c(t)\big) \) linear abhängig ist. \\
+  \big["`\(\Rightarrow\)"' nach a), "`\(\Leftarrow\)"' nach b), da \([c]\) regulär\big]
+ \end{enumerate}
+ \begin{definition}
+  Ein (regulärer) Kurvenpunkt \(c(t)\) heißt \uline{Wendepunkt} (WP, inflection point), falls \(\big(\dot c(t), \ddot c(t)\big)\) linear abhängig ist.
+ \end{definition}
+ \begin{enumerate}
+  \item[2.] Eine \uline{wendepunktfreie} \(\C^3\)-Kurve \([c]\) im \(\IR^n\) verläuft genau dann \uline{in einer Ebene}, wenn \\ 
+  \(\forall_t \big( \dot c(t), \ddot c(t), \dddot c(t) \big) \) linear abhängig ist.
+ \end{enumerate}
+ \begin{definition}
+  Ein \uline{Nicht-Wendepunkt} \(\dot c(t)\) heißt "`\uline{Henkelpunkt}"' (handle point), wenn \( \big( \dot c(t), \ddot c(t), \dddot c(t) \big) \) linear abhängig ist.
+ \end{definition}
+
+\end{anwendung}
+
+\begin{beweis}
+ \begin{enumerate}
+  \item[a)]
+  \begin{align*}
+   &\forall_t \quad c(t) = p_0 + \sum_{k=1}^p \lambda_k(t) \cdot a_k \in U_p = p_0 + \hl a_1, \dots, a_p \hr \Rightarrow \\
+   &\overset{p+1}{\underset{l=1}\forall} \forall_t \quad c_l(t)= c^{(l)}(t) = \sum_{k=1}^p \lambda_k^{(l)}(t)\cdot a_k \in \hl a_1, \dots, a_p \hr \Rightarrow \\
+   & \forall_t \quad \dim S_{p+1}(t) \le p < p
+  \end{align*}
+  \item[b)] Nach Voraussetzung ist \((c_1, \dots, c_p)(t) \) linear unabhängig, aber \(c_1, \dots, c_{p+1})(t) \) linear abhängig. Es existieren also Funktionen \(t \mapsto \lambda_0(t), \dots, \lambda_{p_1}(t)\) mit 
+  \begin{align*}
+   c_{p+1} = \sum_{k=1}^p \lambda_{k-1} c_k \text{ bzw. } \uline{(\dot c)^{(p)} = \sum_{k=0}^{p-1} \lambda_k (\dot c)^k} \tag{\(\ast\)}
+  \end{align*}
+  Die Funktionen sind stetig auf \(I\), denn \((\ast)\) kann nach \(\lambda_0, \dots, \lambda_{p-1}\) aufgelöst werden (Inhomogenes lineares Gleichungssystem mit vollrangiger Koeffizientenmatrix, da \(c_1, \dots, c_p\) linear unabhängig; Einträge und "`rechte Seite"' stetig). \\
+  Die Koeffizientenfunktionen \(t \mapsto \dot c^{\,i}(t) \, (i=1,\dots, n)\) genügen also der linearen Differentialgleichung \(p\)-ter Ordnung
+  \[
+   y^{(p)} = \sum_{k=0}^{p-1} \lambda_k y^{(k)}
+  \]
+  mit stetigen Koeffizienten.
+  für sie existiert ein Fundamentalsystem \(y_1, \dots y_p : I \to \IR\), so dass für jede Lösung gilt
+  \[
+   y(t)=\sum_{k=1}^p a_k y_k(t)
+  \]
+  also auch
+  \[
+   \dot c^{\,i}(t)=\sum_{k=1}^p a_k^i y_k(t)
+  \]
+  und damit
+  \[
+   \dot c(t)=\sum_{k=1}^p y_k(t) a_k
+  \]
+  mit konstanten Vektoren \(a_1, \dots, a_p \in \IR^n\). \\
+  Integration liefert \(\forall_{t \in I}\)
+  \[
+   c(t)= c(t_0) + \sum_{k=1}^p \left(\int_{t_0}^t y_k(\tau) \dd \tau \right) a_k \in c(t_0) + \hl a_1, \dots, a_p \hr =: U_p
+  \]
+  Es ist schließlich 
+  \[
+  \uline{\dim U_p =p}
+  \] 
+  denn aus \(\dim U_p = k < p\) folgt nach a), dass \( \dim S_{k+1} < k+1 \), also auch \(\dim S_p <p\) im Widerspruch zur Voraussetzung.
+ \end{enumerate}
+  
+\end{beweis}

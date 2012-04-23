@@ -16,7 +16,7 @@ Ist zusätzlich eine feste Orthonormalbasis \( (\mathring{e_1}, ... \mathring{e_
   
 \paragraph*{Standard-Modell:} \(E^n = V^n = \IR^n\), ausgestattet mit dem Standard-Skalarprodukt \(\langle X, Y \rangle = \sum_{i=1}^n X^iY^i\) und der (positiv orientierten) Standardbasis \(\mathring{e_1}, ... \mathring{e_n})\) mit \(\mathring{e_i} = (0, \dots, 1, \dots, 0)^T\).
 Dieses Standardmodell reicht bei uns meist aus:
-Bezüglich eines kartesischen Koordinatensystems \((0; e_1, ... e_n)\) in einem abstraktem, orientiertem euklidschem Raum \(E^n\), bestehend aus 
+Bezüglich eines kartesischen Koordinatensystems \((0; e_1, ... e_n)\) in einem abstrakten, orientierten euklidschen Raum \(E^n\), bestehend aus 
   \begin{itemize}
    \item einem "`Ursprung"' ("`Nullpunkt"') \(0 \in E^n\)
    \item einer positiv orientierten Orthonormalbasis \((e_1, ... e_n)\) im \(V^n\)
@@ -43,29 +43,30 @@ Zum \uline{Vektorprodukt} (Kreuzprodukt) im orientierten euklidischen \(\IR^n\):
    \item \(Y \perp X_k, (k = 1, \dots, n-1) \)
    \item \(|Y|=a_{n-1}(X_1, \dots, X_{n-1}) = \sqrt{\det\left(\langle X_i, X_k \rangle\right)_{i=k=1,\dots,n-1}} \) \\
 	  \(= (n-1)\)-dimensionaler Flächeninhalt des von \(X_1, \dots, X_{n-1}\) aufgespannten \(n-1\)-dimensionalen Parallelogramms \\
-	  \(=\) Wurzel aus der \uline{Gramschen} Determinanten \(G(X_1,\dots, X_{n-1}\)
-   \item \(\det (X_1, \dots, X_{n-1}, Y) \ge 0\) ( d.h. \(X_1, \dots, X_{n-1}, Y)\) ist positiv orientiert)
+	  \(=\) Wurzel aus der \uline{Gramschen} Determinanten \(G(X_1,\dots, X_{n-1})\)
+   \item \(\det (X_1, \dots, X_{n-1}, Y) \ge 0\) (d.h. \((X_1, \dots, X_{n-1}, Y)\) ist positiv orientiert)
   \end{enumerate}
 Bezeichnung: \(Y=X_1 \times \dots \times X_{n-1}\) \\
-Eine explizite ormel ist (mit der Standardbasis \((e_1, \dots , e_n)\) des \(\IR^n\) ): 
+Eine explizite Formel ist (mit der Standardbasis \((e_1, \dots , e_n)\) des \(\IR^n\) ): 
 \begin{align*}
- X_1 \times \dots \times X_{n-1} = \sum_{i=1}^n \det (X_1, \dots, X_{n-1},e_i)e_i = \sum_{i=1}^n \left\vert\begin{matrix}
-                                                                                                  X_1^1  &\dots  &X_{n-1}^1 &0 &\\
-                                                                                                  \vdots &       & \vdots   &\vdots &\\
-                                                                                                  \vdots &       & \vdots   &1 &(i)\\
-                                                                                                  \vdots &       & \vdots   & \vdots &\\
-                                                                                                  X_1^n  & \dots &X_{n-1}^n &0 &
-                                                                                                 \end{matrix}
-                                                                                                 \right\vert  e_i = \left\vert\begin{matrix}
-                                                                                                                    X_1^1 & \dots & X_{n-1}^1 & e_1 \\
-                                                                                                                    \vdots & & \vdots & \vdots \\
-                                                                                                                    \vdots & & \vdots & \vdots \\
-                                                                                                                    \vdots & & \vdots & \vdots \\
-                                                                                                                    X_1^n & \dots & X_{n-1}^n & e_n
-                                                                                                                   \end{matrix}
-                                                                                                                   \right\vert
+ X_1 \times \dots \times X_{n-1} &= \sum_{i=1}^n \det (X_1, \dots, X_{n-1},e_i)e_i \\
+				 &= \sum_{i=1}^n \left\vert\begin{matrix}
+                                                            X_1^1  &\cdots  &X_{n-1}^1 &0 &\\
+                                                            \vdots &       & \vdots   &\vdots &\\
+                                                            \vdots &       & \vdots   &1 &(i)\\
+                                                            \vdots &       & \vdots   & \vdots &\\
+                                                            X_1^n  & \cdots &X_{n-1}^n &0 &
+                                                           \end{matrix}
+                                                           \right\vert  e_i = \left\vert\begin{matrix}
+										         X_1^1 & \cdots & X_{n-1}^1 & e_1 \\
+                                                                                         \vdots & & \vdots & \vdots \\
+                                                                                         \vdots & & \vdots & \vdots \\
+                                                                                         \vdots & & \vdots & \vdots \\
+                                                                                         X_1^n & \cdots & X_{n-1}^n & e_n
+                                                                                        \end{matrix}
+                                                                                        \right\vert
 \end{align*}
-\begin{bsp}{\(\uline{n=2}\):}
+\begin{bsp}{\(\uline{n=2}\)}
  \[ X=\begin{pmatrix}
        X^1 \\
        X^2
@@ -104,4 +105,6 @@ Eine explizite ormel ist (mit der Standardbasis \((e_1, \dots , e_n)\) des \(\IR
 \]
 \end{bsp}
 
-\uline{Anwendung:} Jedes Orthonormalsystem \((e_1, \dots, e_{n-1})\) im \(\IR^n\) lässt sich durch \(e_n := e_1 \times \dots \times e_{n-1}\) eindeutig zu einer positiv orientierten Orthonormalbasis \((e_1, \dots, e_n)\) ergänzen.
+\begin{anwendung} 
+Jedes Orthonormalsystem \((e_1, \dots, e_{n-1})\) im \(\IR^n\) lässt sich durch \(e_n := e_1 \times \dots \times e_{n-1}\) eindeutig zu einer positiv orientierten Orthonormalbasis \((e_1, \dots, e_n)\) ergänzen.
+\end{anwendung}
