@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.0
-lastDocument=01-kurventheorie.tex
+lastDocument=packages.tex
 masterDocument=
 name=Differentialgeometrie-SS12-Pabel
 pkg_extIsRegExp=false
@@ -122,7 +122,7 @@ order=3
 
 [item:packages.tex]
 archive=true
-column=40
+column=78
 encoding=UTF-8
 highlight=LaTeX
 line=15
@@ -177,7 +177,7 @@ CursorColumn=0
 CursorLine=4
 
 [view-settings,view=0,item:packages.tex]
-CursorColumn=40
+CursorColumn=78
 CursorLine=15
 
 [view-settings,view=0,item:symbols.tex]
