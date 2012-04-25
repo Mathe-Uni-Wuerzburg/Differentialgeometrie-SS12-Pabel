@@ -1,18 +1,18 @@
 \chapter{Lokale Kurventheorie im euklidischen Raum}
 \section{Grundbegriffe der Kurventheorie}
-Wir betrachten zunächst (kurzzeitig) rein affingeometrische Begriffe/Invarianten.
+Wir betrachten zunächst (kurzzeitig) rein \uline{affingeometrische} Begriffe/Invarianten.
 \begin{definition}
- Ein \uline{\(\C^r\)-Weg} oder eine \uline{parametrisierte \(\C^r\)-Kurve} (\(r\ge 0\)) [\(\C^r = r\)-mal stetig differenzierbar] im (affinen) \(\IR^n\) ist eine \(\C^r\)-Abbildung 
+ Ein \uline{\(\C^r\)-Weg}\index{\(\C^r\)-Weg} oder eine \uline{parametrisierte \(\C^r\)-Kurve}\index{\(\C^r\)-Kurve} (\(r\ge 0\)) [\(\C^r = r\)-mal stetig differenzierbar] im (affinen) \(\IR^n\) ist eine \(\C^r\)-Abbildung 
 \[
  c: t\in I \subset \IR \mapsto c(t)\in \IR^n
 \]
 eines offenen Intervalls \(I\) in den \(\IR^n\). \\
-\(t\) heißt \uline{Parameter}, die Bildmenge \(c[I] \subset \IR^n\) die \uline{Spur des Weges}. \\
-Ein \(\C^r\)-Weg (\(n\ge 1\)) heißt \uline{regulär}, wenn überall der \uline{Tangentenvektor} \(\dot c(t) = \frac{\dd c}{\dd t}(t) \ne 0\) ist. Nichtreguläre Punkte \(c(t_0)\) mit \(\dot c(t_0)=0\) heißen \uline{Singularitäten}.
+\(t\) heißt \uline{Parameter}\index{Parameter}, die Bildmenge \(c[I] \subset \IR^n\) die \uline{Spur des Weges}\index{Spur}. \\
+Ein \(\C^r\)-Weg (\(r\ge 1\)) heißt \uline{regulär}\index{regulär}, wenn überall der \uline{Tangentenvektor}\index{Tangentenvektor} \(\dot c(t) = \frac{\dd c}{\dd t}(t) \ne 0\) ist. Nichtreguläre Punkte \(c(t_0)\) mit \(\dot c(t_0)=0\) heißen \uline{Singularitäten}\index{Singularität}.
 \end{definition}
 \uline{Kinematische Interpretation:} \\
 \(t \mapsto c(t)\) beschreibt die \uline{zeit}abhängige Bewegung eines Punktes im \(\IR^n\).
-\(\dot c\) ist die vektorielle Geschwindigkeit (und im euklidischen \(\IR^n\) \(w:= | \dot c|\) die skalare Geschwindigkeit).
+\(\dot c\) ist die vektorielle Geschwindigkeit\index{Geschwindigkeit} (und im euklidischen \(\IR^n\) \(w:= | \dot c|\) die skalare Geschwindigkeit).
 
 \begin{bsp}\(\)
 \begin{enumerate}
@@ -43,7 +43,7 @@ sind Parametrisierungen von Kreisstücken.
 Wege,  die nur mit veränderlicher "`Zeitskala"' durchlaufen werden, sollen nicht als verschieden angesehen werden.
 \begin{definition}
  \(I, \tilde I \subset \IR\) seien offene Intervalle. \\
-Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\)-äquivalent} (\(r\ge 0 \)), wenn ein orientierungstreuer (d.h. monoton wachsender) \(\C^r\)-Diffiomorphismus \(\Phi : I \to \tilde I\) existiert, mit
+Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\)-äquivalent}\index{\(\C^r\)-Äquivalenz} (\(r\ge 0 \)), wenn ein orientierungstreuer\index{orientierungstreu} (d.h. monoton wachsender) \(\C^r\)-Diffeomorphismus\index{Diffeomorphismus} \(\Phi : I \to \tilde I\) existiert, mit
 \[
  \uline{c= \tilde c \circ \Phi}, \text{ d.h. } \uline{\forall_t c(t)=\tilde c (\Phi(t))}
 \]
@@ -52,7 +52,7 @@ Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\
 
 \begin{bemerkung} \(\)
  \begin{enumerate}
-  \item[0.] \(\Phi \, \C^r\)-Diffeomorphismus \(\Leftrightarrow \Phi\) bijektiv und \(\Phi\) \uline{und \(\Phi^{-1}\)}\, \(C^r\)-differenzierbar. 
+  \item[0.] \(\Phi \, \C^r\)-Diffeomorphismus\index{Diffeomorphismus} \(\Leftrightarrow \Phi\) bijektiv und \(\Phi\) \uline{und \(\Phi^{-1}\)}\, \(C^r\)-differenzierbar. 
   [Bsp.: \(\Phi: t \in \IR \to t^3 \in \IR\) ist \uline{kein} \(\C^1\)-Diffeomorphismus] \\
   Bei \(C^r\)-Diffeomorphismus ist stets \(\dot \Phi(t)\ne 0\) (falls \(r\ge 1\))
   \item[1.] \(\Phi\) ist (für \(r\ge 1\)) genau dann orientierungstreu, wenn überall \(\dot \Phi(t)>0\) ist.
@@ -65,11 +65,11 @@ Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\
 \end{bemerkung}
 
 \begin{definition}
- Eine (orientierte, reguläre) \uline{\(\C^r\)-Kurve} (\(r\ge1\)) im (affinen) \(\IR^n\) ist eine Äquivalenzklasse \([c]\) von regulären \(\C^r\)-Wegen \(c : I \subset \IR \to \IR^n\). Ein Repräsentant heißt eine (zulässige) \uline{Parametrisierungen} der \(\C^r\)-Kurve, eine die Äquivalenz vermittelnde Abbildung \(\Phi\) eine (zulässige) \uline{Parametertransformation}.
+ Eine (orientierte, reguläre) \uline{\(\C^r\)-Kurve} (\(r\ge1\)) im (affinen) \(\IR^n\) ist eine Äquivalenzklasse \([c]\) von regulären \(\C^r\)-Wegen \(c : I \subset \IR \to \IR^n\). Ein Repräsentant heißt eine (zulässige) \uline{Parametrisierungen}\index{Parametrisierung} der \(\C^r\)-Kurve, eine die Äquivalenz vermittelnde Abbildung \(\Phi\) eine (zulässige) \uline{Parametertransformation}\index{Parametertransformation}.
 \end{definition}
 
 \begin{bsp}
- Die "`Kreis"'-Darstellungen 
+ Die "`Kreis"'-Darstellungen\index{Kreis} 
  \[
  t \mapsto c(t)=\begin{pmatrix}
                  \cos t \\
@@ -94,7 +94,7 @@ mit
 
 \begin{bemerkung}
  Nicht jedes 1-dimensionale "`Gebilde"' im \(\IR^n\) (z.B. eine vollständige Kreislinie) lässt sich global und injektiv als Bild eines offenen Intervalls darstellen. \\
- Objekte, die sich nur lokal so parametrisieren lassen, heißen (1-dimensionale) differenzierbare Mannigfaltigkeiten. Für lokale Untersuchungen ist eine solche Erweiterung der Kurvenbegriffs nicht nötig.
+ Objekte, die sich nur lokal so parametrisieren lassen, heißen (1-dimensionale) differenzierbare Mannigfaltigkeiten\index{Mannigfaltigkeit}. Für lokale Untersuchungen ist eine solche Erweiterung der Kurvenbegriffs nicht nötig.
 \end{bemerkung}
 
 Die bisher eingeführten Begriffe sind offensichtlich affin-invariant. Aber im Folgenden sind auch nur Eigenschaften von \uline{Kurven} von Interesse, also Eigenschaften, die nicht von der Parametrisierung abhängen. \\
@@ -107,11 +107,11 @@ Hier ein Beispiel aus der rein affinen Differentialgeometrie.
 \end{bsp}
 
 \begin{satz}\label{satz111}
- \(t \mapsto c(t)\) sei Parameterdarstellung einer \(\C^r\)-Kurve im (affinen) \(\IR^n\) mit \(r \ge n\). Dann sind die Ableitungsvektoren 
+ \(t \mapsto c(t)\) sei Parameterdarstellung einer \(\C^r\)-Kurve im (affinen) \(\IR^n\) mit \(r \ge n\). Dann sind die Ableitungsvektoren\index{Ableitungsvektor} 
  \[
   c_p:= \frac{\dd^p c}{\dd t^p} \, (p=1,\dots, n)
  \]
-\uline{nicht} invariant gegenüber Parametertransformationen, jedoch die (punktualen, orientierten) \uline{Schmieg}-\uline{räume} (oskulierende Räume, "`osculating spaces"') 
+\uline{nicht} invariant gegenüber Parametertransformationen, jedoch die (punktualen, orientierten) \uline{Schmieg}-\uline{räume}\index{Schmiegraum} (oskulierende Räume, "`osculating spaces"') 
 \[
  S_p(t):= c(t) + \langle \langle c_1(t), \dots , c_p(t) \rangle \rangle
 \]
@@ -173,7 +173,7 @@ Zunächst gilt offensichtlich
   \[
    \forall_t \dim S_{p+1}(t) < p+1
   \]
-  d.h. der (\(p+1\))-te Schmiegraum degeneriert.
+  d.h. der (\(p+1\))-te Schmiegraum degeneriert\index{Schmiegraum!degeneriert}.
   \item[b)] Gilt umgekehrt 
   \[
    \forall_t \dim S_{p+1}(t) = \dim S_p(t) \stackrel{!}{=} p
@@ -188,14 +188,14 @@ Zunächst gilt offensichtlich
   \big["`\(\Rightarrow\)"' nach a), "`\(\Leftarrow\)"' nach b), da \([c]\) regulär\big]
  \end{enumerate}
  \begin{definition}
-  Ein (regulärer) Kurvenpunkt \(c(t)\) heißt \uline{Wendepunkt} (WP, inflection point), falls \(\big(\dot c(t), \ddot c(t)\big)\) linear abhängig ist.
+  Ein (regulärer) Kurvenpunkt \(c(t)\) heißt \uline{Wendepunkt}\index{Wendepunkt} (WP, inflection point), falls \(\big(\dot c(t), \ddot c(t)\big)\) linear abhängig ist.
  \end{definition}
  \begin{enumerate}
-  \item[2.] Eine \uline{wendepunktfreie} \(\C^3\)-Kurve \([c]\) im \(\IR^n\) verläuft genau dann \uline{in einer Ebene}, wenn \\ 
+  \item[2.] Eine \uline{wendepunktfreie}\index{Wendepunkt!-frei} \(\C^3\)-Kurve \([c]\) im \(\IR^n\) verläuft genau dann \uline{in einer Ebene}, wenn \\ 
   \(\forall_t \big( \dot c(t), \ddot c(t), \dddot c(t) \big) \) linear abhängig ist.
  \end{enumerate}
  \begin{definition}
-  Ein \uline{Nicht-Wendepunkt} \(\dot c(t)\) heißt "`\uline{Henkelpunkt}"' (handle point), wenn \( \big( \dot c(t), \ddot c(t), \dddot c(t) \big) \) linear abhängig ist.
+  Ein \uline{Nicht-Wendepunkt}\index{Nicht-Wendepunkt} \(c(t)\) heißt "`\uline{Henkelpunkt}"'\index{Henkelpunkt} (handle point), wenn \( \big( \dot c(t), \ddot c(t), \dddot c(t) \big) \) linear abhängig ist.
  \end{definition}
 
 \end{anwendung}
@@ -208,7 +208,7 @@ Zunächst gilt offensichtlich
    &\overset{p+1}{\underset{l=1}\forall} \forall_t \quad c_l(t)= c^{(l)}(t) = \sum_{k=1}^p \lambda_k^{(l)}(t)\cdot a_k \in \hl a_1, \dots, a_p \hr \Rightarrow \\
    & \forall_t \quad \dim S_{p+1}(t) \le p < p
   \end{align*}
-  \item[b)] Nach Voraussetzung ist \((c_1, \dots, c_p)(t) \) linear unabhängig, aber \(c_1, \dots, c_{p+1})(t) \) linear abhängig. Es existieren also Funktionen \(t \mapsto \lambda_0(t), \dots, \lambda_{p_1}(t)\) mit 
+  \item[b)] Nach Voraussetzung ist \((c_1, \dots, c_p)(t) \) linear unabhängig, aber \((c_1, \dots, c_{p+1})(t) \) linear abhängig. Es existieren also Funktionen \(t \mapsto \lambda_0(t), \dots, \lambda_{p-1}(t)\) mit 
   \begin{align*}
    c_{p+1} = \sum_{k=1}^p \lambda_{k-1} c_k \text{ bzw. } \uline{(\dot c)^{(p)} = \sum_{k=0}^{p-1} \lambda_k (\dot c)^k} \tag{\(\ast\)}
   \end{align*}
@@ -242,4 +242,167 @@ Zunächst gilt offensichtlich
   denn aus \(\dim U_p = k < p\) folgt nach a), dass \( \dim S_{k+1} < k+1 \), also auch \(\dim S_p <p\) im Widerspruch zur Voraussetzung.
  \end{enumerate}
   
+\end{beweis}
+
+Ab jetzt arbeiten wir im orientierten, \uline{euklidischen} Raum. Hier gibt es zum Glück in jeder Äquivalenzklasse von Wegen einen ausgezeichneten Repräsentanten, die \uline{Bogenlängenparametrisierung} (kurz: BLP).
+
+\begin{satz}\label{satz113}
+ Sei \(t \mapsto c(t)\) Parameterdarstellung einer \(\C^1\)-Kurve im euklidischen\index{euklidisch} \(\IR^n\). Dann gibt es (bis auf eine additive Konstante) genau eine zulässige Parametertransformation 
+ \[
+  t \mapsto s(t) = \int|\dot c (t)| \dd t \, [+ s_0]
+ \]
+ (genannt Bogenlängenfunktion)\index{Bogenlängenfunktion}, so dass in der neuen Bogenlängenparametrisierung\index{Bogenlängenparametrisierung}
+ \(
+  \overline c = c \circ s^{-1}
+ \)
+ gilt
+ \[
+ \uline{|\overline c' | = 1}
+ \]
+ Die Konstruktion ist unabhängig von der Ausgangsparametrisierung.
+\end{satz}
+
+\uline{Kinematische Interpretation}: \\
+In Bogenlängenparametrisierung wird die Kurve mit konstanter Geschwindigkeit \(w = |\overline c'| \equiv 1\) durchlaufen ("`Zeit \(=\) Weg"'). Solche Wege heißen auch normal\index{normal}.
+
+\begin{beweis}[von Satz \ref{satz113}]
+ Für die gesuchte Transformation \(s\) muss wegen 
+ \[
+ c = \overline c \circ s \Rightarrow |\dot c| = \underbrace{|\overline c' \circ s|}_{= 1} \underbrace{\dot s}_{> 0}
+ \]
+ gelten: 
+ \[
+ \dot s = |\dot c|
+ \]
+Eine Stammfunktion 
+ \[
+ s = \int |\dot c|
+ \]
+leistet das Gewünschte, da sie \(\C^1\)-differenzierbar ist, mit 
+\(
+\dot s = |\dot c| > 0
+\)
+(wegen der Regularität von \(c\)). \\
+ Für eine äquivalente Parametrisierung \(\tilde c\) mit \(c = \tilde c \circ \Phi\) der Kurve erhält man
+ \[
+  \dot s = |\dot c| = |\dot{\tilde c} \circ \Phi| \underbrace{\dot \Phi}_{> 0} = (\tilde s \circ \Phi) \cdot \dot \Phi
+ \]
+ also gilt 
+ \[s = \tilde s \circ \Phi \, (+ s_0)\] 
+ und damit \[\overline c = c \circ s^{-1} = (\tilde c \circ \Phi) \circ (\tilde s \circ \Phi)^{-1} = \tilde c \circ \Phi \circ \Phi^{-1} \circ \tilde s^{-1} = \tilde c \circ \tilde s^{-1} = \overline{\tilde c}\]
+\end{beweis}
+
+\begin{bemerkung}
+ Mit der Bogenlängenfunktion \(t \mapsto s(t)\) kann man die \uline{Länge}\index{Weg!-länge} eines \(\C^1\)-Wegstücks \\
+ \(t \in [a,b] \subset I \mapsto c(t) \in \IR^n\) messen.
+ \[
+  L_a^b(c) = s(b) - s(a) = \int_a^b |\dot c(t)| \dd t
+ \]
+ Diese erhält man aus den Längen einbeschriebener Polygonzüge durch Verfeinern und Grenzüber\-gänge. \(\C^1\)-Wege sind rektifizierbar.
+\end{bemerkung}
+
+\textbf{\uline{Praktische Berechnung der Bogenlängenparametrisierung}}\index{Bogenlängenparametrisierung!Berechnung} (Schreibweise schlampig): 
+\begin{enumerate}
+ \item Man berechne \mat{s = s(t) = \int |\dot c(t)| \dd t}
+ \item bilde die Umkehrfunktkion \(t=t(s)\)
+ \item und bilde \(c(s) = c\big(t(s)\big)\)
+\end{enumerate}
+
+\Links
+
+\begin{bsp}
+ Ellipse\index{Ellipse} \(t \mapsto c(t) = \vxy{a \cos t}{b \sin t}\) im \(\IR^2\) mit Halbachsen \(0 < a < b\)
+ \begin{align*}
+  \frac{\dd s}{\dd t}(t) &= |\dot c(t)| = \sqrt{a^2 \sin^2 t + b^2 \cos^2 t} \\
+  &= b \cdot \sqrt{1 - \left[1-\left(\frac ab\right)^2\right] \sin^2 t} = b \cdot \sqrt{1-k^2 \sin^2 t} \\
+  \Rightarrow s(t) &= b \cdot E(k,t) \, [+ s_0] \quad \text{(Elliptisches Integral 2. Gattung, nicht elementar integrierbar)}
+ \end{align*}
+ Für einen Kreis (\(a = b = r\)) gilt \(k = 0\) also
+ \begin{align*}
+  s &= s(t)=r \cdot t \tag {1.}\\
+  t &= t(s) = \frac sr \quad \text{also} \tag {2.}\\
+  c(s) &= \vxy{r \cos \frac sr}{r \sin \frac sr} \tag {3.}
+ \end{align*}
+\end{bsp}
+
+\textbf{\uline{Ergebnis}:} \\
+Bei Verwendung der Bogenlängenparametrisierung erhält man zwar immer sofort Größen, die invariant gegenüber Parametertransformationen sind.\\
+\uline{Aber} meist lässt sie sich nicht explizit bestimmen und ist nur für theoretische Zwecke brauchbar. \\
+\uline{Ausweg}: siehe später \\\\
+Allgemein zu \uline{Bezeichnungen} (schlampig, aber praktisch)
+
+\begin{tabular}{c||c|c}
+ & bei bel. Par.-Darst. & in BLP \\
+ \hline
+ \hline
+ Parameter & \(t\) [Zeit] & \(s\) [Weg] \\
+ \hline
+ Parameterdarstellung & \(t \mapsto c(t)\) & \(s \mapsto c(s)\) \\
+ \hline
+ Ableitungen & \(\dot c, \ddot c, \dddot c, \dots\) [Zeitabl.] & \(c', c'', c''', \dots\) [Abl. nach BL] 
+\end{tabular} \\\\
+Es gilt 
+\[
+ \dot c = c' \circ \dot s, \ddot c = c'' \cdot \dot s^2 + c' \ddot s, \dots
+\]
+
+\section{Kurven in der euklidischen Ebene $\IR^2$}
+siehe Übungen
+\section{Kurven im euklidischen Raum $\IR^3$}
+\uline{Vorgehensweise} (in jeder Kurven- und Flächentheorie): \\
+Konstruktion einer (möglichst invarianten) \uline{Begleitbasis} der Kurve ("`moving frame"'). Ihre \uline{Ableitungs}-\uline{gleichungen} liefern Invarianten für die Kurve, u.a. ihre \uline{Krümmungen}.
+
+\subsection{FRENET-Begleitbasis, Krümmung und Torsion}
+Die \uline{Krümmung}\index{Krümmung} einer Raumkurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) soll deren Abweichung vom \uline{geradlinigen Verlauf} messen. Diese wird bestimmt durch die Änderung des (invarianten) Tangenteneinheitsvektors\index{Tangenteneinheitsvektor}
+\[
+T := c' = \frac{\dd c}{\dd s}
+\]
+\begin{satz}\label{satz131}
+Für die \uline{Krümmung}\index{Krümmung}
+\[
+ s \mapsto \kappa(s) := |T'(s)| = |c''(s)| \ge 0
+\]
+einer \(\C^2\)-Kurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) gilt
+\begin{enumerate}
+ \item[a)] \(\kappa(s_0)=0 \, \Leftrightarrow \,c(s_0)\) Wendepunkt
+ \item[b)] \(\kappa \equiv 0 \, \Leftrightarrow\) die Kurve verläuft geradlinig
+\end{enumerate}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz131}] \(\)
+ \begin{enumerate}
+  \item[a)] \(\kappa(s_0) = 0 \, \Leftrightarrow \, T'(s_0) = 0 {{\color{red}\Leftarrow} \atop \Rightarrow} (c', c'')(s_0) = (T, T')(s_0)\) linear abhängig \\
+  \(\Leftrightarrow \, c(s_0)\) ist Wendepunkt \\
+  Für die {\color{red}Rückrichtung} wird benötigt: \\
+   \[|T|^2 = \langle T,T\rangle = 1 \Rightarrow 2 \langle T',T\rangle = 0 \Rightarrow T' \perp T\] \\
+   also \((T,T')(s_0)\) linear abhängig \(\Rightarrow T'(s_0)=0\)
+   \item[b)] nach Satz \ref{satz112}, Anwendung 1 oder direkt
+   \[
+    \kappa \equiv 0 \Leftrightarrow T'= c'' = 0 \Leftrightarrow c(s) = x_0 + s \cdot X
+   \]
+ \end{enumerate}
+\end{beweis}
+Noch ein \uline{Test}, ob der Name "`Krümmung"' gerechtfertigt ist: \\
+Für einen \uline{Kreis} in Bogenlängenparametrisierung \(s \mapsto c(s) = r \vxyz{\cos \frac sr}{\sin \frac sr}{0}\) im \(\IR^3\) gilt
+\begin{align*}
+ T(s) &= \vxyz{-\sin \frac sr}{\cos \frac sr}{0} \\
+ T'(s) &= \frac 1r \vxyz{-\cos \frac sr}{-\sin \frac sr}{0} \\
+ \kappa(s) &= \frac 1r
+\end{align*}
+
+\begin{satz}\label{satz132}
+ Sei \(s \mapsto c(s)\) Bogenlängenparametrisierung einer \uline{wendepunktfreien} \(\C^2\)-Kurve im orientierten, euklidischen \(\IR^3\). Dann bilden die Vektorfelder
+ \begin{align*}
+  &s \mapsto T(s) := c'(s) & \text{[Tangentenvektor]} \\
+  &s \mapsto H(s) := \frac{T'(s)}{|T'(s)|} & \text{[Hauptnormalenvektor]} \\
+  &s \mapsto B(s) := (T \times H)(s) & \text{[Binormalenvektor]}
+ \end{align*}\index{Hauptnormalenvektor}\index{Tangentenvektor}\index{Binormalenvektor}
+ eine orthonormierte, positiv orientierte \(\C^0\)-Begleitbasis\index{Begleitbasis} der Kurve, genannt \uline{\textsc{Frenet}-Begleitbasis}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz132}]
+ \begin{align*}
+  T'\perp T, T' \ne 0 \Rightarrow H \text{ definiert; Rest klar}
+ \end{align*}
+
 \end{beweis}

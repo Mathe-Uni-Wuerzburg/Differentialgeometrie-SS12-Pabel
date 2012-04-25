@@ -1,22 +1,22 @@
 \chapter{Grundbegriffe und Bezeichnungen aus der linearen Algebra und analytischen Geometrie}
   
-  Die klassische Differentialgeometrie der Kurven und Flächen benutzt als umgebenden Raum einen \(n\)-dimensionalen, orientierten, euklidischen Raum \(E^n\) mit zugehörigem euklischem Richtungsvektorraum \(V^n\).
+  Die klassische Differentialgeometrie der Kurven und Flächen benutzt als umgebenden Raum einen \(n\)-dimensionalen, orientierten, euklidischen Raum \(E^n\) mit zugehörigem euklischem Richtungsvektorraum \(V^n\)\index{Vektor}.
 
 \section{Strukturen}
-\(V^n\) ist mit einem Skalarprodukt \((X,Y) \mapsto \langle X, Y \rangle \in \IR\) ausgestattet. 
+\(V^n\) ist mit einem Skalarprodukt\index{Skalarprodukt} \((X,Y) \mapsto \langle X, Y \rangle \in \IR\) ausgestattet. 
 Damit lassen sich messen:
   \begin{itemize}
-   \item die Länge von Vektoren \(X\): \(|X| = \sqrt{ \langle X,X \rangle }\)
-   \item die Orthogonalität von Vektoren \(X, Y\): \(X \perp Y \Leftrightarrow \langle X, Y \rangle = 0\)
-   \item der Winkel zwischen zwei Vektoren \(X, Y\): \(\cos \angle (X, Y) = \left\langle \frac{X}{|X|}, \frac{Y}{|Y|} \right\rangle \)
-   \item der Abstand von Punkten \(p, q\): \(\dd(p,q) = | \vv{pq} | \)
+   \item die Länge\index{Vektor!-länge} von Vektoren \(X\): \(|X| = \sqrt{ \langle X,X \rangle }\)
+   \item die Orthogonalität\index{Vektor!orthogonal} von Vektoren \(X, Y\): \(X \perp Y \Leftrightarrow \langle X, Y \rangle = 0\)
+   \item der Winkel\index{Vektor!Winkel} zwischen zwei Vektoren \(X, Y\): \(\cos \angle (X, Y) = \left\langle \frac{X}{|X|}, \frac{Y}{|Y|} \right\rangle \)
+   \item der Abstand\index{Vektor!Abstand} von Punkten \(p, q\): \(\dd(p,q) = | \vv{pq} | \)
    \item Flächeninhalte, Volumina, usw.
   \end{itemize}
-Ist zusätzlich eine feste Orthonormalbasis \( (\mathring{e_1}, ... \mathring{e_n}) \) (definiert durch \( \langle \mathring{e_i}, \mathring{e_k} \rangle = \delta_{ik} \)) ausgezeichnet als positiv orientiert, erhält man eine Orientierung des Raumes und kann alle Basen in positiv und negativ orientierte einteilen.
+Ist zusätzlich eine feste Orthonormalbasis\index{Orthonormalbasis} \( (\mathring{e_1}, ... \mathring{e_n}) \) (definiert durch \( \langle \mathring{e_i}, \mathring{e_k} \rangle = \delta_{ik} \)) ausgezeichnet als positiv orientiert, erhält man eine Orientierung des Raumes und kann alle Basen in positiv und negativ orientierte einteilen.
   
-\paragraph*{Standard-Modell:} \(E^n = V^n = \IR^n\), ausgestattet mit dem Standard-Skalarprodukt \(\langle X, Y \rangle = \sum_{i=1}^n X^iY^i\) und der (positiv orientierten) Standardbasis \(\mathring{e_1}, ... \mathring{e_n})\) mit \(\mathring{e_i} = (0, \dots, 1, \dots, 0)^T\).
+\paragraph*{Standard-Modell:} \(E^n = V^n = \IR^n\), ausgestattet mit dem Standard-Skalarprodukt\index{Standard-Skalarprodukt} \(\langle X, Y \rangle = \sum_{i=1}^n X^iY^i\) und der (positiv orientierten) Standardbasis\index{Standardbasis} \(\mathring{e_1}, ... \mathring{e_n})\) mit \(\mathring{e_i} = (0, \dots, 1, \dots, 0)^T\).
 Dieses Standardmodell reicht bei uns meist aus:
-Bezüglich eines kartesischen Koordinatensystems \((0; e_1, ... e_n)\) in einem abstrakten, orientierten euklidschen Raum \(E^n\), bestehend aus 
+Bezüglich eines kartesischen Koordinatensystems\index{kartesisches Koordinatensystem} \((0; e_1, ... e_n)\) in einem abstrakten, orientierten euklidschen Raum \(E^n\), bestehend aus 
   \begin{itemize}
    \item einem "`Ursprung"' ("`Nullpunkt"') \(0 \in E^n\)
    \item einer positiv orientierten Orthonormalbasis \((e_1, ... e_n)\) im \(V^n\)
@@ -34,10 +34,10 @@ das Standard-Skalarprodukt im \(\IR^n\).
 Man ist im Stanard-Modell angelangt.
 Ein Wechsel des kartesischen Koordinatensystems im \(E^n\) induziert im Koordinatenraum \(\IR^n\) eine \defNotion{Bewegung} \[p \mapsto p' = Dp + t\] bestehend aus einer eigentlichen orthogonalen Drehmatrix \(D \in SO(u, \IR)\) mit \(\det D = +1\) und einem Translationsvektor \(t \in \IR^n\).
 In der euklidschen Differentialgeometrie werden Eigenschaften von Objekten (Kurven, Flächen, ...) untersucht, die invariant gegenüber solchen Transformationen sind, also nicht vom gewählten kartesischen Koordinatensystem abhängig sind. \\
-  \begin{bemerkung} In der sogenannten affinen Differentialgeometrie untersucht man Eigenschaften von Objekten, die (in Koordinaten) invariant sind gegenüber beliebigen affinen Transformationen \(p \mapsto p' = Ap + t\), \(A\) regulär. Man ignoriert dort vollständig die metrische Struktur des \(\IR^n\).
+  \begin{bemerkung} In der sogenannten affinen\index{affin} Differentialgeometrie untersucht man Eigenschaften von Objekten, die (in Koordinaten) invariant sind gegenüber beliebigen affinen Transformationen \(p \mapsto p' = Ap + t\), \(A\) regulär. Man ignoriert dort vollständig die metrische Struktur des \(\IR^n\).
   Der umgebende Raum ist dann ein \defNotion{affiner Punktraum} (bei uns nur am Rande betrachtet).
   \end{bemerkung}
-Zum \uline{Vektorprodukt} (Kreuzprodukt) im orientierten euklidischen \(\IR^n\): \\
+Zum \uline{Vektorprodukt\index{Vektorprodukt}} (Kreuzprodukt\index{Kreuzprodukt}) im orientierten euklidischen \(\IR^n\): \\
   Zu je \(n-1\) Vektoren \(X_1, \dots, X_{n-1} \in \IR^n (n\ge 2)\) gibt es genau einen Vektor \(Y\in \IR^n\) mit den Eigenschaften
   \begin{enumerate}
    \item \(Y \perp X_k, (k = 1, \dots, n-1) \)
