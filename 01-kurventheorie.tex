@@ -2,7 +2,7 @@
 \section{Grundbegriffe der Kurventheorie}
 Wir betrachten zunächst (kurzzeitig) rein \uline{affingeometrische} Begriffe/Invarianten.
 \begin{definition}
- Ein \uline{\(\C^r\)-Weg}\index{\(\C^r\)-Weg} oder eine \uline{parametrisierte \(\C^r\)-Kurve}\index{\(\C^r\)-Kurve} (\(r\ge 0\)) [\(\C^r = r\)-mal stetig differenzierbar] im (affinen) \(\IR^n\) ist eine \(\C^r\)-Abbildung 
+ Ein \uline{\(\C^r\)-Weg}\index{Weg} oder eine \uline{parametrisierte \(\C^r\)-Kurve}\index{Kurve} (\(r\ge 0\)) [\(\C^r = r\)-mal stetig differenzierbar] im (affinen) \(\IR^n\) ist eine \(\C^r\)-Abbildung 
 \[
  c: t\in I \subset \IR \mapsto c(t)\in \IR^n
 \]
@@ -10,10 +10,10 @@ eines offenen Intervalls \(I\) in den \(\IR^n\). \\
 \(t\) heißt \uline{Parameter}\index{Parameter}, die Bildmenge \(c[I] \subset \IR^n\) die \uline{Spur des Weges}\index{Spur}. \\
 Ein \(\C^r\)-Weg (\(r\ge 1\)) heißt \uline{regulär}\index{regulär}, wenn überall der \uline{Tangentenvektor}\index{Tangentenvektor} \(\dot c(t) = \frac{\dd c}{\dd t}(t) \ne 0\) ist. Nichtreguläre Punkte \(c(t_0)\) mit \(\dot c(t_0)=0\) heißen \uline{Singularitäten}\index{Singularität}.
 \end{definition}
-\uline{Kinematische Interpretation:} \\
+\begin{kin}
 \(t \mapsto c(t)\) beschreibt die \uline{zeit}abhängige Bewegung eines Punktes im \(\IR^n\).
 \(\dot c\) ist die vektorielle Geschwindigkeit\index{Geschwindigkeit} (und im euklidischen \(\IR^n\) \(w:= | \dot c|\) die skalare Geschwindigkeit).
-
+\end{kin}
 \begin{bsp}\(\)
 \begin{enumerate}
  \item \uline{Peano-Kurve}: Stetiger (\(\C^0\)-)Weg im \(\IR^2\), dessen Spur jeden Punkt eines Gebietes \(G\subseteq \IR^2\) ausfüllt (nirgends differenzierbar, "`unbrauchbar"')
@@ -43,7 +43,7 @@ sind Parametrisierungen von Kreisstücken.
 Wege,  die nur mit veränderlicher "`Zeitskala"' durchlaufen werden, sollen nicht als verschieden angesehen werden.
 \begin{definition}
  \(I, \tilde I \subset \IR\) seien offene Intervalle. \\
-Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\)-äquivalent}\index{\(\C^r\)-Äquivalenz} (\(r\ge 0 \)), wenn ein orientierungstreuer\index{orientierungstreu} (d.h. monoton wachsender) \(\C^r\)-Diffeomorphismus\index{Diffeomorphismus} \(\Phi : I \to \tilde I\) existiert, mit
+Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\)-äquivalent}\index{Äquivalenz} (\(r\ge 0 \)), wenn ein orientierungstreuer\index{orientierungstreu} (d.h. monoton wachsender) \(\C^r\)-Diffeomorphismus\index{Diffeomorphismus} \(\Phi : I \to \tilde I\) existiert, mit
 \[
  \uline{c= \tilde c \circ \Phi}, \text{ d.h. } \uline{\forall_t c(t)=\tilde c (\Phi(t))}
 \]
@@ -65,7 +65,7 @@ Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\
 \end{bemerkung}
 
 \begin{definition}
- Eine (orientierte, reguläre) \uline{\(\C^r\)-Kurve} (\(r\ge1\)) im (affinen) \(\IR^n\) ist eine Äquivalenzklasse \([c]\) von regulären \(\C^r\)-Wegen \(c : I \subset \IR \to \IR^n\). Ein Repräsentant heißt eine (zulässige) \uline{Parametrisierungen}\index{Parametrisierung} der \(\C^r\)-Kurve, eine die Äquivalenz vermittelnde Abbildung \(\Phi\) eine (zulässige) \uline{Parametertransformation}\index{Parametertransformation}.
+ Eine (orientierte, reguläre) \uline{\(\C^r\)-Kurve} (\(r\ge1\)) im (affinen) \(\IR^n\) ist eine Äquivalenz-klasse \([c]\) von regulären \(\C^r\)-Wegen \(c : I \subset \IR \to \IR^n\). Ein Repräsentant heißt eine (zulässige) \uline{Parametrisierungen}\index{Parametrisierung} der \(\C^r\)-Kurve, eine die Äquivalenz vermittelnde Abbildung \(\Phi\) eine (zulässige) \uline{Parametertransformation}\index{Parametertransformation}.
 \end{definition}
 
 \begin{bsp}
@@ -169,7 +169,7 @@ Zunächst gilt offensichtlich
 
 \begin{satz}\label{satz112} \(\)
  \begin{enumerate}
-  \item[a)] Liegt eine \(\C^{p+1}\)-Kurve in einem \(p\)-dimensionalen affinen Unterraum des \(\IR^n\) (\(1 \le +p \le n-1 \)), so ist
+  \item[a)] Liegt eine \(\C^{p+1}\)-Kurve in einem \(p\)-dimensionalen affinen Unterraum des \(\IR^n\) (\(1 \le p \le n-1 \)), so ist
   \[
    \forall_t \dim S_{p+1}(t) < p+1
   \]
@@ -244,7 +244,7 @@ Zunächst gilt offensichtlich
   
 \end{beweis}
 
-Ab jetzt arbeiten wir im orientierten, \uline{euklidischen} Raum. Hier gibt es zum Glück in jeder Äquivalenzklasse von Wegen einen ausgezeichneten Repräsentanten, die \uline{Bogenlängenparametrisierung} (kurz: BLP).
+Ab jetzt arbeiten wir im orientierten, \uline{euklidischen} Raum. Hier gibt es zum Glück in jeder Äqui\-va\-lenzklasse von Wegen einen ausgezeichneten Repräsentanten, die \uline{Bogenlängenparametrisierung} (kurz: BLP).
 
 \begin{satz}\label{satz113}
  Sei \(t \mapsto c(t)\) Parameterdarstellung einer \(\C^1\)-Kurve im euklidischen\index{euklidisch} \(\IR^n\). Dann gibt es (bis auf eine additive Konstante) genau eine zulässige Parametertransformation 
@@ -262,8 +262,9 @@ Ab jetzt arbeiten wir im orientierten, \uline{euklidischen} Raum. Hier gibt es z
  Die Konstruktion ist unabhängig von der Ausgangsparametrisierung.
 \end{satz}
 
-\uline{Kinematische Interpretation}: \\
+\begin{kin}
 In Bogenlängenparametrisierung wird die Kurve mit konstanter Geschwindigkeit \(w = |\overline c'| \equiv 1\) durchlaufen ("`Zeit \(=\) Weg"'). Solche Wege heißen auch normal\index{normal}.
+\end{kin}
 
 \begin{beweis}[von Satz \ref{satz113}]
  Für die gesuchte Transformation \(s\) muss wegen 
@@ -330,7 +331,7 @@ Bei Verwendung der Bogenlängenparametrisierung erhält man zwar immer sofort Gr
 \uline{Aber} meist lässt sie sich nicht explizit bestimmen und ist nur für theoretische Zwecke brauchbar. \\
 \uline{Ausweg}: siehe später \\\\
 Allgemein zu \uline{Bezeichnungen} (schlampig, aber praktisch)
-
+\begin{center}
 \begin{tabular}{c||c|c}
  & bei bel. Par.-Darst. & in BLP \\
  \hline
@@ -340,7 +341,8 @@ Allgemein zu \uline{Bezeichnungen} (schlampig, aber praktisch)
  Parameterdarstellung & \(t \mapsto c(t)\) & \(s \mapsto c(s)\) \\
  \hline
  Ableitungen & \(\dot c, \ddot c, \dddot c, \dots\) [Zeitabl.] & \(c', c'', c''', \dots\) [Abl. nach BL] 
-\end{tabular} \\\\
+\end{tabular} 
+\end{center}
 Es gilt 
 \[
  \dot c = c' \circ \dot s, \ddot c = c'' \cdot \dot s^2 + c' \ddot s, \dots
@@ -397,7 +399,7 @@ Für einen \uline{Kreis} in Bogenlängenparametrisierung \(s \mapsto c(s) = r \v
   &s \mapsto H(s) := \frac{T'(s)}{|T'(s)|} & \text{[Hauptnormalenvektor]} \\
   &s \mapsto B(s) := (T \times H)(s) & \text{[Binormalenvektor]}
  \end{align*}\index{Hauptnormalenvektor}\index{Tangentenvektor}\index{Binormalenvektor}
- eine orthonormierte, positiv orientierte \(\C^0\)-Begleitbasis\index{Begleitbasis} der Kurve, genannt \uline{\textsc{Frenet}-Begleitbasis}
+ eine orthonormierte, positiv orientierte \(\C^0\)-Begleitbasis der Kurve, genannt \uline{\textsc{Frenet}-Begleitbasis}\index{Frenet-Begleitbasis}.
 \end{satz}
 
 \begin{beweis}[von Satz \ref{satz132}]
@@ -406,3 +408,161 @@ Für einen \uline{Kreis} in Bogenlängenparametrisierung \(s \mapsto c(s) = r \v
  \end{align*}
 
 \end{beweis}
+
+\begin{folgerung}
+\begin{figure}[ht]
+ \centering
+ \includegraphics[scale=0.3]{Bilder/Bsp2.jpg}
+\end{figure}
+
+ In jedem Kurvenpunkt \(c(s)\) hat man die paarweise orthogonalen \uline{Begleitebenen}\index{Begleitebene}
+ \begin{align*}
+  &c(s) + \hl T,H \hr(s) \quad \big(\perp B(s)\big) & \text{[Schmiegebene]} \\
+  &c(s) + \hl H,B \hr(s) \quad \big(\perp T(s)\big) & \text{[Normalebene]} \\
+  &c(s) + \hl B,T \hr(s) \quad \big(\perp H(s)\big) & \text{[rektifizierende Ebene]} 
+ \end{align*}\index{Schmiegebene}\index{Normalebene}\index{rektifizierende Ebene}
+\end{folgerung}
+
+Die \uline{Torsion}\index{Torsion} (Windung\index{Windung}, \uline{2. Krümmung}\index{Krümmung!2. Krümmung}) einer wendepunktfreien \(\C^3\)-Kurve (\(\Rightarrow (T,H,B) \C^1\)-differen\-zier\-bar) soll deren Abweichung vom ebenen Verlauf messen. Diese wird bestimmt durch die Änder\-ung des Binormalenvektors \(B\) (\(=\) Normalenvektor der Schmiegebene). \\
+Wegen \(\begin{Bmatrix}
+         B^2 = 1 & \Rightarrow \langle B,B'\rangle = 0  &\Rightarrow B' \perp B \\
+         B = T \times H & \Rightarrow B' = \underbrace{T' \times H}_{= 0} + T \times H' &\Rightarrow B' \perp T
+        \end{Bmatrix}\) gilt \\
+        \(B' = -\tau H\) mit einer \(\C^0\)-Funktion
+        \[
+         \tau = -\langle B', H\rangle
+        \]
+        
+\begin{satz}\label{satz133}
+ Für die durch \(B' = - \tau H\) definierte \uline{Torsion}\index{Torsion} 
+ \[
+  s \mapsto \tau(s) = - \langle B', H \rangle (s) \stackrel{H \perp B}{=} + \langle H', B \rangle (s) \stackrel{B = T \times H}{=} \det (T,H,H')(s)
+ \]
+einer \uline{wendepunktfreien} \(\C^3\)-Kurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) gilt
+\begin{enumerate}
+ \item[a)] \( \tau(s_0) = 0 \Leftrightarrow c(s)\) Henkelpunkt \(\Leftrightarrow \begin{Bmatrix}
+                                                                                  (c', c'', c''')(s_0) &\text{linear abhängig} \\
+                                                                                  (c',c'') (s_0) & \text{linear unabhängig}
+                                                                                 \end{Bmatrix}\)
+ \item[b)] \(\tau \equiv 0 \Leftrightarrow\) die Kurve verläuft eben.
+\end{enumerate}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz113}] \(\)
+ \begin{enumerate}
+  \item[a)] Allgemein gilt
+  \begin{align*}
+  \langle X \times Y, Z \rangle &= \sum_i (X \times Y)^i Z^i = \sum_{i=1}^3 \det (X,Y,e_i) Z^i \\
+  &=\det(X,Y,Z)
+  \end{align*}
+  Darau folgt
+  \begin{align*}
+   \tau(s_0) &= \det (T,H,H')(s_0) = \det \left( c', \frac{c''}{\kappa}, \left(\frac{c''}{\kappa}\right)'\right)(s_0) \\
+   &= \det \left(c', \frac{c''}{\kappa}, \left(\frac1\kappa\right)' c'' + \frac1\kappa c'''\right)(s_0) = \frac{1}{\kappa^2(s_0)} \det \left(c',c'',c'''\right)(s_0)=0
+  \end{align*}
+\(\Rightarrow (c', c'', c''')(s_0)\) linear abhängig
+  \item[b)] Nach Satz \ref{satz112}, Anwendung 2
+ \end{enumerate}
+\end{beweis}
+
+\begin{satz}\label{satz134}
+ Für die Frenet-Begleitbasis \(s \mapsto (T,H,B)(s)\) einer wendepunktfreien \(\C^3\)-Kurve gelten die Frenetschen \uline{Ableitungsgleichungen}\index{Frenet-Begleitbasis!Ableitungsgleichungen}
+ \[\begin{Bmatrix}
+  T' &= &&\kappa \cdot H \\
+  H' &= &-\kappa T &&+ \tau B \\
+  B' &= &&-\tau H
+ \end{Bmatrix} \text{bzw.}
+ {\vxyz{T}{H}{B}}' = \begin{pmatrix}
+                      0 & \kappa & 0 \\
+                      -\kappa & 0 & \tau \\
+                      0 & -\tau & 0
+                     \end{pmatrix} \vxyz{T}{H}{B}
+ \]
+mit der \(\C^1\)-Krümmung \(s \mapsto \kappa(s) > 0\) und der \(\C^0\)-Torsion \(s \mapsto \tau(s) \).
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz134}] 
+Da \((T_1, T_2, T_3) := (T,H,B)\) ein \uline{Orthonormalbasisfeld}\index{Orthonormalbasis!-feld} ist, gilt \(\langle T_i, T_k \rangle = \delta_{ik}\) \\
+ \(\Rightarrow \langle T_i', T_k \rangle = -\langle T_k', T_i \rangle\), d.h. die Ableitungsmatrix\index{Ableitungsmatrix} \((\langle T_i', T_k \rangle)_{i,k=1,2,3}\) ist \uline{schiefsymmetrisch}. Damit kann die nach Definition bekannte 1. und 3. Zeile ergänzt werden.
+\end{beweis}
+
+\uline{Problem}: Wie berechnet man Begleitbasis, Krümmung und Torsion, wenn man die Bogenlängen\-parametrisierung nicht explizit kennt? \\
+\uline{Lösung}: "`Rücktransformation"'
+
+\begin{folgerung}
+ Bezüglich einer beliebigen Parametrisierung \(t \mapsto c(t)\) einer wendepunktfreien \(\C^3\)-Kurve gilt
+ \begin{align*}
+  T &= \frac{\dot c}{|\dot c|} \\
+  B &= \frac{\dot c \times \ddot c}{|\dot c \times \ddot c|} \\
+  H &= B \times T = \frac{\ddot c - \langle \ddot c, T \rangle T}{|\ddot c - \langle \ddot c, T \rangle T|} \\
+  \kappa &= \frac{|\dot c \times \ddot c|}{|\dot c|^3} \\
+  \tau &= \frac{\det (\dot c, \ddot c, \dddot c)}{|\dot c \times \ddot c|^2}
+ \end{align*}\index{Begleitbasis!Berechnung (unbekannte BLP)}\index{Krümmung!Berechnung (unbekannte BLP)}\index{Torsion!Berechnung (unbekannte BLP)}
+
+\end{folgerung}
+
+\begin{beweis}[der Folgerung]
+ \begin{align*}
+  &\dot c = c' \cdot \dot s = c' \cdot |\dot c| \Rightarrow T = c' = \frac{\dot c}{|\dot c|} = \frac1w \dot c \\
+  &B = T \times H = \frac1\kappa T \times T' = \frac1{w \kappa} T\times \dot T = \frac1{w \kappa} \left(\frac1w \dot c \times \frac{\dd}{\dd t}{\left(\frac1w \dot c\right)}\right) = \frac1{w^3 \kappa} \dot c \times \ddot c = \frac{\dot c \times \ddot c}{|\dot c \times \ddot c|} \\
+  &\Rightarrow w^3 \kappa = |\dot c \times \ddot c| \Rightarrow \kappa = \frac{|\dot c \times \ddot c|}{w^3} = \frac{\dot c \times \ddot c}{|\dot c|^3} \\
+  &\text{usw. (siehe auch Übungen)}
+ \end{align*}
+
+\end{beweis}
+
+\begin{bemerkung}
+ Als \uline{Funktionen} sind z.B. \(s \mapsto \kappa(s)\) und \(t \mapsto \kappa(t)\) im Allgemeinen völlig verschieden, obwohl gleich bezeichnet. \\
+ Zusammenhang: \(\kappa\big(s(t)\big) = \kappa(t)\) \\
+ Analog für \(\tau, T, H, B\).
+\end{bemerkung}
+
+\textbf{\uline{Zusatz}:} (später wichtig) \\
+Die Basis \((T, H, B)\) erhält man durch Anwendung des Schmidtschen Orthonormalisierungsverfahrens\index{Schmidtsches Orthonormalisierungsverfahren} auf die Basis \((\dot c, \ddot c)\) der Schmiegebene \big(\(\rightarrow (T,H)\)\big) und Ergänzung durch \(B = T \times H\).
+
+\begin{satz}\label{satz135}
+ Äquivalent zu den Frenetschen Formeln ist
+ \[
+  {\vxyz{T}{H}{B}}' = \omega \cdot D \times \vxyz THB
+ \]
+ mit der \uline{Gesamtkrümmung}\index{Krümmung!Gesamtkrümmung}
+ \[
+  \omega = \sqrt{\kappa^2 + \tau^2}
+ \]
+ und dem (normierten) \uline{Darboux-Vektor}\index{Darboux-Vektor}
+ \[
+  D = \frac1\omega (\tau \cdot T + \kappa \cdot B)
+ \]
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz135}]
+Nachrechnen unter Verwendung von
+\[
+ B = T \times H, \quad H = B \times T, \quad T = H \times B
+\]
+\end{beweis}
+
+\begin{kin} \(\)
+\begin{figure}[ht]
+ \centering
+ \includegraphics[scale=0.4]{Bilder/Bsp3.jpg}
+\end{figure}
+
+ \(s \mapsto c(s)\) beschreibt die Bewegung aus Punkten mit konstanter Geschwindigkeit \(w = |c'| = 1\). Die Bewegung aus starr mit der Begleitbasis \((T_1,T_2,T_3) = (T, H, B)\) verbundenen Punktes
+ \[
+  P(s) = c(s) + \sum_{i=1}^3 \lambda_i T_i(s) = c(s) + X(s)
+ \]
+setzt sich zusammen aus einer Translation\index{Translation} (mit der Kurve) und einer Drehung\index{Drehung} um eine momentane Drehachse\index{Drehung!Drehachse}. Für seine Geschwindigkeit gilt
+\begin{align*}
+ P'(s) &= c'(s) \sum_{i=1}^3 \lambda_i T_i' (s) = c'(s) + \sum_{i=1}^3 \lambda_i w(s) D(s) \times T_i(s) \\
+ &=\uline{c'(s) + w(s) D(s) \times X(s)}
+\end{align*}
+mit der
+\begin{itemize}
+ \item (vektoriellen) Bahngeschwindigkeit\index{Geschwindigkeit!Bahn-} \(c'(s)\) der Kurve und der 
+ \item (vektoriellen) Winkelgeschwindigkeit\index{Geschwindigkeit!Winkel-} \(w\cdot D)(s)\) des Vektors \(X(s) = P(s) - c(s)\) \\
+ wobei \(D(s)\) der Einheitsvektor\index{Drehung!Drehachse!Einheitsvektor} der momentanen Drehachse ist \\
+ und \(w(s)\)  die skalare Winkelgeschwindigkeit beschreibt
+\end{itemize}
+
+\end{kin}

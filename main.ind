@@ -1,25 +1,30 @@
 \begin{theindex}
 
-  \item \(\C^r\)-Kurve, \hyperpage{6}
-  \item \(\C^r\)-Weg, \hyperpage{6}
-  \item \(\C^r\)-\IeC {\"A}quivalenz, \hyperpage{7}
+  \item \IeC {\"A}quivalenz, \hyperpage{7}
 
   \indexspace
 
+  \item Ableitungsmatrix, \hyperpage{17}
   \item Ableitungsvektor, \hyperpage{8}
   \item affin, \hyperpage{4}
 
   \indexspace
 
-  \item Begleitbasis, \hyperpage{15}
+  \item Begleitbasis
+    \subitem Berechnung (unbekannte BLP), \hyperpage{18}
+  \item Begleitebene, \hyperpage{16}
   \item Binormalenvektor, \hyperpage{15}
   \item Bogenl\IeC {\"a}ngenfunktion, \hyperpage{12}
   \item Bogenl\IeC {\"a}ngenparametrisierung, \hyperpage{12}
-    \subitem Berechnung, \hyperpage{12}
+    \subitem Berechnung, \hyperpage{13}
 
   \indexspace
 
+  \item Darboux-Vektor, \hyperpage{19}
   \item Diffeomorphismus, \hyperpage{7}
+  \item Drehung, \hyperpage{19}
+    \subitem Drehachse, \hyperpage{19}
+      \subsubitem Einheitsvektor, \hyperpage{19}
 
   \indexspace
 
@@ -28,7 +33,14 @@
 
   \indexspace
 
+  \item Frenet-Begleitbasis, \hyperpage{15}
+    \subitem Ableitungsgleichungen, \hyperpage{17}
+
+  \indexspace
+
   \item Geschwindigkeit, \hyperpage{6}
+    \subitem Bahn-, \hyperpage{19}
+    \subitem Winkel-, \hyperpage{19}
 
   \indexspace
 
@@ -39,8 +51,12 @@
 
   \item kartesisches Koordinatensystem, \hyperpage{3}
   \item Kr\IeC {\"u}mmung, \hyperpage{14}
+    \subitem 2. Kr\IeC {\"u}mmung, \hyperpage{16}
+    \subitem Berechnung (unbekannte BLP), \hyperpage{18}
+    \subitem Gesamtkr\IeC {\"u}mmung, \hyperpage{18}
   \item Kreis, \hyperpage{7}
   \item Kreuzprodukt, \hyperpage{4}
+  \item Kurve, \hyperpage{6}
 
   \indexspace
 
@@ -50,11 +66,13 @@
 
   \item Nicht-Wendepunkt, \hyperpage{10}
   \item normal, \hyperpage{12}
+  \item Normalebene, \hyperpage{16}
 
   \indexspace
 
   \item orientierungstreu, \hyperpage{7}
   \item Orthonormalbasis, \hyperpage{3}
+    \subitem -feld, \hyperpage{17}
 
   \indexspace
 
@@ -65,9 +83,12 @@
   \indexspace
 
   \item regul\IeC {\"a}r, \hyperpage{6}
+  \item rektifizierende Ebene, \hyperpage{16}
 
   \indexspace
 
+  \item Schmidtsches Orthonormalisierungsverfahren, \hyperpage{18}
+  \item Schmiegebene, \hyperpage{16}
   \item Schmiegraum, \hyperpage{9}
     \subitem degeneriert, \hyperpage{10}
   \item Singularit\IeC {\"a}t, \hyperpage{6}
@@ -80,6 +101,9 @@
 
   \item Tangenteneinheitsvektor, \hyperpage{14}
   \item Tangentenvektor, \hyperpage{6}, \hyperpage{15}
+  \item Torsion, \hyperpage{16}
+    \subitem Berechnung (unbekannte BLP), \hyperpage{18}
+  \item Translation, \hyperpage{19}
 
   \indexspace
 
@@ -92,9 +116,10 @@
 
   \indexspace
 
-  \item Weg
+  \item Weg, \hyperpage{6}
     \subitem -l\IeC {\"a}nge, \hyperpage{12}
   \item Wendepunkt, \hyperpage{10}
     \subitem -frei, \hyperpage{10}
+  \item Windung, \hyperpage{16}
 
 \end{theindex}
