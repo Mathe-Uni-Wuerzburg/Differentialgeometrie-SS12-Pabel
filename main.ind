@@ -13,6 +13,7 @@
   \item Begleitbasis
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}
   \item Begleitebene, \hyperpage{16}
+  \item Ber\IeC {\"u}hrbedingung, \hyperpage{21}
   \item Binormalenvektor, \hyperpage{15}
   \item Bogenl\IeC {\"a}ngenfunktion, \hyperpage{12}
   \item Bogenl\IeC {\"a}ngenparametrisierung, \hyperpage{12}
@@ -54,9 +55,16 @@
     \subitem 2. Kr\IeC {\"u}mmung, \hyperpage{16}
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}
     \subitem Gesamtkr\IeC {\"u}mmung, \hyperpage{18}
+  \item Kr\IeC {\"u}mmungsachse, \hyperpage{23}
+  \item Kr\IeC {\"u}mmungskreis, \hyperpage{21}, \hyperpage{23}
+  \item Kr\IeC {\"u}mmungsradius, \hyperpage{23}
   \item Kreis, \hyperpage{7}
   \item Kreuzprodukt, \hyperpage{4}
   \item Kurve, \hyperpage{6}
+
+  \indexspace
+
+  \item lokale kanonische Form, \hyperpage{20}
 
   \indexspace
 
@@ -71,6 +79,7 @@
   \indexspace
 
   \item orientierungstreu, \hyperpage{7}
+  \item Orthogonalprojektion, \hyperpage{20}
   \item Orthonormalbasis, \hyperpage{3}
     \subitem -feld, \hyperpage{17}
 
@@ -89,6 +98,7 @@
 
   \item Schmidtsches Orthonormalisierungsverfahren, \hyperpage{18}
   \item Schmiegebene, \hyperpage{16}
+  \item Schmiegkugel, \hyperpage{21}, \hyperpage{23}
   \item Schmiegraum, \hyperpage{9}
     \subitem degeneriert, \hyperpage{10}
   \item Singularit\IeC {\"a}t, \hyperpage{6}
@@ -101,6 +111,7 @@
 
   \item Tangenteneinheitsvektor, \hyperpage{14}
   \item Tangentenvektor, \hyperpage{6}, \hyperpage{15}
+  \item Taylorentwicklung, \hyperpage{20}
   \item Torsion, \hyperpage{16}
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}
   \item Translation, \hyperpage{19}

@@ -566,3 +566,129 @@ mit der
 \end{itemize}
 
 \end{kin}
+
+\subsection{Approximierter Kurvenverlauf}
+\(s \mapsto c(s)\) sei Bogenlängenparametrisierung einer \(\C^3\)-Kurve mit \(\kappa > 0\). Um einen Parameterwert \(s_0\) (ohne Einschränkung sei \(s_0 = 0\)) besitzt sie die Taylorentwicklung
+\[
+ c(s) = c(0) + c'(0) s + \frac12 c''(0) s^2 + \frac16 c'''(0) s^3 + \mathcal O(s^3)
+\]
+Mit \(x_0:= c(0),\, T_0 := T(0), \dots,\, \kappa_0 := \kappa(0), \dots\) folgt wegen \(c' = T,\, c'' = T' = \kappa H,\, c''' = \kappa' H + \kappa (-\kappa T + \tau B)\)
+
+\begin{satz}\label{satz136}
+ Eine wendepunktfreie \(\C^3\)-Kurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) im \(\IR^3\) besitzt um \(s = 0\) die Taylorentwicklung\index{Taylorentwicklung}
+ \begin{align*}
+  c(s) = x_0 &+ \left( s - \frac16 \kappa_0^2 s^3\right) T_0 \\
+  &+ \left( \frac12 \kappa_0 s^2 + \frac16 \kappa_0' s^3 \right) H_0 \\
+  &+ \left(  \frac16 \kappa_0 \tau_0 s^3\right) B_0 \\
+  &+ \mathcal O(s^3)
+ \end{align*}
+ genannt \uline{lokale kanonische Form}\index{lokale kanonische Form} der Kurve bzgl. des kartesischen Koordinatensystems (\(x_0; T_0, H_0, B_0\)) in der Umgebung von \(s = 0\) . Berücksichtigt man nur Terme niedriger Ordnung, so verhält sie sich in Koordinaten wie
+ \[
+  s \mapsto \left(s, \frac12 \kappa_0 s^2, \frac16 \kappa_0 \tau_0 s^3 \right)
+ \]
+\end{satz}
+
+\begin{folgerung}[aus Satz \ref{satz136}] \(\)
+ \begin{enumerate}
+  \item[a)] Eine Kurve im \(\IR^3\) verläuft in 1. Näherung in ihrer Tangente, in 2. Näherung in ihrer Schmiegebene. Abweichungen davon sind durch Krümmung und Torsion bestimmt.
+  \item[b)] Ihre Orthogonalprojektion\index{Orthogonalprojektion}
+  \begin{itemize}
+   \item in die \uline{Schmiegebene} verhält sich wie eine \uline{(quadratische) Parabel}
+   \item in die \uline{Normalebene} verhält sich wie eine \uline{Neil'sche Parabel}
+   \item in die \uline{rektifizierende Ebene} verhält sich wie eine \uline{kubusche Parabel}
+  \end{itemize}
+  Skizze für \(\tau > 0\) \\
+  \begin{figure}[ht]
+  \begin{minipage}{5cm}
+    \centering
+   \includegraphics[scale=0.2]{Bilder/T0H0.jpg} \\
+   Schmiegebene
+  \end{minipage}
+  \begin{minipage}{5cm}
+   \centering
+   \includegraphics[scale=0.2]{Bilder/H0B0.jpg} \\
+   Normalebene
+  \end{minipage} 
+  \begin{minipage}{5cm}
+  \centering
+  \includegraphics[scale=0.2]{Bilder/T0B0.jpg} \\
+  rektifizierende Ebene
+  \end{minipage}
+   \end{figure} \\
+   \begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{Bilder/Skizze.jpg}
+   \end{figure}
+  \item[c)] Sie durchdringt ihre Normalebene \(x_0 + \hl H_0, B_0 \hr\) in Richtung von \(T_0\) und ihre Schmiegebene \(x_0 + \hl T_0, H_0 \hr\) für \(\uline{\tau_0 > 0}\) in Richtung von \(B_0\). (Geometrische Bedeutung des \uline{Vorzeichens der Torsion}) \\
+  Sie durchdringt die rektifizierende Ebene \(x_0 + \hl B_0, T_0 \hr\) niemals, sondern bleibt auf der Seite, in die \(H_0\) zeigt.
+ \end{enumerate}
+\end{folgerung}
+
+\subsection{Krümmungskreis und Schmiegkugel (oskulierende Kugel)}\index{Krümmungskreis}\index{Schmiegkugel}
+Wir bestimmen alle Kugeln \(K_r(m) = \{ y \in \IR^3 \mid |y-m| = r \}\), die eine vorgegebene Kurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) in einem Punkt \(c(s_0)\) von 2. und 3. Ordnung \uline{berühren}. \\\\
+\uline{Berührbedingungen}\index{Berührbedingung} an die Abstandsfunktion \(s \mapsto F(s) := \dd^2 (s) = |c(s) - m|^2\)
+\begin{align*}
+ F(s_0) &= r^2 &\big(\text{Berührung 0. Ordnung: }c(s_0) \in K_r(m)\big) \\
+ \text{zusätzlich } F'(s_0) &= 0 &(\text{Berührung 1. Ordnung}) \\
+ \text{zusätzlich } F''(s_0) &= 0 &(\text{Berührung 2. Ordnung}) \\
+ \text{zusätzlich } F'''(s_0) &= 0 &(\text{Berührung 3. Ordnung})
+\end{align*}
+
+\begin{begruendung} \(\)
+\begin{itemize}
+ \item Berührung 1. Ordnung \(=\) "`2-punktige Berührung"' \includegraphics[scale=0.2]{Bilder/Bsp5.jpg} \\
+ \(F(s_0) = F(s_1) = r^2 \stackrel{\text{MWS}}{\Rightarrow} \exists_{\overline {s_0} \in \overline{s_0 s_1}} F'(\overline{s_0}) = 0 \) \\
+ Grenzübergang \(s_1 \to s_0 (\Rightarrow \overline {s_0} \to s_0)\) liefert \(F'(s_0) = 0\)
+ \item Berührung 2. Ordnung \(=\)"`3-punktige Berührung"' \\
+ \(F(s_0) = F(s_1) = F(s_2) = r^2 \stackrel{\text{MWS}}{\Rightarrow} \exists_{\overline{s_0}, \overline{s_1}} F'(\overline{s_0}) = F'(\overline{s_1}) = 0 \stackrel{\text{MWS}}{\Rightarrow} \exists_{\overline{\overline{s_0}}} F''(\overline{\overline{s_0}}) = 0\).\\
+ Grenzübergang \(s_1, s_2 \to s_0 (\Rightarrow \overline{s_1}, \overline{\overline{s_0}} \to s_0)\) liefert \(F'(s_0) = F''(s_0) = 0\)
+\end{itemize}
+\end{begruendung}
+
+\uline{Auswertung der Bedingungen}: 
+\begin{enumerate}
+ \item[(0)] \(F(s_0) = | c(s) - m|^2 = r^2\)
+ \item[(1)] \(F'(s_0) = 2 \langle c-m, T \rangle (s_0) = 0\)
+ \item[(2)] \(F''(s_0) = 2 \big[ 1 + \kappa \langle c-m, H\rangle \big] (s_0) = 0\)
+ \item[(3)] \(F'''(s_0) = 2 \big[ \kappa' \langle c-m, H\rangle + \kappa \langle c-m, -\kappa T + \tau B\rangle \big](s_0) = 0\)
+\end{enumerate}
+
+Der Ansatz \(m = c(s_0) + \alpha T(s_0) + \beta H(s_0) + \gamma B(s_0)\) liefert
+\begin{align*}
+ \alpha &= - \langle c-m, T \rangle(s_0) \\
+ \beta &= -\langle c-m, H \rangle(s_0) \\
+ \gamma &= -\langle c-m, B\rangle (s_0)
+\end{align*}
+\begin{enumerate}
+ \item[(0)] \(\alpha^2 + \beta^2 + \gamma^2 = r^2\)
+ \item[(1)] \(\Rightarrow\) \({\color{red}\alpha = 0}\)
+ \item[(2)] \(\Rightarrow\) \({\color{red}\beta = \frac1{\kappa(s_0)}} = \rho(s_0) > 0\) (falls \(\kappa(s_0) > 0\))
+ \item[(3)] \((\kappa' \rho + \kappa \tau \gamma)(s_0) = 0\) \(\Rightarrow\) \({\color{red}\gamma = - \frac{\kappa'}{\kappa^2 \tau}(s_0) = \frac{\rho'}{\tau}(s_0)}\) \big[falls \(\tau(s_0) \ne 0\)\big]
+\end{enumerate}
+
+\begin{satz}\label{satz137}\(\)
+\begin{figure}[ht]
+ \centering
+ \includegraphics[scale=0.4]{Bilder/Bsp6.jpg}
+\end{figure}
+\begin{enumerate}
+ \item Bei einer \(\C^2\)-Kurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) existiert in einem Nicht-Wendepunkt \(c(s_0)\) (mit \(\kappa(s_0) > 0\)) genau eine 1-parametrige Kugelschar, die dort von 2. Ordnung berührt. Die Mittelpunkte dieser Kugel liegen auf einer Geraden
+ \[
+  c(s_0) + \rho(s_0) H(s_0) + \hl B(s_0) \hr \quad \left(\text{mit } \rho := \frac1{\kappa}\right)
+ \]
+ genannt \uline{Krümmungsachse}\index{Krümmungsachse} der Kurve in \(c(s_0)\). \\
+ Alle diese Kugeln schneiden die Schmiegebene in einem Kreis mit Mittelpunkt 
+ \[\overline m = c(s_0) + \rho (s_0) H(s_0)\] 
+ und Radius \[\overline r = \rho(s_0)\quad \big[\text{\uline{Krümmungsradius}}\big]\]
+ \index{Krümmungsradius} genannt \uline{Krümmungskreis}\index{Krümmungskreis} der Kurve in \(s_0\).
+ \item Bei einer \(\C^3\)-Kurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) existiert in einem Nicht-Henkelpunkt \(c(s_0)\) (mit \(\kappa(s_0) > 0, \tau(s_0) \ne 0\)) genau eine Kugel, die dort \uline{von 3. Ordnung} berührt. Sie besitzt den Mittelpunkt
+ \[
+  m = c(s_0) + \rho(s_0) H(s_0) + \frac{\rho'}{\tau}(s_0) B(s_0)
+ \]
+ und den Radius
+ \[
+  r = \sqrt{\rho^2 + \left(\frac{\rho'}{\tau}\right)^2}(s_0)
+ \]
+und heißt Schmiegkugel\index{Schmiegkugel} der Korve in \(c(s_0)\).
+\end{enumerate}
+\end{satz}
