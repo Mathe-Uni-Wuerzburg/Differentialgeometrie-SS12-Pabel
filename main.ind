@@ -10,6 +10,8 @@
 
   \indexspace
 
+  \item B\IeC {\"o}schungslinie, \hyperpage{27}
+  \item B\IeC {\"o}schungswinkel, \hyperpage{27}
   \item Begleitbasis
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}
   \item Begleitebene, \hyperpage{16}
@@ -36,6 +38,7 @@
 
   \item Frenet-Begleitbasis, \hyperpage{15}
     \subitem Ableitungsgleichungen, \hyperpage{17}
+  \item Fundamentalsatz, \hyperpage{24}
 
   \indexspace
 
@@ -55,6 +58,7 @@
     \subitem 2. Kr\IeC {\"u}mmung, \hyperpage{16}
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}
     \subitem Gesamtkr\IeC {\"u}mmung, \hyperpage{18}
+    \subitem konische, \hyperpage{28}
   \item Kr\IeC {\"u}mmungsachse, \hyperpage{23}
   \item Kr\IeC {\"u}mmungskreis, \hyperpage{21}, \hyperpage{23}
   \item Kr\IeC {\"u}mmungsradius, \hyperpage{23}

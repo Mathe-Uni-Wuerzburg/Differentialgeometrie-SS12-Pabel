@@ -30,10 +30,10 @@ Ein \(\C^r\)-Weg (\(r\ge 1\)) heißt \uline{regulär}\index{regulär}, wenn übe
                                                        \cos t \\
 						       \sin t
                                                       \end{pmatrix} \in \IR^2\) ( \(\infty\)-oft durchlaufbar) [Affin gesehen ist das eine Ellipse!] \\
-Aber auch \(t \mapsto \tilde c(t) = \begin{pmatrix}
+Aber auch \(t \mapsto \widetilde c(t) = \begin{pmatrix}
                                      t \\
 				     \pm \sqrt{1-t^2}
-                                    \end{pmatrix} \) und \(t \mapsto \tilde{\tilde c}(t)=\begin{pmatrix}
+                                    \end{pmatrix} \) und \(t \mapsto \widetilde{\widetilde c}(t)=\begin{pmatrix}
 											  \frac{1}{\cosh t} \\
 											  \tanh t
 											 \end{pmatrix} \)
@@ -42,10 +42,10 @@ sind Parametrisierungen von Kreisstücken.
 \end{bsp}
 Wege,  die nur mit veränderlicher "`Zeitskala"' durchlaufen werden, sollen nicht als verschieden angesehen werden.
 \begin{definition}
- \(I, \tilde I \subset \IR\) seien offene Intervalle. \\
-Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\)-äquivalent}\index{Äquivalenz} (\(r\ge 0 \)), wenn ein orientierungstreuer\index{orientierungstreu} (d.h. monoton wachsender) \(\C^r\)-Diffeomorphismus\index{Diffeomorphismus} \(\Phi : I \to \tilde I\) existiert, mit
+ \(I, \widetilde I \subset \IR\) seien offene Intervalle. \\
+Zwei Wege \(c: I \to \IR^n, \widetilde c: \widetilde I \to \IR^n\) heißen \uline{\(C^r\)-äquivalent}\index{Äquivalenz} (\(r\ge 0 \)), wenn ein orientierungstreuer\index{orientierungstreu} (d.h. monoton wachsender) \(\C^r\)-Diffeomorphismus\index{Diffeomorphismus} \(\Phi : I \to \widetilde I\) existiert, mit
 \[
- \uline{c= \tilde c \circ \Phi}, \text{ d.h. } \uline{\forall_t c(t)=\tilde c (\Phi(t))}
+ \uline{c= \widetilde c \circ \Phi}, \text{ d.h. } \uline{\forall_t c(t)=\widetilde c (\Phi(t))}
 \]
 
 \end{definition}
@@ -58,7 +58,7 @@ Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\
   \item[1.] \(\Phi\) ist (für \(r\ge 1\)) genau dann orientierungstreu, wenn überall \(\dot \Phi(t)>0\) ist.
   \item[2.] Äquivalente Wege besitzen (für \(r\ge 1\)) das gleiche Regularitätsverhalten.
   \[
-   \dot c(t)= \dot{\tilde c} (\Phi(t)) \cdot \underbrace{\dot \Phi(t)}_{>0}
+   \dot c(t)= \dot{\widetilde c} (\Phi(t)) \cdot \underbrace{\dot \Phi(t)}_{>0}
   \]
   \item[3.] Die Äquivalenz von Wegen ist wirklich eine Äquivalenzrelation (reflexiv, symmetrisch, transitiv)
  \end{enumerate}
@@ -78,13 +78,13 @@ Zwei Wege \(c: I \to \IR^n, \tilde c: \tilde I \to \IR^n\) heißen \uline{\(C^r\
  \]
  und 
      \[
-      \tilde t\mapsto \tilde c(\tilde t) = \begin{pmatrix}
-                                             \frac1{\cosh \tilde t} \\
-                                             \tanh \tilde t
-                                            \end{pmatrix} \in \IR^2 (\tilde t \in \IR) 
+      \widetilde t\mapsto \widetilde c(\widetilde t) = \begin{pmatrix}
+                                             \frac1{\cosh \widetilde t} \\
+                                             \tanh \widetilde t
+                                            \end{pmatrix} \in \IR^2 (\widetilde t \in \IR) 
      \]
  sind \(\C^\infty\)-äquivalente Parametertransformationen: \[
-                                                            \Phi(t) = \operatorname{Artanh} \sin t = \tilde t
+                                                            \Phi(t) = \operatorname{Artanh} \sin t = \widetilde t
                                                            \]
 mit
 \[
@@ -121,14 +121,14 @@ Schmiegebene \( S_2(t) c(t) + \langle \langle \dot c(t), \ddot c(t) \rangle \ran
 \end{satz}
 
 \begin{beweis}[von Satz \ref{satz111}]
- Aus \(c = \tilde c \circ \Phi\) folgt nach der Kettenregel
+ Aus \(c = \widetilde c \circ \Phi\) folgt nach der Kettenregel
  \begin{align*}
-  \dot c &= \dot \Phi \left(\dot{\tilde c} \circ \Phi \right)\\
-  \ddot c &= \dot \Phi^2 \left( \ddot{\tilde c} \circ \Phi \right) + Q_2^1 \left( \dot \Phi, \ddot \Phi \right) \cdot \dot {\tilde c}(t)
+  \dot c &= \dot \Phi \left(\dot{\widetilde c} \circ \Phi \right)\\
+  \ddot c &= \dot \Phi^2 \left( \ddot{\widetilde c} \circ \Phi \right) + Q_2^1 \left( \dot \Phi, \ddot \Phi \right) \cdot \dot {\widetilde c}(t)
  \end{align*}
 allgemein 
 \begin{align*}
- c_p= \dot \Phi^p (\tilde c_p \circ \Phi) + \sum_{k=1}^{p-1} \underbrace{Q_p^k \left( \dot \Phi, \ddot \Phi \right)}_{\text{"`Kettenregelpolynome"'}} \left( \tilde c_k \circ \Phi \right)
+ c_p= \dot \Phi^p (\widetilde c_p \circ \Phi) + \sum_{k=1}^{p-1} \underbrace{Q_p^k \left( \dot \Phi, \ddot \Phi \right)}_{\text{"`Kettenregelpolynome"'}} \left( \widetilde c_k \circ \Phi \right)
 \end{align*}
 Also hat man die Transformationsformel
 \begin{align*}
@@ -143,16 +143,16 @@ Also hat man die Transformationsformel
 		  \vdots & \ddots & \ddots &0 \\
 		  Q_p^1 & \cdots & Q_p^k & \dot \Phi^p
 		 \end{pmatrix} \begin{pmatrix}
-				\tilde c_1 \circ \Phi \\
+				\widetilde c_1 \circ \Phi \\
 				\vdots \\
 				\vdots \\
-				\tilde c_p \circ \Phi
+				\widetilde c_p \circ \Phi
 			       \end{pmatrix}
 \end{align*}
 mit einer regulären Transformationsmatrix positiver Determinante. \\
 Das zeigt 
 \[
- \langle \langle c_1, \dots, c_p \rangle \rangle = \langle \langle \tilde c_1 \circ \Phi, \dots, \tilde c_p \circ \Phi \rangle \rangle
+ \langle \langle c_1, \dots, c_p \rangle \rangle = \langle \langle \widetilde c_1 \circ \Phi, \dots, \widetilde c_p \circ \Phi \rangle \rangle
 \]
 und die weiteren Behauptungen.
 \end{beweis}
@@ -284,13 +284,13 @@ leistet das Gewünschte, da sie \(\C^1\)-differenzierbar ist, mit
 \dot s = |\dot c| > 0
 \)
 (wegen der Regularität von \(c\)). \\
- Für eine äquivalente Parametrisierung \(\tilde c\) mit \(c = \tilde c \circ \Phi\) der Kurve erhält man
+ Für eine äquivalente Parametrisierung \(\widetilde c\) mit \(c = \widetilde c \circ \Phi\) der Kurve erhält man
  \[
-  \dot s = |\dot c| = |\dot{\tilde c} \circ \Phi| \underbrace{\dot \Phi}_{> 0} = (\tilde s \circ \Phi) \cdot \dot \Phi
+  \dot s = |\dot c| = |\dot{\widetilde c} \circ \Phi| \underbrace{\dot \Phi}_{> 0} = (\widetilde s \circ \Phi) \cdot \dot \Phi
  \]
  also gilt 
- \[s = \tilde s \circ \Phi \, (+ s_0)\] 
- und damit \[\overline c = c \circ s^{-1} = (\tilde c \circ \Phi) \circ (\tilde s \circ \Phi)^{-1} = \tilde c \circ \Phi \circ \Phi^{-1} \circ \tilde s^{-1} = \tilde c \circ \tilde s^{-1} = \overline{\tilde c}\]
+ \[s = \widetilde s \circ \Phi \, (+ s_0)\] 
+ und damit \[\overline c = c \circ s^{-1} = (\widetilde c \circ \Phi) \circ (\widetilde s \circ \Phi)^{-1} = \widetilde c \circ \Phi \circ \Phi^{-1} \circ \widetilde s^{-1} = \widetilde c \circ \widetilde s^{-1} = \overline{\widetilde c}\]
 \end{beweis}
 
 \begin{bemerkung}
@@ -689,6 +689,196 @@ Der Ansatz \(m = c(s_0) + \alpha T(s_0) + \beta H(s_0) + \gamma B(s_0)\) liefert
  \[
   r = \sqrt{\rho^2 + \left(\frac{\rho'}{\tau}\right)^2}(s_0)
  \]
-und heißt Schmiegkugel\index{Schmiegkugel} der Korve in \(c(s_0)\).
+und heißt Schmiegkugel\index{Schmiegkugel} der Kurve in \(c(s_0)\).
 \end{enumerate}
+\end{satz}
+
+\subsection{Der Fundamentalsatz der Kurventheorie (im $\IR^3$)}
+\uline{Vorbemerkung}: Frenet-Theorie ist grundsätzlich nur möglich für wendepunktfreie Kurven (\(\kappa > 0\)). \\
+\begin{center}
+\begin{tabular}{c|c}
+ \textbf{Ausreichende Differentiationsordnung} & \textbf{aber auch möglich} \\
+ \begin{tabular}{c c c}
+ \(c\) & \(\C^3\) &(vorausgesetzt) \\
+ \hline
+ \(T\) & \(\C^2\) &\\
+ \(H\) & \(\C^1\) &\\
+ \(B\) & \(\C^1\) &\\
+ \hline
+ \(\kappa\) & \(\C^1\) &\\
+ \(\tau\) & \(\C^0\) &
+ \end{tabular}
+ &
+ \begin{tabular}{c c c}
+ \(c\) & \(\C^2\) &(vorausgesetzt)\\
+ \hline
+ \(T\) & \(\C^1\) &\\
+ \(H\) & \(\C^1\) &(zusätzlich vorausgesetzt) \\
+ \(B\) & \(\C^1\) &\\
+ \hline
+ \(\kappa\) & \(\C^0\) &\\
+ \(\tau\) & \(\C^0\) &
+ \end{tabular}
+\end{tabular}
+\end{center} 
+Schon für solche "`\(\C^2\)-Kurven mit \(\C^1\)-Begleitbasis"' ("`Frenet-Kurven"') lässt sich beweisen:
+
+\begin{satz}[Fundamentalsatz der Kurventheorie im euklidischen $\IR^3\)]\label{satz138}\index{Fundamentalsatz} \(\)
+ \begin{enumerate}
+  \item[a)]Seien \(s \in I \mapsto \kappa(s) > 0, \, s \in I \mapsto \tau(s) \in \IR\) beliebige \(\C^0\)-Funktionen, \(s_0 \in I\) ein Parameterwert, \(x_0 \in \IR^3\) ein Punkt und \((T_0, H_0, B_0)\) eine positiv orientierte Orthonormalbasis des \(\IR^3\). Dann gibt es genau eine \(\C^2\)-Kurve in Bogenlängenparametrisierung \(s \in I \mapsto c(s) \in \IR^3\) mit \(\C^1\)-Begleitbasis \(s \mapsto (T, H, B)(s)\), welche die Krümmung \(s \mapsto \kappa(s)\) und die Torsion \(s \mapsto \tau(s)\) besitzt, sowie die Anfangsbedingungen
+  \begin{align*}
+   c(s_0) = x_0, \, (T, H, B)(s_0) = (T_0, H_0, B_0) \tag{\(\ast\)}
+  \end{align*}
+  erfüllt.
+  \item[b)] Zwei \(\C^2\)-Kurven in Bogenlängenparametrisierung \(s \mapsto c(s), \, s \mapsto \widetilde c(s)\) mit \(\C^1\)-Begleitbasis mit gleicher Krümmung \(s \mapsto \kappa(s) = \widetilde \kappa(s)\) und Torsion \(s \mapsto \tau(s) = \widetilde \tau(s)\) besitzen, stimmen überein bis auf eine (eigentliche) Bewegung (Drehung + Translation) des \(\IR^3\), d.h. es gilt
+  \[
+   \widetilde c = D c + t
+  \]
+  mit einer Drehmatrix \(D \in SO(3,\IR)\) und einem Translationsvektor \(t \in \IR^3\).
+ \end{enumerate}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz138}] \(\)
+ \begin{enumerate}
+  \item[a)] \textbf{\uline{Eindeutigkeit}:} Das \uline{lineare} Differentialgleichungssystem der Frenet-Formeln
+  \begin{align*}
+   c' = T_1, \quad \vxyz{T_1}{T_2}{T_3}' = \begin{pmatrix}
+                            0 & \kappa & 0 \\
+                            -\kappa & 0 &\tau \\
+                            0 & -\tau & 0
+                           \end{pmatrix} \vxyz{T_1}{T_2}{T_3} \text{ bzw. } T_i' = \sum_{k = 1}^3 a_{ik} T_k
+  \end{align*}
+  besitzt zu den Anfangsbedingungen \((\ast)\) \big(bzw. hier \((T_1, T_2, T_3)(s_0) = (T_0, H_0, B_0)\)\big) \uline{genau eine} \(\C^1\)-Lösung \[s \mapsto (T_1, T_2, T_3)(s_0)\] und damit genau eine \(\C^2\)-Lösung \[s \mapsto c(s) = x_0 + \int_{s_0}^s T_1(\sigma) \dd \sigma\], definiert \uline{auf ganz \(I\)}. \\\\
+  \textbf{\uline{Existenz}}: Es muss noch überprüft werden, ob diese Lösung \(s \mapsto c(s)\) Bogenlängen\-para\-metri\-sierung einer \uline{\(\C^2\)-Kurve} mit \(\C^1\)-Begleitbasis ist und wirklich \(s \mapsto \kappa(s), \tau(s)\) als Krümmung und Torsion besitzt.
+  \begin{enumerate}
+  \item[\((\alpha)\)] Wir zeigen: Die Lösungsfelder \(s \mapsto T_1(s), T_2(s), T_3(s)\) bilden \uline{überall} (nicht nur für \(s = s_0\)) eine positiv orientierte Orthonormalbasis: \\
+  Für die Skalarprodukte \(\langle T_i, T_k \rangle\) gilt:
+  \begin{align*}
+   \uline{\langle T_i, T_k \rangle'} = \langle T_i', T_k \rangle + \langle T_i, T_k' \rangle = \sum_{j = 1}^3 a_{ij} \uline{\langle T_j, T_k \rangle} + \sum_{k=1}^3 a_{kj} \uline{\langle T_i, T_j \rangle}
+  \end{align*}
+  Dieses \uline{lineare} Differentialgleichungssystem besitzt zu den Anfangsbedingungen \[\langle T_i, T_k \rangle(s_0) = \delta_{ik}\] \uline{genau eine} Lösung und diese ist \(\langle T_i, T_k \rangle \equiv \delta_{ik}\), denn
+  \begin{align*}
+   0 = \delta_{ik}' = a_{ik} + a_{ki}
+  \end{align*}
+  weil die Ableitungsmatrix schiefsymmetrisch ist. \\
+  Weiter muss für das Orthonormalbasisfeld \(s \mapsto (T_1, T_2, T_3)(s)\) gelten: \[\det(T_1, T_2, T_3) = \pm 1\], wobei aus Stetigkeitsgründen nur \(+1\) möglich ist \big(denn \(\det(T_1, T_2, T_3)(s_0) = +1\)\big).
+  \item[\((\beta)\)] Für die Lösung \(s \mapsto c(s)\) gilt jetzt \(|c'| = |T_1| = 1\), d.h. sie ist Bogen\-längen\-para\-metri\-sierung einer \uline{Kurve} im \(\IR^3\). Weiter ist
+  \begin{align*}
+   T &= c' = T_1 \\
+   H &= \frac{T'}{|T'|} = \frac{T_1'}{|T_1'|} = \frac{\kappa T_2}{\kappa |T_2|} = T_2 \\
+   B &= T \times H = T_1 \times T_2 = T_3
+  \end{align*}
+  Es gelten also die Frenet-Formeln für \((T, H, B)\), sodass \(\kappa\) die Krümmung und \(\tau\) die Torsion ist.
+  \end{enumerate}
+ \item[b)] Sei \(s_0\) ein fester Parameterwert sowie 
+ \begin{align*}
+  x_0 &:= c(s_0) \\
+  (T_0, H_0, B_0) &:= (T, H, B)(s_0) \\
+  \widetilde{x}_0 &:= \widetilde c(s_0) \\
+  \left(\widetilde T_0, \widetilde H_0, \widetilde B_0 \right) &:= \left(\widetilde T, \widetilde H, \widetilde B\right)(s_0)
+ \end{align*}
+ Dann gibt es genau eine Drehmatrix \(D\) und einen Vektor \(t \in \IR^3\) mit
+ \begin{align*}
+  \widetilde x_0 &= D x_0 + t \\
+  \widetilde T_0 &= D \cdot T_0 \\
+  \widetilde H_0 &= D \cdot H_0 \\
+  \widetilde B_0 &= D \cdot B_0
+ \end{align*}
+ (Transformation zweier kartesischer Koordinatensysteme ineinander). \\
+ Das lineare Differentialgleichungssystem
+ \[
+  c' = T_1, \quad \vxyz{T_1}{T_2}{T_3}' = \begin{pmatrix}
+                                           0 & \kappa & 0 \\
+                                           -\kappa & 0 & \tau \\
+                                           0 & -\tau & 0
+                                          \end{pmatrix} \vxyz{T_1}{T_2}{T_3}
+ \]
+ hat nun die Lösungssysteme
+ \begin{enumerate}
+  \item[(1)] \(s \mapsto c(s), \quad s \mapsto (T, H, B)(s_0)\)
+  \end{enumerate}
+  und wegen er Linearität
+  \begin{enumerate}
+  \item[(1a)] \(s \mapsto D \cdot c(s) + t, \quad s \mapsto (D \cdot T, D \cdot H, D \cdot B)\)
+  \end{enumerate}
+  sowie natürlich auch
+  \begin{enumerate}
+  \item[(2)] \(s \mapsto \widetilde c(s), \quad s \mapsto \left(\widetilde T, \widetilde H, \widetilde B\right)(s)\) \\
+ \end{enumerate}
+ wobei (1a) und (2) in \(s_0\) die gleichen Anfangsbedingungen besitzen
+ \[
+  \widetilde c(s_0) = \widetilde x_0 = D x_0 + t, \dots
+ \]
+Also gilt identisch
+\begin{align*}
+ \widetilde c &= D \cdot c + t \\
+ \text{und } \left(\widetilde T, \widetilde H, \widetilde B\right) &= (D \cdot T, D \cdot H, D \cdot B)
+\end{align*}
+
+ \end{enumerate}
+\end{beweis}
+
+\textbf{Ergebnis}: Krümmung und Torsion als Funktionen der Bogenlänge bilden ein \uline{vollständiges} Sys\-tem \uline{unabhängiger} Invarianten für eine Frenet-Kurve im \(\IR^3\).
+
+\begin{bemerkung}
+ Das Differentialgleichungssystem der Frenet-Formeln lässt sich nur in einfachen Fällen explizit lösen, etwa bei ebenen Kurven als Spezialfälle von Böschungslinien.
+\end{bemerkung}
+
+\begin{variante}[des Fundamentalsatzes]
+ Vorgabe von \[\begin{cases}
+                t \mapsto w(t) > 0 & \text{(Geschwindigkeit)} \\
+                t \mapsto \kappa(t) > 0 & \text{(in Abhängigkeit von der Zeit)} \\
+                t \mapsto \tau(t)
+               \end{cases}\]
+ bestimmen eine Kurve in einer Parameterdarstellung \(t \mapsto c(t)\) mit \(|\dot c| = w\) eindeutig. Das Differentialgleichungssystem 
+ \begin{align*}
+  \dot c &= w T_1 \\
+  \frac{\dd}{\dd t}\vxyz{T_1}{T_2}{T_3} &= w \begin{pmatrix}
+                                             0 & \kappa & 0 \\
+                                             -\kappa & 0 & \tau \\
+                                             0 & -\tau & 0 
+                                            \end{pmatrix} \vxyz{T_1}{T_2}{T_3}
+ \end{align*}
+\end{variante}
+
+\subsection{Spezielle Kurvenklassen}
+\subsubsection{A. Böschungslinien}
+
+\begin{definition}
+ Eine Böschungslinie\index{Böschungslinie} im \(\IR^3\) ist eine \(\C^1\)-Kurve, ohne Einschränkung in Bogenlängenparametrisierung \(s \mapsto c(s)\), deren Tangenten mit einer \uline{festen Richtung} \(E\) (mit \(|E| = 1\)) einen festen \uline{Böschungswinkel}\index{Böschungswinkel} \(\gamma\) einschließen. Es ist also \(\forall_s\)
+ \[
+  \langle T(s), E \rangle = \cos \gamma
+ \]
+\end{definition}
+
+\begin{bsp}\(\)
+ \begin{enumerate}
+  \item Ebene Kurven (\(\gamma = 90^{\circ}\))
+  \includegraphics[scale=0.2]{Bilder/ebene_kurve.jpg}
+  \item Gewöhnliche Schraubenlinien
+  \includegraphics[scale=0.2]{Bilder/schraube.jpg}
+ \end{enumerate}
+\end{bsp}
+
+\begin{bemerkung}
+ Bei \uline{Frenet-Böschungslinien} folgt aus \(\langle T, E \rangle = \const.\) sofort \(\kappa \langle H, E \rangle = 0\), sodass \(E\) in der rektifizierenden Ebene \(c + \hl T, B \hr\) liegt. Der Böschungswinkel \(\gamma\) kann dann eindeutig so festgelegt werden, dass
+ \begin{align*}
+  E = \cos \gamma \, T + \sin \gamma \, B \quad \text{mit } -\pi < \gamma \le \pi \tag{\(\ast\)}
+ \end{align*}
+Durch Übergang von \(E\) zu \(-E\) bei Bedarf kann erreicht werden, dass \(\sin \gamma = \langle E, B \rangle \ge 0\), also \(\uline{0 \le \gamma \le \pi}\). Ableiten von \((\ast)\) liefert
+\begin{align*}
+ 0 = (\kappa \cos \gamma - \tau \sin \gamma) \cdot H, \quad \text{also } \uline{\kappa \cos \gamma - \tau \sin \gamma = 0}
+\end{align*}
+sodass nur \(\uline{0 < \gamma < \pi}\) möglich ist.
+\end{bemerkung}
+
+\begin{satz}\label{satz139}
+ Für eine Frenet-Kurve im \(\IR^3\) sind äquivalent
+ \begin{enumerate}
+  \item[(a)] Die Kurve ist Böschungslinie
+  \item[(b)] Die \uline{konische Krümmung}\index{Krümmung!konische} \mat{\frac{\tau}{\kappa} (= \rho \tau)} ist konstant.
+  \item[(c)] Der Darboux-Vektor \mat{D = \frac1\omega (\tau T + \kappa B)} ist konstant \big[und ohne Einschränkung gleich der festen Richtung\big]
+  \item[(d)] Der Winkel zwischen Tangentenrichtung und Darboux-Richtung ist konstant: \(\uline{\langle T, D \rangle = \const}\) \big[und ohne Einschränkung gleich dem Böschungswinkel\big]
+ \end{enumerate}
+
 \end{satz}
