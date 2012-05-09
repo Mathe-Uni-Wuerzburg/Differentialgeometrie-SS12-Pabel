@@ -58,7 +58,7 @@
 \indexentry{Torsion|hyperpage}{16}
 \indexentry{Frenet-Begleitbasis!Ableitungsgleichungen|hyperpage}{17}
 \indexentry{Orthonormalbasis!-feld|hyperpage}{17}
-\indexentry{Ableitungsmatrix|hyperpage}{17}
+\indexentry{Ableitungsmatrix!$\IR^3$|hyperpage}{17}
 \indexentry{Begleitbasis!Berechnung (unbekannte BLP)|hyperpage}{18}
 \indexentry{Kr\IeC {\"u}mmung!Berechnung (unbekannte BLP)|hyperpage}{18}
 \indexentry{Torsion!Berechnung (unbekannte BLP)|hyperpage}{18}
@@ -85,3 +85,5 @@
 \indexentry{B\IeC {\"o}schungslinie|hyperpage}{27}
 \indexentry{B\IeC {\"o}schungswinkel|hyperpage}{27}
 \indexentry{Kr\IeC {\"u}mmung!konische|hyperpage}{28}
+\indexentry{sph\IeC {\"a}risch|hyperpage}{29}
+\indexentry{Ableitungsmatrix!$\IR^n$|hyperpage}{31}

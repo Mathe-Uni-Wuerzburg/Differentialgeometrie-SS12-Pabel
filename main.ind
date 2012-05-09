@@ -4,7 +4,9 @@
 
   \indexspace
 
-  \item Ableitungsmatrix, \hyperpage{17}
+  \item Ableitungsmatrix
+    \subitem $\IR^3$, \hyperpage{17}
+    \subitem $\IR^n$, \hyperpage{31}
   \item Ableitungsvektor, \hyperpage{8}
   \item affin, \hyperpage{4}
 
@@ -107,6 +109,7 @@
     \subitem degeneriert, \hyperpage{10}
   \item Singularit\IeC {\"a}t, \hyperpage{6}
   \item Skalarprodukt, \hyperpage{3}
+  \item sph\IeC {\"a}risch, \hyperpage{29}
   \item Spur, \hyperpage{6}
   \item Standard-Skalarprodukt, \hyperpage{3}
   \item Standardbasis, \hyperpage{3}

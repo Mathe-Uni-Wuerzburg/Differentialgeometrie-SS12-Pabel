@@ -483,7 +483,7 @@ mit der \(\C^1\)-Krümmung \(s \mapsto \kappa(s) > 0\) und der \(\C^0\)-Torsion 
 
 \begin{beweis}[von Satz \ref{satz134}] 
 Da \((T_1, T_2, T_3) := (T,H,B)\) ein \uline{Orthonormalbasisfeld}\index{Orthonormalbasis!-feld} ist, gilt \(\langle T_i, T_k \rangle = \delta_{ik}\) \\
- \(\Rightarrow \langle T_i', T_k \rangle = -\langle T_k', T_i \rangle\), d.h. die Ableitungsmatrix\index{Ableitungsmatrix} \((\langle T_i', T_k \rangle)_{i,k=1,2,3}\) ist \uline{schiefsymmetrisch}. Damit kann die nach Definition bekannte 1. und 3. Zeile ergänzt werden.
+ \(\Rightarrow \langle T_i', T_k \rangle = -\langle T_k', T_i \rangle\), d.h. die Ableitungsmatrix\index{Ableitungsmatrix!$\IR^3$} \((\langle T_i', T_k \rangle)_{i,k=1,2,3}\) ist \uline{schiefsymmetrisch}. Damit kann die nach Definition bekannte 1. und 3. Zeile ergänzt werden.
 \end{beweis}
 
 \uline{Problem}: Wie berechnet man Begleitbasis, Krümmung und Torsion, wenn man die Bogenlängen\-parametrisierung nicht explizit kennt? \\
@@ -662,8 +662,8 @@ Der Ansatz \(m = c(s_0) + \alpha T(s_0) + \beta H(s_0) + \gamma B(s_0)\) liefert
 \begin{enumerate}
  \item[(0)] \(\alpha^2 + \beta^2 + \gamma^2 = r^2\)
  \item[(1)] \(\Rightarrow\) \({\color{red}\alpha = 0}\)
- \item[(2)] \(\Rightarrow\) \({\color{red}\beta = \frac1{\kappa(s_0)}} = \rho(s_0) > 0\) (falls \(\kappa(s_0) > 0\))
- \item[(3)] \((\kappa' \rho + \kappa \tau \gamma)(s_0) = 0\) \(\Rightarrow\) \({\color{red}\gamma = - \frac{\kappa'}{\kappa^2 \tau}(s_0) = \frac{\rho'}{\tau}(s_0)}\) \big[falls \(\tau(s_0) \ne 0\)\big]
+ \item[(2)] \(\Rightarrow\) \({\color{red}\beta = \frac1{\kappa(s_0)}} = \varrho(s_0) > 0\) (falls \(\kappa(s_0) > 0\))
+ \item[(3)] \((\kappa' \varrho + \kappa \tau \gamma)(s_0) = 0\) \(\Rightarrow\) \({\color{red}\gamma = - \frac{\kappa'}{\kappa^2 \tau}(s_0) = \frac{\varrho'}{\tau}(s_0)}\) \big[falls \(\tau(s_0) \ne 0\)\big]
 \end{enumerate}
 
 \begin{satz}\label{satz137}\(\)
@@ -674,20 +674,20 @@ Der Ansatz \(m = c(s_0) + \alpha T(s_0) + \beta H(s_0) + \gamma B(s_0)\) liefert
 \begin{enumerate}
  \item Bei einer \(\C^2\)-Kurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) existiert in einem Nicht-Wendepunkt \(c(s_0)\) (mit \(\kappa(s_0) > 0\)) genau eine 1-parametrige Kugelschar, die dort von 2. Ordnung berührt. Die Mittelpunkte dieser Kugel liegen auf einer Geraden
  \[
-  c(s_0) + \rho(s_0) H(s_0) + \hl B(s_0) \hr \quad \left(\text{mit } \rho := \frac1{\kappa}\right)
+  c(s_0) + \varrho(s_0) H(s_0) + \hl B(s_0) \hr \quad \left(\text{mit } \varrho := \frac1{\kappa}\right)
  \]
  genannt \uline{Krümmungsachse}\index{Krümmungsachse} der Kurve in \(c(s_0)\). \\
  Alle diese Kugeln schneiden die Schmiegebene in einem Kreis mit Mittelpunkt 
- \[\overline m = c(s_0) + \rho (s_0) H(s_0)\] 
- und Radius \[\overline r = \rho(s_0)\quad \big[\text{\uline{Krümmungsradius}}\big]\]
+ \[\overline m = c(s_0) + \varrho (s_0) H(s_0)\] 
+ und Radius \[\overline r = \varrho(s_0)\quad \big[\text{\uline{Krümmungsradius}}\big]\]
  \index{Krümmungsradius} genannt \uline{Krümmungskreis}\index{Krümmungskreis} der Kurve in \(s_0\).
  \item Bei einer \(\C^3\)-Kurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) existiert in einem Nicht-Henkelpunkt \(c(s_0)\) (mit \(\kappa(s_0) > 0, \tau(s_0) \ne 0\)) genau eine Kugel, die dort \uline{von 3. Ordnung} berührt. Sie besitzt den Mittelpunkt
  \[
-  m = c(s_0) + \rho(s_0) H(s_0) + \frac{\rho'}{\tau}(s_0) B(s_0)
+  m = c(s_0) + \varrho(s_0) H(s_0) + \frac{\varrho'}{\tau}(s_0) B(s_0)
  \]
  und den Radius
  \[
-  r = \sqrt{\rho^2 + \left(\frac{\rho'}{\tau}\right)^2}(s_0)
+  r = \sqrt{\varrho^2 + \left(\frac{\varrho'}{\tau}\right)^2}(s_0)
  \]
 und heißt Schmiegkugel\index{Schmiegkugel} der Kurve in \(c(s_0)\).
 \end{enumerate}
@@ -839,6 +839,7 @@ Also gilt identisch
                                              0 & -\tau & 0 
                                             \end{pmatrix} \vxyz{T_1}{T_2}{T_3}
  \end{align*}
+ ist zu lösen.
 \end{variante}
 
 \subsection{Spezielle Kurvenklassen}
@@ -875,10 +876,213 @@ sodass nur \(\uline{0 < \gamma < \pi}\) möglich ist.
 \begin{satz}\label{satz139}
  Für eine Frenet-Kurve im \(\IR^3\) sind äquivalent
  \begin{enumerate}
-  \item[(a)] Die Kurve ist Böschungslinie
-  \item[(b)] Die \uline{konische Krümmung}\index{Krümmung!konische} \mat{\frac{\tau}{\kappa} (= \rho \tau)} ist konstant.
+  \item[(a)] Die Kurve ist Böschungslinie. \big(\(\langle T, E\rangle = \const.\)\big)
+  \item[(b)] Die \uline{konische Krümmung}\index{Krümmung!konische} \mat{\frac{\tau}{\kappa} (= \varrho \tau)} ist konstant.
   \item[(c)] Der Darboux-Vektor \mat{D = \frac1\omega (\tau T + \kappa B)} ist konstant \big[und ohne Einschränkung gleich der festen Richtung\big]
   \item[(d)] Der Winkel zwischen Tangentenrichtung und Darboux-Richtung ist konstant: \(\uline{\langle T, D \rangle = \const}\) \big[und ohne Einschränkung gleich dem Böschungswinkel\big]
  \end{enumerate}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz139}] \(\)
+\begin{enumerate}
+ \item[(a) \(\Rightarrow\) (b)] Nach obiger Bemerkung gilt
+ \begin{align*}
+  &\kappa \cos \gamma - \tau \sin \gamma = 0 \\
+  &\Rightarrow \frac{\tau}{\kappa} = \cot \gamma = \const.
+ \end{align*}
+ \item[(b) \(\Rightarrow\) (c)] 
+ \begin{align*}                                 
+&\frac{\tau}{\kappa} = \lambda = \const. \Rightarrow \begin{cases}
+                                                     \frac{\kappa}{\omega} = \frac{\kappa}{\sqrt{\kappa^2 + \tau^2}} = \frac{1}{\sqrt{1 + \lambda^2}} = \const. \\
+                                                     \frac{\tau}{\omega} = \frac{\tau}{\sqrt{\kappa^2 + \tau^2}} = \frac{\lambda}{\sqrt{1 + \lambda^2}} = \const.
+                                                    \end{cases} \\
+&\Rightarrow D' = \left(\frac{\tau}{\omega} T + \frac{\kappa}{\omega} B\right)' = \left(\frac{\tau}{\omega} \kappa - \frac{\kappa}{\omega} \tau\right)H = 0
+\end{align*}
+\item[(c) \(\Rightarrow\) (d)] \(D = \const. \Rightarrow \langle T, D \rangle' = \kappa \langle H, D\rangle = 0\)
+\item[(d) \(\Rightarrow\) (a)] \begin{align*}                               
+&\langle T, D\rangle = \frac{\tau}{\omega} = \const. \Rightarrow \left(\frac{\kappa}{\omega}\right)^2 = 1 - \left(\frac{\tau}{\omega}\right)^2 = \const \\
+&\Rightarrow \frac{\tau}{\omega}, \frac{\kappa}{\omega} = \const. \Rightarrow D' = \dots = 0 \\
+&\Rightarrow D = \const. \Rightarrow \text{ Die Kurve ist Böschungslinie mit fester Richtung } E := D
+                               \end{align*}
+ \end{enumerate}
+\end{beweis}
+
+\subsubsection{A. Sphärische Kurven}
+\begin{satz}\label{satz1310}\(\)
+ \begin{enumerate}
+  \item[a)] Eine wendepunktfreie \(\C^2\)-Kurve in Bogenlängenparametrisierung \(s \mapsto c(s)\) ist genau dann \uline{sphärisch}\index{sphärisch} (liegt auf einer Kugel), wenn eine \(\C^1\)-Funktion \(s \mapsto a(s)\) existiert mit
+  \begin{center}\(\boxed{\begin{aligned}
+   \varrho' &= a \tau \\
+   a' &= -\varrho \tau
+  \end{aligned}}\)\end{center}
+  Für Mittelpunkt \(m\) und Radius \(r\) der Kugel gilt dann
+  \[
+   m = c + \varrho H + a B, \quad r = \sqrt{\varrho^2 + a^2}
+  \]
+  \item[b)] Äquivalent dazu ist: Es existiert eine \(\C^1\)-(Winkel)-Funktion \(s \mapsto \lambda (s)\) mit \(|\lambda| < \frac{\pi}{2}\) und eine Zahl \(r > 0\) mit \(\uline{\varrho = r \cos \lambda, \, \lambda' = -\tau}\). Dabei gilt
+  \[
+   m = c + r (\cos \lambda \, H + \sin \lambda \, B)
+  \]
+ \end{enumerate}
 
 \end{satz}
+
+\begin{beweis}[von Satz \ref{satz1310}] \(\)
+ \begin{enumerate}
+  \item[a)] 
+  \begin{align*}
+  &\forall_s \, |c(s) - m|^2 = r^2 \Rightarrow \forall_s \, \langle c(s) - m, T(s) \rangle = 0 \\
+  &\Rightarrow c = m - b H - a B
+  \end{align*}
+  mit \(\C^1\)-Funktionen \(a, b\). Aus
+  \begin{align*}
+   T = -b' H - b (-\kappa T + \tau B) - a' B + a \tau H
+  \end{align*}
+  folgt durch Koeffizientenvergleich
+  \begin{align*}
+   b \cdot \kappa &= 1 \quad (\Rightarrow b = \varrho) \\
+   b' &= a \cdot \tau \\
+   a' &= -b \cdot \tau
+  \end{align*}
+  \uline{Rückrichtung}: Aus \(\varrho' = a \tau, \, a' = -\varrho \tau\) folgt für \(m := c + \varrho H + a B\):
+  \begin{align*}
+   m' = \dots = 0 \quad \text{also}\quad m = \const.
+  \end{align*}
+  und für \(r^2 := |c-m|^2 = \varrho^2 + a^2\) folgt:
+  \begin{align*}
+   \frac{\dd}{\dd s} (r^2)= 2 \varrho \varrho' + 2 a a' = 0 \quad \text{also} \quad r = \const.
+  \end{align*}
+  \item[b)]
+  "`\(\Rightarrow\)"' Setze \(\begin{Bmatrix}
+                               \rho = r \cos \lambda &(> 0)\\
+                               a = r \sin \lambda
+                              \end{Bmatrix}\), also \[\lambda = \arctan \frac a\varrho \in \left] -\frac{\pi}2, + \frac{\pi}2\right[ \]
+Dann ist \mat{\tau = - \frac{a'}{\varrho} = -\frac{r (\cos \lambda) \lambda'}{r \cos \lambda} = -\lambda '} \par
+"`\(\Leftarrow\)"' \(\dots\)
+ \end{enumerate}
+
+\end{beweis}
+
+\begin{folgerung} \(\)
+ \begin{enumerate}
+  \item[a)] Sphärische \(\C^4\)-Kurven mit \(\forall_s \kappa(s) > 0, \forall_s \tau \ne 0\) sind durch
+  \[
+   \left(\frac{\varrho'}{\tau}\right)' + \varrho \tau = 0
+  \]
+  definiert.
+  \item[b)] Äquivalent dazu ist, wenn zusätzlich \boxed{\text{"`verrat ich net"'}}
+  \[
+   \left(\frac{\varrho'}{\tau}\right)^2 + \varrho^2 = \const (= r^2)
+  \]
+  Die Kugel, auf der die Kurve verläuft, ist ihre Schmiegkugel.
+ \end{enumerate}
+\end{folgerung}
+
+\begin{beweis}[der Folgerung] \(\)
+ \begin{enumerate}
+  \item[a)] Elimination von \(a\)
+  \item[b)] siehe Übungen
+ \end{enumerate}
+
+\end{beweis}
+
+\section{Kurven im euklidischen $\IR^n$}
+Hier ist Frenet-Theorie möglich für \(\C^n\)-Kurven, ohne Einschränkung in Bogenlängenparametrisierung \(s \mapsto c(s)\), deren Schmieghyperebenen
+\[
+ S_{n-1} = c + \hl c_1, \dots, c_{n-1} \hr \quad \left(\text{mit } c_p := \frac{\dd^p c}{\dd s^p}\right)
+\]
+nirgends degenerieren, also überall \((c_1, \dots, c_{n-1})\) linear unabhängig ist.
+
+\textbf{\uline{Begleitbasis}:} \\
+Anwendung des Schmidt'schen Orthonormalisierungsverfahrens auf die Basis \((c_1, \dots, c_{n-1})\) der Schmieghyperebene liefert dort eine Orthonormalbasis \((T_1, \dots, T_{n-1})\), die durch \(T_n := T_1 \times \dots \times T_{n-1}\) zu einer positiv orientierten, orthonormierten Begleitbasis \((T_1, \dots, T_n)\) der Kurve ergänzt werden kann. \par
+\textbf{\uline{Ableitungsgleichungen}:}\index{Ableitungsmatrix!$\IR^n$} \\
+Aus \(\langle T_i, T_k\rangle = \delta_{ik} \Rightarrow \langle T_i', T_k\rangle = -\langle T_k', T_i \rangle\) folgt die Schiefsymmetrie der Ableitungsmatrix \[\left( \langle T_i', T_k\rangle \right)_{i,k = 1, \dots, n}\]
+Wegen 
+\begin{align*}
+T_p \in \hl c_1, \dots, c_p \hr \Rightarrow T_p' &\in \hl c_1, \dots, c_{p+1} \hr \\
+&= \hl T_1, \dots, T_{p+1}\hr
+\end{align*}
+für \(\forall_{q > p+1} \langle T_p', T_q\rangle = 0\). \par
+So folgt nun der Satz:
+
+
+\begin{satz}\label{satz141}
+ Sei \(s \mapsto c(s)\) Bogenlängenparametrisierung einer \(\C^n\)-Kurve im \(\IR^n\) mit \(\forall_s \big(c_1, \dots, c_{n-1}\big)(s)\) linear unabhängig. Dann genügt die durch
+ \begin{align*}
+  T_1 &:= c' \\
+  \overset{n-2}{\underset{p=1}\forall} \, T_{p+1} &:= \frac{c_{p+1} - \sum_{k=1}^p \langle c_{p+1}, T_k\rangle T_k}{| \dots |} = \frac{[c_{p+1}]_\perp}{\left|[c_{p+1}]_\perp\right|} \\
+  T_n &:= T_1 \times \dots \times T_{n-1}
+ \end{align*}
+rekursiv definierte \uline{Frenet-Begleitbasis} \(s \mapsto \big(T_1, \dots, T_n\big)(s)\) den Ableitungsgleichungen
+\[
+ \begin{pmatrix}
+  T_1 \\
+  \vdots \\
+  \vdots \\
+		\vdots \\
+		\vdots \\
+  T_n
+ \end{pmatrix}' =
+ \begin{pmatrix}
+ 0          & \kappa_1  & 0        & \hdots        & \hdots       & 0 \\
+ -\kappa_1  & 0         & \kappa_2 & \ddots        &              & \vdots \\
+ 0          & -\kappa_2 &   \ddots & \ddots        & \ddots       & \vdots \\
+ \vdots     & \ddots    & \ddots   & \ddots        & \kappa_{n-2} & 0 \\ 
+ \vdots     &           & \ddots   & -\kappa_{n-2} & \ddots       & \tau\\
+ 0          & \hdots    & \hdots   & 0             & -\tau        & 0 
+\end{pmatrix} \begin{pmatrix}
+		T_1 \\
+		\vdots \\
+		\vdots \\
+		\vdots \\
+		\vdots \\
+		T_n
+	      \end{pmatrix}
+\]
+mit den \(n-2\) \uline{Krümmungen}
+\[
+ s \mapsto \kappa_p (s) = \langle T_p', T_{p+1} \rangle (s) \quad (p = 1, \dots, n-2)
+\]
+und der \uline{Torsion}
+\[
+ s \mapsto \tau(s) = \langle T_{n-1}', T_n \rangle(s)
+\]
+\uline{Zusatz}: \\
+Es gilt auch
+\begin{align*}
+ \kappa_p &= \left| [T_p']_\perp \right| = \left| T_p' - \sum_{k=1}^p \langle T_p', T_k\rangle T_k \right| > 0 \quad (p = 1, \dots, n-2) \\
+ \tau &= \det(T_1, \dots, T_{n-1}, T_{n-1}') \gtreqqless 0
+\end{align*}
+
+\end{satz}
+
+\begin{beweis}[des Zusatzes] \(\)
+ \begin{enumerate}
+  \item Es ist 
+  \begin{align*}
+  T_p = \lambda \left(c_p + \sum_{k=1}^{p-1} \lambda_k c_k\right) = [c_p]_\perp \text{ mit } \lambda = \frac{1}{|[c_p]_\perp|} > 0
+  \end{align*}
+  also
+  \[
+   T_p' = \lambda c_{p+1} + \sum_{k=1}^p \widetilde{\lambda}_k c_k \Rightarrow \uline{[T_p']_\perp = \lambda [c_{p+1}]_\perp}
+  \]
+  Ebenso ist
+  \[
+   \uline{T_{p+1} = \mu [c_{p+1}]_\perp} \text{ mit } \mu = \frac{1}{|[c_{p+1}]_\perp|} > 0
+  \]
+  Es folgt
+  \begin{align*}
+   \kappa_p &= \langle T_p', T_{p+1} \rangle = \langle [T_p']_\perp, T_{p+1}\rangle \\
+   &= \lambda \cdot \mu |[c_{p+1}]_\perp |^2 = \uline{\frac{|[c_{p+1}]_\perp|}{|[c_p]_\perp|} = [T_p']_\perp} > 0
+  \end{align*}
+  \item \(\tau = \langle T_{n-1}', T_n \rangle = \langle T_1 \times \dots \times T_{n-1}, T_{n-1}' \rangle = \det ( T_1, \dots, T_{n-1}, T_{n-1}')\)
+ \end{enumerate}
+
+\end{beweis}
+
+\uline{Geometrische Bedeutung}
+ \begin{itemize}
+  \item der Krümmung \(\kappa_p\): Abweichung vom Verlauf in der Schmiegebene \(S_p\)
+  \item der Torsion \(\tau\): Abweichung vom Verlauf in der Schmieghyperebene \(S_{n-1}\) \uline{mit Orientierung! (Vorzeichen)} 
+ \end{itemize}
+
