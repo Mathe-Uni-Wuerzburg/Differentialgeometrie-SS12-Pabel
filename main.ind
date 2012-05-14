@@ -38,9 +38,16 @@
 
   \indexspace
 
+  \item Fl\IeC {\"a}che, \hyperpage{35}
+    \subitem \IeC {\"A}quivalenz, \hyperpage{36}
+    \subitem Parameter, \hyperpage{35}
+    \subitem Parameterlinie, \hyperpage{35}
+    \subitem regul\IeC {\"a}r, \hyperpage{35}
+    \subitem Singularit\IeC {\"a}t, \hyperpage{35}
+    \subitem Spur, \hyperpage{35}
   \item Frenet-Begleitbasis, \hyperpage{15}
     \subitem Ableitungsgleichungen, \hyperpage{17}
-  \item Fundamentalsatz, \hyperpage{24}
+  \item Fundamentalsatz, \hyperpage{24}, \hyperpage{33}
 
   \indexspace
 
@@ -52,6 +59,8 @@
 
   \item Hauptnormalenvektor, \hyperpage{15}
   \item Henkelpunkt, \hyperpage{10}
+  \item Hyperfl\IeC {\"a}che
+    \subitem regul\IeC {\"a}r, \hyperpage{36}
 
   \indexspace
 
@@ -109,6 +118,8 @@
     \subitem degeneriert, \hyperpage{10}
   \item Singularit\IeC {\"a}t, \hyperpage{6}
   \item Skalarprodukt, \hyperpage{3}
+  \item Sph\IeC {\"a}re
+    \subitem 2-, \hyperpage{36}
   \item sph\IeC {\"a}risch, \hyperpage{29}
   \item Spur, \hyperpage{6}
   \item Standard-Skalarprodukt, \hyperpage{3}
@@ -118,6 +129,8 @@
 
   \item Tangenteneinheitsvektor, \hyperpage{14}
   \item Tangentenvektor, \hyperpage{6}, \hyperpage{15}
+  \item Tangentialraum, \hyperpage{35}
+    \subitem Basistransformation, \hyperpage{37}
   \item Taylorentwicklung, \hyperpage{20}
   \item Torsion, \hyperpage{16}
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}

@@ -1,0 +1,74 @@
+\chapter{Lokale Flächentheorie im euklidischen Raum}
+\section{Grundbegriffe der Flächentheorie}
+\subsection{p-dimensionale Flächen im affinen $\IR^n$}
+Sei \(1 < p < n\) fest gewählt (in Anwendungen meist \(p = 2, n= 3\)).\\
+ 
+\begin{definition}[Parametrisierte \(\C^r\)-p-Fläche (\(r \ge 0\))]\index{Fläche}
+\(\C^r\)-Abbildung \(x: G \subset \IR^p \to \IR^n\)
+\[
+ u = \left( u^1, \dots , u^p \right) \mapsto x(u) = \left(x^1(u), \dots, x^n (u) \right) 
+\]
+wobei \(G\) ein \uline{Gebiet} des \(\IR^p\) (d.h. offen und zusammenhängend) ist.\\
+\uline{Parameter:}\index{Fläche!Parameter} \[ u^1, \dots , u^p \quad \text{bei }n = 3\text{ meist }(u,v) \]
+\uline{Parameterlinien:}\index{Fläche!Parameterlinie}
+\[u^\varrho \mapsto x \left(u^1_0, \dots , u^\varrho , \dots , u^p_0 \right)\]
+\uline{Spur:}\index{Fläche!Spur} \[M:= x\left[G \right] \subset \IR^n\]
+\uline{Regularität \(r \geq 1\)}\index{Fläche!regulär}: Die partiellen Ableitungen 
+\[x_\varrho := \partial_\varrho x = \frac{\partial x}{\partial u^\varrho} \quad (\varrho = 1, \dots , p)\] 
+sind überall linear unabhängig (sonst \uline{Singularitäten})\index{Fläche!Singularität}.
+\end{definition}
+
+\begin{bemerkung}\(\)
+\begin{enumerate}
+ \item Regularität bedeutet: Die partiellen Ableitungen \(x_\varrho (\varrho = 1, \ldots , p)\) [\underline{"`Tangentialvektoren"'}] spannen überall einen p-dimensionalen \uline{Tangentialraum}\index{Tangentialraum} auf. Es gibt keine "`Grate"' oder schlimmeres.
+ \item Reguläre parametrisierte \(p\)-Flächen sind \uline{lokal injektiv}; die Funktionalmatrix 
+\[Dx = \left(\frac{\partial (x^1, \dots , x^n)}{\partial (u^1, \ldots , u^p)}\right) = \left(x_1, \ldots , x_p\right)\]
+besitzt überall den Höchstrang \(p\) (Satz über implizite Funktionen). Bei lokalen Untersuchungen kann man stets annehmen, dass \(x : G \subset \IR^p \rightarrow x \left[G \right] = M \subset \IR^n\) bijektiv ist, also keine Selbstdurchdringungen auftreten. Eine parametrisierte \uline{Hyperfläche}\index{Hyperfläche!regulär} (\(p = n-1\)) im euklidischen \(\IR^n\) ist genau dann regulär, wenn \(\forall_{u} \left(x_1 \times \ldots \times x_{n-1} \right) (u) \neq 0\), d.h. wenn überall der \uline{Normalen(einheits)vektor} 
+\[N = \frac{x_1 \times \ldots \times x_{n-1}}{|x_1 \times \ldots \times x_{n-1}|}\] 
+existiert.
+\end{enumerate}
+\end{bemerkung}
+
+\begin{bsp}
+Die Abbildung 
+\[\left( u.v \right) \in \left]-\pi , + \pi \right[ \times \left]-\frac{\pi}{2}, \frac{\pi}{2} \right[ \mapsto x (u, v) = \begin{pmatrix}
+                                                                                                                \cos u \cos v\\
+														  \sin u \cos v\\
+														   \sin v
+                                                                                                               \end{pmatrix} \in \IR^3
+\] 
+ist (wegen \(|x_1 \times x_2|(u,v) = \ldots = \cos v > 0\)) eine reguläre Parametrisierung der Kugelfläche (\uline{2-Sphäre}\index{Sphäre!2-} \(S^2 \subset \IR^3\)), die aber einen Meridian (samt Polen) auslässt.(\(u = \text{geographische Länge}, v= \text{geographische Breite}\), Würzburg: \(u \approx 10 \deg, v \approx 50 \deg\))\\
+Es gibt keine globale, injektive Parametrisierung der \(S^2\). Als ganzes ist sie eine \underline{"`differenzierbare} \underline{Mannigfaltigkeit"'}, die sich nur lokal so parametrisieren lässt.
+\end{bsp}
+
+\begin{definition}[\(\C^r\)-Äquivalenz]\index{Fläche!Äquivalenz}
+\(\C^r\)-Äquivalenz zweier \(\C^r\)-p-Flächen
+\(\begin{cases}
+x : G \rightarrow \IR^n, u \mapsto x(u)\\
+\widetilde x : \widetilde G \rightarrow \IR^n, \widetilde u \mapsto \widetilde x( \widetilde u)
+\end{cases}\).
+Es existiert ein orientierungstreuer \(\C^r\)-Diffeomorphismus 
+\[\Phi : G \rightarrow \widetilde G, u \mapsto \widetilde u (u) = \Phi (u)\] 
+mit \(x = \widetilde x \circ \Phi\), d.h. 
+\[\forall_{n} \, x(u) = \widetilde x (\Phi(u)) = \widetilde x (\widetilde u)\]
+\end{definition}
+
+\begin{bemerkung} \(\)
+\begin{itemize}
+ \item Für \(r \geq 1\) bestimmt die Funktionalmatrix 
+ \[D\Phi = \left( \frac{\partial \widetilde u^\varrho}{\partial u^\sigma}\right)_{\sigma, \varrho = 1, \dots , p}\] 
+ den Übergang zwischen den Tangentialvektoren \(x_1, \dots , x_p\) und \(\widetilde x_1, \dots , \widetilde x_p\) bezüglich verschiedener Parametrisierungen. Nach der Kettenregel gilt
+\[
+ x_{\varrho}(u) = \sum_{\sigma = 1}^{p} \widetilde x_\sigma \big(\Phi(u)\big) \frac{\partial \widetilde u^\sigma}{\partial u^\varrho} (u) = \uline{\sum_{\sigma = 1}^{p} \widetilde u_\varrho^\sigma (u) \widetilde x_\sigma \big(\Phi(u)\big)}
+\]
+(\uline{Basistransformationsformel}\index{Tangentialraum!Basistransformation} im Tangentialraum)
+ \item \(\Phi\) orientierungstreu \(\Leftrightarrow \det D\Phi = \det \left(\widetilde u_\varrho^\sigma\right) > 0\)
+\end{itemize}
+\end{bemerkung}
+
+\begin{definition}
+Eine (orientierte, reguläre) \uline{\(\C^r\)-p-Fläche} im affinen \( \IR^n\) ist eine Äquivalenzklasse regulärer, parametrisierter \(\C^r\)-p-Flächen \(x : G \subset \IR^p \rightarrow \IR^n\).
+\end{definition}
+
+\uline{Bedauerlich:}
+In der Flächentheorie gibt es \uline{keine ausgezeichnete Parametrisierung} vgl. der Bogenlängenparametrisierung in der Kurventheorie. Deswegen: möglichst \uline{parameterunabhängige} Formulierung von Eigenschaften/Größen. 

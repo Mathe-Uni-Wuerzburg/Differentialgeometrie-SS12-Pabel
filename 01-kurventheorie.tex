@@ -1086,3 +1086,41 @@ Es gilt auch
   \item der Torsion \(\tau\): Abweichung vom Verlauf in der Schmieghyperebene \(S_{n-1}\) \uline{mit Orientierung! (Vorzeichen)} 
  \end{itemize}
 
+\begin{satz}[Fundamentalsatz]\label{satz142}\index{Fundamentalsatz}
+\[\kappa_1, \ldots, \kappa_{n-2}, \tau\] 
+als Funktionen der Bogenlängen bilden ein \uline{vollständiges} System  \uline{unabhängiger} Invarianten.
+\end{satz}
+Berechnung der Größen bezüglich einer beliebigen Parametrisierung:
+\begin{folgerung}
+Bezüglich einer beliebigen, zulässigen Parametrisierung \(t \mapsto c(t)\) einer Frenet-Kurve im \(\IR\) gilt mit \(c_p:=\frac{\dd^p c}{\dd t^p} (p=1, \dots , n)\)
+\begin{align*}
+ T_1 &=\frac{c_1}{|c_1|}\\
+ \overset{n-2}{\underset{p=1}{\forall}} T_p &= T_1 \times \ldots \times T_{n-1}
+\end{align*}
+sowie mit
+\begin{align*}
+ A_0 &:= 1\\
+ A_p &:= a_p \left(c_1, \ldots , c_p \right) = \sqrt{\det \left( \langle c_i, c_k \rangle \right)_{i,k = 1, \ldots , p}} > 0 (p = 1, \ldots, n-1)\\
+ V_n &:= \det \left(c_1, \ldots , c_n \right) \lesseqgtr 0\\
+ \overset{n-2}{\underset{p=1}{\forall}} \kappa_p &= \frac{1}{|\dot c|} \frac{\quad \frac{A_{p+1}}{A_p}\quad}{ \frac{A_p}{A_{p-1}} } > 0\\
+ \tau &= \frac{1}{|\dot c|} \frac{\quad \frac{V_n}{A_{n-1}}\quad}{\frac{A_{n-1}}{A_{n-2}}} \gtreqqless 0
+\end{align*}
+\end{folgerung}
+\textbf{Spezialfälle:}\\
+\begin{align*}
+\uline{n=2:}\quad \tau &= k = \frac{1}{|\dot c|} \frac{\,\frac{V_2}{A_1}\,}{\frac{A_1}{A_0}} = \frac{\det(\dot c, \ddot c)}{|\dot c|^3} A-1 = |\dot c|, V_2 = \det (\dot c, \ddot c) \\
+\uline{n=3:}\quad \kappa &= \frac{1}{|\dot c|} \frac{\,\frac{A_2}{A_1}\,}{\frac{A_1}{A_0}} = \frac{a_2 (\dot c, \ddot c)}{|\dot c|^3} = \frac{|\dot c, \times \ddot c|}{|\dot c|^3} \\
+\tau &= \frac{1}{|\dot c|} \frac{\,\frac{V_3}{A_2}\,}{\frac{A_2}{A_1}} = \frac{\det (\dot c, \ddot c, \dddot c)}{|\dot c,\times \ddot c|^2} 
+\end{align*}
+\begin{beweis}[Beweisskizze zu Satz \ref{satz142}]
+Darstellung von \(T_1, \ldots T_n \) klar, da das Orthonormalisierungsverfahren unabhängig von der Ausgangsbasis ist, wenn \( \langle c_1, \ldots , c_p \rangle = \langle  \widetilde c_1, \dots \widetilde c_p \rangle\), sonst Orientierung
+\begin{align*}
+ \kappa_p = \langle T'_p, T_{p+1} \rangle = \frac{1}{w} \langle \dot T_p, T_{p+1} \rangle \stackrel{\ast}{=} \frac{1}{w} \frac{|\left[c_{p+1} \right]\perp|}{|\left[c_p \right]\perp|}\\
+ \ast = \text{siehe Beweis des Zusatzes}
+\end{align*}
+Nach der Formel "`Volumen \(=\) Grundfläche \(\times\) Höhe"' gilt
+\begin{align*}
+  A_{p+1} (c_1, \dots , c_{p+1}) &= A_p \left(c_1, \dots , c_p \right) \cdot \left|\left[c_{p+1}\right]_\perp\right| \text{, also } \\
+  \left|\left[c_{p+1}\right]_\perp\right| &= \frac{A_{p+1}}{A_p}
+\end{align*}
+\end{beweis}
