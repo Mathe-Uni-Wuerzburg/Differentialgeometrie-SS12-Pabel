@@ -4,7 +4,7 @@ Wir betrachten zunächst (kurzzeitig) rein \uline{affingeometrische} Begriffe/In
 \begin{definition}
  Ein \uline{\(\C^r\)-Weg}\index{Weg} oder eine \uline{parametrisierte \(\C^r\)-Kurve}\index{Kurve} (\(r\ge 0\)) [\(\C^r = r\)-mal stetig differenzierbar] im (affinen) \(\IR^n\) ist eine \(\C^r\)-Abbildung 
 \[
- c: t\in I \subset \IR \mapsto c(t)\in \IR^n
+ c\colon t\in I \subset \IR \mapsto c(t)\in \IR^n
 \]
 eines offenen Intervalls \(I\) in den \(\IR^n\). \\
 \(t\) heißt \uline{Parameter}\index{Parameter}, die Bildmenge \(c[I] \subset \IR^n\) die \uline{Spur des Weges}\index{Spur}. \\
@@ -18,7 +18,7 @@ Ein \(\C^r\)-Weg (\(r\ge 1\)) heißt \uline{regulär}\index{regulär}, wenn übe
 \begin{enumerate}
  \item \uline{Peano-Kurve}: Stetiger (\(\C^0\)-)Weg im \(\IR^2\), dessen Spur jeden Punkt eines Gebietes \(G\subseteq \IR^2\) ausfüllt (nirgends differenzierbar, "`unbrauchbar"')
  \item \uline{Konstanter Weg}: \(t \in I \mapsto c(t)=x_0 \in \IR^n\) (nirgends regulär, "`unbrauchbar"')
- \item \uline{Neil'sche Parabel}: \(c: t\in \IR \mapsto c(t) = \begin{pmatrix}
+ \item \uline{Neil'sche Parabel}: \(c \colon t\in \IR \mapsto c(t) = \begin{pmatrix}
                                                                 t^2 \\
 								t^3
                                                                \end{pmatrix}
@@ -26,7 +26,7 @@ Ein \(\C^r\)-Weg (\(r\ge 1\)) heißt \uline{regulär}\index{regulär}, wenn übe
 								                                                  0 \\
 														  0
 								                                                 \end{pmatrix} \) nicht regulär ("`Spitze"') (\(w(0)=|\dot c (0)|=0\), "`man hat Zeit, sich umzudrehen"')
- \item \uline{Kreislinie}: \(c: t\in \IR \mapsto c(t)=\begin{pmatrix}
+ \item \uline{Kreislinie}: \(c\colon t\in \IR \mapsto c(t)=\begin{pmatrix}
                                                        \cos t \\
 						       \sin t
                                                       \end{pmatrix} \in \IR^2\) ( \(\infty\)-oft durchlaufbar) [Affin gesehen ist das eine Ellipse!] \\
@@ -43,7 +43,7 @@ sind Parametrisierungen von Kreisstücken.
 Wege,  die nur mit veränderlicher "`Zeitskala"' durchlaufen werden, sollen nicht als verschieden angesehen werden.
 \begin{definition}
  \(I, \widetilde I \subset \IR\) seien offene Intervalle. \\
-Zwei Wege \(c: I \to \IR^n, \widetilde c: \widetilde I \to \IR^n\) heißen \uline{\(C^r\)-äquivalent}\index{Äquivalenz} (\(r\ge 0 \)), wenn ein orientierungstreuer\index{orientierungstreu} (d.h. monoton wachsender) \(\C^r\)-Diffeomorphismus\index{Diffeomorphismus} \(\Phi : I \to \widetilde I\) existiert, mit
+Zwei Wege \(c \colon I \to \IR^n, \widetilde c \colon \widetilde I \to \IR^n\) heißen \uline{\(C^r\)-äquivalent}\index{Äquivalenz} (\(r\ge 0 \)), wenn ein orientierungstreuer\index{orientierungstreu} (d.h. monoton wachsender) \(\C^r\)-Diffeomorphismus\index{Diffeomorphismus} \(\Phi \colon I \to \widetilde I\) existiert, mit
 \[
  \uline{c= \widetilde c \circ \Phi}, \text{ d.h. } \uline{\forall_t c(t)=\widetilde c (\Phi(t))}
 \]
@@ -53,7 +53,7 @@ Zwei Wege \(c: I \to \IR^n, \widetilde c: \widetilde I \to \IR^n\) heißen \ulin
 \begin{bemerkung} \(\)
  \begin{enumerate}
   \item[0.] \(\Phi \, \C^r\)-Diffeomorphismus\index{Diffeomorphismus} \(\Leftrightarrow \Phi\) bijektiv und \(\Phi\) \uline{und \(\Phi^{-1}\)}\, \(C^r\)-differenzierbar. 
-  [Bsp.: \(\Phi: t \in \IR \to t^3 \in \IR\) ist \uline{kein} \(\C^1\)-Diffeomorphismus] \\
+  [Bsp.: \(\Phi \colon t \in \IR \to t^3 \in \IR\) ist \uline{kein} \(\C^1\)-Diffeomorphismus] \\
   Bei \(C^r\)-Diffeomorphismus ist stets \(\dot \Phi(t)\ne 0\) (falls \(r\ge 1\))
   \item[1.] \(\Phi\) ist (für \(r\ge 1\)) genau dann orientierungstreu, wenn überall \(\dot \Phi(t)>0\) ist.
   \item[2.] Äquivalente Wege besitzen (für \(r\ge 1\)) das gleiche Regularitätsverhalten.
@@ -65,7 +65,7 @@ Zwei Wege \(c: I \to \IR^n, \widetilde c: \widetilde I \to \IR^n\) heißen \ulin
 \end{bemerkung}
 
 \begin{definition}
- Eine (orientierte, reguläre) \uline{\(\C^r\)-Kurve} (\(r\ge1\)) im (affinen) \(\IR^n\) ist eine Äquivalenz-klasse \([c]\) von regulären \(\C^r\)-Wegen \(c : I \subset \IR \to \IR^n\). Ein Repräsentant heißt eine (zulässige) \uline{Parametrisierungen}\index{Parametrisierung} der \(\C^r\)-Kurve, eine die Äquivalenz vermittelnde Abbildung \(\Phi\) eine (zulässige) \uline{Parametertransformation}\index{Parametertransformation}.
+ Eine (orientierte, reguläre) \uline{\(\C^r\)-Kurve} (\(r\ge1\)) im (affinen) \(\IR^n\) ist eine Äquivalenz-klasse \([c]\) von regulären \(\C^r\)-Wegen \(c \colon I \subset \IR \to \IR^n\). Ein Repräsentant heißt eine (zulässige) \uline{Parametrisierungen}\index{Parametrisierung} der \(\C^r\)-Kurve, eine die Äquivalenz vermittelnde Abbildung \(\Phi\) eine (zulässige) \uline{Parametertransformation}\index{Parametertransformation}.
 \end{definition}
 
 \begin{bsp}
@@ -218,7 +218,7 @@ Zunächst gilt offensichtlich
    y^{(p)} = \sum_{k=0}^{p-1} \lambda_k y^{(k)}
   \]
   mit stetigen Koeffizienten.
-  für sie existiert ein Fundamentalsystem \(y_1, \dots y_p : I \to \IR\), so dass für jede Lösung gilt
+  für sie existiert ein Fundamentalsystem \(y_1, \dots y_p \colon I \to \IR\), so dass für jede Lösung gilt
   \[
    y(t)=\sum_{k=1}^p a_k y_k(t)
   \]
@@ -1005,7 +1005,6 @@ T_p \in \hl c_1, \dots, c_p \hr \Rightarrow T_p' &\in \hl c_1, \dots, c_{p+1} \h
 für \(\forall_{q > p+1} \langle T_p', T_q\rangle = 0\). \par
 So folgt nun der Satz:
 
-
 \begin{satz}\label{satz141}
  Sei \(s \mapsto c(s)\) Bogenlängenparametrisierung einer \(\C^n\)-Kurve im \(\IR^n\) mit \(\forall_s \big(c_1, \dots, c_{n-1}\big)(s)\) linear unabhängig. Dann genügt die durch
  \begin{align*}
@@ -1092,35 +1091,36 @@ als Funktionen der Bogenlängen bilden ein \uline{vollständiges} System  \uline
 \end{satz}
 Berechnung der Größen bezüglich einer beliebigen Parametrisierung:
 \begin{folgerung}
-Bezüglich einer beliebigen, zulässigen Parametrisierung \(t \mapsto c(t)\) einer Frenet-Kurve im \(\IR\) gilt mit \(c_p:=\frac{\dd^p c}{\dd t^p} (p=1, \dots , n)\)
+Bezüglich einer beliebigen, zulässigen Parametrisierung \(t \mapsto c(t)\) einer Frenet-Kurve im \(\IR^n\) gilt mit \(c_p:=\frac{\dd^p c}{\dd t^p} (p=1, \dots , n)\)
 \begin{align*}
- T_1 &=\frac{c_1}{|c_1|}\\
- \overset{n-2}{\underset{p=1}{\forall}} T_p &= T_1 \times \ldots \times T_{n-1}
+ T_1 &=\frac{c_1}{|c_1|} \\
+ \overset{n-2}{\underset{p=1}{\forall}} T_{p+1} &= \frac{c_{p+1} - \sum_{k=1}^p \langle c_{p+1}, T_k \rangle T_k}{| \dots |} = \frac{[c_{p+1}]_{\perp}}{\left| [c_{p+1}]_{\perp} \right|} \\
+ T_n &= T_1 \times \ldots \times T_{n-1}
 \end{align*}
 sowie mit
 \begin{align*}
  A_0 &:= 1\\
- A_p &:= a_p \left(c_1, \ldots , c_p \right) = \sqrt{\det \left( \langle c_i, c_k \rangle \right)_{i,k = 1, \ldots , p}} > 0 (p = 1, \ldots, n-1)\\
- V_n &:= \det \left(c_1, \ldots , c_n \right) \lesseqgtr 0\\
- \overset{n-2}{\underset{p=1}{\forall}} \kappa_p &= \frac{1}{|\dot c|} \frac{\quad \frac{A_{p+1}}{A_p}\quad}{ \frac{A_p}{A_{p-1}} } > 0\\
- \tau &= \frac{1}{|\dot c|} \frac{\quad \frac{V_n}{A_{n-1}}\quad}{\frac{A_{n-1}}{A_{n-2}}} \gtreqqless 0
+ A_p &:= a_p \left(c_1, \ldots , c_p \right) = \sqrt{\det \left( \langle c_i, c_k \rangle \right)_{i,k = 1, \l[c_{p+1}]_{\perp}dots , p}} > 0 \quad (p = 1, \ldots, n-1)\\
+ V_n &:= \det \left(c_1, \ldots , c_n \right) \gtreqqless 0\\
+ \overset{n-2}{\underset{p=1}{\forall}} \kappa_p &= \frac{1}{|\dot c|} \frac{A_{p+1}}{A_p} \left/\frac{A_p}{A_{p-1}}\right.  > 0\\
+ \tau &= \frac{1}{|\dot c|} \frac{V_n}{A_{n-1}}\left/\frac{A_{n-1}}{A_{n-2}} \right. \gtreqqless 0
 \end{align*}
 \end{folgerung}
 \textbf{Spezialfälle:}\\
 \begin{align*}
-\uline{n=2:}\quad \tau &= k = \frac{1}{|\dot c|} \frac{\,\frac{V_2}{A_1}\,}{\frac{A_1}{A_0}} = \frac{\det(\dot c, \ddot c)}{|\dot c|^3} A-1 = |\dot c|, V_2 = \det (\dot c, \ddot c) \\
-\uline{n=3:}\quad \kappa &= \frac{1}{|\dot c|} \frac{\,\frac{A_2}{A_1}\,}{\frac{A_1}{A_0}} = \frac{a_2 (\dot c, \ddot c)}{|\dot c|^3} = \frac{|\dot c, \times \ddot c|}{|\dot c|^3} \\
-\tau &= \frac{1}{|\dot c|} \frac{\,\frac{V_3}{A_2}\,}{\frac{A_2}{A_1}} = \frac{\det (\dot c, \ddot c, \dddot c)}{|\dot c,\times \ddot c|^2} 
+\uline{n=2:}\quad \tau &= k = \frac{1}{|\dot c|} \frac{V_2}{A_1}\left/\frac{A_1}{A_0}\right. = \frac{\det(\dot c, \ddot c)}{|\dot c|^3} \quad \big(A_1 = |\dot c|, V_2 = \det (\dot c, \ddot c)\big) \\
+\uline{n=3:}\quad \kappa &= \frac{1}{|\dot c|} \frac{A_2}{A_1}\left/\frac{A_1}{A_0} \right. = \frac{a_2 (\dot c, \ddot c)}{|\dot c|^3} = \frac{|\dot c, \times \ddot c|}{|\dot c|^3} \\
+\tau &= \frac{1}{|\dot c|} \frac{V_3}{A_2}\left/\frac{A_2}{A_1} \right. = \frac{\det (\dot c, \ddot c, \dddot c)}{|\dot c\times \ddot c|^2} 
 \end{align*}
 \begin{beweis}[Beweisskizze zu Satz \ref{satz142}]
-Darstellung von \(T_1, \ldots T_n \) klar, da das Orthonormalisierungsverfahren unabhängig von der Ausgangsbasis ist, wenn \( \langle c_1, \ldots , c_p \rangle = \langle  \widetilde c_1, \dots \widetilde c_p \rangle\), sonst Orientierung
+Darstellung von \(T_1, \ldots T_n \) klar, da das Orthonormalisierungsverfahren unabhängig von der Ausgangsbasis ist, wenn \( \hl c_1, \ldots , c_p \hr = \hl \widetilde c_1, \dots \widetilde c_p \hr\) samt Orientierung
 \begin{align*}
- \kappa_p = \langle T'_p, T_{p+1} \rangle = \frac{1}{w} \langle \dot T_p, T_{p+1} \rangle \stackrel{\ast}{=} \frac{1}{w} \frac{|\left[c_{p+1} \right]\perp|}{|\left[c_p \right]\perp|}\\
+ \kappa_p = \langle T'_p, T_{p+1} \rangle = \frac{1}{w} \langle \dot T_p, T_{p+1} \rangle \stackrel{\ast}{=} \frac{1}{w} \frac{|\left[c_{p+1} \right]_\perp|}{|\left[c_p \right]_\perp|}\\
  \ast = \text{siehe Beweis des Zusatzes}
 \end{align*}
 Nach der Formel "`Volumen \(=\) Grundfläche \(\times\) Höhe"' gilt
 \begin{align*}
-  A_{p+1} (c_1, \dots , c_{p+1}) &= A_p \left(c_1, \dots , c_p \right) \cdot \left|\left[c_{p+1}\right]_\perp\right| \text{, also } \\
+  a_{p+1} (c_1, \dots , c_{p+1}) &= a_p \left(c_1, \dots , c_p \right) \cdot \left|\left[c_{p+1}\right]_\perp\right| \text{, also } \\
   \left|\left[c_{p+1}\right]_\perp\right| &= \frac{A_{p+1}}{A_p}
 \end{align*}
 \end{beweis}

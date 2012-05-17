@@ -1,10 +1,11 @@
-\chapter{Lokale Flächentheorie im euklidischen Raum}
+  \chapter{Lokale Flächentheorie im euklidischen Raum}
 \section{Grundbegriffe der Flächentheorie}
-\subsection{p-dimensionale Flächen im affinen $\IR^n$}
-Sei \(1 < p < n\) fest gewählt (in Anwendungen meist \(p = 2, n= 3\)).\\
+\setcounter{subsection}{-1}
+\subsection{$p$-dimensionale Flächen im affinen $\IR^n$}
+Sei \(1 < p < n\) fest gewählt (in Anwendungen meist \(p = 2, n= 3\)).
  
-\begin{definition}[Parametrisierte \(\C^r\)-p-Fläche (\(r \ge 0\))]\index{Fläche}
-\(\C^r\)-Abbildung \(x: G \subset \IR^p \to \IR^n\)
+\begin{definition}[Parametrisierte \(\C^r\)-\(p\)-Fläche (\(r \ge 0\))]\index{Fläche}
+\(\C^r\)-Abbildung \(x\colon G \subset \IR^p \to \IR^n\)
 \[
  u = \left( u^1, \dots , u^p \right) \mapsto x(u) = \left(x^1(u), \dots, x^n (u) \right) 
 \]
@@ -23,7 +24,7 @@ sind überall linear unabhängig (sonst \uline{Singularitäten})\index{Fläche!S
  \item Regularität bedeutet: Die partiellen Ableitungen \(x_\varrho (\varrho = 1, \ldots , p)\) [\underline{"`Tangentialvektoren"'}] spannen überall einen p-dimensionalen \uline{Tangentialraum}\index{Tangentialraum} auf. Es gibt keine "`Grate"' oder schlimmeres.
  \item Reguläre parametrisierte \(p\)-Flächen sind \uline{lokal injektiv}; die Funktionalmatrix 
 \[Dx = \left(\frac{\partial (x^1, \dots , x^n)}{\partial (u^1, \ldots , u^p)}\right) = \left(x_1, \ldots , x_p\right)\]
-besitzt überall den Höchstrang \(p\) (Satz über implizite Funktionen). Bei lokalen Untersuchungen kann man stets annehmen, dass \(x : G \subset \IR^p \rightarrow x \left[G \right] = M \subset \IR^n\) bijektiv ist, also keine Selbstdurchdringungen auftreten. Eine parametrisierte \uline{Hyperfläche}\index{Hyperfläche!regulär} (\(p = n-1\)) im euklidischen \(\IR^n\) ist genau dann regulär, wenn \(\forall_{u} \left(x_1 \times \ldots \times x_{n-1} \right) (u) \neq 0\), d.h. wenn überall der \uline{Normalen(einheits)vektor} 
+besitzt überall den Höchstrang \(p\) (Satz über implizite Funktionen). Bei lokalen Untersuchungen kann man stets annehmen, dass \(x \colon G \subset \IR^p \rightarrow x \left[G \right] = M \subset \IR^n\) bijektiv ist, also keine Selbstdurchdringungen auftreten. Eine parametrisierte \uline{Hyperfläche}\index{Hyperfläche!regulär} (\(p = n-1\)) im euklidischen \(\IR^n\) ist genau dann regulär, wenn \(\forall_{u} \left(x_1 \times \ldots \times x_{n-1} \right) (u) \neq 0\), d.h. wenn überall der \uline{Normalen(einheits)vektor} 
 \[N = \frac{x_1 \times \ldots \times x_{n-1}}{|x_1 \times \ldots \times x_{n-1}|}\] 
 existiert.
 \end{enumerate}
@@ -37,18 +38,18 @@ Die Abbildung
 														   \sin v
                                                                                                                \end{pmatrix} \in \IR^3
 \] 
-ist (wegen \(|x_1 \times x_2|(u,v) = \ldots = \cos v > 0\)) eine reguläre Parametrisierung der Kugelfläche (\uline{2-Sphäre}\index{Sphäre!2-} \(S^2 \subset \IR^3\)), die aber einen Meridian (samt Polen) auslässt.(\(u = \text{geographische Länge}, v= \text{geographische Breite}\), Würzburg: \(u \approx 10 \deg, v \approx 50 \deg\))\\
+ist (wegen \(|x_1 \times x_2|(u,v) = \ldots = \cos v > 0\)) eine reguläre Parametrisierung der Kugelfläche (\uline{2-Sphäre}\index{Sphäre!2-} \(S^2 \subset \IR^3\)), die aber einen Meridian (samt Polen) auslässt.(\(u =\) geographische Länge, \(v=\) geographische Breite, Würzburg: \(u \approx 10^\circ, v \approx 50^\circ\))\\
 Es gibt keine globale, injektive Parametrisierung der \(S^2\). Als ganzes ist sie eine \underline{"`differenzierbare} \underline{Mannigfaltigkeit"'}, die sich nur lokal so parametrisieren lässt.
 \end{bsp}
 
 \begin{definition}[\(\C^r\)-Äquivalenz]\index{Fläche!Äquivalenz}
-\(\C^r\)-Äquivalenz zweier \(\C^r\)-p-Flächen
+\(\C^r\)-Äquivalenz zweier \(\C^r\)-\(p\)-Flächen
 \(\begin{cases}
-x : G \rightarrow \IR^n, u \mapsto x(u)\\
-\widetilde x : \widetilde G \rightarrow \IR^n, \widetilde u \mapsto \widetilde x( \widetilde u)
-\end{cases}\).
+x \colon G \rightarrow \IR^n, u \mapsto x(u)\\
+\widetilde x \colon \widetilde G \rightarrow \IR^n, \widetilde u \mapsto \widetilde x( \widetilde u)
+\end{cases}\). \\
 Es existiert ein orientierungstreuer \(\C^r\)-Diffeomorphismus 
-\[\Phi : G \rightarrow \widetilde G, u \mapsto \widetilde u (u) = \Phi (u)\] 
+\[\Phi \colon  G \rightarrow \widetilde G, u \mapsto \widetilde u (u) = \Phi (u)\] 
 mit \(x = \widetilde x \circ \Phi\), d.h. 
 \[\forall_{n} \, x(u) = \widetilde x (\Phi(u)) = \widetilde x (\widetilde u)\]
 \end{definition}
@@ -56,7 +57,7 @@ mit \(x = \widetilde x \circ \Phi\), d.h.
 \begin{bemerkung} \(\)
 \begin{itemize}
  \item Für \(r \geq 1\) bestimmt die Funktionalmatrix 
- \[D\Phi = \left( \frac{\partial \widetilde u^\varrho}{\partial u^\sigma}\right)_{\sigma, \varrho = 1, \dots , p}\] 
+ \[D\Phi = \left( \frac{\partial \widetilde u^\sigma}{\partial u^\varrho}\right)_{\sigma, \varrho = 1, \dots , p}\] 
  den Übergang zwischen den Tangentialvektoren \(x_1, \dots , x_p\) und \(\widetilde x_1, \dots , \widetilde x_p\) bezüglich verschiedener Parametrisierungen. Nach der Kettenregel gilt
 \[
  x_{\varrho}(u) = \sum_{\sigma = 1}^{p} \widetilde x_\sigma \big(\Phi(u)\big) \frac{\partial \widetilde u^\sigma}{\partial u^\varrho} (u) = \uline{\sum_{\sigma = 1}^{p} \widetilde u_\varrho^\sigma (u) \widetilde x_\sigma \big(\Phi(u)\big)}
@@ -67,8 +68,155 @@ mit \(x = \widetilde x \circ \Phi\), d.h.
 \end{bemerkung}
 
 \begin{definition}
-Eine (orientierte, reguläre) \uline{\(\C^r\)-p-Fläche} im affinen \( \IR^n\) ist eine Äquivalenzklasse regulärer, parametrisierter \(\C^r\)-p-Flächen \(x : G \subset \IR^p \rightarrow \IR^n\).
+Eine (orientierte, reguläre) \uline{\(\C^r\)-\(p\)-Fläche} im affinen \( \IR^n\) ist eine Äquivalenzklasse regulärer, parametrisierter \(\C^r\)-\(p\)-Flächen \(x \colon G \subset \IR^p \rightarrow \IR^n\).
 \end{definition}
 
 \uline{Bedauerlich:}
-In der Flächentheorie gibt es \uline{keine ausgezeichnete Parametrisierung} vgl. der Bogenlängenparametrisierung in der Kurventheorie. Deswegen: möglichst \uline{parameterunabhängige} Formulierung von Eigenschaften/Größen. 
+In der Flächentheorie gibt es \uline{keine ausgezeichnete Parametrisierung} vgl. der Bogenlängenparametrisierung in der Kurventheorie. \\
+Deswegen: möglichst \uline{parameterunabhängige} Formulierung von Eigenschaften/Größen. 
+
+\begin{bsp}
+ Die \uline{Tangentialräume} (für \(p = 2\) die Tangentialebenen)
+ \[
+  T_u x := \left[\xcancel{x(u)} + \right] \hl x_1(u) , \dots, x_p(u) \hr
+ \]
+ sind von der Parametrisierung unabhängig,
+ \[
+  T_u x = T_{\widetilde u}\widetilde x = \hl \widetilde x_1( \widetilde u) , \dots, \widetilde x_p ( \widetilde u) \hr
+ \]
+ nicht aber die Basisvektoren \(x_1, \dots, x_p\). \\
+ \uline{Tangentialvektoren}
+ \[
+  X \in T_u x = T_{\widetilde u} \widetilde x \quad \text{(invariante Objekte)}
+ \]
+ besitzen dann verschiedene Basisdarstellungen:
+ \begin{align*}
+  X = \sum_{\varrho = 1}^p X^\varrho x_\varrho (u) = \sum_{\sigma = 1}^p \widetilde X^\sigma \widetilde x_\sigma ( \widetilde u)
+ \end{align*}
+ und aus der Basistransformation
+ \begin{align*}
+  x_\varrho = \sum_\varrho \widetilde u_\varrho^\sigma \widetilde x_\sigma
+ \end{align*}
+ folgt die \uline{Koordinatentransformation}
+ \[
+  \widetilde X^\sigma = \sum \widetilde u_\varrho^\sigma X^\varrho
+ \]
+ für Vektoren.
+\end{bsp}
+
+\begin{bemerkung}
+ Zur Vereinfachung der Schreibweise benutzt man beim Rechnen in Koordinaten ("`Tensorkalkül"') meist (wir nicht immer, aber immer öfter) die sogenannte \textsc{Einstein}sche Summationskonvention.\index{Einsteinsche Summationskonvention} \\
+ In einem Term wird über Indizes, die einmal "`oben"', einmal "`unten"' vorkommen generell summiert.
+ \begin{bsp}
+  \begin{align*}
+  &\cancel{\sum} X^\varrho \widetilde x_\varrho, \quad \cancel{\sum_\mu} a^{\varrho \mu} b_{\mu \sigma}, \quad \cancel{\sum} b^{\varrho}_{\, \varrho} \text{ Spur} \\
+  & \cancel{\sum_{\varrho, \sigma}} X^\varrho \gamma_{\varrho\,\sigma}^{\,\mu} Y^\sigma, \cancel{\sum_\mu} g_{\mu \nu} R_{\varrho \, \sigma \tau}^{\,\mu} = R_{\varrho \nu \sigma \tau}
+  \end{align*}
+ \end{bsp}
+\end{bemerkung}
+
+\subsection{Flächeninterne Metrik auf $p$-Flächen im euklidischen $\IR^n$}
+Die euklidische Struktur im \(\IR^n\) induziert in den \(p\)-dimensionalen Tangentialräumen \(T_u x \subset: \IR^n\) punktale Skalarprodukte.
+
+\begin{satz}\label{satz211}
+ In jedem Punkt \(x(u)\) einer \(\C^1\)-\(p\)-Fläche im euklidischen \(\IR^n\) wird durch
+ \begin{align*}
+  I_u \colon T_u x \times T_u x \to \IR, \, (X,Y) \mapsto I_u (X,Y) := \langle X, Y \rangle
+ \end{align*}
+ein (von der Parametrisierung unabhängiges) Skalarprodukt\index{Fläche!Skalarprodukt} definiert. \\
+Das Feld \(u \mapsto I_u\) dieser Bilinearformen heißen \uline{1. Grundform}\index{1. Grundform} (\uline{1. Fundamentalform}) der \(p\)-Fläche. Die (parameterabhängigen) Koordinatenfunktionen
+\[
+ u \mapsto \uline{g_{\varrho \sigma} (u)} := I_u ( x_\varrho, x_\sigma) = \uline{\langle x_\varrho, x_\sigma \rangle}
+\]
+bilden überall eine symmetrische, positiv definite Matrix \(\big(g_{\varrho \sigma}(u)\big)\) mit Determinante
+\[
+ g(u) := \det \big(g_{\varrho \sigma}(u)\big) = a_p^2 (x_1, \dots, x_p)(u) > 0
+\]
+und für Tangentialvektoren
+\[
+ X = \sum X^\varrho x_\varrho (u), \, Y = \sum Y^\sigma x_\sigma(u)
+\]
+erhält man die Koordinantendarstellung
+\begin{align*}
+I_u (X,Y) = \sum g_{\varrho \sigma}(u) X^\varrho Y^\sigma
+\end{align*}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz211}]
+ \(I_u\) ist die Einschränkung des Skalarproduktes im \(\IR^n\) au den Teilraum \(T_u x \subset: \IR^n\) und \(\big(\grs(u)\big)\) ist die Darstellungsmatrix von \(I_u\) bezüglich der speziellen Basis \((x_1, \dots, x_p)(u)\). Weiter gilt
+ \[
+  I( X,Y) = \left\langle\sum X^\varrho x_\varrho, \sum Y^\sigma x_\sigma \right\rangle = \sum X^\varrho Y^\sigma \underbrace{\langle x_\varrho, x_\sigma\rangle}_{\grs}
+ \]
+\end{beweis}
+ Früher oft übliche Bezeichnung bei \(p = 2\):
+ \begin{align*}
+  (\grs) = \begin{pmatrix}
+            E & F \\
+            F & G
+           \end{pmatrix}
+ \end{align*}
+\subsubsection{Mit Hilfe der 1. Grundform lassen sich \uline{flächenintern} berechnen}
+\uline{\(\rightarrow\) bei tangentialen Objekten}
+\begin{itemize}
+ \item die Länge eines Tangentialvektors \mat{X = \sum X^\varrho x_\varrho (u) \in T_u x}
+ \[
+  |X| = \sqrt{\sum \grs(u) X^\varrho Y^\sigma} \quad (\text{analog der Winkel zwischen Tangentialvektoren }X,Y \ne 0)
+ \]
+ \item den \(p\)-dimensionalen \uline{Flächeninhalt} eines von Vektoren \(X_1, \dots, X_p \in T_u x\) aufgespannten \(p\)-dimensionalen Parallelogramms
+ \[
+  \uline{a_p ( X_1, \dots, X_p)} = \sqrt{\det \left( \left\langle X_\varrho, X_ \sigma \right\rangle \right)} = \uline{\sqrt{g(u)} \det \left(X_\beta^\alpha\right)}
+ \]
+ denn
+ \begin{align*}
+  &X_\varrho = \sum X_\varrho^\mu x_\mu(u) \Rightarrow \langle X_\varrho, X_\sigma \rangle = \sum g_{\mu \nu} (u) X_\varrho^\mu X_\sigma^\nu  \\
+  &\Rightarrow \det \left(\langle X_\varrho, X_\sigma \rangle \right) = \det \big(g_{\mu \nu}(u)\big) = {\det}^2 \left(X_\varrho^\mu \right)
+ \end{align*}
+ Die explizite Kenntnis der räumlichen Basisvektoren \(x_\varrho (u) \in \IR^n\) ist jeweils unnötig.
+\end{itemize}
+\uline{\(\rightarrow\) bei Objekten innerhalb der Fläche}
+\begin{itemize}
+ \item die Länge eines Kurvenstücks
+ \[
+  L_a^b (c) = \int_a^b \sqrt{\sum \grs\big(u(t)\big) \dot u^\varrho(t) \dot u^\sigma(t)} \dd t
+ \]
+ Wegen \(c = x \circ u\) gilt
+ \begin{align*}
+  &\dot c(t) = \sum_\varrho x_\varrho \big(u(t)\big) \dot u^\varrho (t) \\
+  \Rightarrow | &\dot c (t) |^2 = \sum \grs \big(u(t)\big) \dot u^\varrho (t) \dot u^\sigma (t)
+ \end{align*}
+(Ähnlich der Winkel zwischen Flächenkurven)
+ \item der \(p\)-dimensionale \uline{Flächeninhalt eines Bereiches} \(x[K] \subset M\)
+ \[
+  \uline{A_p\big(x[K]\big)} = \int\limits_K a_p \big(x_1(u), \dots, x_p(u) \big) \dd u^1 \dots \dd u^p = \uline{\int\limits_K \sqrt{g(u)} \dd u}
+ \]
+ Man braucht die Kurve bzw. den Bereich nur in der Parameterebene zu kennen.
+\end{itemize}
+\textbf{\uline{Ergebnis}:} Lassen sich zwei (im Raum völlig verschiedene) Flächen so auf gleiche Parameter beziehen, dass sie überall die gleiche 1. Grundform-Matrix besitzt, so erhält man gleiche Ergebnisse beim Messen von Längen, Winkeln, Flächeninhalten usw. \\
+Durch solche Messungen innerhalb der Fläche kann mann nicht entscheiden, auf welcher Fläche man sich wirklich befindet.
+
+\begin{definition}\(\)
+\begin{enumerate}
+ \item[a)] Zwei \(\C^1\)-\(p\)-Flächen heißen \uline{isometrisch}\index{Isometrie}, wenn Parametrisierungen
+ \[
+  u \in G \mapsto x(u) \in M \quad \text{und} \quad u \in G \mapsto \overline x(u) \in \overline M
+ \]
+ existieren mit 
+ \[
+  \forall_n \big(\grs (u) \big) = \big(\overline g_{\varrho \sigma} (u) \big)
+ \]
+ \item[b)] Zwei isometrische \(\C1\)-\(p\)-Flächen mit Parametrisierungen
+ \[
+  u \in G \mapsto x(u) \in M \quad \text{und}\quad u \in G \mapsto \overline x (u) \in \overline M
+ \]
+ heißen \uline{ineinander verbiegbar}\index{verbiegbar} (abwickelbar), wenn eine stetige Schar
+ \[
+  \alpha \in [a,b] \mapsto (\,^\alpha x \colon G \to M_\alpha)
+ \]
+ isometrischer \(\C^1\)-\(p\)-Flächen existiert mit
+ \[
+  \,^a x = x, \,^b x = \overline x
+ \]
+
+\end{enumerate}
+
+\end{definition}
