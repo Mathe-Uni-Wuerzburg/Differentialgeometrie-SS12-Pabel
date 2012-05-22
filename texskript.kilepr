@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.0
-lastDocument=01-kurventheorie.tex
+lastDocument=02-flaechentheorie.tex
 masterDocument=
 name=Differentialgeometrie-SS12-Pabel
 pkg_extIsRegExp=false
@@ -138,30 +138,30 @@ order=1
 
 [item:01-kurventheorie.tex]
 archive=true
-column=142
+column=332
 encoding=UTF-8
 highlight=LaTeX
-line=304
+line=848
 mode=LaTeX
 open=true
 order=2
 
 [item:02-flaechentheorie.tex]
 archive=true
-column=90
+column=68
 encoding=UTF-8
 highlight=LaTeX
-line=193
+line=385
 mode=LaTeX
 open=true
 order=3
 
 [item:anhang.tex]
 archive=true
-column=45
+column=70
 encoding=UTF-8
 highlight=LaTeX
-line=14
+line=2
 mode=LaTeX
 open=true
 order=9
@@ -191,14 +191,14 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=4
+line=16
 mode=LaTeX
 open=true
 order=5
 
 [item:packages.tex]
 archive=true
-column=18
+column=20
 encoding=UTF-8
 highlight=LaTeX
 line=21
@@ -208,10 +208,10 @@ order=6
 
 [item:symbols.tex]
 archive=true
-column=56
+column=33
 encoding=UTF-8
 highlight=LaTeX
-line=35
+line=16
 mode=LaTeX
 open=true
 order=7
@@ -243,20 +243,20 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:01-kurventheorie.tex]
-CursorColumn=142
-CursorLine=304
+CursorColumn=332
+CursorLine=848
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:02-flaechentheorie.tex]
-CursorColumn=90
-CursorLine=193
+CursorColumn=68
+CursorLine=385
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:anhang.tex]
-CursorColumn=45
-CursorLine=14
+CursorColumn=70
+CursorLine=2
 JumpList=
 ViMarks=
 
@@ -274,19 +274,19 @@ ViMarks=
 
 [view-settings,view=0,item:main.tex]
 CursorColumn=0
-CursorLine=4
+CursorLine=16
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:packages.tex]
-CursorColumn=18
+CursorColumn=20
 CursorLine=21
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:symbols.tex]
-CursorColumn=56
-CursorLine=35
+CursorColumn=33
+CursorLine=16
 JumpList=
 ViMarks=
 

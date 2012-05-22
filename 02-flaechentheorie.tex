@@ -202,7 +202,7 @@ Durch solche Messungen innerhalb der Fläche kann mann nicht entscheiden, auf we
  \]
  existieren mit 
  \[
-  \forall_n \big(\grs (u) \big) = \big(\overline g_{\varrho \sigma} (u) \big)
+  \forall_u \big(\grs (u) \big) = \big(\overline g_{\varrho \sigma} (u) \big)
  \]
  \item[b)] Zwei isometrische \(\C1\)-\(p\)-Flächen mit Parametrisierungen
  \[
@@ -220,3 +220,168 @@ Durch solche Messungen innerhalb der Fläche kann mann nicht entscheiden, auf we
 \end{enumerate}
 
 \end{definition}
+
+\begin{bemerkung}\(\)
+ \begin{enumerate}
+  \item Flächengrößen, die sich rein aus der 1. Grundform berechnen lassen, also für alle isometrischen Flächen dieselben sind, heißen \uline{innergeometrische Größen}\index{innergeometrische Größen}.
+  \item Nicht alle isometrischen Flächen sind ineinander verbiegbar. (Es gibt komplizierte Gegenbeispiele)
+ \end{enumerate}
+
+\end{bemerkung}
+
+\begin{bsp}\(\)
+ \begin{enumerate}
+  \item Der \uline{Kreiszylinder}.
+  \begin{figure}[ht]
+   \centering
+   \includegraphics[scale = 0.3]{Bilder/Bsp7.jpg}
+  \end{figure}
+  \begin{align*}
+   (u,v) \in ]-\pi, \pi[ \times \IR \mapsto x(u,v) = \vxyz{h \cdot v}{r \sin u}{r (1-\cos u)} \in \IR^3
+  \end{align*}
+  ist in die Ebene verbiegbar: Eine stetige Verbiegungsschar ist
+  \begin{align*}
+   \,^\alpha x(u,v) &= \vxyz{h v}{r \frac1\alpha \sin \alpha u}{r \frac1\alpha (1-\cos \alpha u)} \quad \alpha \in ]0,1] \\
+   \,^0 x(u,v) &= \lim_{\alpha \to 0} \,^\alpha x(u,v) = \vxyz{hv}{ru}{0} \quad \text{[Ebenenstück], denn} \\
+   \,^\alpha x_1(u,v) &= \vxyz{0}{r\cos \alpha u}{r\sin \alpha u} \\
+   \,^\alpha x_2(u,v) &= \vxyz{h}{0}{0} \\
+   \Rightarrow \big( \,^\alpha g_{\varrho \sigma}(u,v)\big) &= \begin{pmatrix}
+                                                                  r^2 & 0 \\
+                                                                  0 & h^2
+                                                                 \end{pmatrix}
+  \end{align*}
+  Die \uline{Tangentialfläche}
+  \[
+   (s,v) \in I \times \IR \mapsto x(s,v) = c(s) + v T(s) \in \IR^3
+  \]
+  einer beliebigen wendepunktfreien Kurve \(s \mapsto c(s)\) ist in die Ebene verbiegbar. Es gilt
+  \begin{align*}
+   \big( \grs(s,v)\big) = \begin{pmatrix}
+                           1 + v^2 \kappa^2(s) & 1 \\
+                           1 & 1
+                          \end{pmatrix}
+  \end{align*}
+  Die Torsion \(\tau\) der Kurve taucht nicht auf! Nach dem Fundamentalsatz der Kurventheorie kann eine von einem Parameter \(\alpha\) \uline{stetig} abhängende Kurvenschar \(s \mapsto \,^\alpha c(s)\) (\(\alpha \in [0,1]\)) durch Vorgabe von \(s \mapsto \,^\alpha \kappa(s) := \kappa(s)\) und \(s \mapsto \,^\alpha \tau(s) := \alpha \cdot \tau(s)\) konstruiert werden. Die zugehörigen Tangentenflächen bilden eine stetige Verbindungsschar zwischen einem Ebenenstück (\(=\) Tangentenfläche der ebenen Kurve \(\,^0 c\)) und der Ausgangsfläche (\(\alpha = 1\)).
+ \end{enumerate}
+\end{bsp}
+
+\begin{bemerkung}
+ Wir zeigen später, dass die
+ \begin{itemize}
+  \item \uline{allgemeinen Zylinder}, die 
+  \item \uline{allgemeinen Kegel} und 
+  \item \uline{Tangentenflächen von Kurven}
+ \end{itemize}
+ im wesentlichen die einzigen Flächen im \(\IR^3\) sind, die in die Ebene verbiegbar sind. \\
+ Name: "`\uline{Torsen}"' \par
+ Die Kugel ist \uline{nicht} isometrisch zur Ebene. Deswegen Ärger bei Atlanten (Atlassen).
+\end{bemerkung}
+
+\subsection{Hyperflächen im euklidischen $\IR^n$: Ableitungsgleichungen}
+Im Folgenden sei \(\uline{p = n-1}\) \qquad \includegraphics[scale=0.2]{Bilder/Bsp8.jpg}
+Offensichtlich gilt
+
+\begin{satz}\label{satz212}
+ Ist \(u \in G \mapsto x(u) \in \IR^n\) Parameterdarstellung einer \(\C^1\)-Hyperfläche, so bilden die 
+ \begin{itemize}
+  \item tangentialen Vektorfelder
+  \[
+   x_1, \dots, x_{n-1}
+  \]
+  \item das Normalen(einheits)vektorfeld
+  \[
+   N := \frac{x_1 \times \dots \times x_{n-1}}{|x_1 \times \dots \times x_{n-1}|}
+  \]
+ \end{itemize}
+ eine \uline{parameterabhängige}, positiv orientierte Begleitbasis\index{Hyperfläche!Begleitbasis} mit den Eigenschaften
+ \begin{align*}
+  \forall_\varrho \langle x_\varrho, N \rangle &= 0, \quad |N|^2 = 1 \\
+  \det (x_1, \dots, x_{n-1}, N) &= \langle x_1 \times \dots \times x_{n-1}, N \rangle = |x_1 \times \dots \times x_{n-1} | = \sqrt{g} = a_{n-1} (x_1, \dots, x_{n-1})
+ \end{align*}
+ Das Vektorfeld \(N \colon G \to S^{n-1} \subset \IR^n\) ist dabei invariant gegenüber (zulässiger) Parametertransformationen und heißt auch \uline{sphärisches Bild}\index{sphärisches Bild} oder \uline{Gaußabbildung}\index{Gaußabbildung} der Hyperfläche.
+\end{satz}
+
+\begin{bemerkung}
+ In jedem Punkt \(x(u)\) ist die orthogonale Zerlegung
+ \[
+  \IR^n = T_u x \stackrel{\perp}{\oplus} \hl N \hr
+ \]
+ parameterunabhängig.
+\end{bemerkung}
+
+\begin{satz}\label{satz213}
+ Für die Begleitbasis \((x_1, \dots, x_{n-1}, N)\) einer parametrisierten \(\C^2\)-Hyperfläche gelten (parameter\-\uline{abhängige}) Ableitungsgleichungen der Form 
+ \begin{align*}
+ &\boxed{\underset{\varrho, \sigma}{\forall}\, x_{\varrho \sigma} = \sum \gamma_{\varrho \, \sigma}^{\,\mu}\, x_\mu + b_{\varrho \sigma} N} \\
+ &\text{[Gaußsche Ableitungsgleichungen]\index{Gaußsche Ableitungsgleichungen]}} \\
+ &\boxed{N_\sigma := \partial_\sigma N = - \sum b^\mu_{\; \sigma}\, x_\mu [ + 0 \cdot N]} \\
+ &\text{[Weingartenschen Ableitungsgleichungen]\index{Weingartenschen Ableitungsgleichungen}}
+ \end{align*}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz213}]
+ Klar wegen 
+ \[
+  |N|^2 = 1 \Rightarrow \langle N_\sigma, N \rangle = 0
+ \]
+\end{beweis}
+
+\subsubsection*{Berechnung der Koeffizienten}
+\begin{enumerate}
+ \item[a)] Mit den \uline{Christoffelsymbolen\index{Christoffelsymbole} 1. Art}
+ \[
+  \gamma_{\varrho \nu \sigma} := \langle x_{\varrho \sigma}, x_\nu \rangle = \sum_\mu \christ\varrho\mu\sigma \, g_{\mu \nu}
+ \]
+ erhält man die \uline{Christoffelsymbole 2. Art} durch
+ \[
+  \christ\varrho\mu\sigma = \sum_\nu g^{\mu\nu} \, \gamma_{\varrho \nu \sigma}
+ \]
+ wenn \((g^{\mu\nu})\) die zur \((g_{\varrho \sigma})\) inverse Matrix (mit \(\sum_\nu g^{\mu\nu} \, \grund \nu\sigma = \delta^\mu_{\, \nu}\)) berechnet.
+ \item[b)] Es gilt
+ \begin{align*}
+  b_{\varrho\sigma} &= \langle x_{\varrho\sigma}, N \rangle = -\langle x_{\varrho}, N_\sigma \rangle = + \sum_\mu b^\mu_{\,\sigma} \, g_{\mu \varrho} \\
+  \Rightarrow b^\mu_{\,\sigma} &= \sum_{\varrho} g^{\mu\varrho} \, b_{\varrho\sigma}
+ \end{align*}
+\end{enumerate}
+
+\begin{bemerkung}\(\)
+\begin{enumerate}
+ \item Mit den Matrizen \((g_{\varrho\sigma})\) und ihrer Inversen \((g^{\varrho \sigma})\) lassen sich im Tensorkalkül Indizes "`herauf- und herunterziehen"'.
+ \item \((\gamma_{\varrho\nu\sigma}),\, (\christ\varrho\mu\sigma),\, (v_{\varrho \sigma})\) sind in dem Indexpaar \((\varrho, \sigma)\) \uline{symmetrisch}.
+ \begin{align*}
+ (b^\mu_{\,\sigma}) = (g^{\mu\nu}) \cdot (b_{\varrho \sigma})
+ \end{align*}
+ braucht \uline{nicht} symmetrisch sein, obwohl Produkt symmetrischer Matrizen!
+ \item Bei \(n = 3\) denke man an \(N = \frac1{\sqrt{g}} x_1 \times x_2\)
+ \begin{align*}
+ (g^{\varrho \sigma}) &= \frac1g \begin{pmatrix}
+                                 g_{22} & -g_{12}\\
+                                 -g_{21} & g_{11}
+                                \end{pmatrix} \\
+ (b^\mu_{\;\sigma}) &= \begin{pmatrix}
+                        b^1_{\;1} & b^1_{\;2} \\
+                        b^2_{\;1} & b^2_{\;2}
+                       \end{pmatrix}         
+ \end{align*}
+\end{enumerate}
+
+\end{bemerkung}
+
+\subsubsection*{Fragen}
+\begin{enumerate}
+ \item Welche geometrische und algebraische Bedeutung haben die Koeffizienten \(\christ\varrho\mu\sigma, \, b_{\varrho\sigma},\, b^\mu_{\;\sigma}\)?
+ \item Wie ändern sie sich bei Parametertransformationen? (z.T. kompliziert, Berechnung soll vermieden werden)
+ \item Wie kann man die Ableitungsgleichunen parameterunabhängig formulieren?
+\end{enumerate}
+
+\subsubsection*{Idee (zu 3.)}
+Statt die parameterabhängigen Vektorfelder \(x_1, \dots, x_{n-1}, N\) in Richtung von Parameterlinien (nach \(u^\sigma\)) zu differenzieren, Ableiten eines \uline{beliebigen} (tangentialen oder normalen) Vektorfeldes \(u \mapsto Z(u)\) in Richtung eines \uline{beliebigen} Vektors \(Y \in T_u x\). Diese \uline{Richtungsableitung}\index{Richtungsableitung}
+\begin{align*}
+ \boxed{\dd_Y Z = \sum (\partial_\sigma Z) Y^\sigma}
+\end{align*}
+(mit \(Y = \sum Y^\sigma x_\sigma\)) [vergleiche im \(\IR^n\): \(d_Y f = \langle \grad f, Y \rangle = \sum \partial_\varrho f \cdot Y^\varrho\)]\par
+ist \uline{parameterunabhängig}, denn aus \(x = \widetilde x \circ \Phi, \, Z = \widetilde Z \circ \Phi, \, Y = \widetilde Y \circ \Phi\) folgt	
+\begin{align*}
+ &\dd_Y Z(u) = \sum_\sigma \partial_\sigma \left( \widetilde Z \big( \Phi(u)\big)\right) Y^\sigma(u) = \sum_{\mu,\sigma} \left( \partial_\mu \widetilde Z\right) \big(\Phi(u)\big) \underbrace{\frac{\partial \widetilde u^\mu}{\partial u^\sigma} Y^\sigma(u)}_{\widetilde Y^\mu \big(\Phi(u)\big)} = \uline{\dd_{\widetilde Y} \widetilde Z} \big(\Phi(u)\big) \\
+ &\left(\text{weil } x_\varrho = \sum \widetilde u_\varrho^\sigma \,\widetilde x_\sigma \Leftrightarrow \widetilde Y^\sigma = \sum \widetilde u_\varrho^\sigma \, Y^\varrho\right)
+\end{align*}

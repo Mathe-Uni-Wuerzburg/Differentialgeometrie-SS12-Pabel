@@ -26,6 +26,10 @@
 
   \indexspace
 
+  \item Christoffelsymbole, \hyperpage{43}
+
+  \indexspace
+
   \item Darboux-Vektor, \hyperpage{19}
   \item Diffeomorphismus, \hyperpage{7}
   \item Drehung, \hyperpage{19}
@@ -54,6 +58,8 @@
 
   \indexspace
 
+  \item Gau\IeC {\ss }abbildung, \hyperpage{43}
+  \item Gau\IeC {\ss }sche Ableitungsgleichungen], \hyperpage{43}
   \item Geschwindigkeit, \hyperpage{6}
     \subitem Bahn-, \hyperpage{19}
     \subitem Winkel-, \hyperpage{19}
@@ -63,10 +69,12 @@
   \item Hauptnormalenvektor, \hyperpage{15}
   \item Henkelpunkt, \hyperpage{10}
   \item Hyperfl\IeC {\"a}che
+    \subitem Begleitbasis, \hyperpage{42}
     \subitem regul\IeC {\"a}r, \hyperpage{36}
 
   \indexspace
 
+  \item innergeometrische Gr\IeC {\"o}\IeC {\ss }en, \hyperpage{40}
   \item Isometrie, \hyperpage{40}
 
   \indexspace
@@ -115,6 +123,7 @@
 
   \item regul\IeC {\"a}r, \hyperpage{6}
   \item rektifizierende Ebene, \hyperpage{16}
+  \item Richtungsableitung, \hyperpage{44}
 
   \indexspace
 
@@ -128,6 +137,7 @@
   \item Sph\IeC {\"a}re
     \subitem 2-, \hyperpage{36}
   \item sph\IeC {\"a}risch, \hyperpage{29}
+  \item sph\IeC {\"a}risches Bild, \hyperpage{43}
   \item Spur, \hyperpage{6}
   \item Standard-Skalarprodukt, \hyperpage{3}
   \item Standardbasis, \hyperpage{3}
@@ -156,6 +166,7 @@
 
   \item Weg, \hyperpage{6}
     \subitem -l\IeC {\"a}nge, \hyperpage{12}
+  \item Weingartenschen Ableitungsgleichungen, \hyperpage{43}
   \item Wendepunkt, \hyperpage{10}
     \subitem -frei, \hyperpage{10}
   \item Windung, \hyperpage{16}
