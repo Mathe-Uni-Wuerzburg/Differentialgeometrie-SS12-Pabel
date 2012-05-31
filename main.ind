@@ -2,6 +2,7 @@
 
   \item \IeC {\"A}quivalenz, \hyperpage{7}
   \item 1. Grundform, \hyperpage{38}
+  \item 2. Grundform, \hyperpage{46}
 
   \indexspace
 
@@ -60,6 +61,8 @@
 
   \item Gau\IeC {\ss }abbildung, \hyperpage{43}
   \item Gau\IeC {\ss }sche Ableitungsgleichungen], \hyperpage{43}
+  \item Gau\IeC {\ss }sche Kr\IeC {\"u}mmung, \hyperpage{48}
+  \item geod\IeC {\"a}tische Parallelit\IeC {\"a}t, \hyperpage{50}
   \item Geschwindigkeit, \hyperpage{6}
     \subitem Bahn-, \hyperpage{19}
     \subitem Winkel-, \hyperpage{19}
@@ -80,6 +83,7 @@
   \indexspace
 
   \item kartesisches Koordinatensystem, \hyperpage{3}
+  \item kovariante Ableitung, \hyperpage{46}
   \item Kr\IeC {\"u}mmung, \hyperpage{14}
     \subitem 2. Kr\IeC {\"u}mmung, \hyperpage{16}
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}
@@ -94,11 +98,13 @@
 
   \indexspace
 
+  \item linearer Zusammenhang, \hyperpage{46}
   \item lokale kanonische Form, \hyperpage{20}
 
   \indexspace
 
   \item Mannigfaltigkeit, \hyperpage{8}
+  \item mittlere Kr\IeC {\"u}mmung, \hyperpage{48}
 
   \indexspace
 
@@ -115,6 +121,8 @@
 
   \indexspace
 
+  \item Parallelfeld, \hyperpage{50}
+  \item Parallelverschiebung, \hyperpage{50}
   \item Parameter, \hyperpage{6}
   \item Parametertransformation, \hyperpage{7}
   \item Parametrisierung, \hyperpage{7}
@@ -166,6 +174,7 @@
 
   \item Weg, \hyperpage{6}
     \subitem -l\IeC {\"a}nge, \hyperpage{12}
+  \item Weingarten-Endomorphismus, \hyperpage{46}
   \item Weingartenschen Ableitungsgleichungen, \hyperpage{43}
   \item Wendepunkt, \hyperpage{10}
     \subitem -frei, \hyperpage{10}
