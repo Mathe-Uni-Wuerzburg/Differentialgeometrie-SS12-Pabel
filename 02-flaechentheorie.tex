@@ -143,7 +143,7 @@ erhält man die Koordinantendarstellung
 \end{satz}
 
 \begin{beweis}[von Satz \ref{satz211}]
- \(\Rom 1_u\) ist die Einschränkung des Skalarproduktes im \(\IR^n\) au den Teilraum \(T_u x \subset: \IR^n\) und \(\big(\grs(u)\big)\) ist die Darstellungsmatrix von \(\Rom 1_u\) bezüglich der speziellen Basis \((x_1, \dots, x_p)(u)\). Weiter gilt
+ \(\Rom 1_u\) ist die Einschränkung des Skalarproduktes im \(\IR^n\) auf den Teilraum \(T_u x \subset: \IR^n\) und \(\big(\grs(u)\big)\) ist die Darstellungsmatrix von \(\Rom 1_u\) bezüglich der speziellen Basis \((x_1, \dots, x_p)(u)\). Weiter gilt
  \[
   \Rom 1( X,Y) = \left\langle\sum X^\varrho x_\varrho, \sum Y^\sigma x_\sigma \right\rangle = \sum X^\varrho Y^\sigma \underbrace{\langle x_\varrho, x_\sigma\rangle}_{\grs}
  \]
@@ -169,7 +169,7 @@ erhält man die Koordinantendarstellung
  denn
  \begin{align*}
   &X_\varrho = \sum X_\varrho^\mu x_\mu(u) \Rightarrow \langle X_\varrho, X_\sigma \rangle = \sum g_{\mu \nu} (u) X_\varrho^\mu X_\sigma^\nu  \\
-  &\Rightarrow \det \left(\langle X_\varrho, X_\sigma \rangle \right) = \det \big(g_{\mu \nu}(u)\big) = {\det}^2 \left(X_\varrho^\mu \right)
+  &\Rightarrow \det \left(\langle X_\varrho, X_\sigma \rangle \right) = \det \big(g_{\mu \nu}(u)\big)  {\det}^2 \left(X_\varrho^\mu \right)
  \end{align*}
  Die explizite Kenntnis der räumlichen Basisvektoren \(x_\varrho (u) \in \IR^n\) ist jeweils unnötig.
 \end{itemize}
@@ -336,7 +336,7 @@ Offensichtlich gilt
  \[
   v= \sum_\nu g^{\mu\nu} \, \gamma_{\varrho \nu \sigma}
  \]
- wenn \((g^{\mu\nu})\) die zur \((g_{\varrho \sigma})\) inverse Matrix (mit \(\sum_\nu g^{\mu\nu} \, \grund \nu\sigma = \delta^\mu_{\, \nu}\)) berechnet.
+ wenn \((g^{\mu\nu})\) die zur \((g_{\varrho \sigma})\) inverse Matrix (mit \(\sum_\nu g^{\mu\nu} \, \grund \nu\sigma = \delta^\mu_{\;\, \nu}\)) berechnet.
  \item[b)] Es gilt
  \begin{align*}
   b_{\varrho\sigma} &= \langle x_{\varrho\sigma}, N \rangle = -\langle x_{\varrho}, N_\sigma \rangle = + \sum_\mu b^\mu_{\;\,\sigma} \, g_{\mu \varrho} \\
@@ -457,7 +457,7 @@ Umgekehrt gilt (bezüglich jeder Parametrisierung):
 \end{align*}
 Früher übliche Bezeichnung für \(p = 2, n = 3\)
 \[
- (b_{\varrho \sigma} = \begin{pmatrix}
+ (b_{\varrho \sigma}) = \begin{pmatrix}
                         L & M \\
                         M & N
                        \end{pmatrix} = 
@@ -476,7 +476,7 @@ Früher übliche Bezeichnung für \(p = 2, n = 3\)
 \end{enumerate}
 
 \begin{satz}\label{satz215}
- ie Christoffelsymbole 1. und 2. Art einer \(\C^2\)-(Hyper)Fläche lassen sich allein aus den Komponenten \(g_{\varrho \sigma}\) der 1. Grundform bestimmen. Und zwar gilt
+ Die Christoffelsymbole 1. und 2. Art einer \(\C^2\)-(Hyper)Fläche lassen sich allein aus den Komponenten \(g_{\varrho \sigma}\) der 1. Grundform bestimmen. Und zwar gilt
  \begin{align*}
   \gamma_{\varrho \mu \sigma} = \frac12 \left( \partial_\varrho g_{\nu \sigma} - \partial_\nu g_{\varrho \sigma} + \partial_\sigma g_{\varrho \nu}\right)
  \end{align*}
@@ -613,7 +613,7 @@ In der euklidischen Ebene sind wohldefinierte:
 \begin{satz}\label{satz221}
  Sind \(t \mapsto X(t) = \sum X^\varrho (t) x_\varrho\big(u(t)\big), \, Y(t) = \sum X^\sigma(t) x_\sigma \big(u(t)\big)\) geodätisch parallele \(\C^1\)-Vektorfelder längs derselben \(\C^1\)-Flächenkurve \(t \mapsto c(t) = x\big(u(t)\big)\), so gilt
  \begin{align*}
-  t \mapsto Rom 1_{u(t)}\big(X(t), Y(t)\big) = \sum g_{\varrho \sigma} \big(u(t)\big) X^\varrho(t) Y^\sigma(t) = \const.
+  t \mapsto \Rom 1_{u(t)}\big(X(t), Y(t)\big) = \sum g_{\varrho \sigma} \big(u(t)\big) X^\varrho(t) Y^\sigma(t) = \const.
  \end{align*}
 d.h. Längen, Winkel, Flächeninhalt bleiben erhalten.
 \end{satz}
@@ -635,7 +635,7 @@ kürzer: ``außergeometrisch''
   \item \uline{Berühren} sich zwei Flächen längs einer Flächenkurve, so ist der geodätische Parallelismus bezüglich dieser Kurven für beide Flächen derselbe (denn es wird in die gleiche Tangentialebene projeziert)
  \end{enumerate}
 \uline{Kreiszylinder} \includegraphics[scale=0.2]{Bilder/Bsp9} \par
-\uline{Kreisgekel} \includegraphics[scale=0.2]{Bilder/Bsp10} \par
+\uline{Kreiskegel} \includegraphics[scale=0.2]{Bilder/Bsp10} \par
 \uline{Großkreis} \includegraphics[scale=0.2]{Bilder/Bsp11} 
 grüne Pfeile: Parallelfeld längs Großkreis \\
 roter Pfeil: Tangentenvektoren bilden Parallelfeld (berühren Zylinder) \par
@@ -648,3 +648,138 @@ Geodätische Parallelverschiebung ist im Allgemeinen nicht wegunabhängig.
 \includegraphics[scale=0.3]{Bilder/Bsp13}
 \end{figure}
 \end{bsp}
+
+\subsection{Geodätische Linien}
+\begin{definition}
+ Eine \uline{Geodätische}\index{Geodätische} (Autoparallele, ``Geodäte'') auf einer \(\C^2\)-Fläche ist eine \(\C^2\)-Flächenkurve mit geodätisch parallelem Tangenteneinheitsfeld, d.h. mit
+ \[
+  \boxed{\frac{\nabla T}{\dd t \equiv 0}}
+ \]
+\end{definition}
+\begin{bsp} \(\)
+ \begin{enumerate}
+  \item Schraubenlinien auf Kreiszylindern (\(\widehat{=}\) Geraden in der Abwickelebene)
+  \item Großkreise auf Kugeln, aber nicht andere Kreise.
+ \end{enumerate}
+\end{bsp}
+Aus \(\dot c = w T\) (mit \(w = |\dot c|\)) folgt 
+\begin{align*}
+ \frac{\nabla \dot c}{\dd t} = w \cdot \frac{\nabla T}{\dd t} + \dot w T
+\end{align*}
+und wegen 
+\[ 
+\Rom 1 \left(T, \frac{\nabla T}{\dd t}\right) = \left\langle T, \frac{\dd T}{\dd t} \right\rangle = 0
+\]
+gilt
+ \begin{align*}
+  \frac{\nabla \dot c}{\dd t} \equiv 0 &\Leftrightarrow \frac{\nabla T}{\dd t} = 0 \land \dot w = 0 \\
+  &\Leftrightarrow c \text{ ist Geodätische, proportional zur Bogenlänge parametrisiert}
+ \end{align*}
+
+Für Flächenkurven in BLP \(s \mapsto c(s)\) gilt natürlich:
+\[
+ c \text{ Geodätische } \Leftrightarrow \frac{\nabla c'}{\dd s} \equiv 0
+\]
+\Links
+\begin{folgerung}
+ Geodätische in \(\C^2\)-BLP \(s \mapsto c(s)\), d.h. mit
+ \[
+  |c'|^2 = \sum g_{\varrho \sigma}(u) u'^\varrho u'^\sigma \equiv 1
+ \]
+ sind (in der Parameterebene) gekennzeichnet durch
+ \begin{align*}
+  u''^\mu + \sum_{\varrho, \sigma} \christ \varrho \mu \sigma (u) u'^\varrho u'^\sigma \equiv 0  \quad (\mu = 1,2) \tag{\(\ast\)}
+ \end{align*}
+\big(Differentialgleichungssystem für \(s \mapsto u^1(s), u^2(s)\)\big)
+\end{folgerung}
+
+\begin{beweis}[der Folgerung]
+ \begin{align*}
+  \frac{\nabla c'}{\dd s} &= \frac{\nabla}{\dd s} \left(\sum u'^\varrho x_\varrho(u) \right) = \sum u''^{\cancelto{\mu}{\varrho}} x_{\cancelto{\mu}{\varrho}} \;(u) + \sum u'^\varrho \nabla_{\sigma} x_\varrho (u) u'^\sigma \\
+  &= \sum \left(u''^\mu + \christ \varrho \mu \sigma (u) u'^\varrho u'^\sigma \right) x_\mu (u) \equiv 0 \Leftrightarrow (\ast)
+ \end{align*}
+\end{beweis}
+
+Zur Existenz von Geodätischen:
+
+\begin{satz}\label{satz222}
+ Auf einer \(\C^3\)-Fläche verläuft durch \uline{jeden} Flächenpunkt in \uline{jede} Tangentialrichtung \uline{genau eine} Geodätische.
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz222}]
+ \((\ast)\) bildet ein im Allgemeinen \uline{nichtlineares} autonomes Differentialgleichungssystem 2. Ordnung für die Funktionen \(s \mapsto u^1(s), u^2(s)\) (transformierbar in ein System 1. Ordnung). Es besitzt etwa für \(\C^3\)-Flächen (mit \(\C^1\)-Christoffelsymbolen \(\Rightarrow\) lokale Lipschitzbeschränktheit) zu vorgegebenen Anfangsbedingungen \(u^\mu(0) = u_0^\mu, u'^\mu(0) = X_0^\mu \,(\mu = 1,2)\) genau eine auf einem maximalen Intervall um \(s = 0\) definierte Lösung \(s \in I \mapsto u(s) = \big(u^1(s),u^2(s)\big) \in G \subset \IR^2\). Also existiert genau eine Geodätische \(s \in I \mapsto c(s) = x\big( U(s)\big) \in M \subset \IR^3\) mit \(c(0) = x(u_o) = x_0\) und \(c'(0) = \sum X_0^\mu x_\mu(u_0) = X_0 \in T_{u_0}x\) (wenn \(|X_0| = 1\))
+\end{beweis}
+
+\begin{bemerkung}
+ Die maximal fortgesetzte Lösung  \(s \in I \mapsto u(s) \in G \subset \IR^2\) brauct nur auf einem endlichen Intervall \(I = ]s_{-}; s_{+}[\) definiert zu sein. Die zugehörige Geodätische besitzt dann \uline{endliche Länge}. Flächen, auf denen jede Geodätische \(\infty\)-lang ist (\(I = \IR\)) heißen \uline{geodätisch vollständig}\index{geodätische Vollständigkeit}.
+\end{bemerkung}
+
+Geodätische sind nach Definition ``möglichst gerade''. Sind sie auch ``möglichst kurz''?
+
+\begin{satz}\label{satz223}
+ Auf einer \(\C^2\)-Fläche ist eine kürzeste Verbindungskurve zwischen zwei festen Flächenpunkten notwendig eine Geodätische.
+ \[
+  \text{``möglichst kurz'' } \Rightarrow \text{ ``möglichst gerade''}
+ \]
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz223}]
+ Gegeben: \(\C^2\)-Flächenkurve \(st \mapsto c(t) = x\big(u(t)\big)\) mit \(\begin{cases}
+                                                                            c(a) = x(u_a) = x_a \\
+                                                                            c(b) = x(u_b) = x_b
+                                                                           \end{cases}\). \par
+ Wir konstruieren \(\C^2\)-Vergleichsflächenkurven \(t \mapsto \,^\varepsilon c(t) \, \big(\varepsilon \in U(0)\big)\) mit
+ \[
+  \forall_\varepsilon \,^\varepsilon c(a) = x_a, \, \,^\varepsilon c(b) = x_b, \, \,^\varepsilon c |_{\varepsilon = 0} = c
+ \]
+ und untersuchen ihre Längen \(L_a^b (\,^\varepsilon c)\). \par
+ Ansatz: \(\,^\varepsilon c(t) = x\big( \,^\varepsilon u(t)\big) = x\big( u(t) + \varepsilon v(t)\big)\) mit einer \(\C^2\)-Abbildung \(t \in [a,b] \mapsto v(t) \in \IR^2\), wobei \(v(a) = v(b) = 0\) (diese sind regulär für genügend kleine \(\varepsilon\), d.h. \(|\,^\varepsilon \dot c(t) | > 0\)). \par
+ Die Kurven definieren ein \uline{\(\C^1\)-Variationsvektorfeld}
+ \[
+  t \in [a,b] \mapsto V(t):= \frac{\partial}{\partial \varepsilon} \big(\,^\varepsilon \left.(c(t)\big)\right|_{\varepsilon = 0} = \sum v^\varrho(t) x_\varrho \big(u(t)\big) \in T_{u(t)}x
+ \]
+ mit \(V(a) = V(b) = 0\). \par
+ Falls \(c\) kürzeste Verbindung zwischen \(x_a\) und \(x_b\), muss gelten
+ \[
+  \boxed{\frac{\dd}{\dd\varepsilon} \left.L_a^b (\,^\varepsilon c)\right|_{\varepsilon = 0} = 0}
+ \]
+ \big(und zwar für alle Abbildungen \(t \mapsto v(t)\)\big)
+ \uline{Berechnung}:
+ \begin{align*}
+  \frac{\dd}{\dd \varepsilon} \left. L_a^b (\,^\varepsilon c) \right|_{\varepsilon = 0} &= \frac{\dd}{\dd \varepsilon} \left[ \int_a^b |\,^\varepsilon \dot c(t)| \dd t\right]_{\varepsilon = 0}\\
+  &= \int_a^b \frac{\partial}{\partial \varepsilon} \left.\underbrace{|\,^\varepsilon \dot c(t)|}_{> 0} \dd t \right|_{\varepsilon = 0} = \int_a^b \frac1{|\,^\varepsilon c(t)|} \langle \,^\varepsilon c(t), \left.\underbrace{\partial_\varepsilon \dot c(t)}_{\partial_\varepsilon \partial_t \,^\varepsilon c(t)} \rangle \dd t \right|_{\varepsilon = 0} \\
+  &= \int_a^b \frac{1}{|\dot c(t)|} \left\langle \dot c(t), \dot V(t) \right\rangle \dd t \\
+  &= \int_a^b \left\langle T(t), \dot V(t) \right\rangle \dd t = \int_a^b \frac{\dd}{\dd t} \left\langle T(t) V(t) \right\rangle \dd t - \int_a^b \left\langle \dot T(t), V(t) \right\rangle \dd t \\
+  &= \left. \left\langle T(t), V(t) \right\rangle \right|_a^b - \int_a^b \left\langle \frac{\nabla T}{\dd t}(t), V(t) \right\rangle \dd t \\
+  &= -\int_a^b \Rom 1_{u(t)} \left( \frac{\nabla T}{\dd t}(t) , V(t) \right) \dd t = - \int_a^b \sum g_{\varrho \sigma} \big(u(t)\big) \frac{\nabla T^\varrho}{\dd t} (t) v^\sigma(t) \dd t
+ \end{align*}
+ (1. Variation der Länge einer Flächenkurve) \par
+ Dies ist (nach dem sog. Fundamentallemma der Variationsrechnung) nur möglich, wenn \(\forall_{\varrho} \frac{\nabla T^\varrho}{\dd t} (t) = 0\) auf \([a,b]\), also \(\frac{\nabla T}{\dd t} \equiv 0\) ist, sonst kann man Gegenbeispiele konstruieren. \par
+ \uline{Annahme}: 
+ \begin{align*}
+  \frac{\nabla T^\mu}{\dd t}(t_0) > 0 \text{ für ein } t_0 \in ]a,b[ \text{ und ein festes } \mu = 1,2
+ \end{align*}
+ also wegen der Stetigkeit:
+ \[
+  \frac{\nabla T^\mu}{\dd t}(t) > 0 \text{ in } U(t_0) \subset ]a,b[
+ \]
+ Wir rechnen mit
+ \[
+   w_\varrho(t) := \sum g_{\varrho \sigma} \big(u(t)\big) v^\sigma(t)
+ \]
+ umgekehrt ist dann
+ \[
+  V^\sigma (t) = \sum g^{\varrho \sigma} \big(u(t)\big) w_\varrho (t)
+ \]
+ Wähle \(w_\varrho \equiv 0\) und \(w_\mu > 0\) so, dass 
+ \[
+  W_\mu(t)  \begin{cases}
+             > 0 &\text{für } t \in U(t_0) \\
+             = 0 &\text{sonst}
+            \end{cases}
+ \]
+ \begin{align*}
+  \int_a^b \sum g_{\varrho \sigma} \big(u(t)\big) \frac{\nabla T^\varrho}{\dd t}(t) V^\sigma(t) \dd t = \int\limits_{U(t_0)} \underbrace{\frac{\nabla T^\mu}{\dd t} (t) \cdot w_\mu(t) \dd t}_{> 0} >0 \quad \text{Widerspruch}
+ \end{align*}
+
+\end{beweis}
