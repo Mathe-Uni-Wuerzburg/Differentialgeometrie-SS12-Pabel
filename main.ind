@@ -3,6 +3,7 @@
   \item \IeC {\"A}quivalenz, \hyperpage{7}
   \item 1. Grundform, \hyperpage{38}
   \item 2. Grundform, \hyperpage{46}
+  \item 3. Grundform, \hyperpage{61}
 
   \indexspace
 
@@ -53,6 +54,7 @@
     \subitem Singularit\IeC {\"a}t, \hyperpage{35}
     \subitem Skalarprodukt, \hyperpage{38}
     \subitem Spur, \hyperpage{35}
+  \item Flachpunkt, \hyperpage{60}
   \item Frenet-Begleitbasis, \hyperpage{15}
     \subitem Ableitungsgleichungen, \hyperpage{17}
   \item Fundamentalsatz, \hyperpage{24}, \hyperpage{33}
@@ -110,6 +112,7 @@
 
   \indexspace
 
+  \item Nabelpunkt, \hyperpage{60}
   \item Nicht-Wendepunkt, \hyperpage{10}
   \item normal, \hyperpage{12}
   \item Normalebene, \hyperpage{16}

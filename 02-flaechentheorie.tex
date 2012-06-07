@@ -334,7 +334,7 @@ Offensichtlich gilt
  \]
  erhält man die \uline{Christoffelsymbole 2. Art} durch
  \[
-  v= \sum_\nu g^{\mu\nu} \, \gamma_{\varrho \nu \sigma}
+  \christ \varrho \mu \sigma = \sum_\nu g^{\mu\nu} \, \gamma_{\varrho \nu \sigma}
  \]
  wenn \((g^{\mu\nu})\) die zur \((g_{\varrho \sigma})\) inverse Matrix (mit \(\sum_\nu g^{\mu\nu} \, \grund \nu\sigma = \delta^\mu_{\;\, \nu}\)) berechnet.
  \item[b)] Es gilt
@@ -408,7 +408,7 @@ Da auch die Zerlegung von \(u \mapsto \dd_Y Z(u)\) in Tangential- und Normalante
 Für \(Z = X\) selbst tangential gilt
 \begin{align*}
  \dd_Y X &= \sum \partial_{\sigma} \left( \sum X^{\cancelto{\mu}{\varrho}} x_{\cancelto{\mu}{\varrho}}\right)Y^\sigma = \sum \left( \partial_\sigma X^\varrho \right) Y^\sigma x_\varrho + \sum X^\varrho x_{\varrho \sigma} X^\sigma \\
- &=\underbrace{\sum \left[ \left( \partial_\sigma X^\mu + X^\varrho \christ \gamma \varrho \mu \sigma \right) Y^\sigma \right] x_\mu}_{\dd_Y X |_\perp} + \underbrace{\left[ \sum b_{\varrho \sigma} X^\varrho Y^\sigma \right]}_{\langle \dd_Y X, N\rangle = \langle- X, \dd_Y N \rangle (\text{(Bilinearform)})} N \\
+ &=\underbrace{\sum \left[ \left( \partial_\sigma X^\mu + X^\varrho \christ \varrho \mu \sigma \right) Y^\sigma \right] x_\mu}_{\dd_Y X |_\perp} + \underbrace{\left[ \sum b_{\varrho \sigma} X^\varrho Y^\sigma \right]}_{\langle \dd_Y X, N\rangle = \langle- X, \dd_Y N \rangle (\text{(Bilinearform)})} N \\
  &=: \nabla_Y X + \Rom 2 (X,Y) N
 \end{align*}
 und für \(Z = N\):
@@ -478,14 +478,15 @@ Früher übliche Bezeichnung für \(p = 2, n = 3\)
 \begin{satz}\label{satz215}
  Die Christoffelsymbole 1. und 2. Art einer \(\C^2\)-(Hyper)Fläche lassen sich allein aus den Komponenten \(g_{\varrho \sigma}\) der 1. Grundform bestimmen. Und zwar gilt
  \begin{align*}
-  \gamma_{\varrho \mu \sigma} = \frac12 \left( \partial_\varrho g_{\nu \sigma} - \partial_\nu g_{\varrho \sigma} + \partial_\sigma g_{\varrho \nu}\right)
+  \gamma_{\varrho \nu \sigma} &= \frac12 \left( \partial_\varrho g_{\nu \sigma} - \partial_\nu g_{\varrho \sigma} + \partial_\sigma g_{\varrho \nu}\right) \\
+  \christ \varrho \mu \sigma &= \sum g^{\mu \nu} \gamma_{\varrho \nu \sigma}
  \end{align*}
 \end{satz}
 
 \begin{beweis}[von Satz \ref{satz215}]
  Aus 
  \begin{align*}
-  \partial_\varrho g_{\nu \sigma} &= \partial_\varrho \langle x_\nu, x_\sigma \rangle + \langle x_\nu x_{\sigma \varrho} \rangle &= \gamma_{\nu\sigma\varrho} + \gamma_{\sigma \nu \varrho} \\
+  \partial_\varrho g_{\nu \sigma} &= \partial_\varrho \langle x_\nu, x_\sigma \rangle = \langle x_\nu, x_{\sigma \varrho} \rangle &= \gamma_{\nu\sigma\varrho} + \gamma_{\sigma \nu \varrho} \\
   \partial_\nu g_{\varrho \nu} &= \dots &= \gamma_{\varrho \sigma \nu} + \gamma_{\sigma \varrho \nu} \\
   \partial_\sigma g_{\varrho \nu} &= \dots &= \gamma_{\nu \varrho \sigma} + \gamma_{\varrho \nu \sigma}
  \end{align*}
@@ -711,7 +712,7 @@ Zur Existenz von Geodätischen:
 \end{beweis}
 
 \begin{bemerkung}
- Die maximal fortgesetzte Lösung  \(s \in I \mapsto u(s) \in G \subset \IR^2\) brauct nur auf einem endlichen Intervall \(I = ]s_{-}; s_{+}[\) definiert zu sein. Die zugehörige Geodätische besitzt dann \uline{endliche Länge}. Flächen, auf denen jede Geodätische \(\infty\)-lang ist (\(I = \IR\)) heißen \uline{geodätisch vollständig}\index{geodätische Vollständigkeit}.
+ Die maximal fortgesetzte Lösung  \(s \in I \mapsto u(s) \in G \subset \IR^2\) braucht nur auf einem endlichen Intervall \(I = ]s_{-}; s_{+}[\) definiert zu sein. Die zugehörige Geodätische besitzt dann \uline{endliche Länge}. Flächen, auf denen jede Geodätische \(\infty\)-lang ist (\(I = \IR\)) heißen \uline{geodätisch vollständig}\index{geodätische Vollständigkeit}.
 \end{bemerkung}
 
 Geodätische sind nach Definition ``möglichst gerade''. Sind sie auch ``möglichst kurz''?
@@ -780,6 +781,246 @@ Geodätische sind nach Definition ``möglichst gerade''. Sind sie auch ``möglic
  \]
  \begin{align*}
   \int_a^b \sum g_{\varrho \sigma} \big(u(t)\big) \frac{\nabla T^\varrho}{\dd t}(t) V^\sigma(t) \dd t = \int\limits_{U(t_0)} \underbrace{\frac{\nabla T^\mu}{\dd t} (t) \cdot w_\mu(t) \dd t}_{> 0} >0 \quad \text{Widerspruch}
+ \end{align*}
+
+\end{beweis}
+
+\begin{bemerkung}\(\)
+ \begin{enumerate}
+  \item Die Umkehrung (Anm. d. Redaktion: von Satz \ref{satz223}) ist im Allgemeinen \uline{nicht} richtig.
+  \begin{bsp}
+   Großkreise auf Kugeln
+  \end{bsp}
+  \uline{Aber}: Jeder Flächenpunkt besitzt eine Umgebung, in der auch die Umkehrung gilt. (ohne Beweis!)
+  \item Geodätische sind auch Kurven minimaler Krümmung \(\kappa\).
+  \item Auf Rotationsflächen lässt sich das Differentialgleichungssystem für Geodätische explizit lösen. (\uline{Clairaut-Gleichungen}) [siehe Übung]
+  \item Geodätische können auch ``experimentell'' bestimmt werden. \\
+  ``Aufwickeln'' eines Papierstreifens auf eine Fläche (\(\widehat{=}\) Berührung). Mittellinie (\(=\) Geodätische auf dem Streifen) ist dann auch Geodätische auf der Fläche.
+ \end{enumerate}
+
+\end{bemerkung}
+
+\subsection{Abbildungen von Flächen, Kartographie}
+\begin{definition}
+ \(x \colon G \to M, \overline x\colon G \to \overline M\) seien \textit{injektive} Parametrisierungen zweier \(\C^1\)-Flächen. Dann heißt die durch \(\Psi = \overline x \circ x^{-1}\colon M \to \overline M\) definierte \textit{Flächenabbildung}
+ \begin{enumerate}
+ \item[a)] \textit{längentreu}, wenn zugeordnete Kurvenstücke stets gleiche Länge besitzen,
+ \item[b)] \textit{winkeltreu} (konform), wenn zugeordnete Kurvenstückpaare in zugeordneten Schnittpunkten stets gleiche Winkel einschließen,
+ \item[c)] \textit{flächentreu} (arealtreu), wenn zugeordnete Flächenstücke stets den gleichen Flächeninhalt besitzen.      
+ \end{enumerate}
+\end{definition}
+
+Diese Eigenschaften kann man an den 1. Grundformen \((g_{\varrho \sigma})\) und \((\overline g_{\varrho \sigma})\) erkennen:
+
+\begin{satz}\label{satz224}
+ Für eine Abbildung \(\Psi = \overline x \circ x^{-1} \colon M \to \overline M\) zwischen injektiven \(\C^1\)-Flächen in Parametrisierungen \(x \colon G \to M, \overline x \colon G \to \overline M\) gilt
+ \begin{enumerate}
+  \item[a)] \(\Psi\) \textit{längentreu} \(\Leftrightarrow \forall_{u \in G} (g_{\varrho \sigma})(u) = (\overline g_{\varrho \sigma})(u) \Leftrightarrow \Psi\) Isometrie
+  \item[b)] \(\Psi\) \textit{winkeltreu} \(\Leftrightarrow \forall_{u \in G} (g_{\varrho \sigma})(u) = \lambda(u) \cdot (\overline g_{\varrho \sigma})(u)\) mit einer \(\C^0\)-Funktion \(\lambda > 0\)
+  \item[c)] \(\Psi\) \textit{flächentreu} \(\Leftrightarrow \forall_{u \in G} \det (g_{\varrho \sigma})(u) = \det (\overline g_{\varrho \sigma})(u)\)
+ \end{enumerate}
+
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz224}]
+ \item[a)]
+ \[
+  \int_a^b \sqrt{\sum g_{\varrho \sigma} \big(u(t)\big) \dot u^{\varrho}(t) \dot u^\sigma (t)} \dd t = \int_a^b \sqrt{\sum \overline g_{\varrho \sigma} \big(u(t)\big) \dot u^\varrho (t) \dot u^\sigma(t)} \dd t
+ \]
+ für alle Kurven \(t \mapsto u(t)\) in dem Parametergebiet \(G \Rightarrow \forall_{u \in G} (g_{\varrho \sigma})(u) = (\overline g_{\varrho \sigma})(u)\), sonst ließen sich Gegenbeispiele konstruieren.
+ \item[c)]
+ \[
+  \int\limits_B \sqrt{g(u)} \dd u = \int\limits_B \sqrt{\overline g(u)}\dd u
+ \]
+ für alle Bereiche \(B\) in \(G\)
+ \[
+  \Leftrightarrow \forall_{u\in G} \sqrt{g(u)} = \sqrt{\overline{g}(u)}
+ \]
+ \item[b)] Für den Winkel \(\delta\) zwischen zwei Flächenkurfen \(t \mapsto c_1(t) = x\big(u_1(t)\big), \, t \mapsto c_2(t) = x\big(u_2(t)\big)\) gilt zunächst
+ \begin{align*}
+  \cos\delta &= \frac{\langle \dot c_1, \dot c_2\rangle}{|\dot c_1| |\dot c_2|} \\
+  \text{also } \sin \delta &= \pm \frac{\sqrt{|\dot c_1|^2 |\dot c_2|^2 - \langle \dot c_1, \dot c_2\rangle^2}}{|\dot c_1||\dot c_2|} = \pm \frac{|\dot c_1 \times \dot c_2|}{|\dot c_1||\dot c_2|}
+ \end{align*}
+ und folglich
+ \[
+  \cot \delta = \pm \frac{\langle\dot c_1, \dot c_2\rangle}{|\dot c_1\times \dot c_2|} = \pm \frac{\sum g_{\varrho \sigma}(u) \dot u_1^\varrho \dot u_2^\sigma}{\det\big(\dot u_1^\varrho, \dot u_2^\sigma\big) \sqrt{{g(u)}}}
+ \]
+ Bei einer winkeltreuen Flächenabbildung ist also
+ \[
+  \frac{\sum g_{\varrho \sigma} (u) \dot u_1^\varrho \dot u_2^\sigma}{\sqrt{ g(u)}} = \frac{\sum \overline g_{\varrho \sigma} (u) \dot u_1^\varrho \dot u_2^\sigma}{\sqrt{\overline g(u)}}
+ \]
+ für alle Kurven \(t \mapsto u_1(t), \, t \mapsto u_2(t)\) im Parametergebiet \(G\)
+ \begin{align*}
+  \Rightarrow \forall_{u \in G} \left(\frac{g_{\varrho \sigma}}{\sqrt{g}}\right)(u) = \left(\frac{\overline g_{\varrho \sigma}}{\sqrt{\overline g}}\right)(u) \Rightarrow \forall_{u \in G} \big(g_{\varrho \sigma}\big)(u) = \lambda(u) \cdot \big(\overline g_{\varrho \sigma}\big)(u)
+ \end{align*}
+ mit einer Funktion \(u \mapsto \lambda(u) > 0\). Diese Bedingung ist auch hinreichend für Winkeltreue.
+\end{beweis}
+
+\begin{folgerung}
+\centering
+  \(\Psi\) längentreu \(\Leftrightarrow \, \Psi\) winkeltreu \textit{und} \(\Psi\) flächentreu.
+\end{folgerung}
+
+\uline{Anwendung}: Es gibt keine Karte der Erdkugel, die gleichzeitig winkel- und flächentreu ist!
+
+\begin{bsp}[für Abbildungen eines Kugelstücks]
+ \[
+  (u,v) \mapsto x(u,v) = r \vxyz{\cos u \cos v}{\sin u \cos v}{\sin v} \quad \text{mit} \quad \big(g_{\varrho \sigma} (u,v)\big) = r^2 \begin{pmatrix}
+   \cos^2 v & 0 \\
+   0 & 1
+  \end{pmatrix}
+ \]
+ in die Ebene:
+ \begin{enumerate}
+  \item[a)]
+  \textit{Winkeltreue Abbildung} durch \textit{stereographische Projektion} vom Nordpol \(N = (0,0,r)^T\) auf die Äquatorebene \(x^3 = 0\). \par
+  Der Ansatz \(N + \lambda \big(x(u,v) - N\big) = \big(\overline x^1(u,v), \overline x^2(u,v), 0\big)^T\) liefert \(r + \lambda r(\sin v-1) = 0\), also \(\lambda = \frac1{1-\sin v}\).\par
+  \uline{\textit{Ergebnis}}:
+  \begin{align*}
+   &\overline x(u,v) = \frac{r\cos v}{1-\sin v} \vxyz {\cos u}{\sin u}{0} \quad \text{mit} \\
+   &\big( \overline g_{\varrho \sigma}(u,v)\big) = \frac{r^2}{(1-\sin v)^2} \begin{pmatrix}
+                                                                             \cos^2 v & 0 \\
+                                                                             0 & 1
+                                                                            \end{pmatrix}
+   = \frac{1}{(1-\sin v)^2} \big(g_{\varrho \sigma}(u,v)\big)
+  \end{align*}
+  \item[b)] \textit{Flächentreue Abbildung} durch den \textit{Kartenentwurf von Archimedes/Lambert}. \par
+  Prinzip: Projektion eines Kugelpunktes auf einen am Äquator berührenden Kreiszylinder und Abwicklung dieses Zylinders in die Ebene.\\
+  Der Ansatz \(\overline x = x_0 + \lambda (x-x_0)\) mit \(x_0 = r (0,0, \sin v)^T\) liefert
+  \[
+   \lambda = \frac{|\overline x - x_0|}{|x-x_0|} = \frac{r}{|x-x_0|} = \frac{1}{\cos v}
+  \]
+  \uline{\textit{Ergebnis}}:
+  \begin{align*}
+   \overline{x}(u,v) &= r \vxyz{\cos u}{\sin u}{\sin v} \quad \text{(auf dem Zylinder) bzw.} \\
+   \overline{\overline x}(u,v) &= r \vxyz{u}{0}{\sin v} \quad \text{(in der Ebene) mit} \\
+   \big(\overline g_{\varrho \sigma}(u,v)\big) &= \big(\overline{\overline g}_{\varrho \sigma}(u,v)\big) = r^2 \begin{pmatrix}
+                                                                                                               1 & 0 \\
+                                                                                                               0 & \cos^2 v
+                                                                                                              \end{pmatrix}, \text{ also } \overline g(u,v) = \overline{\overline g}(u,v) = g(u,v)   
+  \end{align*}
+
+ \end{enumerate}
+
+\end{bsp}
+
+\section{Krümmungstheorie der Flächen im $\IR^3$}
+(Einiges ist problemlos auf Hyperflächen im \(\IR^n\) zu verallgemeinern)
+\subsection{Erste geometrische Bedeutungen der Krümmungsgrößen}
+Bei \(p = 2, n = 3\) vereinfacht sich doch einiges: \par
+Für die beiden Hauptkrümmungen \(\kappa_1(u), \kappa_2(u)\) in einem Punkt \(x(u)\) [\(=\) Eigenwerte von \(A\)] gibt es nur zwei Möglichkeiten
+\begin{enumerate}
+ \item \(\uline{\kappa_1(u) \ne \kappa_2(u) \Rightarrow Y_1(u) \perp Y_2(u)}\) für die zugehörigen Hauptkrümmungsrichtungen (\(=\) Eigenvektoren von \(A\)) ohne Einschränkung
+ \[
+  |Y_1(u)| = |Y_2(u)|, \, \det \big(Y_1(u), Y_2(u), N(u)\big) = 1
+ \]
+ \boxed{\textbf{gut!}}
+ \item \(\uline{\kappa_1(u) = \kappa_2(u)} \Rightarrow\) \uline{Jede} Tangentialrichtung ist Hauptkrümmungsrichtungen (der Eigenraum  von \(\lambda(u) := \kappa_1(u) = \kappa_2(u)\) ist ganz \(T_u x\))
+ \[
+  \Rightarrow \forall_Y A_u(Y) = \lambda(u) \cdot Y \text{ bzw. } (\wein \mu \sigma (u) = \lambda(u) (\delta^\mu_\sigma)
+ \]
+ Eine Orthonormalbasis \(\big(Y_1(u), Y_2(u)\big)\) kann willkürlich gewählt werden. \par
+ \boxed{\textbf{schlecht!}}\par
+\end{enumerate}
+ Bezeichnungen für solche Ausnahmepunkte mit 2):
+ \begin{definition}
+  Auf einer \(\C^2\)-Fläche im \(\IR^3\) heißen Flächenpunkte \(x(u)\) 
+  \begin{enumerate}
+   \item[a)] \(\uline{\kappa_1(u) = \kappa_2(u) = \lambda (u)} \in \IR\) \uline{Nabelpunkte}\index{Nabelpunkt} [umbilics] mit der Kennzeichnung
+   \[
+    A_u = \lambda(u) \, \Id|_{T_u x} \text{ bzw. } \Rom 2_u = \lambda(u) \cdot \Rom 1_u
+   \]
+   (``symmetrisches Krümmungsverhalten'')
+   \item[b)] \(\uline{\kappa_1(u) = \kappa_2(u) = 0}\) \uline{Flachpunkte}\index{Flachpunkt} mit der Kennzeichnung
+   \[
+    A_u = 0 \text{ bzw. } \Rom 2_u = 0
+   \]
+   (``keine Krümmung'')
+  \end{enumerate}
+ \end{definition}
+
+Test für die Interpretation
+
+\begin{satz}\label{satz231}
+ Eine \(\C^3\)-Fläche, die nur Nabelpunkte enthält, ist \uline{entweder} Stück einer Kugelfläche mit Gaußscher Krümmung \(K = \frac1{R^2} >0\), wenn \(R\) der Kugelradius ist, \uline{oder} ein Ebenenstück mit Gaußscher Krümmung \(K \equiv 0\). Im zweiten Fall besitzt sie nur Flachpunkte.
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz231}]
+ \begin{align*}
+  &\forall_u A_u = \lambda (u) \Id \Rightarrow \forall_u \partial_\varrho N(u) = - \lambda(u) \cdot x_\varrho (u) \quad \text{oder kurz} \\
+  &N_\varrho = - \lambda x_\varrho (\varrho = 1,2) \tag{\(\ast\)}
+ \end{align*}
+ Daraus folgt
+ \begin{align*}
+  &N_{\varrho \sigma} = - \lambda_\sigma x_\varrho - \lambda x_{\varrho \sigma} \quad\text{, insbesondere} \\
+  &N_{12} - N_{21} = -\lambda_2 x_1 - \lambda_1 x_2 - \lambda (\underbrace{x_{12} - x_{21}}_{= 0}) = 0
+ \end{align*}
+ Dies zeigt: \(\lambda_1 = \lambda_2 = 0\), d.h.
+ \[
+  \lambda = \const.
+ \]
+ \begin{enumerate}
+  \item Fall: \(\lambda \ne 0\) (nur \uline{echte} Nabelpunkte). Dann liefert \((\ast)\)
+  \begin{align*}
+   &N = -\lambda (x - x_0) \quad \text{, also} \\
+   & |x-x_0| = \frac{1}{|\lambda|} = \const. > 0
+  \end{align*}
+  Die Fläche liegt auf einer Kugel mit Radius 
+  \[
+   R = \frac{1}{|\lambda|} = \frac{1}{\sqrt{K}} \text{ bzw. } K = \frac{1}{R^2} > 0
+  \]
+ \end{enumerate}
+ \item Fall: \(\lambda = 0\) (nur Flachpunkte). Dann liefert \((\ast)\)
+ \begin{align*}
+  N = \const.
+ \end{align*}
+ Die Fläche ist eine Ebene mit
+ \[
+  K = \lambda^2 = 0
+ \]
+\end{beweis}
+
+\begin{folgerung}
+ Kugel und Ebene sind nicht isometrisch, da \(K\) innergeometrisch.
+\end{folgerung}
+
+\begin{definition}
+ Die \uline{3. Grundform} (Fundamentalform)\index{3. Grundform} einer \(\C^2\)-Fläche sei das Feld von symmetrischen, positiv semidefiniten Bilinearformen
+ \[
+  \Rom3_u \colon T_u x \times T_u x \to \IR, \, (X,Y) \mapsto \uline{\Rom3_u(X,Y) = \Rom1_u \big(A_u(X), A_u(Y)\big)}
+ \]
+ mit den Darstellungsmatritzen
+ \[
+  \big(c_{\varrho \sigma} (u)\big) = \left(\Rom3_u \big( x_\varrho (u), x_\sigma(u)\big)\right) = \left(\sum_{\mu\nu} g_{\mu \nu} \wein{\mu}{\varrho} \wein \nu \sigma \right)
+ \]
+ Geometrische Bedeutung:
+ \begin{align*}
+  \Rom3(X,Y) = \langle \dd_Y N, \dd_Y N \rangle &\Rightarrow c_{\varrho \sigma} = \langle N_\varrho, N_\sigma \rangle \\
+  &(\text{vergleiche } g_{\varrho \sigma} = \langle x_\varrho, x_\sigma \rangle)
+ \end{align*}
+ Daraus folgt: \par
+ Die 3. Grundform einer Fläche \(u \mapsto x(u)\) ist die 1. Grundform ihres Normalenfeldes \(u \mapsto 0 + N(u)\)
+\end{definition}
+
+\begin{satz}\label{satz232}
+ Zwischen den Grundformen einer Fläche besteht die Identität
+ \begin{align*}
+  &\Rom3 - 2 H \cdot \Rom2 + K \cdot \Rom1 = 0 \\
+  \text{bzw. } & c_{\varrho \sigma} - 2 H b_{\varrho \sigma} + K g_{\varrho \sigma} = 0
+ \end{align*}
+
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz232}]
+ Der Endomorphismus \(A\) annulliert nac dem Satz von Cayley-Hamilton sein eigenes charakteristisches Polynom 
+ \begin{align*}
+  &\chi_A(t) = t^2 - \tr A \cdot t + \det A = t^2 - 2H \cdot t + K, \text{ d.h. es gilt} \\
+  &A^2 - 2H \cdot A + K \cdot \Id
+ \end{align*}
+ Daraus folgt:
+ \begin{align*}
+  \Rom3(X,Y) &= \Rom1 \big(A(X),A(Y)\big) \stackrel{A \text{ selbstadjungiert}}{=} \Rom1\big(X, A^2(Y)\big) = \Rom1 \big(X,2H \cdot A(Y)\big) - K \cdot \Rom1(X,Y) \\
+  &=2H \cdot \Rom2(X,Y) - K \cdot \Rom1(X,Y)
  \end{align*}
 
 \end{beweis}
