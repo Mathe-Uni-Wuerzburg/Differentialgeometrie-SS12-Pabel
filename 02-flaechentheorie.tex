@@ -431,7 +431,7 @@ Dabei gilt:
  (Andere Bezeichnung: Durch \(\nabla\) wird ein \uline{linearer Zusammenhang}\index{linearer Zusammenhang} (linear connection) definiert)
  \item[b)] Durch \((X,Y) \mapsto \Rom 2(X,Y) = \langle \dd_Y X, N\rangle = -\langle X, \dd_Y N \rangle = -\Rom 1 (X, \dd_YN)\) wird ein Feld symmetrischer \uline{Bilinearformen} 
  \[
-  \Rom 2 u \colon T_u x \times T_u x \to \IR, \, (X,Y) \mapsto \Rom 2_u (X,Y)
+  \Rom 2_u \colon T_u x \times T_u x \to \IR, \, (X,Y) \mapsto \Rom 2_u (X,Y)
  \]
  definiert, genannt \uline{2. Grundform}\index{2. Grundform} (2. Fundamentalform) der Hyperfläche
  \item[c)] Durch \(Y \mapsto A(Y) := -\dd_Y N\) wird ein Feld \uline{linearer Abbildungen} \(A_u \colon T_u x \to T_u x\) definiert, genannt \uline{Weingarten-Endomorphismus}\index{Weingarten-Endomorphismus} (shape operator) der Hyperfläche.
@@ -486,7 +486,7 @@ Früher übliche Bezeichnung für \(p = 2, n = 3\)
 \begin{beweis}[von Satz \ref{satz215}]
  Aus 
  \begin{align*}
-  \partial_\varrho g_{\nu \sigma} &= \partial_\varrho \langle x_\nu, x_\sigma \rangle = \langle x_\nu, x_{\sigma \varrho} \rangle &= \gamma_{\nu\sigma\varrho} + \gamma_{\sigma \nu \varrho} \\
+  \partial_\varrho g_{\nu \sigma} &= \partial_\varrho \langle x_\nu, x_\sigma \rangle = \langle x_{\nu \varrho}, x_\sigma \rangle + \langle x_\nu, x_{\sigma \varrho} \rangle &= \gamma_{\nu\sigma\varrho} + \gamma_{\sigma \nu \varrho} \\
   \partial_\nu g_{\varrho \nu} &= \dots &= \gamma_{\varrho \sigma \nu} + \gamma_{\sigma \varrho \nu} \\
   \partial_\sigma g_{\varrho \nu} &= \dots &= \gamma_{\nu \varrho \sigma} + \gamma_{\varrho \nu \sigma}
  \end{align*}
@@ -654,7 +654,7 @@ Geodätische Parallelverschiebung ist im Allgemeinen nicht wegunabhängig.
 \begin{definition}
  Eine \uline{Geodätische}\index{Geodätische} (Autoparallele, ``Geodäte'') auf einer \(\C^2\)-Fläche ist eine \(\C^2\)-Flächenkurve mit geodätisch parallelem Tangenteneinheitsfeld, d.h. mit
  \[
-  \boxed{\frac{\nabla T}{\dd t \equiv 0}}
+  \boxed{\frac{\nabla T}{\dd t} \equiv 0}
  \]
 \end{definition}
 \begin{bsp} \(\)
@@ -857,7 +857,6 @@ Diese Eigenschaften kann man an den 1. Grundformen \((g_{\varrho \sigma})\) und 
 \end{beweis}
 
 \begin{folgerung}
-\centering
   \(\Psi\) längentreu \(\Leftrightarrow \, \Psi\) winkeltreu \textit{und} \(\Psi\) flächentreu.
 \end{folgerung}
 
@@ -1021,6 +1020,158 @@ Test für die Interpretation
  \begin{align*}
   \Rom3(X,Y) &= \Rom1 \big(A(X),A(Y)\big) \stackrel{A \text{ selbstadjungiert}}{=} \Rom1\big(X, A^2(Y)\big) = \Rom1 \big(X,2H \cdot A(Y)\big) - K \cdot \Rom1(X,Y) \\
   &=2H \cdot \Rom2(X,Y) - K \cdot \Rom1(X,Y)
+ \end{align*}
+
+\end{beweis}
+
+\subsection{Approximativer Flächenverlauf, Klassifikation der Flächenpunkte}
+\uline{Gegeben}: \(\C^2\)-Fläche in Parameterdarstellung \(u \mapsto x(u)\), \(\stackrel{0}{x} = x(\stackrel{0}{u})\) \par
+\uline{Gesucht}: Eulersche Parametrisierung, \(\overline u = \overline x(\overline u) = \stackrel{0}{x}+ \overline u^1 e_1 + \overline u^2 e_2 + F(\overline u^1, \overline u^2) e_3\) in der Umgebung von \(\stackrel \circ x\) \quad (``\(z = F(x,y)\)'') \par
+\uline{Konstruktion}: Wähle eine Orthonormalbasis \((e_1, e_2)\) in \(T_{\stackrel \circ u}x\), so dass mit \(e_3 := N\left(\stackrel \circ u\right)\) \(\left(\stackrel \circ x; e_1, e_2, e_3\right)\) ein kartesisches Koordinantensystem bildet (z.B. Hauptkrümmungsrichtung \(e_\varrho := Y_\varrho (\varrho = 1,2))\) \par
+Darstellung der Fläche in diesem Koordinantensystem
+\begin{align*}
+ u \mapsto x(u) = x_0 + x^1(u) e_1 + x^2(u) e_2 + x^3(u) e_3
+\end{align*}
+mit
+\begin{enumerate}
+ \item[(a)] \(x^i \left(\stackrel \circ u\right) = 0 \quad (i = 1,2,3)\)
+ \item[(b)] \(x^3_\varrho\left(\stackrel \circ u\right) = 0\), denn \(x_\varrho \left(\stackrel \circ u\right) = \sum_{i = 1}^3 x^i_\varrho \left(\stackrel \circ u\right) e_1 \in \hl e_1, e_2\hr = T_{\stackrel \circ u}x\)
+\end{enumerate}
+Mit (b) folgt weiter
+\begin{align*}
+ &x_1 \times x_2 \left(\stackrel \circ u\right) = 0 \cdot e_1 + 0 \cdot e_2 + \left|\begin{matrix}
+                                                                     x_1^1 & x_1^2 \\
+                                                                     x_2^1 & x_2^2
+                                                                    \end{matrix}\right|\left(\stackrel \circ u\right) \cdot e_3 = \underbrace{\lambda}_{> 0} N\left(\stackrel \circ u \right)\text{, also}\\
+&\det \begin{pmatrix}
+      x_1^1 & x_1^2 \\
+      x_2^1 & x_2^2
+     \end{pmatrix} \left(\stackrel \circ u\right) > 0 \text{ und damit in einer Umgebung von } \stackrel \circ u)
+\end{align*}
+
+Durch \(u \mapsto \Phi(u) := \big( x^1(u), x^2(u) \big) = \big(\overline u^1(u), \overline u^2(u)\big)\) wird also eine in der Umgebung von \(\stackrel \circ u\) zulässige Parametertransformation definiert (mit \(\Phi\left(\stackrel \circ u\right) = 0\) nach (a)) [lokaler Umkehrsatz] \par
+Neue Darstellung der Fläche in einer Umgebung von \(\overline u = 0\)
+\begin{align*}
+ \overline u \mapsto \overline x(\overline u) = x \circ \Phi^{-1} (\overline u) = x_0 + \overline u^1 e_1 + \overline u^2 e_2 + \underbrace{x^3\big(\Phi^{-1}(\overline u)\big)}_{F(\overline u)} e_3
+\end{align*}
+mit 
+\begin{align*} 
+F(0) &= x^3\big(\underbrace{\Phi^{-1}(0)}_{\stackrel \circ u}\big)= 0 \text{ (nach (a)), und} \\
+\partial_\varrho F(0) &= \sum \underbrace{\partial_\sigma x^3\left(\stackrel \circ u\right)}_{= 0} \frac{\partial u^\sigma}{\partial \overline u^\varrho}(0) =0
+\end{align*}
+
+\begin{hilfssatz}
+ Jede \(\C^2\)-Fläche im \(\IR^3\) besitzt lokal um jeden Punkt \(\stackrel \circ x\) eine Eulersche Parametrisierung 
+ \[
+  u \mapsto x(u) = \stackrel \circ x + u^1 e_1 + u^2 e_2 + (u^1, u^2) e_3
+ \]
+ bezüglich eines geeigneten Koordinantensystems mit
+ \[
+  F(0) = \partial_1 F(0) = \partial_2 F(0) = 0
+ \]
+\end{hilfssatz}
+
+\uline{Eigenschaften}:
+\begin{align*}
+ x(0) &= \stackrel \circ x \\
+ x_\varrho(0) &= e_\varrho \quad (\varrho = 1,2) \\
+ N(0) &= e_3 \\
+ x_{\varrho \sigma}(0) &= F_{\varrho \sigma} (0) e_3
+\end{align*}
+Daraus ergeben sich
+\begin{align*}
+ \big(g_{\varrho \sigma}(0)\big) &= (\delta_{\varrho \sigma}  \christ \varrho \mu \sigma (0)\big) = 0\\
+ \big(b_{\varrho \sigma}(0)\big) &= \big(\wein \mu \sigma (0) \big) = \big(F_{\varrho \sigma} (0) \big) \\ 
+ [&= \text{\textsc{HESSE}-Matrix von } F \text{ in } u = 0]
+\end{align*}
+
+Die Taylorentwicklung dieser Parametrisierung um \(u = 0\) ist
+\begin{align*}
+ x(u) = x(0) + \sum_{\varrho = 1}^2 x_\varrho (0) u^\varrho + \frac12 \sum x_{\varrho \sigma}(u) u^\varrho u^\sigma + R(u)
+\end{align*}
+wobei \mat{\frac{R(u)}{|u|^2} \stackrel{u \to 0}\to 0}. Einsetzen obiger Eigenschaften liefert 
+
+\begin{satz}\label{satz233}
+ Eine \(\C^2\)-Fläche im \(\IR^3\) in der Eulerschen Parametrisierung des Hilfssatzes besitzt um \(u = 0\) die Taylorentwicklung
+ \[
+  u \mapsto x(u) = \stackrel \circ x + \sum_{i=1}^2 u^\varrho e_\varrho + \frac12 \sum b_{\varrho \sigma}(0) u^\varrho u^\sigma + o\left(|u|^2\right)
+ \]
+ Die in 2. Ordnung appriximierte Fläche
+ \[
+  u \mapsto \widetilde x(0) = \stackrel \circ x + \sum_{i=1}^2 u^\varrho e_\varrho + \frac12 \sum b_{\varrho \sigma}(0) u^\varrho u^\sigma e_3
+ \]
+ ist eine (möglicherweise entartete) parabolische Quadrik, genannt \uline{Schmiegparaboloid}\index{Schmiegparaboloid} (oskulierendes Paraboloid) der Fläche in \(u = 0\). \\
+ {\Huge[}in Koordinaten: \mat{2x^3 = \sum_{\varrho, \sigma = 1}^2 b_{\varrho \sigma}(0) x^\varrho x^\sigma}{\Huge]}
+\end{satz}
+
+\subsubsection*{Diskussion des Schmiegparaboloids}
+Aus 
+\begin{align*}
+ \widetilde x(u^1, u^2) = \stackrel \circ x + \underbrace{\sum u^\varrho x_\varrho (0)}_{= Y \in T_0 x} + \frac12 \sum \stackrel \circ {\Rom2} \big( x_\varrho(0), x_\sigma(0)\big) u^\varrho u^\sigma \cdot \stackrel \circ N
+\end{align*}
+folgt die Darstellung
+\begin{align*}
+ \widetilde x(Y) = \stackrel \circ x + Y + \frac12\stackrel \circ {\Rom2}(Y,Y) \cdot \stackrel \circ N \quad \text{ mit } Y \in T_0 x
+\end{align*}
+(Parameterebene \(=\) Tangentialebene in \(u = 0\)) \par
+Die Zerlegung \(Y = s \cdot \stackrel \circ{Y_1} + t \cdot \stackrel \circ{Y_2}\) bezüglich orthonormierter Hauptkrümmungsrichtung (\(\widehat=\) Wahl von \(e_\varrho := \stackrel \circ{Y_\varrho}\) bei der Konstruktion der Eulerschen Parametrisierung) liefert wegen \(\stackrel \circ A \left(\stackrel \circ{Y_\varrho}\right) = \stackrel \circ {\kappa_\varrho} \cdot \stackrel \circ{Y_\varrho}\), also \(\stackrel \circ A(Y) = s \stackrel \circ{\kappa_1} \stackrel \circ {Y_1} + t \stackrel \circ{\kappa_2} \stackrel \circ {Y_2}\) und damit
+\[
+ \stackrel \circ {\Rom2} (Y,Y) = \stackrel \circ {\Rom1}\big(Y, \stackrel \circ A(Y)\big) = \stackrel \circ {\kappa_1} s^2 + \stackrel \circ {\kappa_2} t^2
+\]
+
+\begin{folgerung}
+ Wählt man in der Tangentialebene \(T_0x\) Hauptkrümmungsrichtungen \(\stackrel \circ {Y_1}, \stackrel \circ{Y_2}\) also (orthonormierte) Basisvektoren, lässt sich das Schmiegparaboloid schreiben in der Form
+ \[
+  (s,t) \mapsto \widetilde x(s,t) = \stackrel \circ x + s \stackrel \circ {Y_1} + t \stackrel \circ {Y_2} + \frac12 \left( \stackrel \circ {\kappa_1}s^2 + \stackrel \circ {\kappa_2} t^2 \right) \stackrel \circ N
+ \]
+ mit den Hauptkrümmungen \(\stackrel \circ {\kappa_1}, \stackrel \circ {\kappa_2}\) in \(\stackrel \circ x = x(0)\) \\(Hauptachsentransformation des Schmiegparaboloids) \\
+ \big[ ``\(z = \frac12 \left( \stackrel \circ {\kappa_1} x^2 + \stackrel \circ {\kappa_2} y^2 \right)\)'' \big]
+\end{folgerung}
+
+Daraus ist abzulesen:
+
+\begin{satz}[Klassifikation der Flächenpunkte]\label{satz234}
+ Eine \(\C^2\)-Fläche im \(\IR^3\) verhält sich in 2. Näherung in der Umgebung eines Punktes mit 
+ \begin{enumerate}
+  \item[(a)] \(\uline{K = \kappa_1 \kappa_2 > 0}\) (elliptischer Punkt) \\
+  wie ein \uline{elliptisches Paraboloid}  
+  \item[(b1)] \uline{\(K = \kappa_1 \kappa_2 = 0\) aber nicht \(\kappa_1 = \kappa_2 = 0\)} (parabolischer Punkt) \\
+  wie ein \uline{parabolischer Zylinder}
+  \item[(b2)] \uline{\(K = \kappa_1 = \kappa_2 = 0\)} (Flachpunkt)
+  wie eine \uline{Ebene}
+  \item[(c)] \uline{\(K = \kappa_1 \kappa_2 < 0\)} (hyperbolischer Punkt)
+  wie ein \uline{hyperbolisches Paraboloid} (``Sattelfläche'')
+ \end{enumerate}
+\end{satz}
+
+\begin{bemerkung}
+ Echte Nabelpunkte (\(\kappa_1 = \kappa_2 \ne 0\)) sind stets elliptisch (\(K > 0\)) mit rotationssymmetrischem Querschnitt.
+\end{bemerkung}
+
+Wir betrachten jetzt \uline{Parallelschnitte des Schmiegparaboloids} im Abstand \(\pm \varepsilon \, (\varepsilon > 0)\), genauer die Mengen
+\begin{align*}
+ \widetilde J_\varepsilon = \left\{ Y \in T_0 x \mid \frac12 \stackrel \circ {\Rom2} (Y,Y) = \pm \varepsilon\right\}
+\end{align*}
+ Sie sind ähnlich zur Menge
+ \[
+  J = \frac{\widetilde J_\varepsilon}{\sqrt{2\varepsilon}} = \left\{ Y \in T_0 x \mid \stackrel \circ {\Rom2} (Y,Y) = \pm 1\right\}
+ \]
+ genannt \textsc{Dupin}sche Indikatrix \\
+ (denn \(Y \in \widetilde J_\varepsilon \Leftrightarrow \stackrel \circ {\Rom2}(Y,Y) = \pm 2\varepsilon \Leftrightarrow \frac{Y}{\sqrt{2\varepsilon}} \in J\)) \par
+ Für \uline{Parallelschnitte der Fläche} selbst, also für
+ \[
+  J_\varepsilon = \left\{ Y \in T_0 x\mid \frac12 \stackrel{\circ}{\Rom2}(Y,Y) + R(Y) = \pm \varepsilon \right\}
+ \]
+ gilt zumindest
+ \[
+  \lim_{\varepsilon \to 0} \frac{J_\varepsilon}{\sqrt{2\varepsilon}} = J
+ \]
+ d.h. sie konvergiert gegen die Dupinsche Indikatrix für \(\varepsilon \to 0\).
+ 
+\begin{beweis}
+ \begin{align*}
+  &Y \in \frac{J_\varepsilon}{\sqrt{2\varepsilon}} \Leftrightarrow \frac12 \Rom2 \left( \sqrt{2\varepsilon}Y, \sqrt{2\varepsilon}Y\right) + R\left(\sqrt{2\varepsilon} Y\right) = \pm \varepsilon \\
+  &\Leftrightarrow \stackrel{\circ}{\Rom2}(Y,Y) + \underbrace{\frac{R\left(\sqrt{2\varepsilon}Y\right)|Y|^2}{2\varepsilon |Y|^2}}_{\to 0 \text{ für } \varepsilon \to 0} = \pm 1 \quad \text{denn } \frac{R(u)}{|u|^2} \stackrel {u \to 0}\to 0
  \end{align*}
 
 \end{beweis}
