@@ -1,0 +1,13 @@
+\newsavebox{\satzbox}
+\newsavebox{\onenullbox}
+\newsavebox{\twonullbox}
+\newenvironment{satz}{\par\global\setbox\onenullbox=\vbox\bgroup\begin{satzn}}
+{\end{satzn}\egroup\setbox\twonullbox=\copy\onenullbox\unvbox\twonullbox
+\global\setbox\satzbox=\vbox{\unvbox\satzbox\unvbox\onenullbox}}
+
+\newsavebox{\definitionbox}
+\newsavebox{\threenullbox}
+\newsavebox{\fournullbox}
+\newenvironment*{definition}{\par\global\setbox\threenullbox=\vbox\bgroup\begin{definitionl}}
+{\end{definitionl}\egroup\setbox\fournullbox=\copy\threenullbox\unvbox\fournullbox
+\global\setbox\definitionbox=\vbox{\unvbox\definitionbox\unvbox\threenullbox}}

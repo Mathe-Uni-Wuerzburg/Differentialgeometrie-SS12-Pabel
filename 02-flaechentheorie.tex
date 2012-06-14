@@ -1175,3 +1175,121 @@ Wir betrachten jetzt \uline{Parallelschnitte des Schmiegparaboloids} im Abstand 
  \end{align*}
 
 \end{beweis}
+
+Es gilt
+\[
+ Y = d Y_1 + t Y_2 \in J = \stackrel{\circ}{\Rom2}(Y,Y) = \stackrel \circ{\kappa_1}s^2 + \stackrel \circ{\kappa_2}t^2 = \pm 1
+\]
+Daraus folgt
+\begin{satz}\label{satz235}
+ Die Dupinsche Indikatrix in einem Punkt einer \(\C^2\)-Fläche ist
+ \begin{enumerate}
+  \item[(a)] in einem \uline{elliptischen Punkt} (\(K > 0)\) \par
+  eine \uline{Ellipse} mit den Hauptachsrichtungen \(Y_1, Y_2\) und den Halbachslängen \(\frac{1}{\sqrt{|\kappa_1|}}, \frac{1}{\sqrt{|\kappa_2|}}\) \par
+  (insbesondere in einem echten Nabelpunkt ein \uline{Kreis})
+  \item[(b1)] in einem \uline{parabolischen Punkt} (etwa \(\kappa_1 = 0, \kappa_2 \ne 0\)) \par
+  ein \uline{Paar paralleler Geraden} (etwa parallel zur \(Y_1\)-Achse im Abstand \(\frac{2}{\sqrt{|\kappa_2|}}\))
+  \item[(b2)] in einem \uline{Flachpunkt} \par
+  \uline{leer}
+  \item[(c)] in einem \uline{hyperbolischen Punkt} (\(K < 0\)) \par
+  ein \uline{Hyperbelpaar} mit gleichen Asymptoten, den Hauptachsrichtungen \(Y_1, Y_2\) und den Halbachslängen \(\frac{1}{\sqrt{|\kappa_1|}}, \frac{1}{\sqrt{|\kappa_2|}}\).
+ \end{enumerate}
+Die \uline{Asymptotenrichtungen} \(Z\) (in den Fällen (b1) und (c)) sind jeweils durch \(\Rom2(Z,Z) = 0\) gegeben.
+\end{satz}
+
+\begin{bemerkung}
+ Bei Minimalflächen (\(H = 0, \kappa_2 = - \kappa_1\)) erhält man symmetrische Hyperbeln, falls \(\kappa_1 \ne 0\).\par
+ Alternative: \uline{Flachpunkte}
+\end{bemerkung}
+
+In der ursprünglichen Eulerschen Parametrisierung "\(z = F(x,y)\)" des Hilfssatzes war \(\grad F(0) = 0\) (d.h. \(F\) ist  in \(0\) stationär) und \(\big(b_{\varrho \sigma}(0)\big) = \big(F_{\varrho \sigma}(0)\big)\) die Hesse-Matrix von \(F\) in \(x(0)\). \par
+
+Sätze aus der Analysis liefern sofort die 
+
+\begin{folgerung}
+ \begin{enumerate}
+  \item[(a)] In einem \uline{elliptischen Punkt} (\uline{\(\Rom2\) definit}) liegt eine hinreichend kleine Umgebung des Flächenpunktes ganz auf einer Seite der Tangentialebene. ("Relatives Extremum")
+  \item[(b)] In einem \uline{parabolischen Punkt} oder \uline{Flachpunkt} (\uline{\(\Rom2\) semidefinit}) wird das Flächenverhalten in der Umgebung vom Restglied mitbestimmt.
+  \item[(c)] In einem \uline{hyperbolischen Punkt} (\uline{\(\Rom2\) indefinit}) gibt es in jeder Umgebung Flächenpunkte, die auf verschiedenen Seiten der Tangentialebene liegen.
+ \end{enumerate}
+\end{folgerung}
+
+\begin{bsp}[zu (b)]
+ \begin{enumerate}
+  \item \(F(s,t) = s^3 + t^2 = t^2 + R(s,t) \Rightarrow \big(b_{\varrho \sigma}(0,0)\big) = \big(F_{\varrho \sigma}(0,0)\big) = \begin{pmatrix}
+																 2 & 0 \\
+																 0 & 0
+																\end{pmatrix}\) \par
+  \(\Rightarrow (0,0)\) ist parabolischer Punkt.
+  \item \(F(s,t) = s(s^2 - t^2) =  R(s,t) \Rightarrow \big(b_{\varrho \sigma}(0,0)\big) = \big(F_{\varrho \sigma} (0,0)\big) = \begin{pmatrix}
+																0 & 0 \\
+																0 & 0
+															       \end{pmatrix}\) \par
+  \(\Rightarrow (0,0)\) ist Flachpunkt. (``Affensattel'')
+ \end{enumerate}
+\end{bsp}
+
+\section{Kurven und spezielle Parameter auf einer Fläche im $\IR^3$}
+
+\subsection{Theorie der Flächenkurven}
+
+Bei Flächenkurven konstruieren wir eine an die Fläche angepasste Begleitbasis und betrachten deren Ableitungsgleichungen.
+
+\begin{satz}\label{satz241}
+ Auf einer \(\C^2\)-Fläche sei eine \(\C^2\)-Flächenkurve in BLP \(s \mapsto c(s) = x\big(u(s)\big)\) gegeben. Dann bilden die Vektorfelder
+ \begin{align*}
+  &s \mapsto T(s) := c'(s) & [\text{Tangentenvektor}] \\
+  &s \mapsto S(s) := N\big(u(s)\big) \times T(s) = T^{\times}(s) & [\text{Seitenvektor}] \\
+  &s \mapsto \hat N(s) := N\big(u(s)\big) & [\text{Normalenvektor}]
+ \end{align*}
+ eine orthonormierte, positiv orientierte \(\C^1\)-Begleitbasis, genannt \uline{Streifen-} oder \uline{Darboux-Begleitbasis}\index{Streifenbegleitbasis}\index{Darbouxbegleitbasis} \(s \mapsto \big(T(s), S(s), \widehat N(s)\big)\). \par
+ Für sie gelten die Ableitungsgleichungen
+ \[
+  \vxyz T S {\widehat N}' = \begin{pmatrix}
+		      0 & \kappa_g & \kappa_n \\
+		      -\kappa_g  & 0 & \tau_g \\
+		      -\kappa_n   & -\tau_g & 0
+		     \end{pmatrix} \vxyz T S {\widehat N}
+ \]
+ mit den Koeffizienten (``Streifeninvarianten'')
+\begin{itemize}
+ \item \uline{geodätische Krümmung}
+  \[
+   \kappa_g = \langle T', S \rangle = \left\langle \frac{\nabla T}{\dd s}, S \right\rangle = \Rom1 \left(\frac{\nabla T}{\dd s}, S\right)
+  \]
+  \item \uline{Normalkrümmung}
+  \begin{align*}
+   \kappa_n &= \langle T', \widehat N \rangle = - \langle T, \widehat N' \rangle = - \langle T, \dd_T N \rangle \\
+    &= \langle T, A(T) \rangle = \Rom1 \big( T, A(T)\big) = \Rom2 (T,T)
+  \end{align*}
+  \item \uline{geodätische Torsion}
+  \begin{align*}
+   \tau_g &= \langle S', \widehat N \rangle = - \langle S, \widehat N \rangle = - \langle S, \dd_T N \rangle \\
+   &=\langle S, A(T) \rangle = \Rom1 \big(A(T), S\big) = \Rom2 (T,S)
+  \end{align*}
+ \end{itemize}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz241}]
+ Klar!
+\end{beweis}
+
+\begin{folgerung}
+ \begin{enumerate}
+  \item[a)] Im Unterschied zu \(\kappa_g = \langle T, S' \rangle = \Rom1 \left( \frac{\nabla T}{\dd t}, S \right)\) hängen \(\kappa_n = \Rom2 (T,T)\) und \(\tau_g = \Rom2 (T,S) \) nur von der Tangentialrichtung \(T\) ab. \par
+   \(\boxed{\begin{aligned}
+             &\text{Alle Flächenkurven durch einen Punkt mit gleicher Tangentialrichtung } T \\
+             &\text{ haben dort gleiches } \kappa_n \text{ und } \tau_g
+            \end{aligned}}\) \par
+   \(\kappa_n\) und \(\tau_g\) bestimmen also mehr das Krümmungsverhalten der Fläche als der Kurve.
+  \item[b)] Der \uline{immergeometrische Anteil} der Ableitungsgleichungen ist
+   \[
+    \frac{\nabla}{\dd S} \vxy T S = \begin{pmatrix}
+					0 & \kappa_g \\
+					-\kappa_g & 0
+				      \end{pmatrix} \vxy T S
+   \]
+   und verallgemeinert die Frenetformeln für ebene Kurven. \par
+\framebox{Im Unterschied zu \(\kappa_n\) und \(\tau_g\) ist \(\kappa_g\) eine innergeometrische Größe.}
+ \end{enumerate}
+\end{folgerung}
