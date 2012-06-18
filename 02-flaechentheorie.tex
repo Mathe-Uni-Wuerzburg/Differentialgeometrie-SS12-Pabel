@@ -836,7 +836,7 @@ Diese Eigenschaften kann man an den 1. Grundformen \((g_{\varrho \sigma})\) und 
  \[
   \Leftrightarrow \forall_{u\in G} \sqrt{g(u)} = \sqrt{\overline{g}(u)}
  \]
- \item[b)] Für den Winkel \(\delta\) zwischen zwei Flächenkurfen \(t \mapsto c_1(t) = x\big(u_1(t)\big), \, t \mapsto c_2(t) = x\big(u_2(t)\big)\) gilt zunächst
+ \item[b)] Für den Winkel \(\delta\) zwischen zwei Flächenkurven \(t \mapsto c_1(t) = x\big(u_1(t)\big), \, t \mapsto c_2(t) = x\big(u_2(t)\big)\) gilt zunächst
  \begin{align*}
   \cos\delta &= \frac{\langle \dot c_1, \dot c_2\rangle}{|\dot c_1| |\dot c_2|} \\
   \text{also } \sin \delta &= \pm \frac{\sqrt{|\dot c_1|^2 |\dot c_2|^2 - \langle \dot c_1, \dot c_2\rangle^2}}{|\dot c_1||\dot c_2|} = \pm \frac{|\dot c_1 \times \dot c_2|}{|\dot c_1||\dot c_2|}
@@ -1282,7 +1282,7 @@ Bei Flächenkurven konstruieren wir eine an die Fläche angepasste Begleitbasis 
              &\text{ haben dort gleiches } \kappa_n \text{ und } \tau_g
             \end{aligned}}\) \par
    \(\kappa_n\) und \(\tau_g\) bestimmen also mehr das Krümmungsverhalten der Fläche als der Kurve.
-  \item[b)] Der \uline{immergeometrische Anteil} der Ableitungsgleichungen ist
+  \item[b)] Der \uline{innergeometrische Anteil} der Ableitungsgleichungen ist
    \[
     \frac{\nabla}{\dd S} \vxy T S = \begin{pmatrix}
 					0 & \kappa_g \\
@@ -1293,3 +1293,159 @@ Bei Flächenkurven konstruieren wir eine an die Fläche angepasste Begleitbasis 
 \framebox{Im Unterschied zu \(\kappa_n\) und \(\tau_g\) ist \(\kappa_g\) eine innergeometrische Größe.}
  \end{enumerate}
 \end{folgerung}
+
+Wir bestimmen alle Flächenkurven, bei denen eine der Invarianten verschwindet.
+
+\begin{definition}
+ Eine Flächenkurve, deren Tangentenrichtung 
+ \begin{itemize}
+  \item eine Hauptkrümmungsrichtung ist, heißt \uline{Krümmungslinie}\index{Krümmungslinie},
+  \item eine Asymptotenrichtung ist, heißt \uline{Asymptotenlinie}\index{Asymptotenlinie}
+ \end{itemize}
+ (letztere existiert nicht durch elliptische Punkte)
+\end{definition}
+
+\begin{satz}\label{satz242}
+ Für \(\C^2\)-Flächenkurven \(c\) auf \(\C^2\)-Flächen gilt
+ \begin{enumerate}
+  \item[(a)] \(\kappa_g \equiv 0 \Leftrightarrow c\) Geodätische
+  \item[(b)] \(\kappa_n \equiv 0 \Leftrightarrow c\) Asymptotenlinie
+  \item[(c)] \(\tau_g \equiv 0 \Leftrightarrow c\) Krümmungslinie
+ \end{enumerate}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz242}]
+ \begin{align*}
+  \kappa_g \equiv 0 &\Leftrightarrow \frac{\nabla T}{\dd s} = \kappa_g \cdot S \equiv 0 \Leftrightarrow c \text{ geodätisch} \tag{a} \\
+  \kappa_n \equiv 0 &\Leftrightarrow \Rom2(T,T) \equiv 0 \Leftrightarrow T \text{ Asymptotenrichtung} \Leftrightarrow c \text{ Asymptotenlinie} \tag{b} \\
+  \tau_g \equiv 0 &\Leftrightarrow \Rom2(T,S) = \Rom1 \big(A(T),S\big) \equiv 0 \Leftrightarrow A(T) \parallel T \Leftrightarrow T \text{ Eigenvektor von }A \tag{c} \\
+  &\Leftrightarrow T \text{ Hauptkrümmungsrichtung} \Leftrightarrow c \text{ Krümmungslinie} 
+ \end{align*}
+\end{beweis}
+
+Wir untersuchen den Zusammenhang zwischen Frenet- und Darboux-Begleitbasis bzw. ihrer Invarianten. 
+\begin{center}
+\includegraphics[scale=0.2]{Bilder/Bsp14.jpg} 
+\end{center}
+\begin{satz}\label{satz243}
+ Ist der Winkel \(\vartheta\) zwischen der \uline{Schmiegebene} einer wendepunktfreien \(\C^2\)-Flächenkurve (mit \(\C^1\)-Frenet-Begleitbasis) und der \uline{Tangentialebene} der Fläche, so gewählt, dass gilt
+ \begin{align*}
+  \begin{matrix}
+  H &= \cos \vartheta S + \sin \vartheta \widehat N \\
+  B &= -\sin \vartheta S + \cos \vartheta \widehat N
+  \end{matrix}
+  \quad\text{ bzw. }\quad
+  \begin{matrix}
+   S &= \cos \vartheta H - \sin \vartheta B \\
+   \widehat N &= \sin \vartheta H + \cos \vartheta B
+  \end{matrix}
+  \quad \text{ (Zurückdrehen!)}
+ \end{align*}
+ so folgt für die Streifeninvarianten sowie Krümmung und Torsion der Kurve
+ \begin{align*}
+  &\begin{rcase}
+   (1)\quad &\kappa_g = \kappa \cos \vartheta \\
+   (2)\quad &\kappa_n = \kappa \sin \vartheta
+  \end{rcase}
+  \text{ also } \kappa = \sqrt{\kappa_g^2 + \kappa_n^2} \\
+  &\;\,(3) \quad \tau_g = \tau - \vartheta' 
+ \end{align*}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz243}]
+ \begin{align*}
+  T' &= \kappa \cdot H \stackrel{!}{=} = \kappa_g S + \kappa_n \widehat N \Rightarrow (1), (2) \\
+  \tau_g &= \langle S', \widehat N \rangle = \langle -(\underbrace{\sin \vartheta H + \cos \vartheta B}_{\widehat N}) \vartheta' + \underbrace{\cos \vartheta (\cancel{-\kappa T} + \tau B) + \sin \vartheta \tau H}_{\tau \cdot \widehat N}, \widehat N \rangle = -\vartheta' + \tau
+ \end{align*}
+\end{beweis}
+
+\begin{bemerkung}
+ \uline{Geraden} (\(T' \equiv 0\)) auf einer Fläche (passen nicht ins Schema) sind sowohl \uline{Geodätische} als auch \uline{Asymptotenlinien} (\(\kappa_g = \kappa_n \equiv 0\))
+\end{bemerkung}
+
+\begin{folgerung}
+ Für wendepunktfreie Flächenkurven gilt
+ \begin{enumerate}
+  \item[a)] \uline{Geodätische} sind durch \(\uline{\cos \vartheta = 0}\) bzw. \(\uline{H = \pm \widehat N}\) gekennzeichnet. Der ``Krümmungsvektor'' \(c'' = \kappa \cdot H\) ist stets orthogonal zur Fläche. Schmiegebene und Tangentenebene schneiden sich rechtwinklig.
+  \item[b)] \uline{Asymptotenlinien} sind durch \(\uline{\sin \vartheta = 0}\) bzw. \(\uline{B = \pm \widehat N}\) gekennzeichnet. Schmiegebene und Tangentialebene stimmen (bis au die Orientierung) überein. (Deswegen auch ``Schmieglinien'')
+ \end{enumerate}
+\end{folgerung}
+
+Eine weitere Interpretation von \(\kappa_n\) und \(\tau_g\)
+
+\begin{satz}\label{satz244}
+ Für \(\C^2\)-Flächenkurven gilt
+ \begin{enumerate}
+  \item[a)] In einem Flächenpunkt \(c(s)\) ist \(|\kappa_n(s)|\) die Krümmung und \(\tau_g(s)\) die Torsion derjenigen Geodätischen, die dort die Kurve berührt.
+  \begin{beweis}[von a)]
+   Für Kurve \(c\) und Geodätische \(\widetilde c\) folgt aus \(T = \widetilde T\) auch \[\kappa_n = \widetilde \kappa_n, \, \tau_g = \widetilde \tau_g\]. Wegen \(\widetilde \kappa_g = 0\) (\(\Rightarrow \widetilde \kappa = |\widetilde \kappa_n|, \, \widetilde \vartheta = \const\)) erhält man \[|\kappa_n| = |\widetilde \kappa_n| = \widetilde\kappa, \, \tau_g = \widetilde \tau_g = \widetilde \tau\].
+  \end{beweis}
+  \item[b)] [Satz von \textsc{Meusnier}] \\
+  In einem Kurvenpunkt \(c(s)\) ist \(|\kappa_n(s)|\) die Krümmung des ebenen Normalschnitts der Fläche, die dort die Kurve berührt.
+  \begin{beweis}[von b)]
+   Für den ebenen Normalschnitt \(\widetilde c\) gilt 
+   \begin{align*}
+    &\widetilde B \perp \widehat N, \text{ also } \cos \widetilde \vartheta = \langle \widetilde B, \widehat N \rangle = 0, \\
+    &\text{also ebenfalls } |\kappa_n| = |\widetilde \kappa_n | = \widetilde \kappa
+   \end{align*}
+  \end{beweis}
+
+ \end{enumerate}
+\end{satz}
+
+\begin{folgerung}
+ Geodätische auf einer Fläche besitzen in jedem Kurvenpunkt \uline{minimale Krümmung} \(\kappa\) im Vergleich zu allen anderen Flächenkurven durch diesen Punkt mit gleicher Tangentialrichtung.
+\end{folgerung}
+
+\begin{beweis}[der Folgerung]
+ Für Geodätische \(c\) und Vergleichskurve \(\widetilde c\) gilt
+ \[
+  \kappa = |\kappa_n | = |\widetilde \kappa_n | \le \sqrt{\kappa_g^2 + \kappa_n^2} = \widetilde \kappa
+ \]
+\end{beweis}
+
+Wir untersuchen jetzt \(\kappa_n\) und \(\tau_g\) in Abhängigkeit von der Tangentenrichtung in einem festen Kurvenpunkt. \\ Referenzsystem: Hauptkrümmungsrichtungen
+
+\begin{satz}\label{satz245}
+ In einem Flächenpunkt sei die Tangentialrichtung \(\uline{T = \cos \varphi Y_1 + \sin \varphi Y_2}\) mit (orthonormierten) Hauptkrümmungsrichtungen \(Y_1, Y_2\) gegeben. Dann gilt
+ \begin{align*}
+  &\uline{\kappa_n(\varphi) = \kappa_1 \cos^2 \varphi + \kappa_2 \sin^2 \varphi} = H - \sqrt{H^2-K} \cos 2\varphi &\text{[\textsc{euler}sche Formel]}\\
+  &\uline{\tau_g (\varphi) = (\kappa_2 - \kappa_1) \sin \varphi \cos \varphi} = + \sqrt{H^2 - K} \sin 2 \varphi
+ \end{align*}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz245}]
+ Wegen
+ \[
+  S = - \sin \varphi Y_1 + \cos \varphi Y_2, \, A(T) = \kappa_1 \cos \varphi Y_1 + \kappa_2 \sin \varphi Y_2
+ \]
+ ist
+ \begin{align*}
+  &\kappa_n(\varphi) = \langle A(T), T \rangle = \kappa_1 \cos^2 \varphi + \kappa_2 \sin^2 \varphi \\
+  &\tau_g(\varphi) = \langle A(T), S \rangle = (\kappa_2 - \kappa_1) \sin \varphi \cos \varphi
+ \end{align*}
+ Aus 
+ \begin{align*}
+  &H = \frac12 (\kappa_1 + \kappa_2), \, K = \kappa_1 \kappa_2 \Rightarrow \sqrt{H^2 - K} = \frac12 (\kappa_2 - \kappa_1) &[\text{wenn }\kappa_1 \le \kappa_2] \text{ und} \\
+  & \cos^2 \varphi - \sin^2 \varphi = \cos 2\varphi, \, 2 \sin \varphi \cos \varphi = \sin 2 \varphi
+ \end{align*}
+ folgt die zweite Darstellung.
+\end{beweis}
+
+\begin{folgerung} \(\)
+ \begin{enumerate}
+  \item[a)] In einem Flächenpunkt sind die Hauptkrümmungen \(\kappa_1, \kappa_2\) die \uline{Extremalwerte} der Normalkrümmung \(\kappa_n\) bezüglich aller Tangentenrichtungen.
+  \item[b)] Trägt man in einem Flächenpunkt in jede Tangentialrichtung die Größe \(\frac{1}{\sqrt{|\kappa_n(\varphi)|}}\) ab, so erhält man die Dupinsche Indikatrix.
+ \end{enumerate}
+\end{folgerung}
+
+\begin{beweis}[der Folgerung] \(\)
+ \begin{enumerate}
+  \item[a)] \mat{\frac{\dd}{\dd \varphi} \kappa_n(\varphi) = (\kappa_2 - \kappa_1) \sin \varphi \cos \varphi = 0 \stackrel{\kappa_1 \ne \kappa_2}{\Leftrightarrow} \sin \varphi = 0 \lor \cos \varphi = 0}
+  \item[b)] Für \mat{X := \frac{1}{\sqrt{|\kappa_n(\varphi)|}} \cdot T} gilt
+  \[
+   \Rom2(X,X) = \frac{1}{| \kappa_n(\varphi)|} \Rom2(T,T) = \frac{1}{|\kappa_n(\varphi)|} \underbrace{\langle A(T), T) \rangle}_{\kappa_n(\varphi)} = \pm 1
+  \]
+ \end{enumerate}
+
+\end{beweis}

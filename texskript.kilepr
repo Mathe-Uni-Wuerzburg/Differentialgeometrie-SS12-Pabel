@@ -46,6 +46,26 @@ Indentation Mode=cstyle
 Mode=LaTeX
 ReadWrite=true
 
+[document-settings,item:03-satzsammlung.tex]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
+
+[document-settings,item:04-definitionsammlung.tex]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
+
 [document-settings,item:anhang.tex]
 Bookmarks=
 Encoding=UTF-8
@@ -87,6 +107,16 @@ Mode=LaTeX
 ReadWrite=true
 
 [document-settings,item:packages.tex]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
+
+[document-settings,item:sammlung.tex]
 Bookmarks=
 Encoding=UTF-8
 FoldedColumns=
@@ -138,23 +168,43 @@ order=1
 
 [item:01-kurventheorie.tex]
 archive=true
-column=332
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=848
+line=412
 mode=LaTeX
 open=true
 order=2
 
 [item:02-flaechentheorie.tex]
 archive=true
-column=9
+column=34
 encoding=UTF-8
 highlight=LaTeX
-line=433
+line=1441
 mode=LaTeX
 open=true
 order=3
+
+[item:03-satzsammlung.tex]
+archive=true
+column=9
+encoding=UTF-8
+highlight=LaTeX
+line=0
+mode=LaTeX
+open=true
+order=10
+
+[item:04-definitionsammlung.tex]
+archive=true
+column=0
+encoding=UTF-8
+highlight=LaTeX
+line=0
+mode=LaTeX
+open=true
+order=11
 
 [item:anhang.tex]
 archive=true
@@ -178,7 +228,7 @@ order=4
 
 [item:main.ind]
 archive=true
-column=13
+column=0
 encoding=UTF-8
 highlight=None
 line=104
@@ -191,7 +241,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=16
+line=15
 mode=LaTeX
 open=true
 order=6
@@ -206,22 +256,32 @@ mode=LaTeX
 open=true
 order=5
 
-[item:symbols.tex]
+[item:sammlung.tex]
 archive=true
-column=29
+column=20
 encoding=UTF-8
 highlight=LaTeX
-line=19
+line=3
+mode=LaTeX
+open=true
+order=12
+
+[item:symbols.tex]
+archive=true
+column=17
+encoding=UTF-8
+highlight=LaTeX
+line=0
 mode=LaTeX
 open=true
 order=7
 
 [item:theorems.tex]
 archive=true
-column=34
+column=11
 encoding=UTF-8
 highlight=LaTeX
-line=21
+line=19
 mode=LaTeX
 open=true
 order=8
@@ -243,14 +303,26 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:01-kurventheorie.tex]
-CursorColumn=332
-CursorLine=848
+CursorColumn=0
+CursorLine=412
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:02-flaechentheorie.tex]
+CursorColumn=34
+CursorLine=1441
+JumpList=
+ViMarks=
+
+[view-settings,view=0,item:03-satzsammlung.tex]
 CursorColumn=9
-CursorLine=433
+CursorLine=0
+JumpList=
+ViMarks=
+
+[view-settings,view=0,item:04-definitionsammlung.tex]
+CursorColumn=0
+CursorLine=0
 JumpList=
 ViMarks=
 
@@ -267,14 +339,14 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:main.ind]
-CursorColumn=13
+CursorColumn=0
 CursorLine=104
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:main.tex]
 CursorColumn=0
-CursorLine=16
+CursorLine=15
 JumpList=
 ViMarks=
 
@@ -284,15 +356,21 @@ CursorLine=12
 JumpList=
 ViMarks=
 
+[view-settings,view=0,item:sammlung.tex]
+CursorColumn=20
+CursorLine=3
+JumpList=
+ViMarks=
+
 [view-settings,view=0,item:symbols.tex]
-CursorColumn=29
-CursorLine=19
+CursorColumn=17
+CursorLine=0
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:theorems.tex]
-CursorColumn=34
-CursorLine=21
+CursorColumn=11
+CursorLine=19
 JumpList=
 ViMarks=
 

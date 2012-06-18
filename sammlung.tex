@@ -1,9 +1,9 @@
-\newsavebox{\satzbox}
+\newsavebox{\satznbox}
 \newsavebox{\onenullbox}
 \newsavebox{\twonullbox}
 \newenvironment{satz}{\par\global\setbox\onenullbox=\vbox\bgroup\begin{satzn}}
 {\end{satzn}\egroup\setbox\twonullbox=\copy\onenullbox\unvbox\twonullbox
-\global\setbox\satzbox=\vbox{\unvbox\satzbox\unvbox\onenullbox}}
+\global\setbox\satznbox=\vbox{\unvbox\satznbox\unvbox\onenullbox}}
 
 \newsavebox{\definitionbox}
 \newsavebox{\threenullbox}
