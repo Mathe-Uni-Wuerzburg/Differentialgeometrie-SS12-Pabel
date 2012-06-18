@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.0
-lastDocument=02-flaechentheorie.tex
+lastDocument=main.tex
 masterDocument=
 name=Differentialgeometrie-SS12-Pabel
 pkg_extIsRegExp=false
@@ -168,27 +168,27 @@ order=1
 
 [item:01-kurventheorie.tex]
 archive=true
-column=0
+column=18
 encoding=UTF-8
 highlight=LaTeX
-line=412
+line=435
 mode=LaTeX
 open=true
 order=2
 
 [item:02-flaechentheorie.tex]
 archive=true
-column=34
+column=427
 encoding=UTF-8
 highlight=LaTeX
-line=1441
+line=26
 mode=LaTeX
 open=true
 order=3
 
 [item:03-satzsammlung.tex]
 archive=true
-column=9
+column=32
 encoding=UTF-8
 highlight=LaTeX
 line=0
@@ -198,7 +198,7 @@ order=10
 
 [item:04-definitionsammlung.tex]
 archive=true
-column=0
+column=9
 encoding=UTF-8
 highlight=LaTeX
 line=0
@@ -208,10 +208,10 @@ order=11
 
 [item:anhang.tex]
 archive=true
-column=17
+column=70
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=2
 mode=LaTeX
 open=true
 order=9
@@ -231,7 +231,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=None
-line=104
+line=2
 mode=
 open=false
 order=8
@@ -241,24 +241,24 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=15
+line=19
 mode=LaTeX
 open=true
 order=6
 
 [item:packages.tex]
 archive=true
-column=20
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=12
+line=18
 mode=LaTeX
 open=true
 order=5
 
 [item:sammlung.tex]
 archive=true
-column=20
+column=15
 encoding=UTF-8
 highlight=LaTeX
 line=3
@@ -278,7 +278,7 @@ order=7
 
 [item:theorems.tex]
 archive=true
-column=11
+column=31
 encoding=UTF-8
 highlight=LaTeX
 line=19
@@ -288,10 +288,10 @@ order=8
 
 [item:titlepage.tex]
 archive=true
-column=2
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=28
+line=20
 mode=LaTeX
 open=true
 order=0
@@ -303,32 +303,32 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:01-kurventheorie.tex]
-CursorColumn=0
-CursorLine=412
+CursorColumn=18
+CursorLine=435
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:02-flaechentheorie.tex]
-CursorColumn=34
-CursorLine=1441
+CursorColumn=427
+CursorLine=26
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:03-satzsammlung.tex]
-CursorColumn=9
+CursorColumn=32
 CursorLine=0
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:04-definitionsammlung.tex]
-CursorColumn=0
+CursorColumn=9
 CursorLine=0
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:anhang.tex]
-CursorColumn=17
-CursorLine=0
+CursorColumn=70
+CursorLine=2
 JumpList=
 ViMarks=
 
@@ -340,24 +340,24 @@ ViMarks=
 
 [view-settings,view=0,item:main.ind]
 CursorColumn=0
-CursorLine=104
+CursorLine=2
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:main.tex]
 CursorColumn=0
-CursorLine=15
+CursorLine=19
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:packages.tex]
-CursorColumn=20
-CursorLine=12
+CursorColumn=0
+CursorLine=18
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:sammlung.tex]
-CursorColumn=20
+CursorColumn=15
 CursorLine=3
 JumpList=
 ViMarks=
@@ -369,13 +369,13 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:theorems.tex]
-CursorColumn=11
+CursorColumn=31
 CursorLine=19
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:titlepage.tex]
-CursorColumn=2
-CursorLine=28
+CursorColumn=0
+CursorLine=20
 JumpList=
 ViMarks=

@@ -1,8 +1,8 @@
 \newsavebox{\satznbox}
 \newsavebox{\onenullbox}
 \newsavebox{\twonullbox}
-\newenvironment{satz}{\par\global\setbox\onenullbox=\vbox\bgroup\begin{satzn}}
-{\end{satzn}\egroup\setbox\twonullbox=\copy\onenullbox\unvbox\twonullbox
+\newenvironment{satz}{\par\global\setbox\onenullbox=\vbox\bgroup\begin{set}}
+{\end{set}\egroup\setbox\twonullbox=\copy\onenullbox\unvbox\twonullbox
 \global\setbox\satznbox=\vbox{\unvbox\satznbox\unvbox\onenullbox}}
 
 \newsavebox{\definitionbox}
