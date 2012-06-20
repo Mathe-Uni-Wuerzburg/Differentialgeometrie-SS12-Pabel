@@ -1387,7 +1387,7 @@ Eine weitere Interpretation von \(\kappa_n\) und \(\tau_g\)
   \item[a)] Für Kurve \(c\) und Geodätische \(\widetilde c\) folgt aus \(T = \widetilde T\) auch \[\kappa_n = \widetilde \kappa_n, \, \tau_g = \widetilde \tau_g\]. Wegen \(\widetilde \kappa_g = 0\) (\(\Rightarrow \widetilde \kappa = |\widetilde \kappa_n|, \, \widetilde \vartheta = \const\)) erhält man \[|\kappa_n| = |\widetilde \kappa_n| = \widetilde\kappa, \, \tau_g = \widetilde \tau_g = \widetilde \tau\].
   \item[b)] Für den ebenen Normalschnitt \(\widetilde c\) gilt 
    \begin{align*}
-    &\widetilde B \perp \widehat N, \text{ also } \cos \widetilde \vartheta = \langle \widetilde B, \widehat N \rangle = 0, \\
+    &\widetilde B \perp \widehat N, \text{ also } \cos \widetilde \vartheta = \left\langle \widetilde B, \widehat N \right\rangle = 0, \\
     &\text{also ebenfalls } |\kappa_n| = |\widetilde \kappa_n | = \widetilde \kappa
    \end{align*}
    \end{enumerate}
@@ -1422,7 +1422,7 @@ Wir untersuchen jetzt \(\kappa_n\) und \(\tau_g\) in Abhängigkeit von der Tange
  \]
  ist
  \begin{align*}
-  &\kappa_n(\varphi) = \langle A(T), T \rangle = \kappa_1 \cos^2 \varphi + \kappa_2 \sin^2 \varphi \\
+  &\kappa_n(\varphi) = \left\langle A(T), T \right\rangle = \kappa_1 \cos^2 \varphi + \kappa_2 \sin^2 \varphi \\
   &\tau_g(\varphi) = \langle A(T), S \rangle = (\kappa_2 - \kappa_1) \sin \varphi \cos \varphi
  \end{align*}
  Aus 
@@ -1450,3 +1450,182 @@ Wir untersuchen jetzt \(\kappa_n\) und \(\tau_g\) in Abhängigkeit von der Tange
  \end{enumerate}
 
 \end{beweis}
+
+\begin{anwendung}
+ Auf einer Kugel ist jede Richtung eine Hauptkrümmungsrichtung (nur Nabelpunkte!). Also ist jede sphärische Kurve eine Krümmungslinie mit \(\tau_g \equiv 0\). Weiter ist \(\kappa_n = \kappa_1 \cos^2 \varphi + \kappa_2  \sin^2 \varphi = \kappa_1 = \kappa_2 = \frac{1}{r} = \const.\) (wenn \(r\) der Kugelradius ist). Also gilt
+ \begin{align*}
+  &\begin{Bmatrix}
+   \kappa \sin \vartheta = \frac1r \\
+   \tau = \vartheta'
+  \end{Bmatrix} 
+ \Leftrightarrow
+ \begin{Bmatrix}
+  \varrho = r \sin \vartheta \\
+  \tau = \vartheta'
+ \end{Bmatrix}
+ \Leftrightarrow
+ \begin{Bmatrix}
+  \varrho = r \cos \lambda \\
+  \tau = - \lambda'
+ \end{Bmatrix}
+ &\text{ mit } \lambda = \frac{\pi}{2} - \vartheta
+ \end{align*}
+\end{anwendung}
+
+\subsection{Spezielle Parameter}
+Auf einer Fläche gibt es zwar keine BLP wie bei Kurven aber doch einige nützliche spezielle Parameter, z.B. \\ \uline{Krümmungslinienparameter}\index{Krümmungslinienparameter}  
+\begin{itemize}
+ \item[\(\Leftrightarrow\)] alle Parameterlinien sind Krümmungslinien 
+ \item[\(\Leftrightarrow\)] \(x_\varrho \parallel Y_\varrho \, (\varrho = 1,2)\) mit Hauptkrümmungsrichtungen \(Y_1, Y_2\)
+\end{itemize}
+\uline{Asymptotenlinienparameter}\index{Asymptotenlinienparameter} (existieren nur auf hyperpolischen Flächen, evtl. mit Flachpunkten)
+\begin{itemize}
+ \item[\(\Leftrightarrow\)] alle Parameterlinien sind Asymptotenlinien
+ \item[\(\Leftrightarrow\)] \(x_\varrho \parallel Z_\varrho \, (\varrho = 1,2)\) mit Asymptotenrichtungen \(Z_1, Z_2\)
+\end{itemize}
+
+Wie erkennt man solche Parameter?
+
+\begin{satz}\label{satz246} \(\)
+ \begin{enumerate}
+  \item[a)] Auf einer \uline{nabelpunktfreien} \(\C^2\)-Fläche in der Parameterdarstellung \(u \mapsto x(u)\) sind die Parameterlinien genau dann \uline{Krümmungslinien}, wenn gilt
+  \[
+   g_{12} = b_{12} = 0
+  \]
+  In diesem Fall sind die Hauptkrümmungen
+  \[
+   \kappa_1 = \frac{b_{11}}{g_{11}}, \kappa_2 = \frac{b_{22}}{g_{22}}
+  \]
+  und die Weingartenschen Ableitungsgleichungen lauten
+  \[
+   \partial_\varrho N = - \kappa_\varrho x_\varrho \quad (\varrho = 1,2) \qquad [\text{Formel von \textsc{Rodriguez}}]
+  \]
+  \item[b)] Auf einer rein \uline{hyperbolischen} \(\C^2\)-Fläche sind die Parameterlinien genau dann \uline{Asymptotenlinien}, wenn gilt
+  \[
+   b_{11} = b_{22} = 0
+  \]
+ \end{enumerate}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz246}] \(\)
+ \begin{enumerate}
+  \item[a)] ``\(\Rightarrow\)'' in Krümmungslinienparametern folgt aus \(x_\varrho \parallel Y_\varrho \, (\varrho = 1,2)\)
+  \[
+   - \partial_\varrho N = A(x_\varrho) = \kappa_\varrho x_\varrho, \text{ also } (\wein \mu \sigma) = \begin{pmatrix}
+                                                                                                       \kappa_1 & 0 \\
+                                                                                                       0 & \kappa_2
+                                                                                                      \end{pmatrix}
+  \]
+  und wegen \(\kappa_1 \ne \kappa_2\) (Nabelpunktfreiheit) auch
+  \[
+   \langle x_1, x_2 \rangle = g_{12} = 0
+  \]
+  Also ist 
+  \[
+   (b_{\varrho \sigma} = (g_{\varrho \sigma}) \cdot (\wein \mu \sigma) = \begin{pmatrix}
+                                                                          g_{11} \kappa_1 & 0 \\
+                                                                          0 & g_{22} \kappa_2
+                                                                         \end{pmatrix}
+                                                                         = \begin{pmatrix}
+                                                                            b_{11} & 0 \\
+                                                                            0 & b_{22}
+                                                                           \end{pmatrix}
+  \]
+  ``\(\Leftrightarrow\)'' \(g_{12} = b_{12} = 0 \Rightarrow \wein12 = \wein21 = 0\), d.h. \((\wein \mu \sigma)\) ist Diagonalmatrix. Die Basisvektoren \(x_1, x_2\) sind also Eigenvektoren und definieren die Hauptkrümmungsrichtungen.
+  \item[b)]
+  \(x_1, x_2\) Asymptotenrichtungen \(\Leftrightarrow \Rom2 (x_1, x_1) = b_{11} = 0 \land \Rom2 (x_2, x_2) = b_{22} = 0\)
+ \end{enumerate}
+
+\end{beweis}
+
+\begin{bemerkung}
+ Auf einer Kugel und in der Ebene ist jede Parametrisierung eine ``Krümmungslinienparametrisierung'' (\uline{nur Nabelpunkte}) : Jede Richtung ist Hauptkrümmungsrichtung. \\
+ In isolierten Nabelpunkten können Singularitäten des Krümmungsliniennetzes auftreten.
+ \begin{bsp}
+  Ellipsoid
+ \end{bsp}
+\end{bemerkung}
+
+\begin{bsp} \(\)
+ \begin{enumerate}
+  \item Auf einer \uline{Rotationsfläche} sind Meridiane und Breitenkreise \uline{ebene Krümmungslinien} (\(g_{12} = b_{12} = 0\))
+  \item Auf einer \uline{Wendelfläche} (siehe \(\widehat x\) in Übung 2.1) sind die auf ihr liegenden Geraden und Schraubenlinien \uline{Asymptotenlinien} (\(b_{11} = b_{22} = 0\))
+ \end{enumerate}
+
+\end{bsp}
+
+Zur Existenz solcher parameter: Dazu eine Verallgemeinerung des Problems. \par
+\uline{Gegeben} seien auf einer \(\C^2\)-Fläche \(u \mapsto x(u)\) zwei linear unabhängige tangentiale \(\C^1\)-Vektorfelder
+\begin{align*}
+ &u \mapsto X_1(u) = \sum \xi^\mu_1 x_\mu (u) \\
+ &u \mapsto X_2(u) = \sum \xi^\mu_2 x_\mu (u)
+\end{align*}
+\uline{Gesucht} ist eine Parametertransformation \(u \mapsto \overline u = \Phi(u)\), sodass nach der Transformation für \(\overline x = x \circ \Phi^{-1}\) gilt
+\[
+ \forall_u \overline x_\varrho \big(\Phi(u)\big) \parallel X_\varrho (u)
+\]
+
+\uline{Lösung}: Wegen \(x = \overline x \circ \Phi\), also \( x_\mu = \sum \overline x_\sigma \partial_\mu \Phi^\sigma\), d.h.
+\begin{align*}
+ X_\varrho = \sum \xi^\mu_\varrho x_\mu = \sum \xi^\mu_\varrho \partial \mu \Phi^\sigma \overline x_\sigma \parallel \overline x_\varrho \quad (\varrho = 1,2)
+\end{align*}
+muss gelten
+\begin{align*}
+  &\sum \xi^\mu_2 \partial_\mu \Phi^1 = \uline{\xi^1_2 \partial_1 \Phi^1 + \xi^2_2 \partial_2 \Phi^1 = 0} \tag{\(\varrho = 2\)} \\
+  &\sum \xi^\mu_1 \partial_\mu \Phi^2 = \uline{\xi^1_1 \partial_1 \Phi^2 + \xi^2_1 \partial_2 \Phi^2 = 0} \tag{\(\varrho = 1\)} 
+\end{align*}
+Für die Komponententen \(F = \Phi^1, \Phi^2\) von \(\Phi\) müssen also partielle Differentialgleichungen der Form
+\begin{align*}
+ &a \cdot \partial_1 F + b \cdot \partial_2 F = 0 &\text{bzw.} \\
+ &\grad F \parallel \vxy {-b}{a} =: f
+\end{align*}
+Solche Differentialgleichungen lassen sich in der \uline{Ebene} (bei zwei Parametern) mit einem geeigneten \uline{integrierenden Faktor} \((u^1, u^2) \mapsto \mu(u^1, u^2) \ne 0\) lokal stets lösen: Es existiert eine Funktion \(F\) mit 
+\[
+ \grad F = \mu \cdot f
+\]
+(siehe Differentialgleichungen, Stichwort: ``Exakte Differentialgleichungen'') \par
+\uline{Problem} dabei: Diese Lösungen sind im Allgemeinen nur \(\C^1\)-differenzierbar (\(a,b \; \C^1\), aber \(\mu \; \C^0 \Rightarrow F \; \C^1\)) und liefern eine nicht zulässige \(\C^1\)-Parametertransformation \(u \mapsto \Phi(u)\) auf der \(\C^2\)-Fläche mit den gewünschten Eigenschaften \(\overline x_\varrho \big(\Phi(u)\big) \parallel X_\varrho(u)\). \par
+
+Anwendung auf Hauptkrümmungsrichtungen bzw. Asymptotenrichtungen:\\
+Hier sind erst bei \(\C^3\)-Flächen 2. Grundform und Weingartenmatrix \(\C^1\)-Differenzierbar und damit auch die Hauptkrümmungsrichtungen bzw. Asymptotenrichtungen. Dies liefert
+
+\begin{satz}\label{satz247} \(\)
+ \begin{enumerate}
+  \item[a)] In der Umgebung eines \uline{Nicht-Nabelpunktes} einer \(\C^3\)-Fläche existiert ein \(\C^1\)-Parameternetz aus \uline{Krümmungslinien}.  
+  \item[b)] In der Umgebung eines \uline{hyperbolsichen Punktes}  einer \(\C^3\)-Fläche existiert ein \(\C^1\)-Parameternetz aus \uline{Asymptotenlinien}.
+ \end{enumerate}
+
+\end{satz}
+
+\begin{bemerkung} \(\)
+ \begin{enumerate}
+  \item Erst auf einer \(\C^4\)-Fläche existiert im Allgemeinen eine lokale Krümmungslinien-/Asymptotenlinien-Parametrisierung, mit der sich vernünftig arbeiten lässt.
+  \item Der Satz gilt \uline{nicht} ür höher-dimensionale Hyperflächen.
+  \item Ist das Parametergebiet der Fläche \uline{einfach zusammenhängend} (``ohne Löcher''), so exsitert sogar eine globale Transformation auf Krümmungslinien-/Asymptotenlinien-Parametern (falls keine Nabelpunkte stören).
+ \end{enumerate}
+
+\end{bemerkung}
+
+\uline{Ergänzung}: Weitere ausgezeichnete, lokal in jedem Punkt existierende Parameter sind:
+\begin{enumerate}
+ \item[a)] \uline{Geodätische Parallelkoordinaten} bezüglich einer Flächenkurve \(c\) \\
+ \;\uline{Erkennungszeichen}: 
+ \begin{align*}
+  &\big(g_{\varrho \sigma}(u,v)\big) = \begin{pmatrix}
+                                      1 & 0 \\
+                                      0 & g(u,v)
+                                     \end{pmatrix}&\text{falls Geodätische in BLP} \\
+  &\big(g_{\varrho \sigma}(u,v)\big) = \begin{pmatrix}
+                                        \lambda(u) & 0 \\
+                                        0 & \mu(u,v)
+                                       \end{pmatrix}&\text{sonst}
+ \end{align*}
+ \begin{bsp}
+  Rotationsfläche mit \(\big(g_{\varrho \sigma}(u,v)\big) = \begin{pmatrix}
+                                                             w(u) & 0 \\
+                                                             0 & r(u)
+                                                            \end{pmatrix}\)
+ \end{bsp}
+ \item[b)] \uline{Geodätische Polarkoodinaten} (\(c \equiv x_0\)) \\
+ \uline{Kennzeichen}: wie unter a)
+\end{enumerate}
