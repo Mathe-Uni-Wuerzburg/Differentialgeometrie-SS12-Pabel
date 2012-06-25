@@ -1629,3 +1629,138 @@ Hier sind erst bei \(\C^3\)-Flächen 2. Grundform und Weingartenmatrix \(\C^1\)-
  \item[b)] \uline{Geodätische Polarkoodinaten} (\(c \equiv x_0\)) \\
  \uline{Kennzeichen}: wie unter a)
 \end{enumerate}
+
+\section{Vertauschbarkeitsrelationen, BONNETscher Fundamentalsatz}
+Die Koeffizienten der Ableitungsgleichungen einer \uline{\(\C^3\)-Hyperfläche im \(\IR^n\)}
+\begin{align*}
+ \partial_\sigma x_\varrho &= \sum \christ \varrho \mu \sigma x_\mu + b_{\varrho \sigma} N \\
+ \partial_\sigma N &= -\sum \wein \mu \sigma x_\mu
+\end{align*}
+lassen sich alle aus den beiden Grundform-Matrizen berechnen.
+\begin{align*}
+ &(g_{\varrho \sigma}) \to \left(\christ \varrho \mu \sigma \right) \\
+ &(g_{\varrho \sigma}) \text{ und } (b_{\varrho \sigma}) \to \left(\wein \mu \sigma\right)
+\end{align*}
+Aber sie sind nicht unabhängig voneinander. Die \uline{Vertauschbarkeitsrelationen}\index{Vertauschbarkeitsrelationen}
+\begin{align*}
+ &\partial_\tau \partial_\sigma x_\varrho = \partial_\sigma \partial_\tau x_\varrho & \partial_\tau \partial_\sigma N = \partial_\sigma \partial_\tau N
+\end{align*}
+liefern komplizierte differentielle Relationen zwischen ihnen. \par
+Zunächst: Hilfsmittel zu ihrer invarianten Beschreibung:
+\subsection{Der Riemannsche Krümmungstensor}\index{Riemannscher Krümmungstensor}
+Bei einer \(\C^3\)-Fläche sind die zweiten \uline{gewöhnlichen} partiellen Ableitungen der tangentialen Basisfelder \(u \mapsto x_1(u), \dots, x_{n-1} (u)\) vertauschbar. Dies gilt im Allgemeinen \uline{nicht} für die zweiten \uline{kovarianten} partiellen Ableitungen, wenn die Fläche ``krumm''ist, also \(\nabla \ne \dd\) ist. Man erhält
+\begin{align*}
+ \nabla_\tau \nabla_\sigma x_\varrho - \nabla_\sigma \nabla_\tau x_\varrho = \sum \riem \varrho \mu \sigma \tau x_\mu
+\end{align*}
+mit Koeffizientenfunktion \(u \mapsto \riem \varrho \mu \sigma \tau (u)\). \par
+Wegen
+\begin{align*}
+ \nabla_{\tau} \nabla_\sigma x_\varrho &= \nabla_\tau \left( \sum \christ \varrho \mu \sigma x_\mu \right) = \sum \partial_\tau \christ \varrho \mu \sigma x_\mu + \sum \christ \varrho {\cancelto{\alpha}{\mu}} \sigma \nabla_\tau x_{\cancelto{\alpha}{\mu}} \\
+ &=\sum \left(\partial_\tau \christ \varrho \mu \sigma + \christ \varrho \alpha \sigma \christ \alpha \mu \tau \right) x_\mu
+\end{align*}
+gilt
+\[
+ \riem \varrho \mu \sigma \tau = \left(\partial_\tau \christ \varrho \mu \sigma + \christ \varrho \alpha \sigma \christ \alpha \mu \tau \right) - \left(\partial_\sigma \christ \varrho \mu \tau + \christ \varrho \alpha \tau \christ \alpha \mu \sigma \right)
+\]
+Die Koeffizienten sind offensichtlich \uline{innergeometrisch}. \par
+Durch lineare Fortsetzung auf beliebige tangentiale Vektorfelder \(x = \sum X^\varrho x_\varrho, \, Y = \sum Y^\sigma x_\sigma, \, Z = \sum Z^\tau x_\tau\) mittels
+\begin{align*}
+ R(Y,Z)X := \sum \riem \varrho \mu \sigma \tau X^\varrho Y^\sigma Z^\tau x_\mu
+\end{align*}
+wird in jedem Flächenpunkt eine dreifach lineare Abbildung 
+\[
+ R_u \colon (T_u x)^3 \to T_u x
+\]
+definiert. Das Feld \(u \mapsto R_u\) ist unabhängig von der Ausgangsparametrisierung (siehe später) und nennt es \uline{Riemannsches Krümmungstensorfeld}\index{Riemannsches Krümmungstensorfeld}.
+
+\begin{bemerkung}
+ Die Parameterunabhängigkeit sieht man auch an der Darstellung
+ \begin{align*}
+  R(Y,Z)X = \nabla_Z \nabla_Y X - \nabla_Y \nabla_Z X - \nabla_{[Y,Z]} X
+ \end{align*}
+
+\end{bemerkung}
+
+Verwendet wird dabei die durch \([Y,Z] := \dd_Z Y - \dd_Y Z\) definierte \uline{Lie-Klammer}\index{Lie-Klammer} (auch \uline{Kommutator}\index{Kommutator} von \(Y,Z\) genannt), welche zwei tangentialen Vektorfeldern \(Y,Z\) wieder ein tangentiales Vektorfeld \([Y,Z]\) zuordnet (ohne Beweis). \par
+
+Speziell für natürliche Basisfelder \(X = x_\varrho, \, Y = x_\sigma, \, Z = x_\tau\) gilt
+\begin{align*}
+[x_\sigma, x_\tau] = \partial_\tau x_\sigma - \partial_\sigma x_\tau = 0 
+\end{align*}
+d.h. sie ``kommutieren'' und es folgt
+\begin{align*}
+ R(x_\sigma, x_\tau) x_\varrho = \nabla_\tau \nabla_\sigma x_\varrho - \nabla_\sigma \nabla_\tau x_\varrho = \sum \riem \varrho \mu \sigma \tau x_\mu
+\end{align*}
+
+\uline{Hinweis}: Oft wird auch die Definition
+\begin{align*}
+ [Y,Z] = \dd_Y Z - \dd_Z Y, \, T(Y,Z)X = \nabla_Y \nabla_Z X - \dots
+\end{align*}
+verwendet; ändert nur das Vorzeichen. \par
+
+Zur Bezeichnung ``\uline{Krümmungstensor}'': \\
+Eine Ableitung kann als infinitesimale Parallelverschiebung gedeutet werden. \\
+Au ``flachen'' Flächen mit \(\nabla = \dd\) gilt \(R \equiv 0\). Infinitesimale durch \uline{gewöhnliche} Parallelverschiebung entstandene Parallelogramme ``schließen sich''. Dies gilt nicht auf ``krummen'' Flächen mit \(\nabla \ne \dd\) bei Verwendung der geodätischen Parallelverschiebung.
+
+\subsection{Weitere kovariante Ableitungen}
+Ziel: Fortsetzung der kovarianten Ableitung \(\nabla X\) für Vektorfelder \(X\) auf andere ``Tensorfelder'', z. B. Felder von Bilinearformen (\(\Rom1, \Rom2\)) und von linearen Abbildungen (\(A\)). \par
+Trick: Forderung der Gültigkeit der \uline{Produktregel}.
+
+\begin{enumerate}
+ \item Wir definieren \(\nabla_\tau \Rom2\) (soll wieder Bilinearform sein) durch
+ \begin{align*}
+  (\nabla_\tau \Rom2)(x_\varrho, x_\sigma) &:= \partial_\tau \left[\Rom2(x_\varrho, x_\sigma)\right] - \Rom2 (\underbrace{\nabla_\tau x_\varrho}_{\sum \christ \varrho \alpha \tau x_\alpha}, x_\sigma) - \Rom2 (x_\varrho, \underbrace{\nabla_\tau x_\sigma}_{\sum \christ \sigma \alpha \tau x_\alpha}) \\
+  &= \partial_\tau b_{\varrho \sigma} - \sum b_{\alpha \sigma} \christ \varrho \alpha \tau - \sum b_{\varrho \alpha} \christ \sigma \alpha \tau =: \nabla_\tau b_{\varrho \sigma}
+ \end{align*}
+ Für die lineare Fortsetzung
+ \[
+  (\nabla_Z \Rom2)(X,Y) = \sum \nabla_\tau b_{\varrho \sigma} X^\varrho Y^\sigma Z^\tau
+ \]
+ auf beliebige tangentiale Vektorfelder \(X,Y,Z\) reduziert man nach
+ \begin{align*}
+  (\nabla_Z \Rom2)(X,Y) = \dd_Z \left[ \Rom2(X,Y)\right] - \Rom2(\nabla_Z X,Y) - \Rom2(X , \nabla_Z Y)
+ \end{align*}
+ was die Parameterunabhängigkeit zeigt.
+
+ \begin{bemerkung}
+  Anwendung dieses Verfahrens auf die 1. Grundform \(\Rom1\) liefert
+  \begin{align*}
+   &(\nabla_\tau \Rom1) (x_\varrho, x_\sigma) = \partial_\tau g_{\varrho \sigma} - \gamma_{\varrho \sigma \tau} - \gamma_{\sigma \varrho \tau} \equiv 0 &\text{(siehe Satz \ref{satz215})}
+  \end{align*}
+   und beweist das \uline{\textsc{Ricci}-Lemma} \(\boxed{\nabla \Rom1 \equiv 0}\)
+  \end{bemerkung}
+ \item Analog definieren wir \(\nabla_\tau A\) (soll wieder lineare Abbildung sein) durch
+ \begin{align*}
+  (\nabla_\tau A) (x_\sigma) &:= \nabla_\tau \left[A(x_\sigma)\right] - A(\nabla_\tau x_\sigma) \\
+  &= \nabla_\tau \left(\sum \wein \mu \sigma x_\mu \right) - A\left(\sum \christ \sigma \alpha \tau x_\alpha \right) \\
+  &= \sum \left(\partial_\tau \wein \mu \sigma \right) + \sum \wein {\cancelto{\alpha}{\mu}} \sigma \nabla_\tau x_{\cancelto{\alpha}{\mu}} \quad- \sum \christ \sigma \alpha \tau A(x_\alpha) \\
+  &= \partial_\tau \wein \mu \sigma x_\mu + \sum \wein \alpha \sigma \christ \alpha \mu \tau x_\mu - \sum \wein \mu \alpha \christ \sigma \alpha \tau x_\mu \\
+  &= \left[\partial_\tau \wein \mu \sigma + \sum \wein \alpha \sigma \christ \alpha \mu \tau - \sum \wein \mu \alpha \christ \sigma \alpha \tau \right] x_\mu \\
+  &=: \left(\nabla_\tau \wein \mu \sigma \right) x_\mu
+ \end{align*}
+ Für die lineare Fortsetzung
+ \[
+  \nabla_Z A)(Y) = \sum (\nabla_\tau \wein \mu \sigma) Y^\sigma Z^\tau x_\mu
+ \]
+ auf beliebige tangentiale Vektorfelder \(Y,Z\) errechnet man wieder 
+ \[
+  (\nabla_\tau A) (Y) = \nabla_Z \left[A(Y)\right] - A(\nabla_Z Y)
+ \]
+ was die Parameterunabhängigkeit zeigt.
+\end{enumerate}
+
+\subsection{Die Gauß- und Codazzigleichungen}
+Wir beschreiben die Vertauschbarkeitsrelationen durch die Operatoren \(R, \nabla \Rom2, \nabla A\).
+
+\subsubsection{Die Gaußschen Ableitungsgleichungen}
+
+\begin{align*}
+ &\partial_\sigma x_\varrho = \nabla_\sigma x_\varrho + \Rom2(x_\varrho, x_\sigma) N \Rightarrow \\
+ &\partial_\tau \partial_\sigma x_\varrho = \nabla_\tau \nabla_\sigma x_\varrho + \Rom2\left( \nabla_\sigma x_\varrho, x_\tau\right) N + \partial_\tau \left[\Rom2(x_\varrho, x_\sigma)\right] N - \Rom2(x_\varrho, x_\sigma) A(x_\tau) \Rightarrow \\
+ &0 = (\nabla_\tau \nabla_\sigma x_\varrho - \nabla_\sigma \nabla_\tau x_\varrho) - \big(\Rom2(x_\varrho, \sigma) A(x_\tau) - \Rom2(x_\varrho, x_\tau)A(x_\sigma)\big) \\
+ &+[ \cancel{\Rom2 (\nabla_\sigma x_\varrho, x_\tau)} - \xcancel{\Rom2(\nabla_\tau x_\varrho, x_\sigma)} + (\nabla_\tau \Rom2)(x_\varrho, x_\sigma) - (\nabla_\sigma \Rom2)(x_\varrho, x_\tau) \\
+ &+ \xcancel{\Rom2( \nabla_\tau x_\varrho, x_\sigma)} - \cancel{\Rom2( \nabla_\sigma x_\varrho, x_\tau)} + \Rom2 (x_\varrho, \underbrace{\nabla_\tau x_\sigma - \nabla_\sigma x_\tau}_{= 0})] N &\Leftrightarrow \\
+ &\text{(Aufspaltung in Tangential- und Normalanteil)} \\
+ &\boxed{R(x_\sigma, x_\tau) x_\varrho = \Rom2 (x_\varrho, x_\sigma) A(x_\tau) - \Rom2(x_\varrho, x_\tau) A(x_\sigma)} \\
+ &\boxed{(\nabla_\tau \Rom2)(x_\varrho, x_\sigma) = (\nabla_\sigma \Rom2)(x_\tau)}
+\end{align*}
