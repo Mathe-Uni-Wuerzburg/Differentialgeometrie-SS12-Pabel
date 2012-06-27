@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.0
-lastDocument=main.tex
+lastDocument=02-flaechentheorie.tex
 masterDocument=
 name=Differentialgeometrie-SS12-Pabel
 pkg_extIsRegExp=false
@@ -39,8 +39,8 @@ ReadWrite=true
 [document-settings,item:02-flaechentheorie.tex]
 Bookmarks=
 Encoding=UTF-8
-FoldedColumns=0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
-FoldedLines=6,21,32,44,56,69,77,106,120,144,151,159,176,196,223,231,267,283,303,311,321,329,346,370,378,383,389,392,408,414,420,441,473,477,485,495,500,512,519,529,537,543,547,552,559,574,578,590,599,609,613,623,631,653,659,666,670,674,680,684,696,705,709,713,719,726,787,803,814,824,858,864,910,924,942,946,981,985,1003,1012,1031,1035
+FoldedColumns=0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+FoldedLines=21,32,44,56,69,77,106,120,144,151,159,176,196,223,231,267,283,303,321,329,346,378,383,389,392,408,414,441,473,477,485,495,500,512,519,529,537,543,547,552,559,574,578,590,599,609,613,623,631,653,659,666,670,674,680,684,696,705,709,713,719,726,787,803,814,824,858,864,910,924,942,946,981,985,1003,1012,1031,1035
 Highlighting=LaTeX
 Indentation Mode=cstyle
 Mode=LaTeX
@@ -178,10 +178,10 @@ order=2
 
 [item:02-flaechentheorie.tex]
 archive=true
-column=8
+column=36
 encoding=UTF-8
 highlight=LaTeX
-line=1764
+line=1884
 mode=LaTeX
 open=true
 order=3
@@ -218,10 +218,10 @@ order=9
 
 [item:literatur.tex]
 archive=true
-column=26
+column=86
 encoding=UTF-8
 highlight=LaTeX
-line=4
+line=10
 mode=LaTeX
 open=true
 order=4
@@ -241,7 +241,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=19
+line=15
 mode=LaTeX
 open=true
 order=6
@@ -268,20 +268,20 @@ order=12
 
 [item:symbols.tex]
 archive=true
-column=49
+column=33
 encoding=UTF-8
 highlight=LaTeX
-line=47
+line=44
 mode=LaTeX
 open=true
 order=7
 
 [item:theorems.tex]
 archive=true
-column=31
+column=38
 encoding=UTF-8
 highlight=LaTeX
-line=19
+line=27
 mode=LaTeX
 open=true
 order=8
@@ -309,8 +309,8 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:02-flaechentheorie.tex]
-CursorColumn=8
-CursorLine=1764
+CursorColumn=36
+CursorLine=1884
 JumpList=
 ViMarks=
 
@@ -333,8 +333,8 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:literatur.tex]
-CursorColumn=26
-CursorLine=4
+CursorColumn=86
+CursorLine=10
 JumpList=
 ViMarks=
 
@@ -346,7 +346,7 @@ ViMarks=
 
 [view-settings,view=0,item:main.tex]
 CursorColumn=0
-CursorLine=19
+CursorLine=15
 JumpList=
 ViMarks=
 
@@ -363,14 +363,14 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:symbols.tex]
-CursorColumn=49
-CursorLine=47
+CursorColumn=33
+CursorLine=44
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:theorems.tex]
-CursorColumn=31
-CursorLine=19
+CursorColumn=38
+CursorLine=27
 JumpList=
 ViMarks=
 

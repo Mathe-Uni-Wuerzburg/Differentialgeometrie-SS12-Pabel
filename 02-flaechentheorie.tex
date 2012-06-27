@@ -1599,7 +1599,7 @@ Hier sind erst bei \(\C^3\)-Flächen 2. Grundform und Weingartenmatrix \(\C^1\)-
 
 \begin{bemerkung} \(\)
  \begin{enumerate}
-  \item Erst auf einer \(\C^4\)-Fläche existiert im Allgemeinen eine lokale Krümmungslinien-/Asymptotenlinien-Parametrisierung, mit der sich vernünftig arbeiten lässt.
+  \item Erst auf einer \(\C^4\)-Fläche existiert im Allgemeinen eine lokale Krümmungslinien-/Asymptoten\-linien-Parametrisierung, mit der sich vernünftig arbeiten lässt.
   \item Der Satz gilt \uline{nicht} ür höher-dimensionale Hyperflächen.
   \item Ist das Parametergebiet der Fläche \uline{einfach zusammenhängend} (``ohne Löcher''), so exsitert sogar eine globale Transformation auf Krümmungslinien-/Asymptotenlinien-Parametern (falls keine Nabelpunkte stören).
  \end{enumerate}
@@ -1752,15 +1752,136 @@ Trick: Forderung der Gültigkeit der \uline{Produktregel}.
 \subsection{Die Gauß- und Codazzigleichungen}
 Wir beschreiben die Vertauschbarkeitsrelationen durch die Operatoren \(R, \nabla \Rom2, \nabla A\).
 
-\subsubsection{Die Gaußschen Ableitungsgleichungen}
+\subsubsection{1. Die Gaußschen Ableitungsgleichungen}
 
 \begin{align*}
- &\partial_\sigma x_\varrho = \nabla_\sigma x_\varrho + \Rom2(x_\varrho, x_\sigma) N \Rightarrow \\
+ &\partial_\sigma x_\varrho = \nabla_\sigma x_\varrho + \Rom2(x_\varrho, x_\sigma) N \quad\Rightarrow \\
  &\partial_\tau \partial_\sigma x_\varrho = \nabla_\tau \nabla_\sigma x_\varrho + \Rom2\left( \nabla_\sigma x_\varrho, x_\tau\right) N + \partial_\tau \left[\Rom2(x_\varrho, x_\sigma)\right] N - \Rom2(x_\varrho, x_\sigma) A(x_\tau) \Rightarrow \\
  &0 = (\nabla_\tau \nabla_\sigma x_\varrho - \nabla_\sigma \nabla_\tau x_\varrho) - \big(\Rom2(x_\varrho, \sigma) A(x_\tau) - \Rom2(x_\varrho, x_\tau)A(x_\sigma)\big) \\
  &+[ \cancel{\Rom2 (\nabla_\sigma x_\varrho, x_\tau)} - \xcancel{\Rom2(\nabla_\tau x_\varrho, x_\sigma)} + (\nabla_\tau \Rom2)(x_\varrho, x_\sigma) - (\nabla_\sigma \Rom2)(x_\varrho, x_\tau) \\
- &+ \xcancel{\Rom2( \nabla_\tau x_\varrho, x_\sigma)} - \cancel{\Rom2( \nabla_\sigma x_\varrho, x_\tau)} + \Rom2 (x_\varrho, \underbrace{\nabla_\tau x_\sigma - \nabla_\sigma x_\tau}_{= 0})] N &\Leftrightarrow \\
+ &+ \xcancel{\Rom2( \nabla_\tau x_\varrho, x_\sigma)} - \cancel{\Rom2( \nabla_\sigma x_\varrho, x_\tau)} + \Rom2 (x_\varrho, \underbrace{\nabla_\tau x_\sigma - \nabla_\sigma x_\tau}_{= 0})] N \quad\Leftrightarrow \\
  &\text{(Aufspaltung in Tangential- und Normalanteil)} \\
  &\boxed{R(x_\sigma, x_\tau) x_\varrho = \Rom2 (x_\varrho, x_\sigma) A(x_\tau) - \Rom2(x_\varrho, x_\tau) A(x_\sigma)} \\
  &\boxed{(\nabla_\tau \Rom2)(x_\varrho, x_\sigma) = (\nabla_\sigma \Rom2)(x_\tau)}
 \end{align*}
+
+\subsubsection{2. Die Weingartenschen Ableitungsgleichungen}
+
+\begin{align*}
+ -\partial_\sigma N &= A(x_\sigma) \\
+ -\partial_\tau \partial_\sigma N &= \partial_\tau \left[A(x_\sigma)\right] = \nabla_\tau \left[A(x_\sigma)\right] + \Rom2 \big(A(x_\sigma), x_\tau\big) N \\
+ & = (\nabla_\tau A)(x_\sigma) + A(\nabla_\tau x_\sigma) + \big(A(x_\sigma), A(x_\tau)\big) N \quad \Rightarrow \\
+ 0 &= - (\partial_\tau \partial_\sigma N - \partial_\sigma \partial_\tau N) = (\nabla_\tau A)(x_\sigma) - (\nabla_\sigma A)(x_\tau) + A(\underbrace{\nabla_\tau x_\sigma - \nabla_\sigma x_\tau}_{= 0}) \quad \Leftrightarrow \\
+ &\boxed{(\nabla_\tau A)(x_\sigma) = (\nabla_\sigma A)(x_\tau)}
+\end{align*}
+
+Lineare Fortsetzung liefert
+
+\begin{satz}\label{satz251}
+ Die Vertauschbarkeitsrelationen der Gaußschen Ableitungsgleichungen einer \(\C^3\)-Hyperfläche im \(\IR^n\) lauten parameterunabhängig
+ \begin{align*}
+  &\boxed{R(Y,Z)X = \Rom2 (X,Y) A(Z) - \Rom2 (X,Z) A(Y)} &\text{Gaußgleichung} \tag 1 \\
+  &\boxed{(\nabla_Z \Rom2)(X,Y) = (\nabla_Y \Rom2)(X,Z)} &\text{Codazzigleichung für } \Rom2 \tag 2
+ \end{align*}
+ Die Vertauschbarkeitsrelationen der Weingartenschen Ableitungsgleichungen lauten parameterunabhängig
+ \begin{align*}
+  &\boxed{(\nabla_Z A)(Y) = (\nabla_Y A)(Z)} &\text{Codazzigleichung für } A \tag 3 
+ \end{align*}
+ und sind äquivalent zur Codazzigleichung für \(\Rom2\).
+\end{satz}
+
+\begin{beweis}[der Äquivalenz (2) \(\Leftrightarrow\) (3) von Satz \ref{satz251}]
+ Für alle \(X,Y\) gilt
+ \begin{align*}
+  \Rom2(X,Y) &= \Rom1 \big(A(X), Y\big) = \Rom1\big(X, A(Y)\big) \quad \Rightarrow \\
+  (\nabla_Z \Rom2) (X,Y) &= \dd_z[\Rom2(X,Y)] - \Rom2 (\nabla_Z X, Y) - \Rom2 (X, \nabla_Z Y) \\
+  &=\dd_Z [\Rom1 (X,A(Y))] - \Rom1 \big(\nabla_Z X, A(Y)\big) - \Rom1 \big(X, A(\nabla_Z Y)\big) \\
+  &\quad- \underbrace{\Rom1 \big(X, \nabla_Z [A(Y)]\big) + \Rom1 \big(X,\nabla_Z [A(Y)]\big)}_{= 0} \\
+  &= \underbrace{(\nabla_Z \Rom1)}_{= 0}\big(X, A(Y)\big) + \Rom1 \big( X, \nabla_Z [A(Y)] - A(\nabla_Z Y) \big) \\
+  &= \Rom1 \big(X, (\nabla_Z )(Y) \big)
+ \end{align*}
+ Also ist (2) äquivalent zu
+ \begin{align*}
+  \Rom1 \big(X, (\nabla_Z A)(Y) - (\nabla_Y A)(Z) \big) = 0 \text{ für alle }X
+ \end{align*}
+ also äquivalent zu (3).
+\end{beweis}
+
+\begin{bemerkung}
+ Gleichung (1) beweist (nochmal) die Parameterunabhängigkeit und Linearität des Krümmungs\-tensors.
+\end{bemerkung}
+\setcounter{korollar}{1}
+\begin{korollar}\label{korollar252}
+ Bezüglich einer Parametrisierung \(u \mapsto x(u)\) einer \(\C^3\)-Hyperfläche im \(\IR^n\) lauten die Vertauschbarkeitsrelationen der Abbildungsgleichungen
+ \begin{align*}
+  &\riem \varrho \mu \sigma \tau = b_{\varrho \sigma} \wein \mu \tau - b_{\varrho \tau} \wein \mu \sigma &\text{(Gaußgleichung)} \tag{1} \\
+  &\nabla_\tau b_{\varrho \sigma} = \nabla_\sigma b_{\varrho \tau} &\text{Codazzigleichung für } (b_{\varrho \sigma}) \tag{2} \\
+  &\nabla_\tau \wein \mu \sigma = \nabla_\sigma \wein \mu \tau &\text{Codazzigleichung für } (\wein \mu \sigma) \tag{3}
+ \end{align*}
+\end{korollar}
+
+Definiert man die 4-lineare \uline{Krümmungsform}
+\[
+ R(Y,Z) (X,W) := \Rom1 \big(R(Y,Z)X, W\big)
+\]
+in Koordinaten
+\[
+ \uline{R_{\varrho \nu \,\sigma \tau} = \sum g_{\mu \nu} \riem \varrho \mu \sigma \tau}
+\]
+so gilt
+\begin{align*}
+ (1) &\Leftrightarrow R(Y,Z)(X,W) = \Rom2(X,Y) \Rom2(W,Z) - \Rom2(X,Z) \Rom2(W,Y) \\
+ &\Leftrightarrow R_{\varrho \nu \,\sigma \tau} = b_{\varrho \sigma} b_{\nu \tau} - b_{\varrho \tau} b_{\nu \sigma} \quad (\ast)
+\end{align*}
+
+\begin{folgerung} \(\)
+ \begin{enumerate}
+  \item Die Krümmungsform ist nicht nur in \((Y,Z)\), sondern auch in \((W,Z)\) \uline{schiefsymmetrisch} \big(Analog für die Indexpaare \((\sigma, \tau)\) und \((\varrho, \nu)\) in \((\ast)\)\big).
+  \item Alle \((2 \times 2)\)-Unterdeterminanten der Matrix \((b_{\varrho \sigma})_{\varrho, \sigma = 1, \dots, n-1}\) sind \uline{innergeometrisch} (``Schnittkrümmungen'').
+ \end{enumerate}
+\end{folgerung}
+
+\subsubsection{Spezialisierung auf 2-Flächen im \(\IR^3\)}
+Hier sind in \((\ast)\) nur die Indexpaare \((\varrho, \nu) = (1,2)\) und \((\sigma,\tau) = (1,2)\) wesentlich und man erhält.
+\begin{align*}
+ (1) \Leftrightarrow R_{12\,12} = b_{11}b_{22}-b_{12}b_{21} = b
+\end{align*}
+Ebenso folgt aus der Symmetrie von \((b_{\varrho \sigma})\):
+\begin{align*}
+ (2) \Leftrightarrow \begin{Bmatrix}
+                      \nabla_2 b_{11} &= \nabla_1 b_{12} \\
+                      \nabla_1 b_{22} &= \nabla_2 b_{12}
+                     \end{Bmatrix}
+\end{align*}
+\setcounter{folgn}{2}
+\begin{folgn}
+ Speziell für \(\C^3\)-Flächen im \(\IR^3\) ist die Gaußgleichung äquivalent zu
+ \begin{align*}
+  &\fcolorbox{red}{white}{\(K = \frac{R_{12 \, 12}}{g}\)} &\text{(\uline{Theorema egregium} von Gauß)} \tag {1'} \\
+  &\fcolorbox{red}{white}{\(\begin{aligned}
+           \nabla_2 b_{11} &= \nabla_1 b_{12} \\
+           \nabla_1 b_{22} &= \nabla_2 b_{12}
+          \end{aligned}\)} &\text{(\uline{Gleichung von Mainardi-Codazzi})} \tag{2'}
+ \end{align*}
+ Insbesondere ist die Gaußsche Krümmung eine innergeometrische Größe.
+\end{folgn}
+
+\subsection{Der BONNETsche Fundamentalsatz}
+Die Ableitungsgleichungen einer Hyperfläche im \(\IR^n\) 
+\begin{align*}
+ \begin{Bmatrix}
+  \partial_\sigma {\color{red}x_\varrho} = \sum {\color{green}\christ \varrho \mu \sigma} {\color{red}x_\mu} + {\color{green}b_{\varrho \sigma}} {\color{red}N} \\
+  \partial_\sigma {\color{red}N} = - \sum {\color{green}\wein \mu \sigma} {\color{red}x_\mu}  
+ \end{Bmatrix} \tag {\(\ast\)}
+\end{align*}
+bilden bei {\color{green}bekannten} Funktionen \(u \mapsto \big(g_{\varrho \sigma}(u)\big), \big(b_{\varrho \sigma}(u)\big)\) [\(\to \christ \varrho \mu \sigma (u), \wein \mu \sigma (u)\)], definiert au ein Gebiet \(G \subset R^{n-1}\) ein \uline{System partieller Differentialgleichungen 1. Ordnung} für {\color{red}gesuchte} Abbildungen \(u \mapsto x_\varrho(u), N(u)\). \\
+Aus diesen lässt sich die Fläche selbst gewinnen durch Lösen des Systems
+\begin{align*}
+ \partial_\varrho {\color{red}x} = {\color{green}x_{\varrho}} \tag{\(\ast \ast\)}
+\end{align*}
+Solche Systeme sind genau dann \uline{lokal eindeutig lösbar}, wenn sogenannte \uline{Integrabilitätsbedingungen} für die Koeffizientenfunktionen erfüllt sind, die man erhält, indem man die Vertauschbarkeitsrelationen (bei \((\ast)\) etwa \(\partial_\tau \partial_\sigma x_\varrho = \partial_\sigma \partial_\tau x_\varrho, \partial_\tau \partial_\sigma N = \partial_\sigma \partial_\tau N\)) formal auswertet.\par
+Zuständig ist der \uline{Satz von \textsc{Frobenius}}. \par
+Beim System \((\ast)\) sind die Integrabilitätsbedingungen gerade die Gauß- und Codazzigleichungen und beim System \((\ast \ast)\) lauten sie \(\partial_\sigma x_\varrho = \partial_\varrho x_\sigma\) und sind erfüllt, wenn mann in \((\ast) (g_{\varrho \sigma})\) und \((b_{\varrho \sigma})\) [\(\to (\christ \varrho \mu \sigma)\)] als symmetrisch in \((\varrho, \sigma)\) vorausgesetzt. \par
+Damit gilt (zunächst für \(n = 3\)):
+  
+  
