@@ -1883,5 +1883,104 @@ Solche Systeme sind genau dann \uline{lokal eindeutig lösbar}, wenn sogenannte 
 Zuständig ist der \uline{Satz von \textsc{Frobenius}}. \par
 Beim System \((\ast)\) sind die Integrabilitätsbedingungen gerade die Gauß- und Codazzigleichungen und beim System \((\ast \ast)\) lauten sie \(\partial_\sigma x_\varrho = \partial_\varrho x_\sigma\) und sind erfüllt, wenn mann in \((\ast) (g_{\varrho \sigma})\) und \((b_{\varrho \sigma})\) [\(\to (\christ \varrho \mu \sigma)\)] als symmetrisch in \((\varrho, \sigma)\) vorausgesetzt. \par
 Damit gilt (zunächst für \(n = 3\)):
-  
-  
+
+\setcounter{set}{3}
+\begin{satz}\label{satz254}\(\)
+ \begin{enumerate}
+  \item[a)] Auf einem Gebiet \(G \in \IR^2\) seien
+  \begin{itemize}
+   \item eine symmetrische positiv definite \(\C^2\)-Matrixfunktion
+   \[    u \in G \mapsto \big(\overline g_{\varrho \sigma}(u)\big) \in M(2,2;\IR)
+   \]
+   \item eine symmetrische \(\C^1\)-Matrixfunktion
+   \[
+    u \in G \mapsto \big(\overline b_{\varrho \sigma}(u)\big) \in M(2,2;\IR)
+   \]
+  \end{itemize}
+  vorgegeben, welche
+  \begin{itemize}
+   \item das Theorema egregium (1') \(\overline R_{12 \, 12} = \det (\overline b_{\varrho \sigma})\)
+   \item die Mainardi-Codazzi-Gleichung (2') \(\begin{cases}
+                                                &\overline \nabla_2 \overline b_{11} = \overline \nabla_1 \overline b_{12} \\
+                                                &\overline \nabla_1 \overline b_{22} = \overline \nabla_2 \overline b_{12}
+                                               \end{cases}\) 
+  \end{itemize}
+  formal erfüllen. \par
+  Weiter seien ein Parameterwert \(\stackrel \circ u \in G\), ein Punkt \(\stackrel \circ x \in \IR^3\) und zwei Vektoren \(\stackrel \circ x_1, \stackrel \circ x_2\) mit \(\forall_{\varrho, \sigma} \left\langle \stackrel \circ x_\varrho, \stackrel \circ x_\sigma \right\rangle = \overline g_{\varrho \sigma} \left(\stackrel \circ x\right)\)  \(\left( \to N = \frac{\stackrel \circ x_1 \times \stackrel \circ x_2}{\left|\left|\stackrel \circ x_1 \times \stackrel \circ x_2 \right|\right|}\right)\) gegeben. \par
+  Dann gibt es \uline{genau eine} \(\C^3\)-Fläche in einer Parameterdarstellung \(x \colon u \in U\left(\stackrel \circ u\right) \subset G \mapsto x(u) \in \IR^3\) mit \(x\left(\stackrel \circ x\right) = \stackrel \circ x, \partial_\varrho x\left(\stackrel \circ u\right) = \stackrel \circ x_\varrho \, (\varrho = 1,2)\) deren Grundformmatrizen \((g_{\varrho \sigma})\) und \((b_{\varrho \sigma})\) gerade die vorgegebenen Matrizen \(\left(\overline g_{\varrho \sigma}\right)\) und \(\left(\overline b_{\varrho \sigma}\right)\) sind.
+  \item[b)] Zwei \(\C^3\)-Flächen in Parametrisierungen \(u \mapsto x(u), u \mapsto \widetilde x(u)\) mit gleichen Grundformmatrizen \((g_{\varrho \sigma}) =(\widetilde g_{\varrho \sigma}), (b_{\varrho \sigma}) = (\widetilde b_{\varrho \sigma})\) stimmen überein bis auf eine eigentliche Bewegung des \(\IR^3\), d.h. es gilt
+  \[
+   \widetilde x = Dx + t \text{ mit } D \in SO(3,\IR) \text{ mit } t \in \IR^3
+  \]
+ \end{enumerate}
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz254}]
+ Wie in der Kurventheorie, unter Verwendung des Satzes von Frobenius statt des entsprechenden Satzes über gewöhnliche Differentialgleichungssystem. \par
+ 1. und 2. Grundform bilden als ein \uline{vollständiges} System allerdings \uline{nicht unabhängiger} Invarianten für eine Fläche.
+\end{beweis}
+\subsubsection{Schlussbemerkungen}
+\begin{enumerate}
+ \item Im Unterschied zur Kurventheorie liefert der \textsc{Bonnet}sche Fundamentalsatz im Allgemeinen nur \uline{lokale} Lösungen (Ist aber das Parametergebiet einfach zusammenhängend, existiert sogar eine globale Lösung).
+ \item
+\end{enumerate}
+
+{\Huge Hier fehlt noch was}
+\begin{beweis}[von Satz \ref{satz261}]
+Wir betrachten zunächst \uline{Normalvariationen} mit \(V(u) = f(u) \cdot N(u)\) wobei \(f\) eine \(\C^1\)-Funktion ist. Dann gilt
+\begin{align*}
+ &V_\sigma = (\partial_\sigma f) N - f \sum \wein \mu \sigma x_\mu \text{ also } \langle V_\sigma, x_\varrho \rangle = -f \sum \wein \mu \sigma g_{\mu \varrho} = -f b_{\varrho \sigma} \\
+ &\langle V_\sigma, x_\varrho \rangle + \langle V_\varrho, x_\sigma \rangle = -2 b_{\varrho \sigma} \\
+ &\sum_{\varrho, \sigma} g^{\varrho \sigma} \big(\langle V_\sigma, x_\varrho \rangle + \langle V_\varrho, x_\sigma \rangle \big) = -2 f \sum g^{\varrho \sigma} g_{\sigma \varrho} = -2f \sum \wein \varrho \varrho = -4 f \cdot H
+\end{align*}
+
+\uline{Ergebnis}:
+\begin{align*}
+ a'(0) = \frac12 \int\limits_\Omega \frac{1}{\sqrt{g(u)}} g(u) \big(-4 f(u) \cdot H(u)\big) \dd u = -2 \int\limits_\Omega f(u) \cdot H(u) \cdot \underbrace{\sqrt{g(u)} \dd u}_{= \dd A}
+\end{align*}
+(\uline{1. Normalvariation des Flächeninhalts})\par
+Gilt \(a'(0)\) für alle \(\C^1\)-Variationen, insbesondere für alle \(\C^1\)-Normalvariationen, d.h. für alle \(\C^1\)-Funktionen \(f\), so liefert das Fundamentallemma der Variationsrechnung \(\uline{H \equiv 0}\) in \(\Omega\). \par
+Lässt man auch einen tangentialanteil im Variationsvektorfeld \(V\) zu, so erhält man nichts Neues:\\
+Für \(\overline V = \sum \eta^\mu x_\mu\) gilt
+\begin{align*}
+ &\overline V_\sigma = \sum \big(\partial_\sigma \eta^\mu + \eta^\alpha \christ \alpha \mu \sigma \big) x_\mu + (\dots) N \\
+ \Rightarrow & \langle \overline V_\sigma, x_\varrho \rangle = \sum \big(g_{\mu \varrho} \partial_\sigma \eta^\mu + \eta^\alpha \gamma_{\alpha \varrho \sigma}\big) \\
+ \Rightarrow & \langle \overline V_\sigma, x_\varrho \rangle + \langle \overline V_\varrho, x_\sigma \rangle = \sum \big( g_{\mu \varrho} \partial_\sigma \eta^\mu + g_{\mu \sigma} \partial_\varrho \eta^\mu + \eta^\alpha \partial_\alpha g_{\varrho \sigma}\big) \\
+ \Rightarrow &\sum_{\varrho, \sigma} g^{\varrho \sigma} \big(\langle \overline V_\sigma, x_\varrho \rangle + \langle \overline V_\varrho, x_\sigma \rangle \big) = \sum \big(\partial_\sigma \eta^\sigma + \partial_\varrho \eta^\varrho + g^{\varrho \sigma} (\partial_\alpha g_{\varrho \sigma}) \eta^{\alpha}\big) \\
+ &\stackrel{\text{Hilfssatz}}{=} 2 \sum \left(\partial_\alpha \eta^\alpha + \frac12 \frac{\partial_\alpha g}{g} \eta^\alpha \right) = 2 \sum \left( \partial_\alpha \eta^\alpha + \frac{\partial_\alpha \sqrt{g}}{\sqrt{g}} \eta^\alpha \right) \\
+ &= \frac2{\sqrt{g}} \sum \partial_\alpha \left(\sqrt{g} \eta^\alpha \right) = \frac2{\sqrt{g}} \left( \partial_1 (\sqrt{g} \eta^1) + \partial_2(\sqrt{g} \eta^2)\right) \\
+\end{align*}
+\begin{align*}
+ \Rightarrow  \overline a'(0) &= \frac12 \int\limits_\Omega \frac{1}{\sqrt{g(u)}} g(u) \frac{2}{\sqrt{g(u)}} \sum_\alpha \big(\sqrt{g(u)} \eta^\alpha(u)\big) \dd u \\
+ &= \int\limits_\Omega \big( \partial_1(\sqrt{g} \eta^1)(u^1, u^2) + \partial_2(\sqrt{g}\eta^2)(u^1,u^2)\big) \dd u^1 \dd u^2
+\end{align*}
+Ein solches Integral lässt sich nach dem (zweidimensionalen) \uline{Satz von \textsc{Stokes}} in ein Integral über den Rand \(\partial \Omega\) umformen \mat{\left(\int\limits_\Omega \dd \varphi = \int\limits_{\partial\Omega} \varphi\right)}. Beweis nur für den Spezialfall \(\overline \Omega = [a, b] \times [c, d]\):
+\begin{align*}
+ \overline a'(0) &= \int_c^d \left(\int_a^b \partial_1 (\sqrt{g} \eta^1)(u^1, u^2) \dd u^1\right) \dd u^2 + \int_a^b \left(\int_c^d \partial_2 (\sqrt{g}\eta^2)(u^1, u^2) \dd u^2 \right) \dd u^1 \\
+ &= \int_c^d \big( (\sqrt{g}\eta^1)(b, u^2) - (\sqrt{g}\eta^1)(a, u^2)\big)\dd u^2 + \int_a^b \big((\sqrt{g}\eta^2)(u^1, d) - (\sqrt{g}\eta^2)(u^1, c) \big) \dd u^1 \\
+ &= 0
+\end{align*}
+wegen \(\left.\overline V\right|_{\partial \Omega} = 0 \Leftrightarrow \left. \eta^1 \right|_{\partial \Omega} = \left. \eta^2 \right|_{\partial \Omega} = 0\) \par
+Man erhält also durch Tangentialanteile in der Variation keine Verschärfung des Satzes.
+\end{beweis}
+
+\subsubsection{Wichtig!}
+Die Bedingung \(H \equiv 0\) ist nur notwendig für die Minimalität des Flächeninhalts bei fester Randkurve. \\
+Mögliche Situationen:
+\begin{itemize}
+ \item Indefinit stationärer Flächeninalt \(\to\) \uline{Instabile Minimalfläche}
+ \item Relatives Minimum \(\to\) \uline{Stabile Minimalfläche}
+ \item Absolutes Minimum \(\to\) \uline{Minimierende Minimalfläche}
+\end{itemize}
+
+\subsubsection{\uline{Ergänzungen} aus Physik und Analysis}
+\begin{enumerate}
+ \item \uline{Stabile Minimalflächen} lassen sich durch Seifenhäute realisieren (\textsc{Plateau} 1850). \\
+ Geschlossene Raumkurve aus Draht in Seifenlauge bringen. Die eingespannte Haut ist eine Minimalfläche. Physikalischer Hintergrund: Druckdifferenz Außen/Innen ist proportional zu \(H\). Bei Druckausgleich (\(H = 0\)) wird die Oberfläche minimiert.
+ \begin{bemerkung}
+  Bei geschlossenen ``Seifenblasen'' ist \(\Delta p\) proportional zu \(H = \const. \ne 0\) (\(\to\) cmc-Flächen: ``constant mean currature'')
+ \end{bemerkung}
+ \item \uline{\textsc{Plateau}sches Problem}: Existiert zu jeder einfach geschlossenen rektifizierbaren Kurve eine eingespannte (stabile) Minimalfläche? \\
+ \uline{Antwort}: Es existiert immer eine singularitätenfreie minimierende Lösung. (Teillösungen 1930 (Douglas, Radó), Endgültige Lösung 1970 (Ossermann, Gulliver))
+\end{enumerate}
+

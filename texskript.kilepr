@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.0
-lastDocument=02-flaechentheorie.tex
+lastDocument=literatur.tex
 masterDocument=
 name=Differentialgeometrie-SS12-Pabel
 pkg_extIsRegExp=false
@@ -57,6 +57,16 @@ Mode=LaTeX
 ReadWrite=true
 
 [document-settings,item:04-definitionsammlung.tex]
+Bookmarks=
+Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
+
+[document-settings,item:05-fragestunde.tex]
 Bookmarks=
 Encoding=UTF-8
 FoldedColumns=
@@ -178,10 +188,10 @@ order=2
 
 [item:02-flaechentheorie.tex]
 archive=true
-column=36
+column=164
 encoding=UTF-8
 highlight=LaTeX
-line=1884
+line=1983
 mode=LaTeX
 open=true
 order=3
@@ -206,22 +216,32 @@ mode=LaTeX
 open=true
 order=11
 
-[item:anhang.tex]
+[item:05-fragestunde.tex]
 archive=true
-column=37
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=6
+line=0
+mode=LaTeX
+open=true
+order=13
+
+[item:anhang.tex]
+archive=true
+column=127
+encoding=UTF-8
+highlight=LaTeX
+line=8
 mode=LaTeX
 open=true
 order=9
 
 [item:literatur.tex]
 archive=true
-column=86
+column=87
 encoding=UTF-8
 highlight=LaTeX
-line=10
+line=14
 mode=LaTeX
 open=true
 order=4
@@ -238,7 +258,7 @@ order=8
 
 [item:main.tex]
 archive=true
-column=0
+column=30
 encoding=UTF-8
 highlight=LaTeX
 line=15
@@ -309,8 +329,8 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:02-flaechentheorie.tex]
-CursorColumn=36
-CursorLine=1884
+CursorColumn=164
+CursorLine=1983
 JumpList=
 ViMarks=
 
@@ -326,15 +346,21 @@ CursorLine=0
 JumpList=
 ViMarks=
 
+[view-settings,view=0,item:05-fragestunde.tex]
+CursorColumn=0
+CursorLine=0
+JumpList=
+ViMarks=
+
 [view-settings,view=0,item:anhang.tex]
-CursorColumn=37
-CursorLine=6
+CursorColumn=127
+CursorLine=8
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:literatur.tex]
-CursorColumn=86
-CursorLine=10
+CursorColumn=87
+CursorLine=14
 JumpList=
 ViMarks=
 
@@ -345,7 +371,7 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:main.tex]
-CursorColumn=0
+CursorColumn=30
 CursorLine=15
 JumpList=
 ViMarks=
