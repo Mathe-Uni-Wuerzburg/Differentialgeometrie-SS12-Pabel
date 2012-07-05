@@ -1922,11 +1922,77 @@ Damit gilt (zunächst für \(n = 3\)):
 \subsubsection{Schlussbemerkungen}
 \begin{enumerate}
  \item Im Unterschied zur Kurventheorie liefert der \textsc{Bonnet}sche Fundamentalsatz im Allgemeinen nur \uline{lokale} Lösungen (Ist aber das Parametergebiet einfach zusammenhängend, existiert sogar eine globale Lösung).
- \item
+ \item Der Satz lässt sich problemlos auf Hyperflächen im \(\IR^n\) erweitern (Verwendung von (1), (2) statt (1'), (2'))
+ \item Der Satz kann kaum verwendet werden, um Flächen zu \uline{konstruieren}. Man kann höchstens damit entscheiden, ob zwei Flächen kongruent sind.
 \end{enumerate}
 
-{\Huge Hier fehlt noch was}
+\section{Spezielle Flächenklassen im $\IR^n$}
+\subsection{Minimalflächen}
+(mit \(H \equiv 0 \Rightarrow K \le 0\)) \par
+Typische Flächenpunkte:
+\begin{enumerate}
+ \item \uline{Hyperbolische Punkte} (\(K < 0\)) \\
+ Die Dupinsche Indikatrix besteht aus gleichseitigen Hyperbeln. Asymptotenrichtung \(=\) Winkelhalbierende der Hauptkrümmungsrichtungen
+ \item \uline{Flachpunkte} (\(\kappa_1 = \kappa_2 = K = 0\)) \\
+ Man kann zeigen, dass sie auf nicht ebenen Minimalflächen isoliert liegen (Funktionentheorie: Sie sind Nullstellen einer holomorphen Funktion)
+\end{enumerate}
+Also \uline{symmetrisches Krümmungsverhalten} \par
+Wieso Minimalflächen?
+
+\begin{satz}\label{satz261}
+ Sei \(x \colon G \subset \IR^2 \to \IR^3\) eine (reguläre) ramametrisierte \(\C^2\)-Fläche sowie \(\Omega \subset \IR^2\) ein beschränktes Gebiet mit \(\overline \Omega \subset G\) und \(\C^1\)-Rand \(\partial \Omega\). Besitzt dann das Bild \(x[\Omega]\) \uline{minimalen Flächeninhalt} im Vergleich zu allen anderen \(\C^1\)-Flächen \(\widetilde x \colon G \to \IR^3\) mit gleichem Rand, d.h. \(\left. x \right|_{\partial \Omega} = \left. \widetilde x \right|_{\partial \Omega}\), so gilt für ihre mittlere Krümmung \(\uline{H \equiv 0}\)
+\end{satz}
+
+Zum Beweis benötigen wir den
+
+\begin{hilfssatz}
+ Für ein differenzierbares, \uline{reguläres} Matrixfeld \(t \in I \subset \IR \mapsto A(t) \in M(n,n;\IR)\) gilt
+ \[
+  \frac{\dd}{\dd t}(\det A) = (\det A) \tr\left(A^{-1} \dot A\right)
+ \]
+\end{hilfssatz}
+
+\begin{beweis}[des Hilfssatzes]
+ Mit \(A = (a_1, \dots, a_n)\) und \mat{a_k = \sum_{i = 1}^n a_{ik} e_i \, (k = 1, \dots, n)} gilt
+ \begin{align*}
+  \frac{\dd}{\dd t} (\det A) &= \frac{\dd}{\dd t} \big( \det(a_1, \dots, a_n)\big) = \sum_{k = 1}^n \det(a_1, \dots, \dot a_k, \dots, a_n) \\
+  &=\sum_{i,k = 1}^n \det (a_1, \dots, \dot e_1, \dots, a_n) \dot a_{ik} = \sum_{i,k} (i)\stackrel{(k)}{\left|\begin{matrix}
+  				  a_{11} & \dots & 0      & \dots & a_{1n} \\
+  				  \vdots & 		 & \vdots &       &\vdots  \\
+  				  0      & \dots & 1      & \dots & 0      \\
+ 	       		  \vdots & 		 & \vdots &       &\vdots  \\
+ 	       		  a_{n1} & \dots & 0      & \dots & a_{nn}
+  				 \end{matrix}\right|} \dot a_{ik} \\
+  &= \sum_{i,k} A_{ik} \dot a_{ik} \quad (\text{mit den Adjunkten } A_{ik} \text{ zu den Matrixelementen }a_{ik}) \\
+  &= \det A \sum \widetilde a_{ki} \dot a_{ik} \\
+  &(\text{denn } A^{-1} = (\widetilde a_{ki}) = \frac1{\det A} (A_{ki})^T = \frac{1}{\det A} (A_{ik}))\text{[{\color{red}{schöne Prüfungsfrage}}]} \\
+  &=(\det A) \tr(A^{-1} \dot A)
+ \end{align*}
+\end{beweis}
+
 \begin{beweis}[von Satz \ref{satz261}]
+(vgl. Satz \ref{satz223} über Geodätische) \par
+Sei \(u \in G \mapsto x(u) \in \IR^3\) ein \(\C^2\)-Fläche. Wir konstruieren \uline{\(\C^1\)-Vergleichsflächen} \(u \mapsto \,^\varepsilon x(u) \, (\varepsilon \in U(0))\) mit \(\forall_\varepsilon \forall_{u \in \partial \Omega} \,^\varepsilon x(u) = x(u), \left.\,^\varepsilon x\right|_{\varepsilon = 0} = x\) und untersuchen den Flächeninhalt \(A(\,^\varepsilon x[\Omega])\) \par
+Ansatz \uline{\(\,^\varepsilon x(u) = x(u) + \varepsilon V(u)\)} mit einem \(\C^1\)-Vektorfeld \(u \mapsto V(u)\) mit \uline{\(\forall_{u \in \partial \Omega} V(u) = 0\)} (diese sind regulär für genugend kleine \(\varepsilon\)). Besitzt dan die Oberfläche 
+\[
+a(\varepsilon) = A(\,^\varepsilon x[\Omega]= = \int\limits_\Omega \sqrt{\,^\varepsilon g(u)} \dd u
+\]
+in \(\varepsilon\) ein Minimum, so muss gelten:
+\begin{align*}
+ a'(0) &= \frac{\dd}{\dd t} \left. \int\limits_\Omega \sqrt{\,^\varepsilon g(u)} \dd u \right|_{\varepsilon = 0} = \int\limits_\Omega \left[\frac{\partial}{\partial \varepsilon} \sqrt{\,^\varepsilon g(u)} \right]_{\varepsilon = 0} \dd u \\
+ &= \frac12 \int\limits_\Omega \frac{1}{\sqrt{g(u)}} \left[\frac{\partial}{\partial\varepsilon} \,^\varepsilon g(u)\right]_{\varepsilon = 0} \dd u = 0
+\end{align*}
+\uline{Berechnung}
+\begin{enumerate}
+ \item[a)] \mat{\left[\frac{\partial}{\partial \varepsilon} \,^\varepsilon x_{\varrho}(u)\right]_{\varepsilon = 0} = \frac{\partial}{\partial_u \varrho} V(u) =: V_{\varrho}(u)}
+ \item[b)] \mat{\left[\frac{\partial}{\partial \varepsilon} \,^{\varepsilon} g_{\varrho \sigma} (u) \right]_{\varepsilon = 0} = \left[ \frac{\partial}{\partial\varepsilon} \langle \,^\varepsilon x_\varrho(u), \,^\varepsilon x_\sigma (u) \rangle \right]_{\varepsilon = 0} = \langle V_\varrho (u), x_\sigma \rangle + \langle x_\varrho, V_\sigma \rangle (u)}
+ \item[c)] Nach dem Hilfssatz ist
+ \begin{align*}
+  \left[\frac{\partial}{\partial \varepsilon} \,^\varepsilon g(u) \right]_{\varepsilon = 0} &= g(u) \sum_{\varrho, \sigma} g^{\varrho \sigma} (u) \left[ \frac{\partial}{\partial\varepsilon} \,^\varepsilon g_{\varrho \sigma}(u)\right]_{\varepsilon = 0} \\
+  &= g(u) \sum_{\varrho, \sigma} g^{\varrho \sigma} (u) \left(\langle V_\varrho, x_\sigma \rangle + \langle x_\varrho, V_\sigma \rangle \right)(u)
+ \end{align*}
+\end{enumerate}
+
 Wir betrachten zunächst \uline{Normalvariationen} mit \(V(u) = f(u) \cdot N(u)\) wobei \(f\) eine \(\C^1\)-Funktion ist. Dann gilt
 \begin{align*}
  &V_\sigma = (\partial_\sigma f) N - f \sum \wein \mu \sigma x_\mu \text{ also } \langle V_\sigma, x_\varrho \rangle = -f \sum \wein \mu \sigma g_{\mu \varrho} = -f b_{\varrho \sigma} \\
