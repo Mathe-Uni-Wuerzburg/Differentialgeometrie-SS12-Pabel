@@ -1955,7 +1955,7 @@ Zum Beweis benötigen wir den
 \begin{beweis}[des Hilfssatzes]
  Mit \(A = (a_1, \dots, a_n)\) und \mat{a_k = \sum_{i = 1}^n a_{ik} e_i \, (k = 1, \dots, n)} gilt
  \begin{align*}
-  \frac{\dd}{\dd t} (\det A) &= \frac{\dd}{\dd t} \big( \det(a_1, \dots, a_n)\big) = \sum_{k = 1}^n \det(a_1, \dots, \dot a_k, \dots, a_n) \\
+  \frac{\dd}{\dd t} (\det A) &= \frac{\dd}{\dd t} \big( \det(a_1, \dots, a_n)\big) = \sum_{k = 1}^n \det\left(a_1, \dots, \dot a_k, \dots, a_n\right) \\
   &=\sum_{i,k = 1}^n \det (a_1, \dots, \dot e_1, \dots, a_n) \dot a_{ik} = \sum_{i,k} (i)\stackrel{(k)}{\left|\begin{matrix}
   				  a_{11} & \dots & 0      & \dots & a_{1n} \\
   				  \vdots & 		 & \vdots &       &\vdots  \\
@@ -1965,17 +1965,17 @@ Zum Beweis benötigen wir den
   				 \end{matrix}\right|} \dot a_{ik} \\
   &= \sum_{i,k} A_{ik} \dot a_{ik} \quad (\text{mit den Adjunkten } A_{ik} \text{ zu den Matrixelementen }a_{ik}) \\
   &= \det A \sum \widetilde a_{ki} \dot a_{ik} \\
-  &(\text{denn } A^{-1} = (\widetilde a_{ki}) = \frac1{\det A} (A_{ki})^T = \frac{1}{\det A} (A_{ik}))\text{[{\color{red}{schöne Prüfungsfrage}}]} \\
-  &=(\det A) \tr(A^{-1} \dot A)
+  &\left(\text{denn } A^{-1} = \left(\widetilde a_{ki}\right) = \frac1{\det A} (A_{ki})^T = \frac{1}{\det A} (A_{ik})\right)\text{[{\color{red}{schöne Prüfungsfrage}}]} \\
+  &=(\det A) \tr\left(A^{-1} \dot A\right)
  \end{align*}
 \end{beweis}
 
 \begin{beweis}[von Satz \ref{satz261}]
 (vgl. Satz \ref{satz223} über Geodätische) \par
-Sei \(u \in G \mapsto x(u) \in \IR^3\) ein \(\C^2\)-Fläche. Wir konstruieren \uline{\(\C^1\)-Vergleichsflächen} \(u \mapsto \,^\varepsilon x(u) \, (\varepsilon \in U(0))\) mit \(\forall_\varepsilon \forall_{u \in \partial \Omega} \,^\varepsilon x(u) = x(u), \left.\,^\varepsilon x\right|_{\varepsilon = 0} = x\) und untersuchen den Flächeninhalt \(A(\,^\varepsilon x[\Omega])\) \par
+Sei \(u \in G \mapsto x(u) \in \IR^3\) ein \(\C^2\)-Fläche. Wir konstruieren \uline{\(\C^1\)-Vergleichsflächen} \(u \mapsto \,^\varepsilon x(u) \, \big(\varepsilon \in U(0)\big)\) mit \(\forall_\varepsilon \forall_{u \in \partial \Omega} \,^\varepsilon x(u) = x(u), \left.\,^\varepsilon x\right|_{\varepsilon = 0} = x\) und untersuchen den Flächeninhalt \(A\big(\,^\varepsilon x[\Omega]\big)\) \par
 Ansatz \uline{\(\,^\varepsilon x(u) = x(u) + \varepsilon V(u)\)} mit einem \(\C^1\)-Vektorfeld \(u \mapsto V(u)\) mit \uline{\(\forall_{u \in \partial \Omega} V(u) = 0\)} (diese sind regulär für genugend kleine \(\varepsilon\)). Besitzt dan die Oberfläche 
 \[
-a(\varepsilon) = A(\,^\varepsilon x[\Omega]= = \int\limits_\Omega \sqrt{\,^\varepsilon g(u)} \dd u
+a(\varepsilon) = A\big(\,^\varepsilon x[\Omega]\big) = \int\limits_\Omega \sqrt{\,^\varepsilon g(u)} \dd u
 \]
 in \(\varepsilon\) ein Minimum, so muss gelten:
 \begin{align*}
@@ -1989,7 +1989,7 @@ in \(\varepsilon\) ein Minimum, so muss gelten:
  \item[c)] Nach dem Hilfssatz ist
  \begin{align*}
   \left[\frac{\partial}{\partial \varepsilon} \,^\varepsilon g(u) \right]_{\varepsilon = 0} &= g(u) \sum_{\varrho, \sigma} g^{\varrho \sigma} (u) \left[ \frac{\partial}{\partial\varepsilon} \,^\varepsilon g_{\varrho \sigma}(u)\right]_{\varepsilon = 0} \\
-  &= g(u) \sum_{\varrho, \sigma} g^{\varrho \sigma} (u) \left(\langle V_\varrho, x_\sigma \rangle + \langle x_\varrho, V_\sigma \rangle \right)(u)
+  &= g(u) \sum_{\varrho, \sigma} g^{\varrho \sigma} (u) \big(\langle V_\varrho, x_\sigma \rangle + \langle x_\varrho, V_\sigma \rangle \big)(u)
  \end{align*}
 \end{enumerate}
 
@@ -2047,6 +2047,160 @@ Mögliche Situationen:
   Bei geschlossenen ``Seifenblasen'' ist \(\Delta p\) proportional zu \(H = \const. \ne 0\) (\(\to\) cmc-Flächen: ``constant mean currature'')
  \end{bemerkung}
  \item \uline{\textsc{Plateau}sches Problem}: Existiert zu jeder einfach geschlossenen rektifizierbaren Kurve eine eingespannte (stabile) Minimalfläche? \\
- \uline{Antwort}: Es existiert immer eine singularitätenfreie minimierende Lösung. (Teillösungen 1930 (Douglas, Radó), Endgültige Lösung 1970 (Ossermann, Gulliver))
+ \uline{Antwort}: Es existiert immer eine singularitätenfreie minimierende Lösung. \big(Teillösungen 1930 (Douglas, Radó), Endgültige Lösung 1970 (Ossermann, Gulliver)\big)
 \end{enumerate}
+
+Ab jetzt wieder: Minimalfläche \(=\) fläche mit \(H \equiv 0\) (egal, ob sie etwas minimieren)
+
+Die ersten \uline{Beispiele} von Minimalflächen wurden, ausgehend von der Eulerschen Darstellung \((u,v) \mapsto x(u,v) = \vxyz{u}{v}{z(u,v)}\) durc Lösen der \uline{Minimalflächengleichung}\index{Minimalflächengleichung}
+\[
+ H = \frac{1}{2 \sqrt{g}^3} \left[ (1+z_2^2) z_{11} - 2 z_1 z_2 z_{12} + (1+z_1^2) z_{22}\right] = 0
+\]
+für \((x,y) \mapsto z(x,y)\) gefunden (Elliptische partielle Differentialgleichung 2. Ordnung)
+
+\begin{align*}
+ &z = ax + by + c &&\text{Ebene} \tag 0 \\
+ &\cosh z = \sqrt{x^2+ + y^2} &&\text{\uline{Katenoid}} \tag 1 \\
+ &\E^z = \frac{\cos y}{\cos x} &&\text{(1.) \uline{Schergsche Fläche}} \tag 2 \\
+ &\text{definiert auf einem unendlichen Schachbrett} \\
+ &\sin z = \sinh x \sinh y &&\text{2. Schergsche Fläche} \tag 3 \\
+ &\text{isometrisch zur 1.}
+\end{align*}
+
+Innerhalb \uline{spezieller Flächenklassen} lassen sich alle Minimalflächen bestimmen. Bis auf Streckung und Spiegelung gilt
+\begin{enumerate}
+ \item[(a)] Jede (nichtebene) Minimal-\uline{Rotationsfläche}
+ \[
+  x(u,v) = \vxyz{r(u) \cos v}{r(u) sin v}{z(u)}
+ \]
+ ist ein \uline{Katenoid} [Übungsaufgabe!]
+ \item[(b)] Jede (nichtebene) Minimal-\uline{Regelfläche}
+ \[
+  x(u,v) = c(u) + v E(u)
+ \]
+ ist eine \uline{Wendefläche} [Übungsaufgabe!]
+ \item[(c)] Jede (nichtebene) Minimal-\uline{Translationsfläche}
+ \[
+  x(u,v) = \vxyz{u}{0}{f(u)} + \vxyz{0}{v}{h(v)}
+ \]
+ ist eine \uline{(1.) Scherksche Fläche} 
+ \item[(d)] Die einfachste nichttriviale \uline{algebraische} Minimalfläche ist die Enneper-Fläche
+ \[
+  x(u,v) = \operatorname{Re} \vxyz{w - \frac{w^3}{3}}{\operatorname{i} \left(w + \frac{w^3}{3}\right)}{w^2}
+ \]
+ (siehe Kunstwerk vor der Mathematik/Logo des Instituts) \\
+ Sie besitzt ein Parameternetz aus \uline{ebenen Krümmungslinien} und gleichzeitig ein Parameternetz aus Asymptoten-Böschungslinien (vgl. Übung)
+\end{enumerate}
+
+Heute kann man (mit funktionentheoretischen Hilfsmitteln) gezielt Minimalflächen mit speziellen (topologischen) Eigenschaften konstruieren.
+
+\begin{bsp}
+ Minimale Möbiusbänder, Costasche Minimalfläche (199x)
+\end{bsp}
+
+\subsubsection{\uline{Rezept} zur Konstruktion von Minimalflächen}
+Man nehme (im einfachsten Fall) zwei komplex differenzierbare Funktionen \(f,g \colon G \subset \IC \to \IC\), setze
+\[
+ \Phi' = f \frac{1}{2} \vxyz{1-g^2}{\I(1 + g^2)}{2 g}
+\]
+und bestimme eine Stammfunktion \(\Phi\). Dann ist \(x = \Real \Phi\) eine isotherm parametrisierte Minimalfläche mit
+\begin{enumerate}
+ \item \mat{(g_{\varrho \sigma}) = \lambda^2 \begin{pmatrix}
+                                   1 & 0 \\
+                                   0 & 1
+                                  \end{pmatrix} \text{, wobei } \lambda = \frac{1}{2} |f| \left(1 + |g|^2\right)}
+ \item \mat{N = \pi_s^{-1} \circ g = \frac{1}{1 + |g|^2} \vxyz{2 \Real g}{2 \Imag g}{|g|^2 - 1}}
+ \item \mat{\Omega := b_{22} + \I b_{12} = -b_{11} + \I b_{12} = f \cdot g'}
+\end{enumerate}
+
+\begin{bsp} \(\)
+ \begin{enumerate}
+  \item[a)] Einfachste nichttriviale Wahl: \(f(w) = 1, g(w) = w (\Rightarrow \Omega = 1)\) \par
+  Dann ist 
+  \begin{align*}
+   \Phi'(w) &= \frac12 \vxyz{1-w^2}{\I(1+w^2)}{2w} \text{, also} \\
+   \Phi(w) &= \frac12 \vxyz{w - \frac{w^3}{3}}{\I \left(w+\frac{w^3}{3}\right)}{w^2} [+ c]
+  \end{align*}
+  \(x = \Real \Phi\) ist die \uline{Enneperfläche} mit
+  \begin{align*}
+   \lambda(u,v) &= \frac{1}{2} (1 + u^2 + v^2) \\
+   N(u,v) &= \frac{1}{1 + u^2 + v^2} \vxyz{2u}{2v}{u^2 + v^2 - 1} \\
+   \Omega &= b_{22} + \I b_{12} = 0 \Rightarrow (b_{\varrho \sigma}) = \begin{pmatrix}
+                                                                        -1 & 0 \\
+                                                                        0 & 1
+                                                                       \end{pmatrix} &\text{[Krümmungslinienparameter]}
+  \end{align*}
+  \item[b)] Wähle \(\Omega \equiv 1\) (Krümmungslinienparameter), \mat{g(w) = \E^{\I w} \Rightarrow f(w) = \frac{1}{\I \E^{\I w}}} \par
+  Dann ist
+  \begin{align*}
+   \Phi'(w) &= \frac{1}{\I \E^{\I w}} \frac{1}{2} \vxyz{1 - \E^{2 \I w}}{\I \left(1 + \E^{2 \I w}\right)}{2 \E^{\I w}} = \vxyz{-\sin w}{\cos w}{-\I} \text{und} \\
+   \Phi(w) &= \vxyz{\cos w}{\sin w}{- \I w}
+  \end{align*}
+  So folgt
+  \begin{align*}
+   x(u,v) = \Real \Phi(w) = \vxyz{\cos u \cosh v}{\sin u \cosh v}{v}
+  \end{align*}
+  ist ein Katenoid.
+  \item[c)] Wählt man in beiden Fällen \(\widehat x = \Imag \Phi = \Real (- \I \Phi)\), so erhält man wegen \(\widehat \Omega = - \I\)
+  \begin{align*}
+   \left(\widehat b_{\varrho \sigma}\right) = \begin{pmatrix}
+                                               0 & -1 \\
+                                               -1 & 0
+                                              \end{pmatrix}
+  \end{align*}
+\(\begin{rcase}
+  &\text{bei a)} &&\text{nochmal die \uline{Enneperfläche}} \\
+  &\text{bei b)} &&\text{die \uline{Wendelfläche}}
+  \end{rcase}\) jeweils in Asymptotenlinienparametrisierung
+ \end{enumerate}
+\end{bsp}
+
+\subsection{Torsen}
+Ziel: Bestimmung aller Flächen im \(\IR^3\) mit \(\uline{K \equiv 0}\). \\
+Typische Flächenpunkte:
+\begin{enumerate}
+ \item[(1)] \uline{Parabolische Punkte} (etwa \(\kappa_1 \ne 0, \kappa_2 = 0\))
+ \item[(2)] \uline{Flachpunkte}
+\end{enumerate}
+
+Sei \(x(u_0, v_0)\) ein fester Flächenpunkt auf einer solchen genügend oft differenzierbaren Fläche mit \(K \equiv 0\). \\
+Wir unterscheiden \uline{zwei Hauptfälle}:
+\begin{enumerate}
+ \item[{\color{Green}(\(\Rom1\))}] \uline{\(\kappa_1(u,v) = \kappa_2(u,v) = 0\) in \(U(u_0, v_0)\)} \\
+ Dort besteht die Fläche nur aus Flachpunkten und ist nach Satz \ref{satz231} ein \uline{Ebenenstück}
+ \item[{\color{Green}(\(\Rom2\))}] \(\kappa_1(u_0, v_0) \ne 0, \kappa_2(u_0, v_0) = 0\) und damit \uline{\(\kappa_1(u,v) \ne 0, \kappa_2(u,v) = 0\) in \(U(u_0, v_0)\)} \\
+ Dort besteht die Fläche nur aus parabolischen Punkten und es ist anwendbar:
+\end{enumerate}
+
+\begin{satz}\label{satz262}
+ Eine rein parabolische (genügend oft differenzierbare) Fläche im \(\IR^3\) besitzt lokal eine \uline{Regelflächen}-Parametrisierung \((u,v) \mapsto c(u) + v E(u)\)
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz262}]
+ Da die Fläche nabelpunktfrei ist, existiert in der Umbegung eines Punkt \(x(u_0, v_0)\) eine Krümmungs\-linienparametrisierung \((u,v) \mapsto x(u,v)\) (siehe Satz \ref{satz247}) mit \(\langle x_1, x_2\rangle = g_{12} = 0, \, b_{12} = 0\). Sei in dieser Umgebung \(\kappa_1 \ne 0, \kappa_2 = 0\). Dann ist \(\partial_2 N = - \kappa_2 x_2 = 0 (\Rightarrow N_{12} = N_{21} = 0)\). \\
+ Wir zeigen, dass die \(v\)-Linien \(v \mapsto x(u,v)\) \uline{Geodätische} sind. \\
+ Für die Hauptkrümmungsrichtungen \mat{Y_\varrho = \frac{x_\varrho}{|x_{\varrho}|} (\varrho = 1,2)} gilt:
+ \begin{align*}
+  &\langle Y_2, N\rangle = 0 \Rightarrow \langle \partial_2 Y_2, N \rangle + \langle Y_2, \underbrace{\partial_2 N}_{= 0} \rangle = \langle \partial_2 Y_2, N \rangle = 0 \tag 1 \\
+  &N_1 = - \kappa_1 x_1 = \mu Y_1 \text{ mit } \mu \ne 0 \stackrel{Y_1 \perp Y_2}{\Rightarrow} \uline{\langle Y_2, N_1 \rangle = 0} \tag 2 \\
+  &\Rightarrow \langle \partial_2 Y_2, N \rangle + \langle Y_2, \underbrace{N_{12}}_{= 0} \rangle = 0 \stackrel{Y_1 \parallel N_1}{\Rightarrow} \uline{\langle \partial_2 Y_2, Y_1 \rangle = 0} \\
+  &|Y_2|^2 = 1 \Rightarrow \uline{\langle \partial_2 Y_2, Y_2 \rangle = 0} \tag 3
+ \end{align*}
+ Also ist \(\partial_2 Y_2 \equiv 0 \Rightarrow \uline{Y_2(u,v) = E(u)}\). Aus \(x_2(u,v) = \lambda(u,v) E(u)\) folgt
+ \begin{align*}
+  x(u,v) = x(u, v_0) + \int_{v_0}^v \lambda(u, \overline v) \dd \overline v E(u) = c(u) + f(u,v) E(u)
+ \end{align*}
+ bzw. nach der Transformation \(\overline u = u, \overline v = f(u,v)\):
+ \[
+  x(\overline u, \overline v) = c(\overline u) + \overline v E(\overline u)
+ \]
+ Diese ist zulässig wegen 
+ \begin{align*}
+  \left| \frac{\partial(\overline u, \overline v)}{\partial(u,v)}\right| = \left| \begin{matrix}
+                                                                                   1 & 0 \\
+                                                                                   f_u &f_v
+                                                                                  \end{matrix} \right| = f_v = \lambda > 0
+ \end{align*}
+
+\end{beweis}
 
