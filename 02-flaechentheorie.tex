@@ -2166,9 +2166,9 @@ Typische Flächenpunkte:
 Sei \(x(u_0, v_0)\) ein fester Flächenpunkt auf einer solchen genügend oft differenzierbaren Fläche mit \(K \equiv 0\). \\
 Wir unterscheiden \uline{zwei Hauptfälle}:
 \begin{enumerate}
- \item[{\color{Green}(\(\Rom1\))}] \uline{\(\kappa_1(u,v) = \kappa_2(u,v) = 0\) in \(U(u_0, v_0)\)} \\
+ \item[{\color{green}(\(\Rom1\))}] \uline{\(\kappa_1(u,v) = \kappa_2(u,v) = 0\) in \(U(u_0, v_0)\)} \\
  Dort besteht die Fläche nur aus Flachpunkten und ist nach Satz \ref{satz231} ein \uline{Ebenenstück}
- \item[{\color{Green}(\(\Rom2\))}] \(\kappa_1(u_0, v_0) \ne 0, \kappa_2(u_0, v_0) = 0\) und damit \uline{\(\kappa_1(u,v) \ne 0, \kappa_2(u,v) = 0\) in \(U(u_0, v_0)\)} \\
+ \item[{\color{green}(\(\Rom2\))}] \(\kappa_1(u_0, v_0) \ne 0, \kappa_2(u_0, v_0) = 0\) und damit \uline{\(\kappa_1(u,v) \ne 0, \kappa_2(u,v) = 0\) in \(U(u_0, v_0)\)} \\
  Dort besteht die Fläche nur aus parabolischen Punkten und es ist anwendbar:
 \end{enumerate}
 
@@ -2201,6 +2201,34 @@ Wir unterscheiden \uline{zwei Hauptfälle}:
                                                                                    f_u &f_v
                                                                                   \end{matrix} \right| = f_v = \lambda > 0
  \end{align*}
-
 \end{beweis}
 
+\uline{Hauptfälle}
+\begin{enumerate}
+ \item[{\color{green}(\(\Rom1\))}] \(\kappa_1(u,v) = \kappa_2(u,v) = 0\) in \(U(u_0, v_0)\): uline{Ebene}
+ \item[{\color{green}(\(\Rom2\))}] \(\kappa_1(u_0, v_0) \ne 0, \kappa_2(u_0, v_0) = 0\) in \(U(u_0, v_0)\): (nichtebene) \uline{Regelfläche}
+\end{enumerate}
+
+\uline{Nicht erfasste Sonderfälle}
+\begin{enumerate}
+ \item[{\color{red}\(\Rom3\)}] \(\kappa_1 (u_0, v_0) = 0, \kappa_2 \equiv 0\), aber in jeder Umgebung \(U(u_0, v_0)\) gibt es ein \((u_1, v_1)\) mit \(\kappa_1(u_1, v_1) \ne 0\) (und möglicherweise sogar ein \((u_2, v_2)\) mit \(\kappa_1(u_2, v_2) = 0\)) \(\left[\kappa_1 (u, v) = u^k \sin \frac{1}{u}\right]\) \\
+"Parabolische Punkte häufen sich in einem Flächenpunkt" \\
+ Um einen solchen Punkt braucht keine Regelflächenparametrisierung zu existieren (siehe \textsc{Kühnel}, S.63)
+\end{enumerate}
+Im Hauptfall \((\Rom2)\) brauchen wir nur Regelflächen auf \(K = 0\) zu untersuchen. \par
+Bei einer beliebigen Regelfläche \((t,v) \mapsto x(t,v) = c(t) + v E(t)\) gilt stets \(x_2 (t,v) = E(t) \in T_{(t,v)}x\) für alle \(v\). Aber die Tangentialfläche kann sich um \(E(t)\) drehen, wenn \(v\) sich ändert.
+
+\begin{definition}
+ Eine Regelfläche im \(\IR^3\) heißt \uline{Torse}\index{Torse}, wenn längs jeder erzeugenden Geraden die Tangentialebene fest bleibt.
+\end{definition}
+
+Kennzeichnung:
+
+\begin{satz}\label{satz263}
+ Eine Regelfläche im \(\IR^3\) in der Parameterdarstellung \((t,v) \mapsto c(t) + v E(t)\) ist genau dann eine Torse, wenn die sogenannte "Torsenbedingung"
+ \Links
+ \begin{align*}
+  \det(\dot c, E, \dot E) = 0 \tag{\text{TB}}
+ \end{align*}
+ erfüllt ist. Äquivalent dazu ist die Bedingung \(K = 0\).
+\end{satz}

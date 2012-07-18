@@ -138,77 +138,40 @@
 \indexentry{Lie-Klammer|hyperpage}{79}
 \indexentry{Kommutator|hyperpage}{79}
 \indexentry{Minimalfl\IeC {\"a}chengleichung|hyperpage}{89}
-\indexentry{Ableitungsvektor|hyperpage}{98}
-\indexentry{Schmiegraum|hyperpage}{98}
-\indexentry{Schmiegraum!degeneriert|hyperpage}{98}
-\indexentry{euklidisch|hyperpage}{98}
-\indexentry{Bogenl\IeC {\"a}ngenfunktion|hyperpage}{98}
-\indexentry{Bogenl\IeC {\"a}ngenparametrisierung|hyperpage}{98}
-\indexentry{Kr\IeC {\"u}mmung|hyperpage}{99}
-\indexentry{Hauptnormalenvektor|hyperpage}{99}
+\indexentry{Torse|hyperpage}{94}
+\indexentry{Weg|hyperpage}{99}
+\indexentry{Kurve|hyperpage}{99}
+\indexentry{Parameter|hyperpage}{99}
+\indexentry{Spur|hyperpage}{99}
+\indexentry{regul\IeC {\"a}r|hyperpage}{99}
 \indexentry{Tangentenvektor|hyperpage}{99}
-\indexentry{Binormalenvektor|hyperpage}{99}
-\indexentry{Frenet-Begleitbasis|hyperpage}{99}
-\indexentry{Torsion|hyperpage}{99}
-\indexentry{Frenet-Begleitbasis!Ableitungsgleichungen|hyperpage}{99}
-\indexentry{Kr\IeC {\"u}mmung!Gesamtkr\IeC {\"u}mmung|hyperpage}{100}
-\indexentry{Darboux-Vektor|hyperpage}{100}
-\indexentry{Taylorentwicklung|hyperpage}{100}
-\indexentry{lokale kanonische Form|hyperpage}{100}
-\indexentry{Kr\IeC {\"u}mmungsachse|hyperpage}{100}
-\indexentry{Kr\IeC {\"u}mmungsradius|hyperpage}{101}
-\indexentry{Kr\IeC {\"u}mmungskreis|hyperpage}{101}
-\indexentry{Schmiegkugel|hyperpage}{101}
-\indexentry{Fundamentalsatz|hyperpage}{101}
-\indexentry{Kr\IeC {\"u}mmung!konische|hyperpage}{101}
-\indexentry{sph\IeC {\"a}risch|hyperpage}{102}
-\indexentry{Fundamentalsatz|hyperpage}{103}
-\indexentry{Fl\IeC {\"a}che!Skalarprodukt|hyperpage}{103}
-\indexentry{1. Grundform|hyperpage}{103}
-\indexentry{Hyperfl\IeC {\"a}che!Begleitbasis|hyperpage}{104}
-\indexentry{sph\IeC {\"a}risches Bild|hyperpage}{104}
-\indexentry{Gau\IeC {\ss }abbildung|hyperpage}{104}
-\indexentry{Gau\IeC {\ss }sche Ableitungsgleichungen]|hyperpage}{104}
-\indexentry{Weingartenschen Ableitungsgleichungen|hyperpage}{104}
-\indexentry{kovariante Ableitung|hyperpage}{104}
-\indexentry{linearer Zusammenhang|hyperpage}{104}
-\indexentry{2. Grundform|hyperpage}{105}
-\indexentry{Weingarten-Endomorphismus|hyperpage}{105}
-\indexentry{Schmiegparaboloid|hyperpage}{106}
-\indexentry{Streifenbegleitbasis|hyperpage}{107}
-\indexentry{Darbouxbegleitbasis|hyperpage}{107}
-\indexentry{Weg|hyperpage}{112}
-\indexentry{Kurve|hyperpage}{112}
-\indexentry{Parameter|hyperpage}{112}
-\indexentry{Spur|hyperpage}{112}
-\indexentry{regul\IeC {\"a}r|hyperpage}{112}
-\indexentry{Tangentenvektor|hyperpage}{112}
-\indexentry{Singularit\IeC {\"a}t|hyperpage}{112}
-\indexentry{\IeC {\"A}quivalenz|hyperpage}{112}
-\indexentry{orientierungstreu|hyperpage}{112}
-\indexentry{Diffeomorphismus|hyperpage}{112}
-\indexentry{Parametrisierung|hyperpage}{112}
-\indexentry{Parametertransformation|hyperpage}{112}
-\indexentry{Wendepunkt|hyperpage}{112}
-\indexentry{Nicht-Wendepunkt|hyperpage}{112}
-\indexentry{Henkelpunkt|hyperpage}{112}
-\indexentry{B\IeC {\"o}schungslinie|hyperpage}{112}
-\indexentry{B\IeC {\"o}schungswinkel|hyperpage}{112}
-\indexentry{Fl\IeC {\"a}che|hyperpage}{113}
-\indexentry{Fl\IeC {\"a}che!Parameter|hyperpage}{113}
-\indexentry{Fl\IeC {\"a}che!Parameterlinie|hyperpage}{113}
-\indexentry{Fl\IeC {\"a}che!Spur|hyperpage}{113}
-\indexentry{Fl\IeC {\"a}che!regul\IeC {\"a}r|hyperpage}{113}
-\indexentry{Fl\IeC {\"a}che!Singularit\IeC {\"a}t|hyperpage}{113}
-\indexentry{Fl\IeC {\"a}che!\IeC {\"A}quivalenz|hyperpage}{113}
-\indexentry{Isometrie|hyperpage}{113}
-\indexentry{verbiegbar|hyperpage}{114}
-\indexentry{mittlere Kr\IeC {\"u}mmung|hyperpage}{114}
-\indexentry{Gau\IeC {\ss }sche Kr\IeC {\"u}mmung|hyperpage}{114}
-\indexentry{geod\IeC {\"a}tische Parallelit\IeC {\"a}t|hyperpage}{114}
-\indexentry{Geod\IeC {\"a}tische|hyperpage}{114}
-\indexentry{Nabelpunkt|hyperpage}{115}
-\indexentry{Flachpunkt|hyperpage}{115}
-\indexentry{3. Grundform|hyperpage}{115}
-\indexentry{Kr\IeC {\"u}mmungslinie|hyperpage}{115}
-\indexentry{Asymptotenlinie|hyperpage}{116}
+\indexentry{Singularit\IeC {\"a}t|hyperpage}{99}
+\indexentry{\IeC {\"A}quivalenz|hyperpage}{99}
+\indexentry{orientierungstreu|hyperpage}{99}
+\indexentry{Diffeomorphismus|hyperpage}{99}
+\indexentry{Parametrisierung|hyperpage}{99}
+\indexentry{Parametertransformation|hyperpage}{99}
+\indexentry{Wendepunkt|hyperpage}{99}
+\indexentry{Nicht-Wendepunkt|hyperpage}{99}
+\indexentry{Henkelpunkt|hyperpage}{99}
+\indexentry{B\IeC {\"o}schungslinie|hyperpage}{99}
+\indexentry{B\IeC {\"o}schungswinkel|hyperpage}{99}
+\indexentry{Fl\IeC {\"a}che|hyperpage}{100}
+\indexentry{Fl\IeC {\"a}che!Parameter|hyperpage}{100}
+\indexentry{Fl\IeC {\"a}che!Parameterlinie|hyperpage}{100}
+\indexentry{Fl\IeC {\"a}che!Spur|hyperpage}{100}
+\indexentry{Fl\IeC {\"a}che!regul\IeC {\"a}r|hyperpage}{100}
+\indexentry{Fl\IeC {\"a}che!Singularit\IeC {\"a}t|hyperpage}{100}
+\indexentry{Fl\IeC {\"a}che!\IeC {\"A}quivalenz|hyperpage}{100}
+\indexentry{Isometrie|hyperpage}{100}
+\indexentry{verbiegbar|hyperpage}{101}
+\indexentry{mittlere Kr\IeC {\"u}mmung|hyperpage}{101}
+\indexentry{Gau\IeC {\ss }sche Kr\IeC {\"u}mmung|hyperpage}{101}
+\indexentry{geod\IeC {\"a}tische Parallelit\IeC {\"a}t|hyperpage}{101}
+\indexentry{Geod\IeC {\"a}tische|hyperpage}{101}
+\indexentry{Nabelpunkt|hyperpage}{102}
+\indexentry{Flachpunkt|hyperpage}{102}
+\indexentry{3. Grundform|hyperpage}{102}
+\indexentry{Kr\IeC {\"u}mmungslinie|hyperpage}{102}
+\indexentry{Asymptotenlinie|hyperpage}{103}
+\indexentry{Torse|hyperpage}{103}
