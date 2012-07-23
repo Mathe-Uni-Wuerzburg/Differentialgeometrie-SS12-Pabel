@@ -2211,8 +2211,8 @@ Wir unterscheiden \uline{zwei Hauptfälle}:
 
 \uline{Nicht erfasste Sonderfälle}
 \begin{enumerate}
- \item[{\color{red}\(\Rom3\)}] \(\kappa_1 (u_0, v_0) = 0, \kappa_2 \equiv 0\), aber in jeder Umgebung \(U(u_0, v_0)\) gibt es ein \((u_1, v_1)\) mit \(\kappa_1(u_1, v_1) \ne 0\) (und möglicherweise sogar ein \((u_2, v_2)\) mit \(\kappa_1(u_2, v_2) = 0\)) \(\left[\kappa_1 (u, v) = u^k \sin \frac{1}{u}\right]\) \\
-"Parabolische Punkte häufen sich in einem Flächenpunkt" \\
+ \item[{\color{magenta}\(\Rom3\)}] \(\kappa_1 (u_0, v_0) = 0, \kappa_2 \equiv 0\), aber in jeder Umgebung \(U(u_0, v_0)\) gibt es ein \((u_1, v_1)\) mit \(\kappa_1(u_1, v_1) \ne 0\) (und möglicherweise sogar ein \((u_2, v_2)\) mit \(\kappa_1(u_2, v_2) = 0\)) \(\left[\kappa_1 (u, v) = u^k \sin \frac{1}{u}\right]\) \\
+``Parabolische Punkte häufen sich in einem Flächenpunkt'' \\
  Um einen solchen Punkt braucht keine Regelflächenparametrisierung zu existieren (siehe \textsc{Kühnel}, S.63)
 \end{enumerate}
 Im Hauptfall \((\Rom2)\) brauchen wir nur Regelflächen auf \(K = 0\) zu untersuchen. \par
@@ -2225,10 +2225,232 @@ Bei einer beliebigen Regelfläche \((t,v) \mapsto x(t,v) = c(t) + v E(t)\) gilt 
 Kennzeichnung:
 
 \begin{satz}\label{satz263}
- Eine Regelfläche im \(\IR^3\) in der Parameterdarstellung \((t,v) \mapsto c(t) + v E(t)\) ist genau dann eine Torse, wenn die sogenannte "Torsenbedingung"
+ Eine Regelfläche im \(\IR^3\) in der Parameterdarstellung \((t,v) \mapsto c(t) + v E(t)\) ist genau dann eine Torse, wenn die sogenannte ``Torsenbedingung''
  \Links
  \begin{align*}
   \det(\dot c, E, \dot E) = 0 \tag{\text{TB}}
  \end{align*}
  erfüllt ist. Äquivalent dazu ist die Bedingung \(K = 0\).
 \end{satz}
+
+\begin{beweis}[von Satz \ref{satz263}]
+ Eine erzeugende Gerade \(v \mapsto x(t_0 v) = c(t_0) + v E(t_0)\) ist wegen \(\forall_v x_2(t_0, v) = E(t_0) = x_2(t_0, v_0)\) genau dann torsal, wenn \(\forall_v x_1(t_0, v) \in \hl x_1(t_0, v_0), E(t_0) \hr\), d.h. wenn 
+ \begin{align*}
+  \forall_v &\det\big(x_1(t_0, v), x_1(t_0, v_0), E(t_0)\big) = \det \big(\dot c(t_0) + v \dot E(t_0), \dot c(t_0) + v_0 \dot E(t_0), E(t_0)\big) \\
+  &= v_0 \cdot \det \big(\dot c(t_0), \dot E(t_0), E(t_0)\big) + v \cdot \det \big(\dot E(t_0), \dot c(t_0), E(t_0)\big) \\
+  &= (v - v_0) \det \left(\dot c, E, \dot E\right) (t_0) = 0
+ \end{align*}
+ Zur Äquivalenz (TB) \(\Leftrightarrow K = 0\) siehe Übungsaufgabe 37.
+\end{beweis}
+
+\begin{bsp}[für Torsen] \(\)
+ \begin{itemize}
+  \item Zylinder: \(\dot E = 0\)
+  \item Kegel: \(\dot c = 0\)
+  \item Tangentenflächen von Kurven: \(\dot c \parallel E = \pm T\)
+ \end{itemize}
+\end{bsp}
+
+Wir zeigen, dass aus diesem Typen ``im Wesentlichen'' alle Torsen zusammengesetzt sind. \par
+Sei \(v \mapsto c(t_0) + v E(t_0)\) eine este erzeugende gerade. Wir untersuchen wieder zwei \uline{Hauptfälle}:
+\begin{enumerate}
+ \item[{\color{green}(A)}] \(\dot E(t) = 0\) in \(U(t_0)\) \par
+ Dort ist die Fläche ein \uline{Zylinderstück} in der Parameterdarstellung \((t,v) \mapsto c(t) + v E\)
+ \item[{\color{green}(B)}] \(\dot E(t_0) \ne 0\) und damit \(\dot E(t) \ne 0\) in \(U(t_0)\) \par
+ Dann gibt es eine spezielle Leitlinie \(t \mapsto g(t) = c(t) + f(t) E(t)\) mit \(\dot g \parallel E\), genannt \uline{Striktionslinie}\index{Striktionslinie} oder \uline{Gratlinie}\index{Gratlinie}. Aus \(\dot g = \dot c + \dot f E + f \dot E\) folgt mit der Tosenbedingung
+ \[
+  \det \left(\dot g, E, \dot E\right) = 0, \text{ d.h. } \dot g \in \hl E, \dot E\hr
+ \]
+ Die Forderung \(\dot g \parallel E\), also \(\langle \dot g, \dot E\rangle = 0\), d.h. \(\langle \dot c, \dot E\rangle + f \left| \dot E \right|^2 = 0\) fürt auf
+ \[
+  f = - \frac{\langle \dot c, \dot E\rangle}{\left|\dot E\right|^2}, \text{ also } g = c - \frac{\dot c, \dot E\rangle}{\left|\dot E\right|^2}E
+ \]
+\end{enumerate}
+
+\subsubsection{Darstellung der Fläche bezüglich der neuen Leitlinie \(g\)}
+
+\subsubsection{Haupt-Unterfälle von (B)}
+\begin{enumerate}
+ \item[{\color{green}(Ba)}] \(\dot g(t) = 0\) in \(v(t_0) \subset U(t_0)\) \par
+ Dort ist die Fläche ein \uline{Kegelstück} in der Parameterdarstellung \((t, \overline v) = g + \overline v E(t)\)
+ \item[{\color{green}(Bb)}] \(\dot g(t_0) \ne 0\) und damit \(\dot g(t) \ne 0\) in \(V(t_0) \subset U(t_0)\) \par
+ Dann ist \(T= \frac{\dot g}{|g|} = \pm E\) und die Fläche ist die Tangentenfläche der Gratlinie \((t, \overline v) \mapsto x(t, \overline v) = g(t) \pm \overline v T(t)\)
+\end{enumerate}
+
+\uline{Ergebnis}:
+
+\begin{satz}\label{satz264}
+ Jede Torse im \(\IR^3\) bestezt ``im Wesentlichen'' aus Teilen von \uline{allgemeinen Zylindern}, \uline{allgemeinen Kegeln} und \uline{Tangentenflächen} von Kurven.
+\end{satz}
+
+\subsubsection{Nicht erfasste Sonderfälle}
+\begin{enumerate}
+ \item[{\color{magenta}(Bc)}] \(\dot g(t_0) = 0\), aber in jeder Umgebung \(V(t_0)\) existiert ein \(t_1\) mit \(\dot g(t_1) \ne 0\) (und möglicherweise in \(t_2 \ne t_0\), wo \(\dot g(t_2) = 0\)) \par
+ ``Nicht kegelartige Erzeugende häufen sich in einer kegelartigen Erzeugenden''
+ \item[{\color{magenta}(Bd)}] \(\dot E(t_0) = 0\), aber in jeder Umgebung \(U(t_0)\) existiert ein \(t_1\) mit \(\dot E(t_1) \ne 0\) (und \(\dots\)) \par
+ ``Nicht zylindrische Erzeugende häufen sich in einer zylindrischen Erzeugenden''
+\end{enumerate}
+
+Insgesamt hat man folgende \uline{lokale Klassifikation} der Flächen im \(\IR^3\) mit \(K \equiv 0\):
+\begin{enumerate}
+ \item[{\color{green}\((\Rom1)\)}] {\color{green}Ebene}
+ \item[{\color{green}\((\Rom2)\)}] (nichtebene) Regelfläche \(\begin{cases}
+                                                             {\color{green}(A)} &{\color{green}\text{Zylinder}} \\
+                                                             {\color{green}(B)} & \text{nichtzylindrische Torse} \begin{cases}
+														{\color{green}(a)} &{\color{green}\text{Kegel}}\\
+														{\color{green}(b)} &{\color{green}\text{Tangentenfläche}} \\
+														{\color{magenta}(c)} &\text{weder noch}
+													       \end{cases} \\
+							      {\color{magenta}(C)}&\text{weder noch}
+                                                            \end{cases}\)
+ \item[{\color{magenta}\((\Rom3)\)}] weder noch
+\end{enumerate}
+
+\begin{bsp}
+ für das ``Verkleben'' von Torsenstücken verschiedener Art bei unproblematischen Nullstellen von \(\kappa_1, \dot E, \dot g\)
+\end{bsp}
+
+\uline{Präzisierung von ``im Wesentlichen''}:
+
+\begin{satz}\label{satz265}
+ Die Flächen im \(\IR^3\) mit \(K \equiv 0\) besteht für \uline{eine offene und dichte Teilmenge \(D\) ihres Definitionsbereichs} aus Teilen von allgemeinen Zylindern (inklusive Zylinder), allgemeinen Kegeln und Tangentenflächen von Kurven und sind in diesem Bereich \uline{lokal in die Ebene verbiegbar}.
+\end{satz}
+
+\begin{beweis}[von Satz \ref{satz265}]
+ Die Hauptfälle der Klassifikation sind immer in einer ganzen Umgebung eines flächenglieds definiert (\(\Rightarrow D\) ist offen) und in jeder Umgebung eines Sonderfalls liegt auch ein Hauptfall vor (\(\Rightarrow D\) ist dicht im Definitionsbereich)
+\end{beweis}
+
+\subsection{Rotationsflächen mit konstanter Gaußkrümmung}
+
+Eine \(\C^2\)-Regelfläche in der Standard-Parametrisierung
+\[
+ x(u,v) = r(u) \vxyz{\cos v}{\sin v}{0} + z(u) \vxyz 001
+\]
+mit Profilkurve in BLP, d.h. \uline{\(r'^2 + z'^2 = 1\)} besitzt die Gaußsche Krümmung \(K = -\frac{r''}{r}\) (siehe Übung). \par
+
+Diese kann als stetige Funktion \(u \mapsto K(u)\) längs der Profilkurve vorgegeben werden: Die Lösungsschar ist gegeben durch
+\[
+ \uline{r'' + K r = 0}, \, \uline{z = z_0 \pm \int \sqrt{1 - r'^2}}
+\]
+wobei der Definitionsbereich so einzuschränken ist, dass \(r {>\atop(=)} 0\) und \(r'^2 {< \atop(=)}1\) bleibt.
+
+\subsubsection{Bestimmung aller Rotationsflächen mit \(K = K_0 = \const.\)}
+
+Zu lösen:
+\[
+ r'' + K_0 r = 0, z = z_0 \pm \int \sqrt{1 - r'^2}
+\]
+\begin{align*}
+{\color{magenta}K_0 = 0}\Leftrightarrow r'' = 0 \Leftrightarrow r(u) = k u + r_0, z = (z_0 \pm) \sqrt{1-k^2} u
+\end{align*}
+
+Dies liefert \uline{Drehkugel} einschließlich der Grenzfälle \uline{Drehzylinder} (\(k = 0\)) und \uline{Ebene} (\(k^2 = 1\)) \par
+
+Bei \(K = K_0 \ne 0\) brauchen wir nur die Fälle \(K_0 = \pm 1\) zu betrachten, da eine ``gestreckte'' Fläche \(\widetilde x = \lambda x\) (\(\lambda > 0\)) die Gaußkrümmung \(\widetilde K = \frac{1}{\lambda^2} K\) (siehe Übung) hat.
+
+\begin{align*}
+{\color{magenta}K_0 = \pm 1}&\Leftrightarrow r'' + r = 0 \text{ mit der allgemeinen Lösung} \\
+r(u) & A \cos u + B \sin u = k \cos (u - u_0)
+\end{align*}
+
+Bei geeignetem Beginn in der BLP-Zählung (\(\to u_0 = 0\)) sind alle Profilkurven gegeben durch die 1-Parameterschar
+
+\begin{align*}
+ r(u) &= k \cos u \\
+ z(u) &= [z_0 \pm] \int_0^u \sqrt{1 - k^2 \sin^2 u} \dd u = [z_0 \pm] E(k,u)
+\end{align*}
+
+wobei für \(k \ne 1\) ein elliptisches Integral auftritt.
+
+\subsubsection{Gestalt}
+\begin{align*}
+ &0 < k < 1, |u| \le \frac{\pi}{2} & \text{Spindelfläche} \\
+ &k = 1, |u| \le \frac{\pi}{2} & \text{Sphäre} \\
+ &k > 1, |u| \le u_0 = \arcsin \frac{1}{k}, \sqrt{k^2 - 1} \le r(u) \le k & \text{Wulstfläche (Käsefläche)}
+\end{align*}
+
+\subsubsection{Eigenschaften}
+Alle diese Flächen sind (in Teilen) ineinander verbiegbar
+\begin{align*}
+ \vxy{k}{g_{\varrho \sigma}(u,v)} &= \begin{pmatrix}
+                                     1 & 0 \\
+                                     0 & k^2 \cos^2 u
+                                    \end{pmatrix}
+ \text{ und mit } v = \frac{1}{K} \overline v \\
+ \vxy{k}{g_{\varrho \sigma}(u, \overline v)} &= \begin{pmatrix}
+                                                 1 & 0 \\
+                                                 0 & \cos^2 u
+                                                \end{pmatrix}
+\end{align*}
+
+\begin{align*}
+ &{\color{magenta}K_0 = -1} \Leftrightarrow r'' - r = 0 \text{ mit der allgemeinen Lösung} \\
+ &r(u) = A \cosh u + B \sinh u = a \E^u + b \E^{-u}
+\end{align*}
+Bei geeignetem Beginn der BLP-Zählung (\(r(0) = r_\text{max}\)) kann man die Profilkurve wieder als 1-Parameterschar darstellen.
+
+\begin{align*}
+ r(u) &= k \cosh u - \sinh u \quad (k > 0) \\
+ z(u) &= [z_0 \pm] \int_0^u \sqrt{1 - r'^2(u)} \dd u
+\end{align*}
+wegen \(z'^2 = 1-r'^2 \stackrel{!}{=} k^2 - r^2\) gilt \(\forall_{U_0^a}r(u) \le k = r_\text{max} = r(0)\) also \uline{\(u \ge 0\)}, wobei für \(u = 0\) wegen \(r'(0) = -1, z'(0) = 0\) eine horizontale Tangente auftritt.
+
+\subsubsection{Gestalt}
+\begin{align*}
+ &0 < k < 1, 0 \le u \le u_1 = \artanh k & \text{Pseudospindelfläche} \\
+ &k = 1 [r(u) = \E^{-u}], 0 \le u < \infty & \text{Pseudosphäre} \\
+ &0 \le u \le 2 u_1 = 2 \artanh \frac{1}{k} \,(\text{mit } r(u_1) = \sqrt{k^2 - 1} = r_\text{min}) & \text{Pseudowulstfläche}
+\end{align*}
+
+\uline{Zusatz}: \par
+Eine Verbiegung dieser Typen ineinander ist nicht ohne weiteres möglich, da sie verschiedene Teile der vollständigen Poincaréschen Halbebene repräsentiert.
+
+\uline{Ergänzung}: \par
+\subsubsection{Flächen konstanter Mittlerer Krümmung \(H \ne 0\) (cmc-Flächen)}
+
+Sei \((u,v)\mapsto x(u,v)\) eine beliebige Fläche in Krümmungslinienparameter (also mit \(g_{12} = b_{12} = 0\)) \par
+Für eine \uline{Parallelfläche}\index{Parallelfläche} \(\,^\varepsilon x = x + \varepsilon N\) gilt dann wegen \(\,^\varepsilon x_\varrho = (1 - \varepsilon K_\varrho) x_\varrho = f_\varrho x_\varrho\) (mit \(f_\varrho > 0\) für kleine \(\varepsilon\))
+\begin{align*}
+ \,^\varepsilon N &= N \\
+ (\,^\varepsilon g_{\varrho \sigma}) &= \begin{pmatrix}
+                                        f_1^2 g_{11} & 0 \\
+                                        0 & f_2^2 g_{22}
+                                       \end{pmatrix} \\
+ (\,^\varepsilon n_{\varrho \sigma}) &= \begin{pmatrix}
+                                        f_1 b_{11} & 0 \\
+                                        0 & f_2 b_{22}
+                                       \end{pmatrix} \\
+ (\,^\varepsilon \wein \mu \sigma) &= \begin{pmatrix}
+                                       \frac{\kappa_1}{f_1} & 0 \\
+                                       0 & \frac{\kappa_2}{f_2}
+                                      \end{pmatrix} = \begin{pmatrix}
+                                                       \,^\varepsilon \kappa_1 & 0 \\
+                                                       0 & \,^\varepsilon \kappa_2 
+						       \end{pmatrix} \\
+ \,^\varepsilon K &= \frac{\kappa_1 \kappa_2}{f_1 f_2} = \frac{K}{1 - 2 \varepsilon H + \varepsilon^2 K} \\
+ \,^\varepsilon H &= \frac12 \left(\frac{\kappa_1}{f_1} + \frac{\kappa_2}{f_2}\right) = \frac{H - \varepsilon K}{1 - 2 \varepsilon H + \varepsilon^2 K}
+\end{align*}
+
+\begin{folgerung}\(\)
+ \begin{enumerate}
+  \item Besitzt die Ausgangsfläche konstant \(H = H_0 \ne 0\), so findet man im Abstand \(\varepsilon = \frac{1}{2 H_0}\) eine Parallelfläche mit konstantem \(K = K_0 = \frac{1}{\varepsilon^2} = 4 H_0^2 > 0\).
+  \item Besitzt die Ausgangsfläche konstant \(K = K_0 > 0\), so findet man im Abstand \(\varepsilon = \pm \frac{1}{\sqrt{K_0}}\) Parallelflächen mit
+  \begin{align*}
+   \,^\varepsilon H &= \frac{H \mp \sqrt{K_0}}{2((1 \mp \frac{1}{\sqrt{K_0}} H} \\
+   &= \frac{\sqrt{K_0}}{2} \cdot \frac{H \mp \sqrt{K_0}}{\sqrt{K_0} \mp H} = \pm \frac{\sqrt{K_0}} 	{2} = \const.
+  \end{align*}
+ \end{enumerate}
+\end{folgerung}
+
+\subsubsection{Anwendung von 2.}
+Zu Rotationsflächen mit \(K = K_0 = + 1\) findet man im Abstand \(\varepsilon = \pm 1\) Parallelflächen mit \(\,^{\pm 1}H = \mp \frac12 = \const.\), speziell zu \par
+Spindelflächen: \uline{Onduloide} (Wellenflächen) \\
+Wulstflächen: \uline{Nodoide} (Knotenflächen) \par
+
+All diese gehören zur Klasse der \textsc{Delaunex}-Flächen (1841), den ersten entdeckten (nichttrivialen) cmc-Flächen. Zu ihnen gehören auch
+\begin{itemize}
+ \item Kreiszylinder (\(k \to 0\) ``ohne Welle'')
+ \item Kugel (Grenzfall \(k = 1\))
+\end{itemize}
+
+
