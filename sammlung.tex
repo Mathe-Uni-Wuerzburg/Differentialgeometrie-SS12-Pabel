@@ -10,6 +10,9 @@
 \newenvironment{folgn}{\par\global\setbox\onenullbox=\vbox\bgroup\begin{folgnn}}
 {\end{folgnn}\egroup\setbox\twonullbox=\copy\onenullbox\unvbox\twonullbox
 \global\setbox\satznbox=\vbox{\unvbox\satznbox\unvbox\onenullbox}}
+\newenvironment{bemerkung}{\par\global\setbox\onenullbox=\vbox\bgroup\begin{bemerk}}
+{\end{bemerk}\egroup\setbox\twonullbox=\copy\onenullbox\unvbox\twonullbox
+\global\setbox\satznbox=\vbox{\unvbox\satznbox\unvbox\onenullbox}}
 
 
 \newsavebox{\definitionbox}
