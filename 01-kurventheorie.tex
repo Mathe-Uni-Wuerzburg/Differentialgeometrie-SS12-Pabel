@@ -409,12 +409,12 @@ Für einen \uline{Kreis} in Bogenlängenparametrisierung \(s \mapsto c(s) = r \v
 
 \end{beweis}
 
-\begin{folgerung}
 \begin{figure}[ht]
  \centering
  \includegraphics[scale=0.3]{Bilder/Bsp2.jpg}
 \end{figure}
 
+\begin{folgerung}
  In jedem Kurvenpunkt \(c(s)\) hat man die paarweise orthogonalen \uline{Begleitebenen}\index{Begleitebene}
  \begin{align*}
   &c(s) + \hl T,H \hr(s) \quad \big(\perp B(s)\big) & \text{[Schmiegebene]} \\
@@ -468,7 +468,7 @@ einer \uline{wendepunktfreien} \(\C^3\)-Kurve in Bogenlängenparametrisierung \(
 \begin{satz}\label{satz134}
  Für die Frenet-Begleitbasis \(s \mapsto (T,H,B)(s)\) einer wendepunktfreien \(\C^3\)-Kurve gelten die Frenetschen \uline{Ableitungsgleichungen}\index{Frenet-Begleitbasis!Ableitungsgleichungen}
  \[\begin{Bmatrix}
-  T' &= &&\kappa \cdot H \\
+  T' &= &&\kappa H \\
   H' &= &-\kappa T &&+ \tau B \\
   B' &= &&-\tau H
  \end{Bmatrix} \text{bzw.}
@@ -531,7 +531,7 @@ Die Basis \((T, H, B)\) erhält man durch Anwendung des Schmidtschen Orthonormal
  \]
  und dem (normierten) \uline{Darboux-Vektor}\index{Darboux-Vektor}
  \[
-  D = \frac1\omega (\tau \cdot T + \kappa \cdot B)
+  D = \frac1\omega (\tau T + \kappa B)
  \]
 \end{satz}
 

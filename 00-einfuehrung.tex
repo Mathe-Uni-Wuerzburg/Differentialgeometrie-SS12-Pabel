@@ -12,9 +12,9 @@ Damit lassen sich messen:
 %    \item der Abstand\index{Vektor!Abstand} von Punkten \(p, q\): \(\dd(p,q) = | \vv{pq} | \)
    \item Flächeninhalte, Volumina, usw.
   \end{itemize}
-Ist zusätzlich eine feste Orthonormalbasis\index{Orthonormalbasis} \( (\mathring{e_1}, ... \mathring{e_n}) \) (definiert durch \( \langle \mathring{e_i}, \mathring{e_k} \rangle = \delta_{ik} \)) ausgezeichnet als positiv orientiert, erhält man eine Orientierung des Raumes und kann alle Basen in positiv und negativ orientierte einteilen.
+Ist zusätzlich eine feste Orthonormalbasis\index{Orthonormalbasis} \( (\mathring{e}_1, ... \mathring{e}_n) \) (definiert durch \( \langle \mathring{e}_i, \mathring{e}_k \rangle = \delta_{ik} \)) ausgezeichnet als positiv orientiert, erhält man eine Orientierung des Raumes und kann alle Basen in positiv und negativ orientierte einteilen.
   
-\paragraph*{Standard-Modell:} \(E^n = V^n = \IR^n\), ausgestattet mit dem Standard-Skalarprodukt\index{Standard-Skalarprodukt} \(\langle X, Y \rangle = \sum_{i=1}^n X^iY^i\) und der (positiv orientierten) Standardbasis\index{Standardbasis} \(\mathring{e_1}, ... \mathring{e_n})\) mit \(\mathring{e_i} = (0, \dots, 1, \dots, 0)^T\).
+\paragraph*{Standard-Modell:} \(E^n = V^n = \IR^n\), ausgestattet mit dem Standard-Skalarprodukt\index{Standard-Skalarprodukt} \(\langle X, Y \rangle = \sum_{i=1}^n X^iY^i\) und der (positiv orientierten) Standardbasis\index{Standardbasis} \((\mathring{e}_1, ... \mathring{e}_n)\) mit \(\mathring{e}_i = (0, \dots, 1, \dots, 0)^T\).
 Dieses Standardmodell reicht bei uns meist aus:
 Bezüglich eines kartesischen Koordinatensystems\index{kartesisches Koordinatensystem} \((0; e_1, ... e_n)\) in einem abstrakten, orientierten euklidschen Raum \(E^n\), bestehend aus 
   \begin{itemize}
@@ -23,8 +23,8 @@ Bezüglich eines kartesischen Koordinatensystems\index{kartesisches Koordinatens
   \end{itemize}
 kann man jedem Punkt und jedem Vektor eindeutig reelle Koordinaten zuordnen:
   \begin{itemize}
-   \item Vektor: \(X = \sum_{i=1}^n X^ie_i \in V^n \mapsto (X^1, ... X^n) \in \IR^n\)
-   \item Punkt: \(p = 0 + \sum_{i=1}^n p^ie_i \mapsto (p^1, ... p^n) \in \IR^n\)
+   \item Vektor: \mat{X = \sum_{i=1}^n X^ie_i \in V^n \mapsto (X^1, ... X^n) \in \IR^n}
+   \item Punkt: \mat{p = 0 + \sum_{i=1}^n p^ie_i \mapsto (p^1, ... p^n) \in \IR^n}
   \end{itemize}
 Aus einem Skalarprodukt in \(V^n\) wird in Koordinaten
   \[
@@ -47,7 +47,7 @@ Zum \uline{Vektorprodukt\index{Vektorprodukt}} (Kreuzprodukt\index{Kreuzprodukt}
    \item \(\det (X_1, \dots, X_{n-1}, Y) \ge 0\) (d.h. \((X_1, \dots, X_{n-1}, Y)\) ist positiv orientiert)
   \end{enumerate}
 Bezeichnung: \(Y=X_1 \times \dots \times X_{n-1}\) \\
-Eine explizite Formel ist (mit der Standardbasis \((e_1, \dots , e_n)\) des \(\IR^n\) ): 
+Eine explizite Formel ist (mit der Standardbasis \((e_1, \dots , e_n)\) des \(\IR^n\)): 
 \begin{align*}
  X_1 \times \dots \times X_{n-1} &= \sum_{i=1}^n \det (X_1, \dots, X_{n-1},e_i)e_i \\
 				 &= \sum_{i=1}^n \left\vert\begin{matrix}

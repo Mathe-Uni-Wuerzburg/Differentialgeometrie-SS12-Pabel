@@ -4,6 +4,13 @@
 \newenvironment{satz}{\par\global\setbox\onenullbox=\vbox\bgroup\begin{set}}
 {\end{set}\egroup\setbox\twonullbox=\copy\onenullbox\unvbox\twonullbox
 \global\setbox\satznbox=\vbox{\unvbox\satznbox\unvbox\onenullbox}}
+\newenvironment{folgerung}{\par\global\setbox\onenullbox=\vbox\bgroup\begin{folgerungn}}
+{\end{folgerungn}\egroup\setbox\twonullbox=\copy\onenullbox\unvbox\twonullbox
+\global\setbox\satznbox=\vbox{\unvbox\satznbox\unvbox\onenullbox}}
+\newenvironment{folgn}{\par\global\setbox\onenullbox=\vbox\bgroup\begin{folgnn}}
+{\end{folgnn}\egroup\setbox\twonullbox=\copy\onenullbox\unvbox\twonullbox
+\global\setbox\satznbox=\vbox{\unvbox\satznbox\unvbox\onenullbox}}
+
 
 \newsavebox{\definitionbox}
 \newsavebox{\threenullbox}

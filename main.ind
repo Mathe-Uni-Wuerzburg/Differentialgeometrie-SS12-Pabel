@@ -1,9 +1,9 @@
 \begin{theindex}
 
-  \item \IeC {\"A}quivalenz, \hyperpage{8}, \hyperpage{105}
-  \item 1. Grundform, \hyperpage{39}
-  \item 2. Grundform, \hyperpage{47}
-  \item 3. Grundform, \hyperpage{62}, \hyperpage{108}
+  \item \IeC {\"A}quivalenz, \hyperpage{8}, \hyperpage{104}
+  \item 1. Grundform, \hyperpage{38}
+  \item 2. Grundform, \hyperpage{46}
+  \item 3. Grundform, \hyperpage{60}, \hyperpage{107}
 
   \indexspace
 
@@ -12,16 +12,16 @@
     \subitem $\IR^n$, \hyperpage{32}
   \item Ableitungsvektor, \hyperpage{9}
   \item affin, \hyperpage{5}
-  \item Asymptotenlinie, \hyperpage{69}, \hyperpage{109}
-  \item Asymptotenlinienparameter, \hyperpage{74}
+  \item Asymptotenlinie, \hyperpage{68}, \hyperpage{108}
+  \item Asymptotenlinienparameter, \hyperpage{73}
 
   \indexspace
 
-  \item B\IeC {\"o}schungslinie, \hyperpage{28}, \hyperpage{105}
-  \item B\IeC {\"o}schungswinkel, \hyperpage{28}, \hyperpage{105}
+  \item B\IeC {\"o}schungslinie, \hyperpage{28}, \hyperpage{104}
+  \item B\IeC {\"o}schungswinkel, \hyperpage{28}, \hyperpage{104}
   \item Begleitbasis
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}
-  \item Begleitebene, \hyperpage{17}
+  \item Begleitebene, \hyperpage{16}
   \item Ber\IeC {\"u}hrbedingung, \hyperpage{22}
   \item Binormalenvektor, \hyperpage{16}
   \item Bogenl\IeC {\"a}ngenfunktion, \hyperpage{12}
@@ -30,157 +30,157 @@
 
   \indexspace
 
-  \item Christoffelsymbole, \hyperpage{44}
+  \item Christoffelsymbole, \hyperpage{43}
 
   \indexspace
 
   \item Darboux-Vektor, \hyperpage{19}
-  \item Darbouxbegleitbasis, \hyperpage{68}
-  \item Diffeomorphismus, \hyperpage{8}, \hyperpage{105}
+  \item Darbouxbegleitbasis, \hyperpage{67}
+  \item Diffeomorphismus, \hyperpage{8}, \hyperpage{104}
   \item Drehung, \hyperpage{20}
     \subitem Drehachse, \hyperpage{20}
       \subsubitem Einheitsvektor, \hyperpage{20}
 
   \indexspace
 
-  \item Einsteinsche Summationskonvention, \hyperpage{38}
+  \item Einsteinsche Summationskonvention, \hyperpage{37}
   \item Ellipse, \hyperpage{14}
   \item euklidisch, \hyperpage{12}
 
   \indexspace
 
-  \item Fl\IeC {\"a}che, \hyperpage{36}, \hyperpage{106}
-    \subitem \IeC {\"A}quivalenz, \hyperpage{37}, \hyperpage{106}
-    \subitem Parameter, \hyperpage{36}, \hyperpage{106}
-    \subitem Parameterlinie, \hyperpage{36}, \hyperpage{106}
-    \subitem regul\IeC {\"a}r, \hyperpage{36}, \hyperpage{106}
-    \subitem Singularit\IeC {\"a}t, \hyperpage{36}, \hyperpage{106}
-    \subitem Skalarprodukt, \hyperpage{39}
-    \subitem Spur, \hyperpage{36}, \hyperpage{106}
-  \item Flachpunkt, \hyperpage{60}, \hyperpage{108}
+  \item Fl\IeC {\"a}che, \hyperpage{35}, \hyperpage{105}
+    \subitem \IeC {\"A}quivalenz, \hyperpage{36}, \hyperpage{105}
+    \subitem Parameter, \hyperpage{35}, \hyperpage{105}
+    \subitem Parameterlinie, \hyperpage{35}, \hyperpage{105}
+    \subitem regul\IeC {\"a}r, \hyperpage{35}, \hyperpage{105}
+    \subitem Singularit\IeC {\"a}t, \hyperpage{35}, \hyperpage{105}
+    \subitem Skalarprodukt, \hyperpage{38}
+    \subitem Spur, \hyperpage{35}, \hyperpage{105}
+  \item Flachpunkt, \hyperpage{59}, \hyperpage{107}
   \item Frenet-Begleitbasis, \hyperpage{16}
     \subitem Ableitungsgleichungen, \hyperpage{18}
-  \item Fundamentalsatz, \hyperpage{24}, \hyperpage{34}
+  \item Fundamentalsatz, \hyperpage{24}, \hyperpage{33}
 
   \indexspace
 
-  \item Gau\IeC {\ss }abbildung, \hyperpage{44}
-  \item Gau\IeC {\ss }sche Ableitungsgleichungen], \hyperpage{44}
-  \item Gau\IeC {\ss }sche Kr\IeC {\"u}mmung, \hyperpage{49}, 
-		\hyperpage{107}
-  \item Geod\IeC {\"a}tische, \hyperpage{53}, \hyperpage{107}
-  \item geod\IeC {\"a}tische Parallelit\IeC {\"a}t, \hyperpage{51}, 
-		\hyperpage{107}
-  \item geod\IeC {\"a}tische Vollst\IeC {\"a}ndigkeit, \hyperpage{55}
+  \item Gau\IeC {\ss }abbildung, \hyperpage{43}
+  \item Gau\IeC {\ss }sche Ableitungsgleichungen], \hyperpage{43}
+  \item Gau\IeC {\ss }sche Kr\IeC {\"u}mmung, \hyperpage{48}, 
+		\hyperpage{106}
+  \item Geod\IeC {\"a}tische, \hyperpage{52}, \hyperpage{106}
+  \item geod\IeC {\"a}tische Parallelit\IeC {\"a}t, \hyperpage{50}, 
+		\hyperpage{106}
+  \item geod\IeC {\"a}tische Vollst\IeC {\"a}ndigkeit, \hyperpage{54}
   \item Geschwindigkeit, \hyperpage{7}
     \subitem Bahn-, \hyperpage{20}
     \subitem Winkel-, \hyperpage{20}
-  \item Gratlinie, \hyperpage{95}
+  \item Gratlinie, \hyperpage{94}
 
   \indexspace
 
   \item Hauptnormalenvektor, \hyperpage{16}
-  \item Henkelpunkt, \hyperpage{11}, \hyperpage{105}
+  \item Henkelpunkt, \hyperpage{11}, \hyperpage{104}
   \item Hyperfl\IeC {\"a}che
-    \subitem Begleitbasis, \hyperpage{43}
-    \subitem regul\IeC {\"a}r, \hyperpage{37}
+    \subitem Begleitbasis, \hyperpage{42}
+    \subitem regul\IeC {\"a}r, \hyperpage{36}
 
   \indexspace
 
-  \item innergeometrische Gr\IeC {\"o}\IeC {\ss }en, \hyperpage{41}
-  \item Isometrie, \hyperpage{41}, \hyperpage{106}
+  \item innergeometrische Gr\IeC {\"o}\IeC {\ss }en, \hyperpage{40}
+  \item Isometrie, \hyperpage{40}, \hyperpage{105}
 
   \indexspace
 
   \item kartesisches Koordinatensystem, \hyperpage{4}
-  \item Kommutator, \hyperpage{79}
-  \item kovariante Ableitung, \hyperpage{47}
+  \item Kommutator, \hyperpage{78}
+  \item kovariante Ableitung, \hyperpage{46}
   \item Kr\IeC {\"u}mmung, \hyperpage{15}
-    \subitem 2. Kr\IeC {\"u}mmung, \hyperpage{17}
+    \subitem 2. Kr\IeC {\"u}mmung, \hyperpage{16}
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}
     \subitem Gesamtkr\IeC {\"u}mmung, \hyperpage{19}
-    \subitem konische, \hyperpage{29}
-  \item Kr\IeC {\"u}mmungsachse, \hyperpage{24}
-  \item Kr\IeC {\"u}mmungskreis, \hyperpage{22}, \hyperpage{24}
-  \item Kr\IeC {\"u}mmungslinie, \hyperpage{69}, \hyperpage{108}
-  \item Kr\IeC {\"u}mmungslinienparameter, \hyperpage{74}
-  \item Kr\IeC {\"u}mmungsradius, \hyperpage{24}
+    \subitem konische, \hyperpage{28}
+  \item Kr\IeC {\"u}mmungsachse, \hyperpage{23}
+  \item Kr\IeC {\"u}mmungskreis, \hyperpage{22, 23}
+  \item Kr\IeC {\"u}mmungslinie, \hyperpage{68}, \hyperpage{107}
+  \item Kr\IeC {\"u}mmungslinienparameter, \hyperpage{73}
+  \item Kr\IeC {\"u}mmungsradius, \hyperpage{23}
   \item Kreis, \hyperpage{8}
   \item Kreuzprodukt, \hyperpage{5}
-  \item Kurve, \hyperpage{7}, \hyperpage{105}
+  \item Kurve, \hyperpage{7}, \hyperpage{104}
 
   \indexspace
 
-  \item Lie-Klammer, \hyperpage{79}
-  \item linearer Zusammenhang, \hyperpage{47}
-  \item lokale kanonische Form, \hyperpage{21}
+  \item Lie-Klammer, \hyperpage{78}
+  \item linearer Zusammenhang, \hyperpage{46}
+  \item lokale kanonische Form, \hyperpage{20}
 
   \indexspace
 
   \item Mannigfaltigkeit, \hyperpage{9}
-  \item Minimalfl\IeC {\"a}chengleichung, \hyperpage{89}
-  \item mittlere Kr\IeC {\"u}mmung, \hyperpage{49}, \hyperpage{107}
+  \item Minimalfl\IeC {\"a}chengleichung, \hyperpage{88}
+  \item mittlere Kr\IeC {\"u}mmung, \hyperpage{48}, \hyperpage{106}
 
   \indexspace
 
-  \item Nabelpunkt, \hyperpage{60}, \hyperpage{108}
-  \item Nicht-Wendepunkt, \hyperpage{11}, \hyperpage{105}
+  \item Nabelpunkt, \hyperpage{59}, \hyperpage{107}
+  \item Nicht-Wendepunkt, \hyperpage{11}, \hyperpage{104}
   \item normal, \hyperpage{13}
-  \item Normalebene, \hyperpage{17}
+  \item Normalebene, \hyperpage{16}
 
   \indexspace
 
-  \item orientierungstreu, \hyperpage{8}, \hyperpage{105}
+  \item orientierungstreu, \hyperpage{8}, \hyperpage{104}
   \item Orthogonalprojektion, \hyperpage{21}
   \item Orthonormalbasis, \hyperpage{4}
     \subitem -feld, \hyperpage{18}
 
   \indexspace
 
-  \item Parallelfeld, \hyperpage{51}
-  \item Parallelfl\IeC {\"a}che, \hyperpage{99}
-  \item Parallelverschiebung, \hyperpage{51}
-  \item Parameter, \hyperpage{7}, \hyperpage{105}
-  \item Parametertransformation, \hyperpage{8}, \hyperpage{105}
-  \item Parametrisierung, \hyperpage{8}, \hyperpage{105}
+  \item Parallelfeld, \hyperpage{50}
+  \item Parallelfl\IeC {\"a}che, \hyperpage{98}
+  \item Parallelverschiebung, \hyperpage{50}
+  \item Parameter, \hyperpage{7}, \hyperpage{104}
+  \item Parametertransformation, \hyperpage{8}, \hyperpage{104}
+  \item Parametrisierung, \hyperpage{8}, \hyperpage{104}
 
   \indexspace
 
-  \item regul\IeC {\"a}r, \hyperpage{7}, \hyperpage{105}
-  \item rektifizierende Ebene, \hyperpage{17}
-  \item Richtungsableitung, \hyperpage{45}
-  \item Riemannscher Kr\IeC {\"u}mmungstensor, \hyperpage{78}
-  \item Riemannsches Kr\IeC {\"u}mmungstensorfeld, \hyperpage{78}
+  \item regul\IeC {\"a}r, \hyperpage{7}, \hyperpage{104}
+  \item rektifizierende Ebene, \hyperpage{16}
+  \item Richtungsableitung, \hyperpage{44}
+  \item Riemannscher Kr\IeC {\"u}mmungstensor, \hyperpage{77}
+  \item Riemannsches Kr\IeC {\"u}mmungstensorfeld, \hyperpage{77}
 
   \indexspace
 
   \item Schmidtsches Orthonormalisierungsverfahren, \hyperpage{19}
-  \item Schmiegebene, \hyperpage{17}
+  \item Schmiegebene, \hyperpage{16}
   \item Schmiegkugel, \hyperpage{22}, \hyperpage{24}
-  \item Schmiegparaboloid, \hyperpage{64}
+  \item Schmiegparaboloid, \hyperpage{63}
   \item Schmiegraum, \hyperpage{9}
     \subitem degeneriert, \hyperpage{11}
-  \item Singularit\IeC {\"a}t, \hyperpage{7}, \hyperpage{105}
+  \item Singularit\IeC {\"a}t, \hyperpage{7}, \hyperpage{104}
   \item Skalarprodukt, \hyperpage{4}
   \item Sph\IeC {\"a}re
-    \subitem 2-, \hyperpage{37}
-  \item sph\IeC {\"a}risch, \hyperpage{30}
-  \item sph\IeC {\"a}risches Bild, \hyperpage{44}
-  \item Spur, \hyperpage{7}, \hyperpage{105}
+    \subitem 2-, \hyperpage{36}
+  \item sph\IeC {\"a}risch, \hyperpage{29}
+  \item sph\IeC {\"a}risches Bild, \hyperpage{43}
+  \item Spur, \hyperpage{7}, \hyperpage{104}
   \item Standard-Skalarprodukt, \hyperpage{4}
   \item Standardbasis, \hyperpage{4}
-  \item Streifenbegleitbasis, \hyperpage{68}
-  \item Striktionslinie, \hyperpage{95}
+  \item Streifenbegleitbasis, \hyperpage{67}
+  \item Striktionslinie, \hyperpage{94}
 
   \indexspace
 
   \item Tangenteneinheitsvektor, \hyperpage{15}
-  \item Tangentenvektor, \hyperpage{7}, \hyperpage{16}, \hyperpage{105}
-  \item Tangentialraum, \hyperpage{36}
-    \subitem Basistransformation, \hyperpage{38}
-  \item Taylorentwicklung, \hyperpage{21}
-  \item Torse, \hyperpage{94}, \hyperpage{109}
-  \item Torsion, \hyperpage{17}
+  \item Tangentenvektor, \hyperpage{7}, \hyperpage{16}, \hyperpage{104}
+  \item Tangentialraum, \hyperpage{35}
+    \subitem Basistransformation, \hyperpage{37}
+  \item Taylorentwicklung, \hyperpage{20}
+  \item Torse, \hyperpage{93}, \hyperpage{108}
+  \item Torsion, \hyperpage{16, 17}
     \subitem Berechnung (unbekannte BLP), \hyperpage{18}
   \item Translation, \hyperpage{20}
 
@@ -191,17 +191,17 @@
     \subitem orthogonal, \hyperpage{4}
     \subitem Winkel, \hyperpage{4}
   \item Vektorprodukt, \hyperpage{5}
-  \item verbiegbar, \hyperpage{41}, \hyperpage{107}
-  \item Vertauschbarkeitsrelationen, \hyperpage{78}
+  \item verbiegbar, \hyperpage{40}, \hyperpage{106}
+  \item Vertauschbarkeitsrelationen, \hyperpage{77}
 
   \indexspace
 
-  \item Weg, \hyperpage{7}, \hyperpage{105}
+  \item Weg, \hyperpage{7}, \hyperpage{104}
     \subitem -l\IeC {\"a}nge, \hyperpage{13}
-  \item Weingarten-Endomorphismus, \hyperpage{47}
-  \item Weingartenschen Ableitungsgleichungen, \hyperpage{44}
-  \item Wendepunkt, \hyperpage{11}, \hyperpage{105}
+  \item Weingarten-Endomorphismus, \hyperpage{46}
+  \item Weingartenschen Ableitungsgleichungen, \hyperpage{43}
+  \item Wendepunkt, \hyperpage{11}, \hyperpage{104}
     \subitem -frei, \hyperpage{11}
-  \item Windung, \hyperpage{17}
+  \item Windung, \hyperpage{16}
 
 \end{theindex}
